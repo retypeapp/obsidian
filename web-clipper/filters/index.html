@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="turbo-root" content="/obsidian">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.10.0-preview.802662421177">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 3.10.0-preview">
+
+    <!-- Primary Meta Tags -->
+    <title>Filters</title>
+    <meta name="title" content="Filters">
+    <meta name="description" content="Filters allow you to modify variables in Web Clipper templates. Filters are applied to variables using the syntax ">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://retypeapp.github.io/obsidian/web-clipper/filters/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://retypeapp.github.io/obsidian/web-clipper/filters/">
+    <meta property="og:title" content="Filters">
+    <meta property="og:description" content="Filters allow you to modify variables in Web Clipper templates. Filters are applied to variables using the syntax ">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://retypeapp.github.io/obsidian/web-clipper/filters/">
+    <meta property="twitter:title" content="Filters">
+    <meta property="twitter:description" content="Filters allow you to modify variables in Web Clipper templates. Filters are applied to variables using the syntax ">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link href="../../favicon.ico" rel="icon">
+    <link href="../../resources/css/retype.css?v=3.10.0-preview.802662421177" rel="stylesheet">
+
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.10.0-preview.802662421177" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.10.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.10.0-preview.802662421177" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
+        <div class="absolute bottom-0 left-0 bg-gray-100 dark:bg-dark-800" style="top: 5rem; right: 50%"></div>
+    
+        <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-white border-b border-gray-200 md:h-20 dark:bg-dark-850 dark:border-dark-650">
+            <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+                <!-- Mobile menu button skeleton -->
+                <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-none rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+                <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+        
+                <!-- Logo -->
+                <div class="flex items-center justify-between h-full py-2 md:w-75">
+                    <div class="flex items-center px-2 md:px-6">
+                        <a id="docs-hub-link" href="https://obsidian.md/" title="Visit Obsidian" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="30" viewBox="0 0 12 30" fill="currentColor" aria-label="Home" focusable="false" role="img">
+                                <path d="M10.6763 23.0822C10.4303 23.328 10.0967 23.4661 9.74885 23.4661C9.40103 23.4661 9.06744 23.328 8.82135 23.0822L1.38384 15.6447C1.13806 15.3986 1 15.065 1 14.7172C1 14.3694 1.13806 14.0358 1.38384 13.7897L8.82135 6.35222C9.0703 6.1205 9.39939 5.99432 9.73945 6.0002C10.0795 6.00607 10.404 6.14354 10.6448 6.38372C10.885 6.62452 11.0225 6.94906 11.0284 7.28912C11.0342 7.62917 10.9081 7.95826 10.6763 8.20722L4.16635 14.7172L10.6763 21.2272C10.9221 21.4733 11.0602 21.8069 11.0602 22.1547C11.0602 22.5025 10.9221 22.8361 10.6763 23.0822Z" />
+                            </svg>
+                        </a>
+                        <a id="retype-branding-logo" href="../../" class="flex items-center leading-snug text-2xl">
+                            <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                                <svg alt="Obsidian" height="30" viewBox="-10 0 30 25" width="40" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"></path><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"></path><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"></path><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"></path></svg>
+                            </span>
+                            <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Obsidian</span>
+                        </a><span id="retype-branding-label" class="hidden mt-1 px-2 py-1 ml-4 text-xs font-semibold leading-none text-root-logo-label-text bg-root-logo-label-bg rounded-md md:inline-block">Help</span>
+                    </div>
+        
+                    <span class="hidden h-8 border-r md:inline-block dark:border-dark-650"></span>
+                </div>
+        
+                <div class="flex justify-between md:grow">
+                    <!-- Top Nav -->
+                    <nav id="retype-header-nav" class="hidden md:flex">
+                        <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/download">Download</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/pricing">Pricing</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/sync">Sync</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/publish">Publish</a>
+                            </li>
+                            <li class="mr-6">
+                                <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/enterprise">Enterprise</a>
+                            </li>
+        
+                        </ul>
+                    </nav>
+        
+                    <!-- Header Right Skeleton -->
+                    <div v-cloak class="flex justify-end grow skeleton">
+        
+                        <!-- Search input mock -->
+                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
+                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                            </div>
+                            <input class="w-full h-10 placeholder-gray-400 transition-colors duration-200 ease-in bg-gray-200 border border-transparent rounded md:text-sm hover:bg-white hover:border-gray-300 focus:outline-none focus:bg-white focus:border-gray-500 dark:bg-dark-600 dark:border-dark-600 dark:placeholder-dark-400" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
+                        </div>
+        
+                        <!-- Mobile search button -->
+                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
+                        </div>
+        
+                        <!-- Dark mode switch placeholder -->
+                        <div class="w-10 h-10 lg:ml-2"></div>
+        
+                        <!-- History button -->
+                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
+                        </div>
+                    </div>
+        
+                    <div v-cloak class="flex justify-end grow">
+                        <div id="retype-mobile-search-button"></div>
+                        <doc-search-desktop></doc-search-desktop>
+        
+                        <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                        <doc-history></doc-history>
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <div id="retype-container" class="container relative flex bg-white">
+            <!-- Sidebar Skeleton -->
+            <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-white border-gray-200 sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton dark:bg-dark-800 dark:border-dark-650">
+            
+                <div class="flex items-center h-16 px-6">
+                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-white border border-gray-200 rounded shadow-none text-sm focus:outline-none focus:border-gray-600 dark:bg-dark-600 dark:border-dark-600" type="text" placeholder="Filter">
+                </div>
+            
+                <div class="pl-6 mt-1 mb-4">
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-32 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-48 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                    <div class="w-40 h-3 mb-4 bg-gray-200 rounded-full loading dark:bg-dark-600"></div>
+                </div>
+            
+                <div class="shrink-0 mt-auto bg-transparent dark:border-dark-650">
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Sidebar component -->
+            <doc-sidebar v-cloak>
+                <template #sidebar-footer>
+                    <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-dark-650">
+            
+                        <div class="py-3 px-6 md:hidden border-b dark:border-dark-650">
+                            <nav>
+                                <ul class="flex flex-wrap justify-center items-center">
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/download">Download</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/pricing">Pricing</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/sync">Sync</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/publish">Publish</a>
+                                    </li>
+                                    <li class="mr-6">
+                                        <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-blue-500 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200" href="https://obsidian.md/enterprise">Enterprise</a>
+                                    </li>
+            
+                                </ul>
+                            </nav>
+                        </div>
+            
+                        <a class="flex items-center justify-center flex-nowrap h-16 text-gray-400 dark:text-dark-400 hover:text-gray-700 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                            <span class="text-xs whitespace-nowrap">Powered by</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                        </a>
+                    </div>
+                </template>
+            </doc-sidebar>
+    
+            <div class="grow min-w-0 dark:bg-dark-850">
+                <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+                <div class="flex">
+                    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+                        <main class="relative pb-12 lg:pt-2">
+                            <div class="retype-markdown" id="retype-content">
+                                <!-- Rendered if sidebar right is enabled -->
+                                <div id="retype-sidebar-right-toggle"></div>
+                                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                                    <ol role="list">
+                                        <li class="pr-4">
+                                            <a href="../../" class="pr-4">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                                </svg>
+                                            </a>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <span class="pr-4">
+                                                Obsidian Web Clipper
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="pr-4">
+                                            <a href="../../web-clipper/filters/" class="pr-4">
+                                                Filters
+                                            </a>
+                                        </li>
+                                    </ol>
+                                </nav>
+                
+                                <!-- Page content  -->
+<doc-anchor-target id="filters" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#filters">#</doc-anchor-trigger>
+        <span>Filters</span>
+    </h1>
+</doc-anchor-target>
+<p>Filters allow you to modify <a href="../variables/">variables</a> in <a href="../templates/">Web Clipper templates</a>. Filters are applied to variables using the syntax <code v-pre>{{variable|filter}}</code>.</p>
+<ul>
+<li>Filters work for any kind of <a href="../variables/">variable</a> including <code v-pre>prompt</code>, <code v-pre>meta</code>, <code v-pre>selector</code>, and <code v-pre>schema</code> variables.</li>
+<li>Filters can be chained, e.g. <code v-pre>{{variable|filter1|filter2}}</code>, and are applied in the order they are added.</li>
+</ul>
+<doc-anchor-target id="dates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dates">#</doc-anchor-trigger>
+        <span>Dates</span>
+    </h2>
+</doc-anchor-target>
+<p>Convert and modify dates.</p>
+<doc-anchor-target id="date">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date">#</doc-anchor-trigger>
+        <span><code v-pre>date</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts a date to the specified format, <a href="https://day.js.org/docs/en/display/format" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<ul>
+<li><code v-pre>{{date|date:&quot;YYYY-MM-DD&quot;}}</code> converts the current date to &quot;YYYY-MM-DD&quot;.</li>
+<li>Use <code v-pre>date:(&quot;outputFormat&quot;, &quot;inputFormat&quot;)</code> to specify the input format, e.g. <code v-pre>&quot;12/01/2024&quot;|date:(&quot;YYYY-MM-DD&quot;, &quot;MM/DD/YYYY&quot;)</code> parses &quot;12/01/2024&quot; and returns <code v-pre>&quot;2024-12-01&quot;</code>.</li>
+</ul>
+<doc-anchor-target id="date_modify">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date_modify">#</doc-anchor-trigger>
+        <span><code v-pre>date_modify</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Modifies a date by adding or subtracting a specified amount of time, <a href="https://day.js.org/docs/en/manipulate/add" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<ul>
+<li><code v-pre>&quot;2024-12-01&quot;|date_modify:&quot;+1 year&quot;</code> returns <code v-pre>&quot;2025-12-01&quot;</code></li>
+<li><code v-pre>&quot;2024-12-01&quot;|date_modify:&quot;- 2 months&quot;</code> returns <code v-pre>&quot;2024-10-01&quot;</code></li>
+</ul>
+<doc-anchor-target id="duration">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#duration">#</doc-anchor-trigger>
+        <span><code v-pre>duration</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts ISO 8601 duration strings or seconds into formatted time strings. Uses tokens: <code v-pre>HH</code> (padded hours), <code v-pre>H</code> (hours), <code v-pre>mm</code> (padded minutes), <code v-pre>m</code> (minutes), <code v-pre>ss</code> (padded seconds), <code v-pre>s</code> (seconds).</p>
+<ul>
+<li><code v-pre>&quot;PT1H30M&quot;|duration:&quot;HH:mm:ss&quot;</code> returns <code v-pre>&quot;01:30:00&quot;</code>.</li>
+<li><code v-pre>&quot;3665&quot;|duration:&quot;H:mm:ss&quot;</code> returns <code v-pre>&quot;1:01:05&quot;</code>.</li>
+<li>Setting <code v-pre>duration</code> without any parameters uses <code v-pre>HH:mm:ss</code> over 1 hour, <code v-pre>mm:ss</code> under 1 hour.</li>
+<li>Supports both ISO 8601 duration strings (e.g., <code v-pre>PT6702S</code>, <code v-pre>PT1H30M</code>) and plain seconds.</li>
+</ul>
+<doc-anchor-target id="text-conversion-and-capitalization">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#text-conversion-and-capitalization">#</doc-anchor-trigger>
+        <span>Text conversion and capitalization</span>
+    </h2>
+</doc-anchor-target>
+<p>Convert text strings from one format to another.</p>
+<doc-anchor-target id="camel">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#camel">#</doc-anchor-trigger>
+        <span><code v-pre>camel</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>camelCase</code>.</p>
+<doc-anchor-target id="capitalize">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#capitalize">#</doc-anchor-trigger>
+        <span><code v-pre>capitalize</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Capitalizes the first character of the value and converts the rest to lowercase, e.g. <code v-pre>&quot;hELLO wORLD&quot;|capitalize</code> returns <code v-pre>&quot;Hello world&quot;</code>.</p>
+<doc-anchor-target id="kebab">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#kebab">#</doc-anchor-trigger>
+        <span><code v-pre>kebab</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>kebab-case</code>.</p>
+<doc-anchor-target id="lower">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#lower">#</doc-anchor-trigger>
+        <span><code v-pre>lower</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>lowercase</code>.</p>
+<doc-anchor-target id="pascal">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pascal">#</doc-anchor-trigger>
+        <span><code v-pre>pascal</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>PascalCase</code>.</p>
+<doc-anchor-target id="replace">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#replace">#</doc-anchor-trigger>
+        <span><code v-pre>replace</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Replaces occurrences of specified text:</p>
+<ul>
+<li>Simple replacement: <code v-pre>&quot;hello!&quot;|replace:&quot;,&quot;:&quot;&quot;</code> removes all commas.</li>
+<li>Multiple replacements: <code v-pre>&quot;hello world&quot;|replace:(&quot;e&quot;:&quot;a&quot;,&quot;o&quot;:&quot;0&quot;)</code> returns <code v-pre>&quot;hall0 w0rld&quot;</code>.</li>
+<li>Replacements are applied in the order they are specified.</li>
+<li>To remove specified text, use <code v-pre>&quot;&quot;</code> as the replacement value.</li>
+<li>Special characters including <code v-pre>: | { } ( ) ' &quot;</code> should be escaped with a backslash when used in the search term, e.g. <code v-pre>\:</code> to search for a literal colon.</li>
+</ul>
+<p>Regex is supported using JavaScript regex syntax:</p>
+<ul>
+<li>Replace all vowels: <code v-pre>&quot;hello world&quot;|replace:&quot;/[aeiou]/g&quot;:&quot;*&quot;</code> → <code v-pre>&quot;h*ll* w*rld&quot;.</code></li>
+<li>Case-insensitive: <code v-pre>&quot;HELLO world&quot;|replace:&quot;/hello/i&quot;:&quot;hi&quot;</code> → <code v-pre>&quot;hi world&quot;.</code></li>
+<li>Multiple regex: <code v-pre>&quot;hello world&quot;|replace:(&quot;/[aeiou]/g&quot;:&quot;*&quot;,&quot;/\s+/&quot;:&quot;-&quot;)</code> → <code v-pre>&quot;h*ll*-w*rld&quot;</code>.</li>
+<li>Available flags: <code v-pre>g</code> (global), <code v-pre>i</code> (case-insensitive), <code v-pre>m</code> (multiline), <code v-pre>s</code> (dotAll), <code v-pre>u</code> (unicode), <code v-pre>y</code> (sticky).</li>
+</ul>
+<doc-anchor-target id="safe_name">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#safe_name">#</doc-anchor-trigger>
+        <span><code v-pre>safe_name</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to a safe file name.</p>
+<ul>
+<li>By default, <code v-pre>safe_name</code> applies the most conservative sanitization rules.</li>
+<li>OS-specific rules can be applied with <code v-pre>safe_name:os</code> where <code v-pre>os</code> can be <code v-pre>windows</code>, <code v-pre>mac</code>, or <code v-pre>linux</code> to only apply the rules for that operating system.</li>
+</ul>
+<doc-anchor-target id="snake">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snake">#</doc-anchor-trigger>
+        <span><code v-pre>snake</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>snake_case</code>.</p>
+<doc-anchor-target id="title">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#title">#</doc-anchor-trigger>
+        <span><code v-pre>title</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts text to <code v-pre>Title Case</code>, e.g. <code v-pre>&quot;hello world&quot;|title</code> returns <code v-pre>&quot;Hello World&quot;</code>.</p>
+<doc-anchor-target id="trim">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#trim">#</doc-anchor-trigger>
+        <span><code v-pre>trim</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes white space from both ends of a string.</p>
+<ul>
+<li><code v-pre>&quot;  hello world  &quot;|trim</code> returns <code v-pre>&quot;hello world&quot;</code>.</li>
+</ul>
+<doc-anchor-target id="uncamel">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#uncamel">#</doc-anchor-trigger>
+        <span><code v-pre>uncamel</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts camelCase or PascalCase to space-separated words, which you can further format with other filters like <code v-pre>title</code> or <code v-pre>capitalize</code>.</p>
+<ul>
+<li><code v-pre>&quot;camelCase&quot;|uncamel</code> returns <code v-pre>&quot;camel case&quot;</code>.</li>
+<li><code v-pre>&quot;PascalCase&quot;|uncamel</code> returns <code v-pre>&quot;pascal case&quot;</code>.</li>
+</ul>
+<doc-anchor-target id="upper">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#upper">#</doc-anchor-trigger>
+        <span><code v-pre>upper</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts a value to uppercase, e.g. <code v-pre>&quot;hello world&quot;|upper</code> returns <code v-pre>&quot;HELLO WORLD&quot;</code>.</p>
+<doc-anchor-target id="text-formatting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#text-formatting">#</doc-anchor-trigger>
+        <span>Text formatting</span>
+    </h2>
+</doc-anchor-target>
+<p>Apply <a href="../../syntax/">Basic formatting syntax</a> and <a href="../../advanced-syntax/">Advanced formatting syntax</a> to text.</p>
+<doc-anchor-target id="blockquote">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#blockquote">#</doc-anchor-trigger>
+        <span><code v-pre>blockquote</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Adds a Markdown quote prefix (<code v-pre>&gt; </code>) to each line of the input.</p>
+<doc-anchor-target id="callout">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#callout">#</doc-anchor-trigger>
+        <span><code v-pre>callout</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Creates a <a href="../../callouts/">callout</a> with optional parameters: <code v-pre>{{variable|callout:(&quot;type&quot;, &quot;title&quot;, foldState)}}</code></p>
+<ul>
+<li><code v-pre>type</code> is the callout type, and defaults to &quot;info&quot;</li>
+<li><code v-pre>title</code> is the callout title, and defaults to empty</li>
+<li><code v-pre>foldState</code> is a boolean to set the fold state (true for folded, false for unfolded, null for not foldable)</li>
+</ul>
+<doc-anchor-target id="footnote">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#footnote">#</doc-anchor-trigger>
+        <span><code v-pre>footnote</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts an array or object into a list of Markdown footnotes.</p>
+<ul>
+<li>For arrays: <code v-pre>[&quot;first item&quot;,&quot;second item&quot;]|footnote</code> returns: <code v-pre>[^1]: first item</code> etc.</li>
+<li>For objects: <code v-pre>{&quot;First Note&quot;: &quot;Content 1&quot;, &quot;Second Note&quot;: &quot;Content 2&quot;}|footnote</code> returns: <code v-pre>[^first-note]: Content 1</code> etc.</li>
+</ul>
+<doc-anchor-target id="fragment_link">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fragment_link">#</doc-anchor-trigger>
+        <span><code v-pre>fragment_link</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts strings and arrays into <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments" class="outbound" target="_blank"><span>text fragment</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> links. Defaults to &quot;link&quot; for the link text.</p>
+<ul>
+<li><code v-pre>highlights|fragment_link</code> returns <code v-pre>Highlight content [link](text-fragment-url)</code></li>
+<li><code v-pre>highlights|fragment_link:&quot;custom title&quot;</code> returns <code v-pre>Highlight content [custom title](text-fragment-url)</code></li>
+</ul>
+<doc-anchor-target id="image">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#image">#</doc-anchor-trigger>
+        <span><code v-pre>image</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts strings, arrays, or objects into Markdown image syntax.</p>
+<ul>
+<li>For strings: <code v-pre>&quot;image.jpg&quot;|image:&quot;alt text&quot;</code> returns <code v-pre>![alt text](image.jpg)</code>.</li>
+<li>For arrays: <code v-pre>[&quot;image1.jpg&quot;,&quot;image2.jpg&quot;]|image:&quot;alt text&quot;</code> returns an array of Markdown image strings with the same alt text for all images.</li>
+<li>For objects: <code v-pre>{&quot;image1.jpg&quot;: &quot;Alt 1&quot;, &quot;image2.jpg&quot;: &quot;Alt 2&quot;}|image</code> returns Markdown image strings with alt text from the object keys.</li>
+</ul>
+<doc-anchor-target id="link">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#link">#</doc-anchor-trigger>
+        <span><code v-pre>link</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts strings, arrays, or objects into Markdown link syntax (not to be confused with <doc-anchor-trigger to="#wikilink">wikilink</doc-anchor-trigger>).</p>
+<ul>
+<li>For strings: <code v-pre>&quot;url&quot;|link:&quot;author&quot;</code> returns <code v-pre>[author](url)</code>.</li>
+<li>For arrays: <code v-pre>[&quot;url1&quot;,&quot;url2&quot;]|link:&quot;author&quot;</code> returns an array of Markdown links with the same text for all links.</li>
+<li>For objects: <code v-pre>{&quot;url1&quot;: &quot;Author 1&quot;, &quot;url2&quot;: &quot;Author 2&quot;}|link</code> returns Markdown links with the text that matches the object keys.</li>
+</ul>
+<doc-anchor-target id="list">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#list">#</doc-anchor-trigger>
+        <span><code v-pre>list</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts an array to a Markdown list.</p>
+<ul>
+<li><code v-pre>list</code> to convert to a bullet list.</li>
+<li><code v-pre>list:task</code> to convert to a task list.</li>
+<li><code v-pre>list:numbered</code> to convert to a numbered list.</li>
+<li><code v-pre>list:numbered-task</code> to convert to a task list with numbers.</li>
+</ul>
+<doc-anchor-target id="table">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#table">#</doc-anchor-trigger>
+        <span><code v-pre>table</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts an array or array of objects into a <a href="../../advanced-syntax/#tables">Markdown table</a>:</p>
+<ul>
+<li>For an array of objects, it uses the object keys as headers.</li>
+<li>For an array of arrays, it creates a table with each nested array as a row.</li>
+<li>For a simple array, it creates a single-column table with &quot;Value&quot; as the header.</li>
+<li>Custom column headers can be specified using: <code v-pre>table:(&quot;Column 1&quot;, &quot;Column 2&quot;, &quot;Column 3&quot;)</code>. When used with a simple array, it automatically breaks the data into rows based on the number of columns specified.</li>
+</ul>
+<doc-anchor-target id="wikilink">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wikilink">#</doc-anchor-trigger>
+        <span><code v-pre>wikilink</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts strings, arrays, or objects into Obsidian <a href="../../link-notes/">wikilink</a> syntax.</p>
+<ul>
+<li>For strings: <code v-pre>&quot;page&quot;|wikilink</code> returns <code v-pre>[[page]]</code>.</li>
+<li>For strings with alias: <code v-pre>&quot;page&quot;|wikilink:&quot;alias&quot;</code> returns <code v-pre>[[page|alias]]</code>.</li>
+<li>For arrays: <code v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink</code> returns an array of wikilinks without aliases.</li>
+<li>For arrays with alias: <code v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink:&quot;alias&quot;</code> returns an array of wikilinks with the same alias for all links.</li>
+<li>For objects: <code v-pre>{&quot;page1&quot;: &quot;alias1&quot;, &quot;page2&quot;: &quot;alias2&quot;}|wikilink</code> returns wikilinks with the keys as page names and values as aliases.</li>
+</ul>
+<doc-anchor-target id="numbers">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#numbers">#</doc-anchor-trigger>
+        <span>Numbers</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="calc">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#calc">#</doc-anchor-trigger>
+        <span><code v-pre>calc</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Performs basic arithmetic operations on numbers.</p>
+<ul>
+<li>Supports operators: <code v-pre>+</code>, <code v-pre>-</code>, <code v-pre>*</code>, <code v-pre>/</code>, <code v-pre>**</code> (or <code v-pre>^</code>) for exponentiation.</li>
+<li>Example: <code v-pre>5|calc:&quot;+10&quot;</code> returns <code v-pre>15</code>.</li>
+<li>Example: <code v-pre>2|calc:&quot;**3&quot;</code> returns <code v-pre>8</code> (2 cubed).</li>
+<li>Returns the original string if the input is not a number.</li>
+</ul>
+<doc-anchor-target id="length">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#length">#</doc-anchor-trigger>
+        <span><code v-pre>length</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Returns the length of strings, arrays, or number of keys in objects.</p>
+<ul>
+<li>For strings: <code v-pre>&quot;hello&quot;|length</code> returns <code v-pre>5</code>.</li>
+<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|length</code> returns <code v-pre>3</code>.</li>
+<li>For objects: <code v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|length</code> returns <code v-pre>2</code>.</li>
+</ul>
+<doc-anchor-target id="round">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#round">#</doc-anchor-trigger>
+        <span><code v-pre>round</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Rounds a number to the nearest integer or to a specified number of decimal places.</p>
+<ul>
+<li>Without parameters: <code v-pre>3.7|round</code> returns <code v-pre>4</code>.</li>
+<li>With decimal places specified: <code v-pre>3.14159|round:2</code> returns <code v-pre>3.14</code>.</li>
+</ul>
+<doc-anchor-target id="html-processing">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#html-processing">#</doc-anchor-trigger>
+        <span>HTML processing</span>
+    </h2>
+</doc-anchor-target>
+<p>Process HTML content and convert HTML to Markdown. Note that your input <a href="../variables/">variable</a> must contain HTML content, e.g. using <code v-pre>{{fullHtml}}</code>, <code v-pre>{{contentHtml}}</code> or a <code v-pre>{{selectorHtml:}}</code> variable.</p>
+<doc-anchor-target id="markdown">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#markdown">#</doc-anchor-trigger>
+        <span><code v-pre>markdown</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Converts a string to an <a href="../../obsidian-flavored-markdown/">Obsidian Flavored Markdown</a> formatted string.</p>
+<ul>
+<li>Useful when combined with variables that return HTML such as <code v-pre>{{contentHtml}}</code>, <code v-pre>{{fullHtml}}</code>, and selector variables like <code v-pre>{{selectorHtml:cssSelector}}</code>.</li>
+</ul>
+<doc-anchor-target id="remove_attr">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove_attr">#</doc-anchor-trigger>
+        <span><code v-pre>remove_attr</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes only the specified HTML attributes from tags.</p>
+<ul>
+<li>Example: <code v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|remove_attr:&quot;class&quot;</code> returns <code v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
+<li>Multiple attributes: <code v-pre>{{fullHtml|remove_attr:(&quot;class,style,id&quot;)}}</code></li>
+</ul>
+<doc-anchor-target id="remove_html">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove_html">#</doc-anchor-trigger>
+        <span><code v-pre>remove_html</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes the specified HTML elements and their content from a string.</p>
+<ul>
+<li>Supports tag name, class, or id, e.g. <code v-pre>{{fullHtml|remove_html:(&quot;img,.class-name,#element-id&quot;)}}</code></li>
+<li>To remove only HTML tags or attributes without removing the content use the <code v-pre>strip_tags</code> or <code v-pre>strip_attr</code> filters.</li>
+</ul>
+<doc-anchor-target id="remove_tags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove_tags">#</doc-anchor-trigger>
+        <span><code v-pre>remove_tags</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes only the specified HTML tags. Keeps the content of the tags.</p>
+<ul>
+<li>Example: <code v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|remove_tags:&quot;b&quot;</code> returns <code v-pre>&quot;&lt;p&gt;Hello world!&lt;/p&gt;&quot;</code>.</li>
+<li>Multiple tags: <code v-pre>{{fullHtml|remove_tags:(&quot;a,em,strong&quot;)}}</code></li>
+</ul>
+<doc-anchor-target id="replace_tags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#replace_tags">#</doc-anchor-trigger>
+        <span><code v-pre>replace_tags</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Replaces HTML tags, maintaining the content and attributes of the tag.</p>
+<ul>
+<li><code v-pre>{{fullHtml|replace_tags:&quot;strong&quot;:&quot;h2&quot;}}</code> replaces all <code v-pre>&lt;strong&gt;</code> tags with <code v-pre>&lt;h2&gt;</code>.</li>
+</ul>
+<doc-anchor-target id="strip_attr">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#strip_attr">#</doc-anchor-trigger>
+        <span><code v-pre>strip_attr</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes <strong>all</strong> HTML attributes from a string.</p>
+<ul>
+<li>Use <code v-pre>strip_attr:(&quot;class, id&quot;)</code> to keep specific attributes.</li>
+<li>Example: <code v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|strip_attr:(&quot;class&quot;)</code> returns <code v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
+</ul>
+<doc-anchor-target id="strip_md">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#strip_md">#</doc-anchor-trigger>
+        <span><code v-pre>strip_md</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes <strong>all</strong> Markdown formatting and returns a plain text string, e.g. turning <code v-pre>**text**</code> into <code v-pre>text</code>.</p>
+<ul>
+<li>Turns formatted text into unformatted plain text, including bold, italic, highlights, headers, code, blockquotes, tables, task lists, and wikilinks.</li>
+<li>Entirely removes tables, footnotes, images, and HTML elements.</li>
+</ul>
+<doc-anchor-target id="strip_tags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#strip_tags">#</doc-anchor-trigger>
+        <span><code v-pre>strip_tags</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes <strong>all</strong> HTML tags from a string. Content within the tag is preserved.</p>
+<ul>
+<li>Use <code v-pre>strip_tags:(&quot;p,strong,em&quot;)</code> to keep specific tags.</li>
+<li>Example: <code v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|strip_tags:(&quot;b&quot;)</code> returns <code v-pre>Hello &lt;b&gt;world&lt;/b&gt;!</code>.</li>
+</ul>
+<doc-anchor-target id="arrays-and-objects">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#arrays-and-objects">#</doc-anchor-trigger>
+        <span>Arrays and objects</span>
+    </h2>
+</doc-anchor-target>
+<p>Process arrays and objects.</p>
+<doc-anchor-target id="first">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#first">#</doc-anchor-trigger>
+        <span><code v-pre>first</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Returns the first element of an array as a string.</p>
+<ul>
+<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|first</code> returns <code v-pre>&quot;a&quot;</code>.</li>
+<li>If the input is not an array, it returns the input unchanged.</li>
+</ul>
+<doc-anchor-target id="join">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#join">#</doc-anchor-trigger>
+        <span><code v-pre>join</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Combines elements of an array into a string.</p>
+<ul>
+<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join</code> returns <code v-pre>&quot;a,b,c&quot;</code>.</li>
+<li>A custom separator can be specified: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join:&quot; &quot;</code> returns <code v-pre>&quot;a b c&quot;</code>. Use <code v-pre>join:&quot;\n&quot;</code> to separate elements with a line break.</li>
+<li>It can be useful after <code v-pre>split</code> or <code v-pre>slice</code>: <code v-pre>&quot;a,b,c,d&quot;|split:&quot;,&quot;|slice:1,3|join:&quot; &quot;</code> returns <code v-pre>&quot;b c&quot;</code>.</li>
+</ul>
+<doc-anchor-target id="last">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#last">#</doc-anchor-trigger>
+        <span><code v-pre>last</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Returns the last element of an array as a string.</p>
+<ul>
+<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|last</code> returns <code v-pre>&quot;c&quot;</code>.</li>
+<li>If the input is not an array, it returns the input unchanged.</li>
+</ul>
+<doc-anchor-target id="map">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#map">#</doc-anchor-trigger>
+        <span><code v-pre>map</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Applies a transformation to each element of an array using the syntax <code v-pre>map:item =&gt; item.property</code> or <code v-pre>map:item =&gt; item.nested.property</code> for nested properties.</p>
+<ul>
+<li><code v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; item.gem</code> returns <code v-pre>[&quot;obsidian&quot;, &quot;amethyst&quot;]</code>.</li>
+<li>Use parentheses for object literals and complex expressions: <code v-pre>map:item =&gt; ({key: value})</code>, e.g.: <code v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; ({name: item.gem, color: item.color})</code>  returns <code v-pre>[{name: &quot;obsidian&quot;, color: &quot;black&quot;}, {name: &quot;amethyst&quot;, color: &quot;purple&quot;}]</code>.</li>
+</ul>
+<p>String literals are supported and automatically wrapped in an object with a <code v-pre>str</code> property. The <code v-pre>str</code> property is used to store the result of string literal transformations, e.g. <code v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;</code> returns <code v-pre>[{str: &quot;genres/rock&quot;}, {str: &quot;genres/pop&quot;}]</code>.</p>
+<p>Combine <code v-pre>map</code> with the <code v-pre>template</code> filter, e.g. <code v-pre>map:item =&gt; ({name: ${item.gem}, color: item.color})|template:&quot;- ${name} is ${color}\n&quot;</code>.</p>
+<doc-anchor-target id="merge">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#merge">#</doc-anchor-trigger>
+        <span><code v-pre>merge</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Adds new values to an array.</p>
+<ul>
+<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:(&quot;c&quot;,&quot;d&quot;)</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]</code>.</li>
+<li>Single value: <code v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:&quot;c&quot;</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>If input is not an array, it creates a new array: <code v-pre>&quot;a&quot;|merge:(&quot;b&quot;,&quot;c&quot;)</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>Values can be quoted: <code v-pre>[&quot;a&quot;]|merge:('b,&quot;c,d&quot;,e')</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c,d&quot;,&quot;e&quot;]</code>.</li>
+</ul>
+<doc-anchor-target id="nth">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#nth">#</doc-anchor-trigger>
+        <span><code v-pre>nth</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Keeps nth items in an array using CSS-style nth-child syntax and group patterns. All positions are 1-based (first item is position 1).</p>
+<ul>
+<li><code v-pre>array|nth:3</code> keeps only the 3rd element.</li>
+<li><code v-pre>array|nth:3n</code> keeps every 3rd element (3, 6, 9, etc.).</li>
+<li><code v-pre>array|nth:n+3</code> keeps the 3rd and all following elements.</li>
+</ul>
+<p>Group pattern syntax for repeating structures:</p>
+<ul>
+<li><code v-pre>array|nth:1,2,3:5</code> keeps positions 1, 2, 3 from each group of 5 items. Example: <code v-pre>[1,2,3,4,5,6,7,8,9,10]|nth:1,2,3:5</code> returns <code v-pre>[1,2,3,6,7,8]</code>.</li>
+</ul>
+<doc-anchor-target id="object">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#object">#</doc-anchor-trigger>
+        <span><code v-pre>object</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Manipulates object data:</p>
+<ul>
+<li><code v-pre>object:array</code> converts an object to an array of key-value pairs.</li>
+<li><code v-pre>object:keys</code> returns an array of the object&#x27;s keys.</li>
+<li><code v-pre>object:values</code> returns an array of the object&#x27;s values.</li>
+<li>Example: <code v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|object:array</code> returns <code v-pre>[[&quot;a&quot;,1],[&quot;b&quot;,2]]</code>.</li>
+</ul>
+<doc-anchor-target id="slice">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#slice">#</doc-anchor-trigger>
+        <span><code v-pre>slice</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Extracts a portion of a string or array.</p>
+<ul>
+<li>For strings: <code v-pre>&quot;hello&quot;|slice:1,4</code> returns <code v-pre>&quot;ell&quot;</code>.</li>
+<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]|slice:1,3</code> returns <code v-pre>[&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>If only one parameter is provided, it slices from that index to the end: <code v-pre>&quot;hello&quot;|slice:2</code> returns <code v-pre>&quot;llo&quot;</code>.</li>
+<li>Negative indices count from the end: <code v-pre>&quot;hello&quot;|slice:-3</code> returns <code v-pre>&quot;llo&quot;</code>.</li>
+<li>The second parameter is exclusive: <code v-pre>&quot;hello&quot;|slice:1,4</code> includes characters at indices 1, 2, and 3.</li>
+<li>Using a negative second parameter excludes elements from the end: <code v-pre>&quot;hello&quot;|slice:0,-2</code> returns <code v-pre>&quot;hel&quot;</code>.</li>
+</ul>
+<doc-anchor-target id="split">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#split">#</doc-anchor-trigger>
+        <span><code v-pre>split</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Divides a string into an array of substrings.</p>
+<ul>
+<li><code v-pre>&quot;a,b,c&quot;|split:&quot;,&quot;</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li><code v-pre>&quot;hello world&quot;|split:&quot; &quot;</code> returns <code v-pre>[&quot;hello&quot;,&quot;world&quot;]</code>.</li>
+<li>If no separator is provided, it splits on every character: <code v-pre>&quot;hello&quot;|split</code> returns <code v-pre>[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</code>.</li>
+<li>Regular expressions can be used as separators: <code v-pre>&quot;a1b2c3&quot;|split:[0-9]</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+</ul>
+<doc-anchor-target id="template">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#template">#</doc-anchor-trigger>
+        <span><code v-pre>template</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Applies a template string to an object or array of objects, using the syntax <code v-pre>object|template:&quot;Template with ${variable}&quot;</code>.</p>
+<ul>
+<li>Access nested properties: <code v-pre>{&quot;gem&quot;:{&quot;name&quot;:&quot;Obsidian&quot;}}|template:&quot;${gem.name}&quot;</code> returns <code v-pre>&quot;Obsidian&quot;</code>.</li>
+<li>For objects: <code v-pre>{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5}|template:&quot;${gem} has a hardness of ${hardness}&quot;</code> returns <code v-pre>&quot;obsidian has a hardness of 5&quot;</code>.</li>
+<li>For arrays: <code v-pre>[{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5},{&quot;gem&quot;:&quot;amethyst&quot;,&quot;hardness&quot;:7}]|template:&quot;- ${gem} has a hardness of ${hardness}\n&quot;</code> returns a formatted list.</li>
+</ul>
+<p>Works with string literals from <code v-pre>map</code> by accessing the <code v-pre>str</code> property:</p>
+<ul>
+<li>Example: <code v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;|template:&quot;${str}&quot;</code> returns <code v-pre>&quot;genres/rock\ngenres/pop&quot;</code>.</li>
+<li>The <code v-pre>str</code> property is automatically used when applying <code v-pre>template</code> to objects created by <code v-pre>map</code> with string literals.</li>
+</ul>
+<doc-anchor-target id="unique">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unique">#</doc-anchor-trigger>
+        <span><code v-pre>unique</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Removes duplicate values from arrays and objects.</p>
+<ul>
+<li>For arrays of primitives: <code v-pre>[1,2,2,3,3]|unique</code> returns <code v-pre>[1,2,3]</code>.</li>
+<li>For arrays of objects: <code v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2},{&quot;a&quot;:1}]|unique</code> returns <code v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2}]</code>.</li>
+<li>For objects it removes properties with duplicate values, keeping the last occurrence&#x27;s key.</li>
+<li>For strings it returns the input unchanged.</li>
+</ul>
+
+                                
+                                <!-- Required only on API pages -->
+                                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+                            </div>
+                            <footer id="retype-content-footer" class="clear-both">
+                            
+                                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../web-clipper/capture/">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                            <span>
+                                                <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
+                                                <span class="block mt-1">Clip web pages</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                            
+                                    <div class="w-1/2">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../web-clipper/highlight/">
+                                            <span>
+                                                <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
+                                                <span class="block mt-1">Highlight web pages</span>
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                                        </a>
+                                    </div>
+                                </nav>
+                            </footer>
+                        </main>
+                
+                        <div id="retype-page-footer" class="print:border-none border-t dark:border-dark-650 pt-6 mb-8">
+                            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                                <div id="retype-footer-links" class="print:hidden">
+                                    <ul class="flex flex-wrap items-center text-sm">
+                                    </ul>
+                                </div>
+                                <div id="retype-copyright" class="print:justify-center docs-copyright py-2 text-gray-500 dark:text-dark-350 text-sm leading-relaxed"><p>© 2025 Obsidian</p></div>
+                            </footer>
+                        </div>
+                    </div>
+                
+                    <!-- Rendered if sidebar right is enabled -->
+                    <!-- Sidebar right skeleton-->
+                    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-white border-gray-200 lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:transform-none sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton dark:bg-dark-850 dark:border-dark-650">
+                        <div class="pl-5">
+                            <div class="w-32 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-48 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                            <div class="w-40 h-3 mb-4 bg-gray-200 dark:bg-dark-600 rounded-full loading"></div>
+                        </div>
+                    </div>
+                
+                    <!-- User should be able to hide sidebar right -->
+                    <doc-sidebar-right v-cloak></doc-sidebar-right>
+                </div>
+
+            </div>
+        </div>
+    
+        <doc-search-mobile></doc-search-mobile>
+        <doc-back-to-top></doc-back-to-top>
+    </div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Filters", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+</body>
+</html>

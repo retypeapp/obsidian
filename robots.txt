@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://retypeapp.github.io/obsidian/sitemap.xml.gz
