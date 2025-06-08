@@ -16,6 +16,11 @@ start:
 
 url: retypeapp.github.io/obsidian
 
+edit:
+  repo: "https://github.com/obsidianmd/obsidian-help/edit"
+  base: /en
+  branch: master
+
 nav:
   icons:
     mode: none
