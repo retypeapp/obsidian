@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.1-preview.804212844196">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804949034045">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.1-preview">
+    <meta name="generator" content="Retype 3.11.0-preview6">
 
     <!-- Primary Meta Tags -->
     <title>Views</title>
@@ -32,11 +32,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.1-preview.804212844196" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804949034045" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.1-preview.804212844196" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.1-preview" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.1-preview.804212844196" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804949034045" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804949034045" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -247,8 +247,12 @@
         <span>Layout</span>
     </h2>
 </doc-anchor-target>
-<p>Currently, bases can be displayed as a table. In the future more layout types will be added. See <a href="../roadmap/">Bases roadmap</a>.</p>
-<p>With the Table layout each row is a file, and columns are populated from the <a href="../../properties/">Properties</a> in your notes.</p>
+<p>Currently, bases can be displayed as a <strong>table</strong> or <strong>cards</strong>. In the future more layout types will be added. See <a href="../roadmap/">Bases roadmap</a>.</p>
+<p>Current layout options:</p>
+<ul>
+<li><strong>Table layout</strong> displays each file as a row in a table. Columns are populated from the <a href="../../properties/">Properties</a> in your notes.</li>
+<li><strong>Cards layout</strong> displays each file as a card in a grid. The view settings allow you to optionally configure an image property, which can be an image URL or <a href="../../attachments/">attachment</a> link.</li>
+</ul>
 <doc-anchor-target id="filters">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#filters">#</doc-anchor-trigger>
@@ -311,6 +315,13 @@
 <li>Click the right arrow next to the current view.</li>
 <li>Choose an action from the view options menu.</li>
 </ol>
+<doc-anchor-target id="limit-copy-and-export-results">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limit-copy-and-export-results">#</doc-anchor-trigger>
+        <span>Limit, copy, and export results</span>
+    </h2>
+</doc-anchor-target>
+<p>The <em>results</em> menu shows the number of results in view. Click the results button to limit the number of results, and access additional actions.</p>
 <doc-anchor-target id="copy-to-clipboard">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#copy-to-clipboard">#</doc-anchor-trigger>

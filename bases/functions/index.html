@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.1-preview.804212844196">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804949034045">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.1-preview">
+    <meta name="generator" content="Retype 3.11.0-preview6">
 
     <!-- Primary Meta Tags -->
     <title>Functions</title>
@@ -32,11 +32,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.1-preview.804212844196" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804949034045" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.1-preview.804212844196" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.1-preview" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.1-preview.804212844196" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804949034045" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804949034045" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -284,6 +284,17 @@
 <li>Returns the <code v-pre>trueResult</code> if <code v-pre>condition</code> is true, or is a truthy value, or <code v-pre>falseResult</code> otherwise.</li>
 <li>Example: <code v-pre>if(isModified, &quot;Modified&quot;, &quot;Unmodified&quot;)</code></li>
 </ul>
+<doc-anchor-target id="image">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#image">#</doc-anchor-trigger>
+        <span><code v-pre>image()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>image(path: string | file | url): image</code></p>
+<ul>
+<li>Returns an image object which will render the image in the view.</li>
+<li>Example: <code v-pre>image(image-property)</code> or <code v-pre>image(&quot;https://obsidian.md/images/obsidian-logo-gradient.svg&quot;)</code></li>
+</ul>
 <doc-anchor-target id="max">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#max">#</doc-anchor-trigger>
@@ -374,6 +385,16 @@
 <ul>
 <li><code v-pre>today()</code> returns a date object representing the current date. The time portion is set to zero.</li>
 </ul>
+<doc-anchor-target id="date-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date-1">#</doc-anchor-trigger>
+        <span><code v-pre>date()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>date(input: string | date): date</code></p>
+<ul>
+<li>Returns a date object representing the parsed input timestamp or date object.</li>
+</ul>
 <doc-anchor-target id="any">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#any">#</doc-anchor-trigger>
@@ -392,9 +413,20 @@
 <li>Returns the string representation of any value.</li>
 <li>Example: <code v-pre>123.toString()</code> returns <code v-pre>&quot;123&quot;</code>.</li>
 </ul>
-<doc-anchor-target id="date-1">
+<doc-anchor-target id="istruthy">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#istruthy">#</doc-anchor-trigger>
+        <span><code v-pre>isTruthy()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>any.isTruthy(): boolean</code></p>
+<ul>
+<li>Return the value coerced into a boolean.</li>
+<li>Example: <code v-pre>1.isTruthy()</code> returns <code v-pre>true</code>.</li>
+</ul>
+<doc-anchor-target id="date-2">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#date-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date-2">#</doc-anchor-trigger>
         <span>Date</span>
     </h2>
 </doc-anchor-target>
@@ -454,9 +486,9 @@
 </tbody>
 </table>
 </div>
-<doc-anchor-target id="date-2">
+<doc-anchor-target id="date-3">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#date-2">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date-3">#</doc-anchor-trigger>
         <span><code v-pre>date()</code></span>
     </h3>
 </doc-anchor-target>
@@ -485,7 +517,7 @@
 </doc-anchor-target>
 <p><code v-pre>date.time(): string</code></p>
 <ul>
-<li>Returns the time</li>
+<li>Returns the time.</li>
 <li>Example: <code v-pre>now().time()</code> returns a string such as &quot;23:59:59&quot;</li>
 </ul>
 <doc-anchor-target id="relative">
@@ -498,6 +530,16 @@
 <ul>
 <li>Returns a readable comparison of the date to the current datetime.</li>
 <li>Example: <code v-pre>file.mtime.relative()</code> returns a value such as <code v-pre>3 days ago</code>.</li>
+</ul>
+<doc-anchor-target id="isempty">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty">#</doc-anchor-trigger>
+        <span><code v-pre>isEmpty()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>date.isEmpty(): boolean</code></p>
+<ul>
+<li>Returns false.</li>
 </ul>
 <doc-anchor-target id="string">
     <h2>
@@ -589,9 +631,9 @@
 <li>Returns a string that represents the icon name to be rendered using Lucide. The icon name must match a supported Lucide icon.</li>
 <li>Example: <code v-pre>&quot;arrow-right&quot;.icon()</code> returns <code v-pre>&quot;arrow-right&quot;</code>.</li>
 </ul>
-<doc-anchor-target id="isempty">
+<doc-anchor-target id="isempty-1">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-1">#</doc-anchor-trigger>
         <span><code v-pre>isEmpty()</code></span>
     </h3>
 </doc-anchor-target>
@@ -761,9 +803,9 @@
 <li>Returns a string with the number in fixed-point notation.</li>
 <li>Example: <code v-pre>(3.14159).toFixed(2)</code> returns <code v-pre>&quot;3.14&quot;</code>.</li>
 </ul>
-<doc-anchor-target id="isempty-1">
+<doc-anchor-target id="isempty-2">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-1">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-2">#</doc-anchor-trigger>
         <span><code v-pre>isEmpty()</code></span>
     </h3>
 </doc-anchor-target>
@@ -839,9 +881,9 @@
 <li>Returns true if the list contains at least one of the <code v-pre>values</code>.</li>
 <li>Example: <code v-pre>[1,2,3].containsAny(3,4)</code> returns <code v-pre>true</code>.</li>
 </ul>
-<doc-anchor-target id="isempty-2">
+<doc-anchor-target id="isempty-3">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-2">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-3">#</doc-anchor-trigger>
         <span><code v-pre>isEmpty()</code></span>
     </h3>
 </doc-anchor-target>
@@ -966,7 +1008,7 @@
 <p><code v-pre>file.hasLink(otherFile: file | string): boolean</code></p>
 <ul>
 <li><code v-pre>otherFile</code> is another file object or string path to check.</li>
-<li>Returns true if <code v-pre>file</code> links to<code v-pre>otherFile</code>.</li>
+<li>Returns true if <code v-pre>file</code> links to <code v-pre>otherFile</code>.</li>
 <li>Example: <code v-pre>file.hasLink(otherFile)</code> returns <code v-pre>true</code> if there’s a link from <code v-pre>file</code> to <code v-pre>otherFile</code>.</li>
 </ul>
 <doc-anchor-target id="hastag">
@@ -1000,9 +1042,9 @@
     </h2>
 </doc-anchor-target>
 <p>Functions you can use with a collection of key-value pairs such as <code v-pre>{&quot;a&quot;: 1, &quot;b&quot;: 2}</code>.</p>
-<doc-anchor-target id="isempty-3">
+<doc-anchor-target id="isempty-4">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-3">#</doc-anchor-trigger>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#isempty-4">#</doc-anchor-trigger>
         <span><code v-pre>isEmpty()</code></span>
     </h3>
 </doc-anchor-target>
@@ -1010,6 +1052,26 @@
 <ul>
 <li>Returns true if the object has no own properties.</li>
 <li>Example: <code v-pre>{}.isEmpty()</code> returns <code v-pre>true</code>.</li>
+</ul>
+<doc-anchor-target id="keys">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#keys">#</doc-anchor-trigger>
+        <span><code v-pre>keys()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>object.keys(): list</code></p>
+<ul>
+<li>Returns a list containing the keys of the object.</li>
+</ul>
+<doc-anchor-target id="values">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#values">#</doc-anchor-trigger>
+        <span><code v-pre>values()</code></span>
+    </h3>
+</doc-anchor-target>
+<p><code v-pre>object.values(): list</code></p>
+<ul>
+<li>Returns a list containing the values of the object.</li>
 </ul>
 <doc-anchor-target id="regular-expression">
     <h2>
