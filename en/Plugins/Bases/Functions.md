@@ -36,6 +36,13 @@ Global functions are used without a type.
 - Returns the `trueResult` if `condition` is true, or is a truthy value, or `falseResult` otherwise.
 - Example: `if(isModified, "Modified", "Unmodified")`
 
+### `image()`
+
+`image(path: string | file | url): image`
+
+- Returns an image object which will render the image in the view.
+- Example: `image(image-property)` or `image("https://obsidian.md/images/obsidian-logo-gradient.svg")`
+
 ### `max()`
 
 `max(value1: number, value2: number...): number`
@@ -94,6 +101,12 @@ Global functions are used without a type.
 
 - `today()` returns a date object representing the current date. The time portion is set to zero.
 
+### `date()`
+
+`date(input: string | date): date`
+
+- Returns a date object representing the parsed input timestamp or date object.
+
 ## Any
 
 Functions you can use with any value. This includes strings (e.g. `"hello"`), numbers (e.g. `42`), lists (e.g. `[1,2,3]`), objects, and more.
@@ -104,6 +117,13 @@ Functions you can use with any value. This includes strings (e.g. `"hello"`), nu
 
 - Returns the string representation of any value.
 - Example: `123.toString()` returns `"123"`.
+
+### `isTruthy()`
+
+`any.isTruthy(): boolean`
+
+- Return the value coerced into a boolean.
+- Example: `1.isTruthy()` returns `true`.
 
 ## Date
 
@@ -142,7 +162,7 @@ The following fields are available for dates:
 
 `date.time(): string`
 
-- Returns the time
+- Returns the time.
 - Example: `now().time()` returns a string such as "23:59:59"
 
 ### `relative()`
@@ -151,6 +171,12 @@ The following fields are available for dates:
 
 - Returns a readable comparison of the date to the current datetime.
 - Example: `file.mtime.relative()` returns a value such as `3 days ago`.
+
+### `isEmpty()`
+
+`date.isEmpty(): boolean`
+
+- Returns false.
 
 ## String
 
@@ -436,7 +462,7 @@ Functions you can use with file in the vault.
 `file.hasLink(otherFile: file | string): boolean`
 
 - `otherFile` is another file object or string path to check.
-- Returns true if `file` links to`otherFile`.
+- Returns true if `file` links to `otherFile`.
 - Example: `file.hasLink(otherFile)` returns `true` if there’s a link from `file` to `otherFile`.
 
 ### `hasTag()`
@@ -465,6 +491,18 @@ Functions you can use with a collection of key-value pairs such as `{"a": 1, "b"
 
 - Returns true if the object has no own properties.
 - Example: `{}.isEmpty()` returns `true`.
+
+### `keys()`
+
+`object.keys(): list`
+
+- Returns a list containing the keys of the object.
+
+### `values()`
+
+`object.values(): list`
+
+- Returns a list containing the values of the object.
 
 ## Regular expression
 
