@@ -8,11 +8,12 @@
 # This retype.yml is only required to configure and build the documentation
 # website using Retype (https://retype.com/) as the static website generator.
 
+start:
+  # Start in Pro mode
+  pro: true
+
 input: .
 output: .retype
-
-start:
-  pro: true
 
 url: retypeapp.github.io/obsidian
 
@@ -63,4 +64,6 @@ footer:
   copyright: "&copy; {{ year }} Obsidian"
 
 templating:
-  enabled: false # Set to false to disable
+  # By default, templating is enabled, but 
+  # we will leave templating turned off for now:
+  enabled: false
