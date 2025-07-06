@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Variables</title>
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
+    <link href="../../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -90,31 +90,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -132,7 +107,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -232,7 +207,7 @@
     </h1>
 </doc-anchor-target>
 <p><a href="../templates/">Web Clipper templates</a> can use variables to automatically pre-populate data from the page in a template. Variables can be used in the <strong>note name</strong>, <strong>note location</strong>, <strong>properties</strong>, and <strong>note content</strong>. Variables can also be modified using <a href="../filters/">filters</a>.</p>
-<p>Use the <code v-pre>...</code> icon in the <a href="../">Web Clipper</a> extension to access the current page variables for use in templates. There are five types of variables you can use:</p>
+<p>Use the <code translate="no" v-pre>...</code> icon in the <a href="../">Web Clipper</a> extension to access the current page variables for use in templates. There are five types of variables you can use:</p>
 <ul>
 <li><doc-anchor-trigger to="#preset-variables">Preset variables</doc-anchor-trigger></li>
 <li><doc-anchor-trigger to="#prompt-variables">Prompt variables</doc-anchor-trigger></li>
@@ -247,7 +222,7 @@
     </h2>
 </doc-anchor-target>
 <p>Preset variables are automatically generated based on the page content. These typically work for most websites.</p>
-<p>The main content variable is <code v-pre>{{content}}</code>, which contains the article content, or the <a href="../highlight/">highlights</a>, or the selection if there is any selected text on the page. Note that <code v-pre>{{content}}</code> attempts to extract the main content of the page, which may not always be what you want. In that case, you can use other preset variables or selector variables to extract the content you need.</p>
+<p>The main content variable is <code translate="no" v-pre>{{content}}</code>, which contains the article content, or the <a href="../highlight/">highlights</a>, or the selection if there is any selected text on the page. Note that <code translate="no" v-pre>{{content}}</code> attempts to extract the main content of the page, which may not always be what you want. In that case, you can use other preset variables or selector variables to extract the content you need.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -258,67 +233,67 @@
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>{{author}}</code></td>
+<td><code translate="no" v-pre>{{author}}</code></td>
 <td>Author of the page</td>
 </tr>
 <tr>
-<td><code v-pre>{{content}}</code></td>
+<td><code translate="no" v-pre>{{content}}</code></td>
 <td>Article content, <a href="../highlight/">highlights</a>, or selection, in Markdown format</td>
 </tr>
 <tr>
-<td><code v-pre>{{contentHtml}}</code></td>
+<td><code translate="no" v-pre>{{contentHtml}}</code></td>
 <td>Article content, <a href="../highlight/">highlights</a>, or selection, in HTML format</td>
 </tr>
 <tr>
-<td><code v-pre>{{date}}</code></td>
-<td>Current date, can be formatted using the <code v-pre>date</code> filter</td>
+<td><code translate="no" v-pre>{{date}}</code></td>
+<td>Current date, can be formatted using the <code translate="no" v-pre>date</code> filter</td>
 </tr>
 <tr>
-<td><code v-pre>{{description}}</code></td>
+<td><code translate="no" v-pre>{{description}}</code></td>
 <td>Description or excerpt</td>
 </tr>
 <tr>
-<td><code v-pre>{{domain}}</code></td>
+<td><code translate="no" v-pre>{{domain}}</code></td>
 <td>Domain</td>
 </tr>
 <tr>
-<td><code v-pre>{{favicon}}</code></td>
+<td><code translate="no" v-pre>{{favicon}}</code></td>
 <td>Favicon URL</td>
 </tr>
 <tr>
-<td><code v-pre>{{fullHtml}}</code></td>
+<td><code translate="no" v-pre>{{fullHtml}}</code></td>
 <td>Unprocessed HTML for the full page content</td>
 </tr>
 <tr>
-<td><code v-pre>{{highlights}}</code></td>
+<td><code translate="no" v-pre>{{highlights}}</code></td>
 <td><a href="../highlight/">Highlights</a> with text and timestamps</td>
 </tr>
 <tr>
-<td><code v-pre>{{image}}</code></td>
+<td><code translate="no" v-pre>{{image}}</code></td>
 <td>Social share image URL</td>
 </tr>
 <tr>
-<td><code v-pre>{{published}}</code></td>
-<td>Published date, can be formatted using the <code v-pre>date</code> filter</td>
+<td><code translate="no" v-pre>{{published}}</code></td>
+<td>Published date, can be formatted using the <code translate="no" v-pre>date</code> filter</td>
 </tr>
 <tr>
-<td><code v-pre>{{site}}</code></td>
+<td><code translate="no" v-pre>{{site}}</code></td>
 <td>Site name or publisher</td>
 </tr>
 <tr>
-<td><code v-pre>{{title}}</code></td>
+<td><code translate="no" v-pre>{{title}}</code></td>
 <td>Title of the page</td>
 </tr>
 <tr>
-<td><code v-pre>{{time}}</code></td>
+<td><code translate="no" v-pre>{{time}}</code></td>
 <td>Current date and time</td>
 </tr>
 <tr>
-<td><code v-pre>{{url}}</code></td>
+<td><code translate="no" v-pre>{{url}}</code></td>
 <td>Current URL</td>
 </tr>
 <tr>
-<td><code v-pre>{{words}}</code></td>
+<td><code translate="no" v-pre>{{words}}</code></td>
 <td>Word count</td>
 </tr>
 </tbody>
@@ -331,7 +306,7 @@
     </h2>
 </doc-anchor-target>
 <p>Prompt variables leverage language models to extract and modify data using natural language. Prompt variables require <a href="../interpreter/">Interpreter</a> to be enabled and configured.</p>
-<p>Prompt variables use the syntax <code v-pre>{{&quot;a summary of the page&quot;}}</code>. The double quotes around the prompt are important and distinguish prompts from preset variables. Prompt responses can be post-processed with <a href="../filters/">filters</a>, e.g. <code v-pre>{{&quot;a summary of the page&quot;|blockquote}}</code>.</p>
+<p>Prompt variables use the syntax <code translate="no" v-pre>{{&quot;a summary of the page&quot;}}</code>. The double quotes around the prompt are important and distinguish prompts from preset variables. Prompt responses can be post-processed with <a href="../filters/">filters</a>, e.g. <code translate="no" v-pre>{{&quot;a summary of the page&quot;|blockquote}}</code>.</p>
 <doc-anchor-target id="when-to-use-prompt-variables">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#when-to-use-prompt-variables">#</doc-anchor-trigger>
@@ -341,7 +316,7 @@
 <p>Prompt variables have the benefit of being extremely flexible and easy to write, however they come with several tradeoffs: they are slower to run, and may have cost and privacy considerations depending on the <a href="../interpreter/#models">provider</a> you choose.</p>
 <p>Unlike other variable types, prompt variables need to be processed by an external language model, so they are replaced only once <a href="../interpreter/">Interpreter</a> has run.</p>
 <p>It is best to <em>not</em> use prompt variables if the data you want to extract is in a consistent format that could be extracted with other variable types.</p>
-<p>On the other hand, prompt variables can be useful if the data you want to extract is an <em>inconsistent</em> format across websites. For example, you can make a <a href="../templates/">template</a> to save books that is agnostic of the book site. Prompt variables like <code v-pre>{{&quot;author of the book&quot;}}</code> will work across any book site, whereas selector variables typically only work for one site.</p>
+<p>On the other hand, prompt variables can be useful if the data you want to extract is an <em>inconsistent</em> format across websites. For example, you can make a <a href="../templates/">template</a> to save books that is agnostic of the book site. Prompt variables like <code translate="no" v-pre>{{&quot;author of the book&quot;}}</code> will work across any book site, whereas selector variables typically only work for one site.</p>
 <doc-anchor-target id="examples">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
@@ -350,8 +325,8 @@
 </doc-anchor-target>
 <p>Prompts can use almost any natural language query. Depending on the model you use, prompts can query or translate data across languages.</p>
 <ul>
-<li><code v-pre>{{&quot;a three bullet point summary, translated to French&quot;}}</code> to extract bullet points about the page, and translate them to French.</li>
-<li><code v-pre>{{&quot;un resumé de la page en trois points&quot;}}</code> to extract three bullet points using a prompt in French.</li>
+<li><code translate="no" v-pre>{{&quot;a three bullet point summary, translated to French&quot;}}</code> to extract bullet points about the page, and translate them to French.</li>
+<li><code translate="no" v-pre>{{&quot;un resumé de la page en trois points&quot;}}</code> to extract three bullet points using a prompt in French.</li>
 </ul>
 <p>Prompts can transform page content into JSON that can be manipulated with <a href="../filters/">filters</a>. For example:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -363,10 +338,10 @@
         <span>Meta variables</span>
     </h2>
 </doc-anchor-target>
-<p>Meta variables allow you to extract data from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" class="outbound" target="_blank"><span>meta elements</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> in the page, including <a href="https://ogp.me/" class="outbound" target="_blank"><span>Open Graph</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> data used to populate social share previews.</p>
+<p>Meta variables allow you to extract data from <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta" class="outbound" target="_blank"><span>meta elements</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> in the page, including <a href="https://ogp.me/" class="outbound" target="_blank"><span>Open Graph</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> data used to populate social share previews.</p>
 <ul>
-<li><code v-pre>{{meta:name}}</code> returns the content of the meta name tag with the given name, e.g. <code v-pre>{{meta:name:description}}</code> for the <code v-pre>description</code> meta tag.</li>
-<li><code v-pre>{{meta:property}}</code> returns the content of the meta property tag with the given property, e.g. <code v-pre>{{meta:property:og:title}}</code> for the <code v-pre>og:title</code> meta tag.</li>
+<li><code translate="no" v-pre>{{meta:name}}</code> returns the content of the meta name tag with the given name, e.g. <code translate="no" v-pre>{{meta:name:description}}</code> for the <code translate="no" v-pre>description</code> meta tag.</li>
+<li><code translate="no" v-pre>{{meta:property}}</code> returns the content of the meta property tag with the given property, e.g. <code translate="no" v-pre>{{meta:property:og:title}}</code> for the <code translate="no" v-pre>og:title</code> meta tag.</li>
 </ul>
 <doc-anchor-target id="selector-variables">
     <h2>
@@ -374,16 +349,16 @@
         <span>Selector variables</span>
     </h2>
 </doc-anchor-target>
-<p>Selector variables allow you to extract text content from elements on the page using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators" class="outbound" target="_blank"><span>CSS selectors</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
-<p>The syntax is <code v-pre>{{selector:cssSelector?attribute}}</code>, where <code v-pre>?attribute</code> is optional. If no attribute is specified, the text content of the element is returned. You can also use <code v-pre>{{selectorHtml:cssSelector}}</code> to get the HTML content of the element. Selector variables tend to work best on a specific website or set of websites that have consistent HTML structure.</p>
+<p>Selector variables allow you to extract text content from elements on the page using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators" class="outbound" target="_blank"><span>CSS selectors</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>The syntax is <code translate="no" v-pre>{{selector:cssSelector?attribute}}</code>, where <code translate="no" v-pre>?attribute</code> is optional. If no attribute is specified, the text content of the element is returned. You can also use <code translate="no" v-pre>{{selectorHtml:cssSelector}}</code> to get the HTML content of the element. Selector variables tend to work best on a specific website or set of websites that have consistent HTML structure.</p>
 <ul>
-<li><code v-pre>{{selector:h1}}</code> returns text content of any <code v-pre>h1</code> elements on the page.</li>
-<li><code v-pre>{{selector:.author}}</code> returns text content of any <code v-pre>.author</code> elements on the page.</li>
-<li><code v-pre>{{selector:img.hero?src}}</code> returns the <code v-pre>src</code> attribute of the image with class <code v-pre>hero</code>.</li>
-<li><code v-pre>{{selector:a.main-link?href}}</code> returns the <code v-pre>href</code> attribute of the anchor tag with class <code v-pre>main-link</code>.</li>
-<li><code v-pre>{{selectorHtml:body|markdown}}</code> returns the entire HTML of the <code v-pre>body</code> element, converted to Markdown using the <code v-pre>markdown</code> <a href="../filters/#html-processing">filter</a>.</li>
+<li><code translate="no" v-pre>{{selector:h1}}</code> returns text content of any <code translate="no" v-pre>h1</code> elements on the page.</li>
+<li><code translate="no" v-pre>{{selector:.author}}</code> returns text content of any <code translate="no" v-pre>.author</code> elements on the page.</li>
+<li><code translate="no" v-pre>{{selector:img.hero?src}}</code> returns the <code translate="no" v-pre>src</code> attribute of the image with class <code translate="no" v-pre>hero</code>.</li>
+<li><code translate="no" v-pre>{{selector:a.main-link?href}}</code> returns the <code translate="no" v-pre>href</code> attribute of the anchor tag with class <code translate="no" v-pre>main-link</code>.</li>
+<li><code translate="no" v-pre>{{selectorHtml:body|markdown}}</code> returns the entire HTML of the <code translate="no" v-pre>body</code> element, converted to Markdown using the <code translate="no" v-pre>markdown</code> <a href="../filters/#html-processing">filter</a>.</li>
 <li>Nested CSS selectors and combinators are supported if you need more specificity.</li>
-<li>If multiple elements match the selector, an array is returned, which you can process with <a href="../filters/#arrays-and-objects">array and object filters</a> like <code v-pre>join</code> or <code v-pre>map</code>.</li>
+<li>If multiple elements match the selector, an array is returned, which you can process with <a href="../filters/#arrays-and-objects">array and object filters</a> like <code translate="no" v-pre>join</code> or <code translate="no" v-pre>map</code>.</li>
 </ul>
 <doc-anchor-target id="schemaorg-variables">
     <h2>
@@ -391,25 +366,25 @@
         <span>Schema.org variables</span>
     </h2>
 </doc-anchor-target>
-<p>Schema variables allow you to extract data from <a href="https://schema.org/" class="outbound" target="_blank"><span>schema.org</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> JSON-LD on the page. Schema.org data can also be used to automatically <a href="../templates/#schemaorg-matching">trigger a template</a>.</p>
+<p>Schema variables allow you to extract data from <a href="https://schema.org/" class="outbound" target="_blank"><span>schema.org</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> JSON-LD on the page. Schema.org data can also be used to automatically <a href="../templates/#schemaorg-matching">trigger a template</a>.</p>
 <ul>
-<li><code v-pre>{{schema:@Type:key}}</code> returns the value of the key from the schema.</li>
-<li><code v-pre>{{schema:@Type:parent.child}}</code> returns the value of a nested property.</li>
-<li><code v-pre>{{schema:@Type:arrayKey}}</code> returns the first item in an array.</li>
-<li><code v-pre>{{schema:@Type:arrayKey[index].property}}</code> returns the item at the specified index in an array.</li>
-<li><code v-pre>{{schema:@Type:arrayKey[*].property}}</code> returns a specific property from all items in an array.</li>
+<li><code translate="no" v-pre>{{schema:@Type:key}}</code> returns the value of the key from the schema.</li>
+<li><code translate="no" v-pre>{{schema:@Type:parent.child}}</code> returns the value of a nested property.</li>
+<li><code translate="no" v-pre>{{schema:@Type:arrayKey}}</code> returns the first item in an array.</li>
+<li><code translate="no" v-pre>{{schema:@Type:arrayKey[index].property}}</code> returns the item at the specified index in an array.</li>
+<li><code translate="no" v-pre>{{schema:@Type:arrayKey[*].property}}</code> returns a specific property from all items in an array.</li>
 </ul>
 <p>You can also use a shorthand notation without specifying the schema type:</p>
 <ul>
-<li><code v-pre>{{schema:author}}</code> will match the first <code v-pre>author</code> property found in any schema type.</li>
-<li><code v-pre>{{schema:name}}</code> will match the first <code v-pre>name</code> property found in any schema type.</li>
+<li><code translate="no" v-pre>{{schema:author}}</code> will match the first <code translate="no" v-pre>author</code> property found in any schema type.</li>
+<li><code translate="no" v-pre>{{schema:name}}</code> will match the first <code translate="no" v-pre>name</code> property found in any schema type.</li>
 </ul>
 <p>This shorthand is particularly useful when you don&#x27;t know or don&#x27;t care about the specific schema type, but you know the property name you&#x27;re looking for.</p>
-<p>Nested properties and array access work as well, both with and without the schema <code v-pre>@Type</code> specified:</p>
+<p>Nested properties and array access work as well, both with and without the schema <code translate="no" v-pre>@Type</code> specified:</p>
 <ul>
-<li><code v-pre>{{schema:author.name}}</code> will find the first <code v-pre>author</code> property and then access its <code v-pre>name</code> sub-property.</li>
-<li><code v-pre>{{schema:author[0].name}}</code> will access the <code v-pre>name</code> of the first author in an array of authors.</li>
-<li><code v-pre>{{schema:author[*].name}}</code> will return an array of all author names.</li>
+<li><code translate="no" v-pre>{{schema:author.name}}</code> will find the first <code translate="no" v-pre>author</code> property and then access its <code translate="no" v-pre>name</code> sub-property.</li>
+<li><code translate="no" v-pre>{{schema:author[0].name}}</code> will access the <code translate="no" v-pre>name</code> of the first author in an array of authors.</li>
+<li><code translate="no" v-pre>{{schema:author[*].name}}</code> will return an array of all author names.</li>
 </ul>
 
                                 

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Filters</title>
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
+    <link href="../../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -90,31 +90,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -132,7 +107,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -231,10 +206,10 @@
         <span>Filters</span>
     </h1>
 </doc-anchor-target>
-<p>Filters allow you to modify <a href="../variables/">variables</a> in <a href="../templates/">Web Clipper templates</a>. Filters are applied to variables using the syntax <code v-pre>{{variable|filter}}</code>.</p>
+<p>Filters allow you to modify <a href="../variables/">variables</a> in <a href="../templates/">Web Clipper templates</a>. Filters are applied to variables using the syntax <code translate="no" v-pre>{{variable|filter}}</code>.</p>
 <ul>
-<li>Filters work for any kind of <a href="../variables/">variable</a> including <code v-pre>prompt</code>, <code v-pre>meta</code>, <code v-pre>selector</code>, and <code v-pre>schema</code> variables.</li>
-<li>Filters can be chained, e.g. <code v-pre>{{variable|filter1|filter2}}</code>, and are applied in the order they are added.</li>
+<li>Filters work for any kind of <a href="../variables/">variable</a> including <code translate="no" v-pre>prompt</code>, <code translate="no" v-pre>meta</code>, <code translate="no" v-pre>selector</code>, and <code translate="no" v-pre>schema</code> variables.</li>
+<li>Filters can be chained, e.g. <code translate="no" v-pre>{{variable|filter1|filter2}}</code>, and are applied in the order they are added.</li>
 </ul>
 <doc-anchor-target id="dates">
     <h2>
@@ -246,37 +221,37 @@
 <doc-anchor-target id="date">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#date">#</doc-anchor-trigger>
-        <span><code v-pre>date</code></span>
+        <span><code translate="no" v-pre>date</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts a date to the specified format, <a href="https://day.js.org/docs/en/display/format" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>Converts a date to the specified format, <a href="https://day.js.org/docs/en/display/format" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <ul>
-<li><code v-pre>{{date|date:&quot;YYYY-MM-DD&quot;}}</code> converts the current date to &quot;YYYY-MM-DD&quot;.</li>
-<li>Use <code v-pre>date:(&quot;outputFormat&quot;, &quot;inputFormat&quot;)</code> to specify the input format, e.g. <code v-pre>&quot;12/01/2024&quot;|date:(&quot;YYYY-MM-DD&quot;, &quot;MM/DD/YYYY&quot;)</code> parses &quot;12/01/2024&quot; and returns <code v-pre>&quot;2024-12-01&quot;</code>.</li>
+<li><code translate="no" v-pre>{{date|date:&quot;YYYY-MM-DD&quot;}}</code> converts the current date to &quot;YYYY-MM-DD&quot;.</li>
+<li>Use <code translate="no" v-pre>date:(&quot;outputFormat&quot;, &quot;inputFormat&quot;)</code> to specify the input format, e.g. <code translate="no" v-pre>&quot;12/01/2024&quot;|date:(&quot;YYYY-MM-DD&quot;, &quot;MM/DD/YYYY&quot;)</code> parses &quot;12/01/2024&quot; and returns <code translate="no" v-pre>&quot;2024-12-01&quot;</code>.</li>
 </ul>
 <doc-anchor-target id="date_modify">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#date_modify">#</doc-anchor-trigger>
-        <span><code v-pre>date_modify</code></span>
+        <span><code translate="no" v-pre>date_modify</code></span>
     </h3>
 </doc-anchor-target>
-<p>Modifies a date by adding or subtracting a specified amount of time, <a href="https://day.js.org/docs/en/manipulate/add" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>Modifies a date by adding or subtracting a specified amount of time, <a href="https://day.js.org/docs/en/manipulate/add" class="outbound" target="_blank"><span>see reference</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <ul>
-<li><code v-pre>&quot;2024-12-01&quot;|date_modify:&quot;+1 year&quot;</code> returns <code v-pre>&quot;2025-12-01&quot;</code></li>
-<li><code v-pre>&quot;2024-12-01&quot;|date_modify:&quot;- 2 months&quot;</code> returns <code v-pre>&quot;2024-10-01&quot;</code></li>
+<li><code translate="no" v-pre>&quot;2024-12-01&quot;|date_modify:&quot;+1 year&quot;</code> returns <code translate="no" v-pre>&quot;2025-12-01&quot;</code></li>
+<li><code translate="no" v-pre>&quot;2024-12-01&quot;|date_modify:&quot;- 2 months&quot;</code> returns <code translate="no" v-pre>&quot;2024-10-01&quot;</code></li>
 </ul>
 <doc-anchor-target id="duration">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#duration">#</doc-anchor-trigger>
-        <span><code v-pre>duration</code></span>
+        <span><code translate="no" v-pre>duration</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts ISO 8601 duration strings or seconds into formatted time strings. Uses tokens: <code v-pre>HH</code> (padded hours), <code v-pre>H</code> (hours), <code v-pre>mm</code> (padded minutes), <code v-pre>m</code> (minutes), <code v-pre>ss</code> (padded seconds), <code v-pre>s</code> (seconds).</p>
+<p>Converts ISO 8601 duration strings or seconds into formatted time strings. Uses tokens: <code translate="no" v-pre>HH</code> (padded hours), <code translate="no" v-pre>H</code> (hours), <code translate="no" v-pre>mm</code> (padded minutes), <code translate="no" v-pre>m</code> (minutes), <code translate="no" v-pre>ss</code> (padded seconds), <code translate="no" v-pre>s</code> (seconds).</p>
 <ul>
-<li><code v-pre>&quot;PT1H30M&quot;|duration:&quot;HH:mm:ss&quot;</code> returns <code v-pre>&quot;01:30:00&quot;</code>.</li>
-<li><code v-pre>&quot;3665&quot;|duration:&quot;H:mm:ss&quot;</code> returns <code v-pre>&quot;1:01:05&quot;</code>.</li>
-<li>Setting <code v-pre>duration</code> without any parameters uses <code v-pre>HH:mm:ss</code> over 1 hour, <code v-pre>mm:ss</code> under 1 hour.</li>
-<li>Supports both ISO 8601 duration strings (e.g., <code v-pre>PT6702S</code>, <code v-pre>PT1H30M</code>) and plain seconds.</li>
+<li><code translate="no" v-pre>&quot;PT1H30M&quot;|duration:&quot;HH:mm:ss&quot;</code> returns <code translate="no" v-pre>&quot;01:30:00&quot;</code>.</li>
+<li><code translate="no" v-pre>&quot;3665&quot;|duration:&quot;H:mm:ss&quot;</code> returns <code translate="no" v-pre>&quot;1:01:05&quot;</code>.</li>
+<li>Setting <code translate="no" v-pre>duration</code> without any parameters uses <code translate="no" v-pre>HH:mm:ss</code> over 1 hour, <code translate="no" v-pre>mm:ss</code> under 1 hour.</li>
+<li>Supports both ISO 8601 duration strings (e.g., <code translate="no" v-pre>PT6702S</code>, <code translate="no" v-pre>PT1H30M</code>) and plain seconds.</li>
 </ul>
 <doc-anchor-target id="text-conversion-and-capitalization">
     <h2>
@@ -288,112 +263,112 @@
 <doc-anchor-target id="camel">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#camel">#</doc-anchor-trigger>
-        <span><code v-pre>camel</code></span>
+        <span><code translate="no" v-pre>camel</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>camelCase</code>.</p>
+<p>Converts text to <code translate="no" v-pre>camelCase</code>.</p>
 <doc-anchor-target id="capitalize">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#capitalize">#</doc-anchor-trigger>
-        <span><code v-pre>capitalize</code></span>
+        <span><code translate="no" v-pre>capitalize</code></span>
     </h3>
 </doc-anchor-target>
-<p>Capitalizes the first character of the value and converts the rest to lowercase, e.g. <code v-pre>&quot;hELLO wORLD&quot;|capitalize</code> returns <code v-pre>&quot;Hello world&quot;</code>.</p>
+<p>Capitalizes the first character of the value and converts the rest to lowercase, e.g. <code translate="no" v-pre>&quot;hELLO wORLD&quot;|capitalize</code> returns <code translate="no" v-pre>&quot;Hello world&quot;</code>.</p>
 <doc-anchor-target id="kebab">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#kebab">#</doc-anchor-trigger>
-        <span><code v-pre>kebab</code></span>
+        <span><code translate="no" v-pre>kebab</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>kebab-case</code>.</p>
+<p>Converts text to <code translate="no" v-pre>kebab-case</code>.</p>
 <doc-anchor-target id="lower">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#lower">#</doc-anchor-trigger>
-        <span><code v-pre>lower</code></span>
+        <span><code translate="no" v-pre>lower</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>lowercase</code>.</p>
+<p>Converts text to <code translate="no" v-pre>lowercase</code>.</p>
 <doc-anchor-target id="pascal">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#pascal">#</doc-anchor-trigger>
-        <span><code v-pre>pascal</code></span>
+        <span><code translate="no" v-pre>pascal</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>PascalCase</code>.</p>
+<p>Converts text to <code translate="no" v-pre>PascalCase</code>.</p>
 <doc-anchor-target id="replace">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#replace">#</doc-anchor-trigger>
-        <span><code v-pre>replace</code></span>
+        <span><code translate="no" v-pre>replace</code></span>
     </h3>
 </doc-anchor-target>
 <p>Replaces occurrences of specified text:</p>
 <ul>
-<li>Simple replacement: <code v-pre>&quot;hello!&quot;|replace:&quot;,&quot;:&quot;&quot;</code> removes all commas.</li>
-<li>Multiple replacements: <code v-pre>&quot;hello world&quot;|replace:(&quot;e&quot;:&quot;a&quot;,&quot;o&quot;:&quot;0&quot;)</code> returns <code v-pre>&quot;hall0 w0rld&quot;</code>.</li>
+<li>Simple replacement: <code translate="no" v-pre>&quot;hello!&quot;|replace:&quot;,&quot;:&quot;&quot;</code> removes all commas.</li>
+<li>Multiple replacements: <code translate="no" v-pre>&quot;hello world&quot;|replace:(&quot;e&quot;:&quot;a&quot;,&quot;o&quot;:&quot;0&quot;)</code> returns <code translate="no" v-pre>&quot;hall0 w0rld&quot;</code>.</li>
 <li>Replacements are applied in the order they are specified.</li>
-<li>To remove specified text, use <code v-pre>&quot;&quot;</code> as the replacement value.</li>
-<li>Special characters including <code v-pre>: | { } ( ) ' &quot;</code> should be escaped with a backslash when used in the search term, e.g. <code v-pre>\:</code> to search for a literal colon.</li>
+<li>To remove specified text, use <code translate="no" v-pre>&quot;&quot;</code> as the replacement value.</li>
+<li>Special characters including <code translate="no" v-pre>: | { } ( ) ' &quot;</code> should be escaped with a backslash when used in the search term, e.g. <code translate="no" v-pre>\:</code> to search for a literal colon.</li>
 </ul>
 <p>Regex is supported using JavaScript regex syntax:</p>
 <ul>
-<li>Replace all vowels: <code v-pre>&quot;hello world&quot;|replace:&quot;/[aeiou]/g&quot;:&quot;*&quot;</code> → <code v-pre>&quot;h*ll* w*rld&quot;.</code></li>
-<li>Case-insensitive: <code v-pre>&quot;HELLO world&quot;|replace:&quot;/hello/i&quot;:&quot;hi&quot;</code> → <code v-pre>&quot;hi world&quot;.</code></li>
-<li>Multiple regex: <code v-pre>&quot;hello world&quot;|replace:(&quot;/[aeiou]/g&quot;:&quot;*&quot;,&quot;/\s+/&quot;:&quot;-&quot;)</code> → <code v-pre>&quot;h*ll*-w*rld&quot;</code>.</li>
-<li>Available flags: <code v-pre>g</code> (global), <code v-pre>i</code> (case-insensitive), <code v-pre>m</code> (multiline), <code v-pre>s</code> (dotAll), <code v-pre>u</code> (unicode), <code v-pre>y</code> (sticky).</li>
+<li>Replace all vowels: <code translate="no" v-pre>&quot;hello world&quot;|replace:&quot;/[aeiou]/g&quot;:&quot;*&quot;</code> → <code translate="no" v-pre>&quot;h*ll* w*rld&quot;.</code></li>
+<li>Case-insensitive: <code translate="no" v-pre>&quot;HELLO world&quot;|replace:&quot;/hello/i&quot;:&quot;hi&quot;</code> → <code translate="no" v-pre>&quot;hi world&quot;.</code></li>
+<li>Multiple regex: <code translate="no" v-pre>&quot;hello world&quot;|replace:(&quot;/[aeiou]/g&quot;:&quot;*&quot;,&quot;/\s+/&quot;:&quot;-&quot;)</code> → <code translate="no" v-pre>&quot;h*ll*-w*rld&quot;</code>.</li>
+<li>Available flags: <code translate="no" v-pre>g</code> (global), <code translate="no" v-pre>i</code> (case-insensitive), <code translate="no" v-pre>m</code> (multiline), <code translate="no" v-pre>s</code> (dotAll), <code translate="no" v-pre>u</code> (unicode), <code translate="no" v-pre>y</code> (sticky).</li>
 </ul>
 <doc-anchor-target id="safe_name">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#safe_name">#</doc-anchor-trigger>
-        <span><code v-pre>safe_name</code></span>
+        <span><code translate="no" v-pre>safe_name</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts text to a safe file name.</p>
 <ul>
-<li>By default, <code v-pre>safe_name</code> applies the most conservative sanitization rules.</li>
-<li>OS-specific rules can be applied with <code v-pre>safe_name:os</code> where <code v-pre>os</code> can be <code v-pre>windows</code>, <code v-pre>mac</code>, or <code v-pre>linux</code> to only apply the rules for that operating system.</li>
+<li>By default, <code translate="no" v-pre>safe_name</code> applies the most conservative sanitization rules.</li>
+<li>OS-specific rules can be applied with <code translate="no" v-pre>safe_name:os</code> where <code translate="no" v-pre>os</code> can be <code translate="no" v-pre>windows</code>, <code translate="no" v-pre>mac</code>, or <code translate="no" v-pre>linux</code> to only apply the rules for that operating system.</li>
 </ul>
 <doc-anchor-target id="snake">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#snake">#</doc-anchor-trigger>
-        <span><code v-pre>snake</code></span>
+        <span><code translate="no" v-pre>snake</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>snake_case</code>.</p>
+<p>Converts text to <code translate="no" v-pre>snake_case</code>.</p>
 <doc-anchor-target id="title">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#title">#</doc-anchor-trigger>
-        <span><code v-pre>title</code></span>
+        <span><code translate="no" v-pre>title</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts text to <code v-pre>Title Case</code>, e.g. <code v-pre>&quot;hello world&quot;|title</code> returns <code v-pre>&quot;Hello World&quot;</code>.</p>
+<p>Converts text to <code translate="no" v-pre>Title Case</code>, e.g. <code translate="no" v-pre>&quot;hello world&quot;|title</code> returns <code translate="no" v-pre>&quot;Hello World&quot;</code>.</p>
 <doc-anchor-target id="trim">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#trim">#</doc-anchor-trigger>
-        <span><code v-pre>trim</code></span>
+        <span><code translate="no" v-pre>trim</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes white space from both ends of a string.</p>
 <ul>
-<li><code v-pre>&quot;  hello world  &quot;|trim</code> returns <code v-pre>&quot;hello world&quot;</code>.</li>
+<li><code translate="no" v-pre>&quot;  hello world  &quot;|trim</code> returns <code translate="no" v-pre>&quot;hello world&quot;</code>.</li>
 </ul>
 <doc-anchor-target id="uncamel">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#uncamel">#</doc-anchor-trigger>
-        <span><code v-pre>uncamel</code></span>
+        <span><code translate="no" v-pre>uncamel</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts camelCase or PascalCase to space-separated words, which you can further format with other filters like <code v-pre>title</code> or <code v-pre>capitalize</code>.</p>
+<p>Converts camelCase or PascalCase to space-separated words, which you can further format with other filters like <code translate="no" v-pre>title</code> or <code translate="no" v-pre>capitalize</code>.</p>
 <ul>
-<li><code v-pre>&quot;camelCase&quot;|uncamel</code> returns <code v-pre>&quot;camel case&quot;</code>.</li>
-<li><code v-pre>&quot;PascalCase&quot;|uncamel</code> returns <code v-pre>&quot;pascal case&quot;</code>.</li>
+<li><code translate="no" v-pre>&quot;camelCase&quot;|uncamel</code> returns <code translate="no" v-pre>&quot;camel case&quot;</code>.</li>
+<li><code translate="no" v-pre>&quot;PascalCase&quot;|uncamel</code> returns <code translate="no" v-pre>&quot;pascal case&quot;</code>.</li>
 </ul>
 <doc-anchor-target id="upper">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#upper">#</doc-anchor-trigger>
-        <span><code v-pre>upper</code></span>
+        <span><code translate="no" v-pre>upper</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts a value to uppercase, e.g. <code v-pre>&quot;hello world&quot;|upper</code> returns <code v-pre>&quot;HELLO WORLD&quot;</code>.</p>
+<p>Converts a value to uppercase, e.g. <code translate="no" v-pre>&quot;hello world&quot;|upper</code> returns <code translate="no" v-pre>&quot;HELLO WORLD&quot;</code>.</p>
 <doc-anchor-target id="text-formatting">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#text-formatting">#</doc-anchor-trigger>
@@ -404,85 +379,85 @@
 <doc-anchor-target id="blockquote">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#blockquote">#</doc-anchor-trigger>
-        <span><code v-pre>blockquote</code></span>
+        <span><code translate="no" v-pre>blockquote</code></span>
     </h3>
 </doc-anchor-target>
-<p>Adds a Markdown quote prefix (<code v-pre>&gt; </code>) to each line of the input.</p>
+<p>Adds a Markdown quote prefix (<code translate="no" v-pre>&gt; </code>) to each line of the input.</p>
 <doc-anchor-target id="callout">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#callout">#</doc-anchor-trigger>
-        <span><code v-pre>callout</code></span>
+        <span><code translate="no" v-pre>callout</code></span>
     </h3>
 </doc-anchor-target>
-<p>Creates a <a href="../../callouts/">callout</a> with optional parameters: <code v-pre>{{variable|callout:(&quot;type&quot;, &quot;title&quot;, foldState)}}</code></p>
+<p>Creates a <a href="../../callouts/">callout</a> with optional parameters: <code translate="no" v-pre>{{variable|callout:(&quot;type&quot;, &quot;title&quot;, foldState)}}</code></p>
 <ul>
-<li><code v-pre>type</code> is the callout type, and defaults to &quot;info&quot;</li>
-<li><code v-pre>title</code> is the callout title, and defaults to empty</li>
-<li><code v-pre>foldState</code> is a boolean to set the fold state (true for folded, false for unfolded, null for not foldable)</li>
+<li><code translate="no" v-pre>type</code> is the callout type, and defaults to &quot;info&quot;</li>
+<li><code translate="no" v-pre>title</code> is the callout title, and defaults to empty</li>
+<li><code translate="no" v-pre>foldState</code> is a boolean to set the fold state (true for folded, false for unfolded, null for not foldable)</li>
 </ul>
 <doc-anchor-target id="footnote">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#footnote">#</doc-anchor-trigger>
-        <span><code v-pre>footnote</code></span>
+        <span><code translate="no" v-pre>footnote</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts an array or object into a list of Markdown footnotes.</p>
 <ul>
-<li>For arrays: <code v-pre>[&quot;first item&quot;,&quot;second item&quot;]|footnote</code> returns: <code v-pre>[^1]: first item</code> etc.</li>
-<li>For objects: <code v-pre>{&quot;First Note&quot;: &quot;Content 1&quot;, &quot;Second Note&quot;: &quot;Content 2&quot;}|footnote</code> returns: <code v-pre>[^first-note]: Content 1</code> etc.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;first item&quot;,&quot;second item&quot;]|footnote</code> returns: <code translate="no" v-pre>[^1]: first item</code> etc.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;First Note&quot;: &quot;Content 1&quot;, &quot;Second Note&quot;: &quot;Content 2&quot;}|footnote</code> returns: <code translate="no" v-pre>[^first-note]: Content 1</code> etc.</li>
 </ul>
 <doc-anchor-target id="fragment_link">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#fragment_link">#</doc-anchor-trigger>
-        <span><code v-pre>fragment_link</code></span>
+        <span><code translate="no" v-pre>fragment_link</code></span>
     </h3>
 </doc-anchor-target>
-<p>Converts strings and arrays into <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments" class="outbound" target="_blank"><span>text fragment</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> links. Defaults to &quot;link&quot; for the link text.</p>
+<p>Converts strings and arrays into <a href="https://developer.mozilla.org/en-US/docs/Web/URI/Fragment/Text_fragments" class="outbound" target="_blank"><span>text fragment</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> links. Defaults to &quot;link&quot; for the link text.</p>
 <ul>
-<li><code v-pre>highlights|fragment_link</code> returns <code v-pre>Highlight content [link](text-fragment-url)</code></li>
-<li><code v-pre>highlights|fragment_link:&quot;custom title&quot;</code> returns <code v-pre>Highlight content [custom title](text-fragment-url)</code></li>
+<li><code translate="no" v-pre>highlights|fragment_link</code> returns <code translate="no" v-pre>Highlight content [link](text-fragment-url)</code></li>
+<li><code translate="no" v-pre>highlights|fragment_link:&quot;custom title&quot;</code> returns <code translate="no" v-pre>Highlight content [custom title](text-fragment-url)</code></li>
 </ul>
 <doc-anchor-target id="image">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#image">#</doc-anchor-trigger>
-        <span><code v-pre>image</code></span>
+        <span><code translate="no" v-pre>image</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts strings, arrays, or objects into Markdown image syntax.</p>
 <ul>
-<li>For strings: <code v-pre>&quot;image.jpg&quot;|image:&quot;alt text&quot;</code> returns <code v-pre>![alt text](image.jpg)</code>.</li>
-<li>For arrays: <code v-pre>[&quot;image1.jpg&quot;,&quot;image2.jpg&quot;]|image:&quot;alt text&quot;</code> returns an array of Markdown image strings with the same alt text for all images.</li>
-<li>For objects: <code v-pre>{&quot;image1.jpg&quot;: &quot;Alt 1&quot;, &quot;image2.jpg&quot;: &quot;Alt 2&quot;}|image</code> returns Markdown image strings with alt text from the object keys.</li>
+<li>For strings: <code translate="no" v-pre>&quot;image.jpg&quot;|image:&quot;alt text&quot;</code> returns <code translate="no" v-pre>![alt text](image.jpg)</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;image1.jpg&quot;,&quot;image2.jpg&quot;]|image:&quot;alt text&quot;</code> returns an array of Markdown image strings with the same alt text for all images.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;image1.jpg&quot;: &quot;Alt 1&quot;, &quot;image2.jpg&quot;: &quot;Alt 2&quot;}|image</code> returns Markdown image strings with alt text from the object keys.</li>
 </ul>
 <doc-anchor-target id="link">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#link">#</doc-anchor-trigger>
-        <span><code v-pre>link</code></span>
+        <span><code translate="no" v-pre>link</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts strings, arrays, or objects into Markdown link syntax (not to be confused with <doc-anchor-trigger to="#wikilink">wikilink</doc-anchor-trigger>).</p>
 <ul>
-<li>For strings: <code v-pre>&quot;url&quot;|link:&quot;author&quot;</code> returns <code v-pre>[author](url)</code>.</li>
-<li>For arrays: <code v-pre>[&quot;url1&quot;,&quot;url2&quot;]|link:&quot;author&quot;</code> returns an array of Markdown links with the same text for all links.</li>
-<li>For objects: <code v-pre>{&quot;url1&quot;: &quot;Author 1&quot;, &quot;url2&quot;: &quot;Author 2&quot;}|link</code> returns Markdown links with the text that matches the object keys.</li>
+<li>For strings: <code translate="no" v-pre>&quot;url&quot;|link:&quot;author&quot;</code> returns <code translate="no" v-pre>[author](url)</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;url1&quot;,&quot;url2&quot;]|link:&quot;author&quot;</code> returns an array of Markdown links with the same text for all links.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;url1&quot;: &quot;Author 1&quot;, &quot;url2&quot;: &quot;Author 2&quot;}|link</code> returns Markdown links with the text that matches the object keys.</li>
 </ul>
 <doc-anchor-target id="list">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#list">#</doc-anchor-trigger>
-        <span><code v-pre>list</code></span>
+        <span><code translate="no" v-pre>list</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts an array to a Markdown list.</p>
 <ul>
-<li><code v-pre>list</code> to convert to a bullet list.</li>
-<li><code v-pre>list:task</code> to convert to a task list.</li>
-<li><code v-pre>list:numbered</code> to convert to a numbered list.</li>
-<li><code v-pre>list:numbered-task</code> to convert to a task list with numbers.</li>
+<li><code translate="no" v-pre>list</code> to convert to a bullet list.</li>
+<li><code translate="no" v-pre>list:task</code> to convert to a task list.</li>
+<li><code translate="no" v-pre>list:numbered</code> to convert to a numbered list.</li>
+<li><code translate="no" v-pre>list:numbered-task</code> to convert to a task list with numbers.</li>
 </ul>
 <doc-anchor-target id="table">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#table">#</doc-anchor-trigger>
-        <span><code v-pre>table</code></span>
+        <span><code translate="no" v-pre>table</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts an array or array of objects into a <a href="../../advanced-syntax/#tables">Markdown table</a>:</p>
@@ -490,21 +465,21 @@
 <li>For an array of objects, it uses the object keys as headers.</li>
 <li>For an array of arrays, it creates a table with each nested array as a row.</li>
 <li>For a simple array, it creates a single-column table with &quot;Value&quot; as the header.</li>
-<li>Custom column headers can be specified using: <code v-pre>table:(&quot;Column 1&quot;, &quot;Column 2&quot;, &quot;Column 3&quot;)</code>. When used with a simple array, it automatically breaks the data into rows based on the number of columns specified.</li>
+<li>Custom column headers can be specified using: <code translate="no" v-pre>table:(&quot;Column 1&quot;, &quot;Column 2&quot;, &quot;Column 3&quot;)</code>. When used with a simple array, it automatically breaks the data into rows based on the number of columns specified.</li>
 </ul>
 <doc-anchor-target id="wikilink">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#wikilink">#</doc-anchor-trigger>
-        <span><code v-pre>wikilink</code></span>
+        <span><code translate="no" v-pre>wikilink</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts strings, arrays, or objects into Obsidian <a href="../../link-notes/">wikilink</a> syntax.</p>
 <ul>
-<li>For strings: <code v-pre>&quot;page&quot;|wikilink</code> returns <code v-pre>[[page]]</code>.</li>
-<li>For strings with alias: <code v-pre>&quot;page&quot;|wikilink:&quot;alias&quot;</code> returns <code v-pre>[[page|alias]]</code>.</li>
-<li>For arrays: <code v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink</code> returns an array of wikilinks without aliases.</li>
-<li>For arrays with alias: <code v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink:&quot;alias&quot;</code> returns an array of wikilinks with the same alias for all links.</li>
-<li>For objects: <code v-pre>{&quot;page1&quot;: &quot;alias1&quot;, &quot;page2&quot;: &quot;alias2&quot;}|wikilink</code> returns wikilinks with the keys as page names and values as aliases.</li>
+<li>For strings: <code translate="no" v-pre>&quot;page&quot;|wikilink</code> returns <code translate="no" v-pre>[[page]]</code>.</li>
+<li>For strings with alias: <code translate="no" v-pre>&quot;page&quot;|wikilink:&quot;alias&quot;</code> returns <code translate="no" v-pre>[[page|alias]]</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink</code> returns an array of wikilinks without aliases.</li>
+<li>For arrays with alias: <code translate="no" v-pre>[&quot;page1&quot;,&quot;page2&quot;]|wikilink:&quot;alias&quot;</code> returns an array of wikilinks with the same alias for all links.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;page1&quot;: &quot;alias1&quot;, &quot;page2&quot;: &quot;alias2&quot;}|wikilink</code> returns wikilinks with the keys as page names and values as aliases.</li>
 </ul>
 <doc-anchor-target id="numbers">
     <h2>
@@ -515,38 +490,38 @@
 <doc-anchor-target id="calc">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#calc">#</doc-anchor-trigger>
-        <span><code v-pre>calc</code></span>
+        <span><code translate="no" v-pre>calc</code></span>
     </h3>
 </doc-anchor-target>
 <p>Performs basic arithmetic operations on numbers.</p>
 <ul>
-<li>Supports operators: <code v-pre>+</code>, <code v-pre>-</code>, <code v-pre>*</code>, <code v-pre>/</code>, <code v-pre>**</code> (or <code v-pre>^</code>) for exponentiation.</li>
-<li>Example: <code v-pre>5|calc:&quot;+10&quot;</code> returns <code v-pre>15</code>.</li>
-<li>Example: <code v-pre>2|calc:&quot;**3&quot;</code> returns <code v-pre>8</code> (2 cubed).</li>
+<li>Supports operators: <code translate="no" v-pre>+</code>, <code translate="no" v-pre>-</code>, <code translate="no" v-pre>*</code>, <code translate="no" v-pre>/</code>, <code translate="no" v-pre>**</code> (or <code translate="no" v-pre>^</code>) for exponentiation.</li>
+<li>Example: <code translate="no" v-pre>5|calc:&quot;+10&quot;</code> returns <code translate="no" v-pre>15</code>.</li>
+<li>Example: <code translate="no" v-pre>2|calc:&quot;**3&quot;</code> returns <code translate="no" v-pre>8</code> (2 cubed).</li>
 <li>Returns the original string if the input is not a number.</li>
 </ul>
 <doc-anchor-target id="length">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#length">#</doc-anchor-trigger>
-        <span><code v-pre>length</code></span>
+        <span><code translate="no" v-pre>length</code></span>
     </h3>
 </doc-anchor-target>
 <p>Returns the length of strings, arrays, or number of keys in objects.</p>
 <ul>
-<li>For strings: <code v-pre>&quot;hello&quot;|length</code> returns <code v-pre>5</code>.</li>
-<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|length</code> returns <code v-pre>3</code>.</li>
-<li>For objects: <code v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|length</code> returns <code v-pre>2</code>.</li>
+<li>For strings: <code translate="no" v-pre>&quot;hello&quot;|length</code> returns <code translate="no" v-pre>5</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|length</code> returns <code translate="no" v-pre>3</code>.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|length</code> returns <code translate="no" v-pre>2</code>.</li>
 </ul>
 <doc-anchor-target id="round">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#round">#</doc-anchor-trigger>
-        <span><code v-pre>round</code></span>
+        <span><code translate="no" v-pre>round</code></span>
     </h3>
 </doc-anchor-target>
 <p>Rounds a number to the nearest integer or to a specified number of decimal places.</p>
 <ul>
-<li>Without parameters: <code v-pre>3.7|round</code> returns <code v-pre>4</code>.</li>
-<li>With decimal places specified: <code v-pre>3.14159|round:2</code> returns <code v-pre>3.14</code>.</li>
+<li>Without parameters: <code translate="no" v-pre>3.7|round</code> returns <code translate="no" v-pre>4</code>.</li>
+<li>With decimal places specified: <code translate="no" v-pre>3.14159|round:2</code> returns <code translate="no" v-pre>3.14</code>.</li>
 </ul>
 <doc-anchor-target id="html-processing">
     <h2>
@@ -554,78 +529,78 @@
         <span>HTML processing</span>
     </h2>
 </doc-anchor-target>
-<p>Process HTML content and convert HTML to Markdown. Note that your input <a href="../variables/">variable</a> must contain HTML content, e.g. using <code v-pre>{{fullHtml}}</code>, <code v-pre>{{contentHtml}}</code> or a <code v-pre>{{selectorHtml:}}</code> variable.</p>
+<p>Process HTML content and convert HTML to Markdown. Note that your input <a href="../variables/">variable</a> must contain HTML content, e.g. using <code translate="no" v-pre>{{fullHtml}}</code>, <code translate="no" v-pre>{{contentHtml}}</code> or a <code translate="no" v-pre>{{selectorHtml:}}</code> variable.</p>
 <doc-anchor-target id="markdown">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#markdown">#</doc-anchor-trigger>
-        <span><code v-pre>markdown</code></span>
+        <span><code translate="no" v-pre>markdown</code></span>
     </h3>
 </doc-anchor-target>
 <p>Converts a string to an <a href="../../obsidian-flavored-markdown/">Obsidian Flavored Markdown</a> formatted string.</p>
 <ul>
-<li>Useful when combined with variables that return HTML such as <code v-pre>{{contentHtml}}</code>, <code v-pre>{{fullHtml}}</code>, and selector variables like <code v-pre>{{selectorHtml:cssSelector}}</code>.</li>
+<li>Useful when combined with variables that return HTML such as <code translate="no" v-pre>{{contentHtml}}</code>, <code translate="no" v-pre>{{fullHtml}}</code>, and selector variables like <code translate="no" v-pre>{{selectorHtml:cssSelector}}</code>.</li>
 </ul>
 <doc-anchor-target id="remove_attr">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#remove_attr">#</doc-anchor-trigger>
-        <span><code v-pre>remove_attr</code></span>
+        <span><code translate="no" v-pre>remove_attr</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes only the specified HTML attributes from tags.</p>
 <ul>
-<li>Example: <code v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|remove_attr:&quot;class&quot;</code> returns <code v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
-<li>Multiple attributes: <code v-pre>{{fullHtml|remove_attr:(&quot;class,style,id&quot;)}}</code></li>
+<li>Example: <code translate="no" v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|remove_attr:&quot;class&quot;</code> returns <code translate="no" v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
+<li>Multiple attributes: <code translate="no" v-pre>{{fullHtml|remove_attr:(&quot;class,style,id&quot;)}}</code></li>
 </ul>
 <doc-anchor-target id="remove_html">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#remove_html">#</doc-anchor-trigger>
-        <span><code v-pre>remove_html</code></span>
+        <span><code translate="no" v-pre>remove_html</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes the specified HTML elements and their content from a string.</p>
 <ul>
-<li>Supports tag name, class, or id, e.g. <code v-pre>{{fullHtml|remove_html:(&quot;img,.class-name,#element-id&quot;)}}</code></li>
-<li>To remove only HTML tags or attributes without removing the content use the <code v-pre>strip_tags</code> or <code v-pre>strip_attr</code> filters.</li>
+<li>Supports tag name, class, or id, e.g. <code translate="no" v-pre>{{fullHtml|remove_html:(&quot;img,.class-name,#element-id&quot;)}}</code></li>
+<li>To remove only HTML tags or attributes without removing the content use the <code translate="no" v-pre>strip_tags</code> or <code translate="no" v-pre>strip_attr</code> filters.</li>
 </ul>
 <doc-anchor-target id="remove_tags">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#remove_tags">#</doc-anchor-trigger>
-        <span><code v-pre>remove_tags</code></span>
+        <span><code translate="no" v-pre>remove_tags</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes only the specified HTML tags. Keeps the content of the tags.</p>
 <ul>
-<li>Example: <code v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|remove_tags:&quot;b&quot;</code> returns <code v-pre>&quot;&lt;p&gt;Hello world!&lt;/p&gt;&quot;</code>.</li>
-<li>Multiple tags: <code v-pre>{{fullHtml|remove_tags:(&quot;a,em,strong&quot;)}}</code></li>
+<li>Example: <code translate="no" v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|remove_tags:&quot;b&quot;</code> returns <code translate="no" v-pre>&quot;&lt;p&gt;Hello world!&lt;/p&gt;&quot;</code>.</li>
+<li>Multiple tags: <code translate="no" v-pre>{{fullHtml|remove_tags:(&quot;a,em,strong&quot;)}}</code></li>
 </ul>
 <doc-anchor-target id="replace_tags">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#replace_tags">#</doc-anchor-trigger>
-        <span><code v-pre>replace_tags</code></span>
+        <span><code translate="no" v-pre>replace_tags</code></span>
     </h3>
 </doc-anchor-target>
 <p>Replaces HTML tags, maintaining the content and attributes of the tag.</p>
 <ul>
-<li><code v-pre>{{fullHtml|replace_tags:&quot;strong&quot;:&quot;h2&quot;}}</code> replaces all <code v-pre>&lt;strong&gt;</code> tags with <code v-pre>&lt;h2&gt;</code>.</li>
+<li><code translate="no" v-pre>{{fullHtml|replace_tags:&quot;strong&quot;:&quot;h2&quot;}}</code> replaces all <code translate="no" v-pre>&lt;strong&gt;</code> tags with <code translate="no" v-pre>&lt;h2&gt;</code>.</li>
 </ul>
 <doc-anchor-target id="strip_attr">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#strip_attr">#</doc-anchor-trigger>
-        <span><code v-pre>strip_attr</code></span>
+        <span><code translate="no" v-pre>strip_attr</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes <strong>all</strong> HTML attributes from a string.</p>
 <ul>
-<li>Use <code v-pre>strip_attr:(&quot;class, id&quot;)</code> to keep specific attributes.</li>
-<li>Example: <code v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|strip_attr:(&quot;class&quot;)</code> returns <code v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
+<li>Use <code translate="no" v-pre>strip_attr:(&quot;class, id&quot;)</code> to keep specific attributes.</li>
+<li>Example: <code translate="no" v-pre>&quot;&lt;div class=&quot;test&quot; id=&quot;example&quot;&gt;Content&lt;/div&gt;&quot;|strip_attr:(&quot;class&quot;)</code> returns <code translate="no" v-pre>&lt;div id=&quot;example&quot;&gt;Content&lt;/div&gt;</code>.</li>
 </ul>
 <doc-anchor-target id="strip_md">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#strip_md">#</doc-anchor-trigger>
-        <span><code v-pre>strip_md</code></span>
+        <span><code translate="no" v-pre>strip_md</code></span>
     </h3>
 </doc-anchor-target>
-<p>Removes <strong>all</strong> Markdown formatting and returns a plain text string, e.g. turning <code v-pre>**text**</code> into <code v-pre>text</code>.</p>
+<p>Removes <strong>all</strong> Markdown formatting and returns a plain text string, e.g. turning <code translate="no" v-pre>**text**</code> into <code translate="no" v-pre>text</code>.</p>
 <ul>
 <li>Turns formatted text into unformatted plain text, including bold, italic, highlights, headers, code, blockquotes, tables, task lists, and wikilinks.</li>
 <li>Entirely removes tables, footnotes, images, and HTML elements.</li>
@@ -633,13 +608,13 @@
 <doc-anchor-target id="strip_tags">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#strip_tags">#</doc-anchor-trigger>
-        <span><code v-pre>strip_tags</code></span>
+        <span><code translate="no" v-pre>strip_tags</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes <strong>all</strong> HTML tags from a string. Content within the tag is preserved.</p>
 <ul>
-<li>Use <code v-pre>strip_tags:(&quot;p,strong,em&quot;)</code> to keep specific tags.</li>
-<li>Example: <code v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|strip_tags:(&quot;b&quot;)</code> returns <code v-pre>Hello &lt;b&gt;world&lt;/b&gt;!</code>.</li>
+<li>Use <code translate="no" v-pre>strip_tags:(&quot;p,strong,em&quot;)</code> to keep specific tags.</li>
+<li>Example: <code translate="no" v-pre>&quot;&lt;p&gt;Hello &lt;b&gt;world&lt;/b&gt;!&lt;/p&gt;&quot;|strip_tags:(&quot;b&quot;)</code> returns <code translate="no" v-pre>Hello &lt;b&gt;world&lt;/b&gt;!</code>.</li>
 </ul>
 <doc-anchor-target id="arrays-and-objects">
     <h2>
@@ -651,147 +626,147 @@
 <doc-anchor-target id="first">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#first">#</doc-anchor-trigger>
-        <span><code v-pre>first</code></span>
+        <span><code translate="no" v-pre>first</code></span>
     </h3>
 </doc-anchor-target>
 <p>Returns the first element of an array as a string.</p>
 <ul>
-<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|first</code> returns <code v-pre>&quot;a&quot;</code>.</li>
+<li><code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|first</code> returns <code translate="no" v-pre>&quot;a&quot;</code>.</li>
 <li>If the input is not an array, it returns the input unchanged.</li>
 </ul>
 <doc-anchor-target id="join">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#join">#</doc-anchor-trigger>
-        <span><code v-pre>join</code></span>
+        <span><code translate="no" v-pre>join</code></span>
     </h3>
 </doc-anchor-target>
 <p>Combines elements of an array into a string.</p>
 <ul>
-<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join</code> returns <code v-pre>&quot;a,b,c&quot;</code>.</li>
-<li>A custom separator can be specified: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join:&quot; &quot;</code> returns <code v-pre>&quot;a b c&quot;</code>. Use <code v-pre>join:&quot;\n&quot;</code> to separate elements with a line break.</li>
-<li>It can be useful after <code v-pre>split</code> or <code v-pre>slice</code>: <code v-pre>&quot;a,b,c,d&quot;|split:&quot;,&quot;|slice:1,3|join:&quot; &quot;</code> returns <code v-pre>&quot;b c&quot;</code>.</li>
+<li><code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join</code> returns <code translate="no" v-pre>&quot;a,b,c&quot;</code>.</li>
+<li>A custom separator can be specified: <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|join:&quot; &quot;</code> returns <code translate="no" v-pre>&quot;a b c&quot;</code>. Use <code translate="no" v-pre>join:&quot;\n&quot;</code> to separate elements with a line break.</li>
+<li>It can be useful after <code translate="no" v-pre>split</code> or <code translate="no" v-pre>slice</code>: <code translate="no" v-pre>&quot;a,b,c,d&quot;|split:&quot;,&quot;|slice:1,3|join:&quot; &quot;</code> returns <code translate="no" v-pre>&quot;b c&quot;</code>.</li>
 </ul>
 <doc-anchor-target id="last">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#last">#</doc-anchor-trigger>
-        <span><code v-pre>last</code></span>
+        <span><code translate="no" v-pre>last</code></span>
     </h3>
 </doc-anchor-target>
 <p>Returns the last element of an array as a string.</p>
 <ul>
-<li><code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|last</code> returns <code v-pre>&quot;c&quot;</code>.</li>
+<li><code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]|last</code> returns <code translate="no" v-pre>&quot;c&quot;</code>.</li>
 <li>If the input is not an array, it returns the input unchanged.</li>
 </ul>
 <doc-anchor-target id="map">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#map">#</doc-anchor-trigger>
-        <span><code v-pre>map</code></span>
+        <span><code translate="no" v-pre>map</code></span>
     </h3>
 </doc-anchor-target>
-<p>Applies a transformation to each element of an array using the syntax <code v-pre>map:item =&gt; item.property</code> or <code v-pre>map:item =&gt; item.nested.property</code> for nested properties.</p>
+<p>Applies a transformation to each element of an array using the syntax <code translate="no" v-pre>map:item =&gt; item.property</code> or <code translate="no" v-pre>map:item =&gt; item.nested.property</code> for nested properties.</p>
 <ul>
-<li><code v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; item.gem</code> returns <code v-pre>[&quot;obsidian&quot;, &quot;amethyst&quot;]</code>.</li>
-<li>Use parentheses for object literals and complex expressions: <code v-pre>map:item =&gt; ({key: value})</code>, e.g.: <code v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; ({name: item.gem, color: item.color})</code>  returns <code v-pre>[{name: &quot;obsidian&quot;, color: &quot;black&quot;}, {name: &quot;amethyst&quot;, color: &quot;purple&quot;}]</code>.</li>
+<li><code translate="no" v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; item.gem</code> returns <code translate="no" v-pre>[&quot;obsidian&quot;, &quot;amethyst&quot;]</code>.</li>
+<li>Use parentheses for object literals and complex expressions: <code translate="no" v-pre>map:item =&gt; ({key: value})</code>, e.g.: <code translate="no" v-pre>[{gem: &quot;obsidian&quot;, color: &quot;black&quot;}, {gem: &quot;amethyst&quot;, color: &quot;purple&quot;}]|map:item =&gt; ({name: item.gem, color: item.color})</code>  returns <code translate="no" v-pre>[{name: &quot;obsidian&quot;, color: &quot;black&quot;}, {name: &quot;amethyst&quot;, color: &quot;purple&quot;}]</code>.</li>
 </ul>
-<p>String literals are supported and automatically wrapped in an object with a <code v-pre>str</code> property. The <code v-pre>str</code> property is used to store the result of string literal transformations, e.g. <code v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;</code> returns <code v-pre>[{str: &quot;genres/rock&quot;}, {str: &quot;genres/pop&quot;}]</code>.</p>
-<p>Combine <code v-pre>map</code> with the <code v-pre>template</code> filter, e.g. <code v-pre>map:item =&gt; ({name: ${item.gem}, color: item.color})|template:&quot;- ${name} is ${color}\n&quot;</code>.</p>
+<p>String literals are supported and automatically wrapped in an object with a <code translate="no" v-pre>str</code> property. The <code translate="no" v-pre>str</code> property is used to store the result of string literal transformations, e.g. <code translate="no" v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;</code> returns <code translate="no" v-pre>[{str: &quot;genres/rock&quot;}, {str: &quot;genres/pop&quot;}]</code>.</p>
+<p>Combine <code translate="no" v-pre>map</code> with the <code translate="no" v-pre>template</code> filter, e.g. <code translate="no" v-pre>map:item =&gt; ({name: ${item.gem}, color: item.color})|template:&quot;- ${name} is ${color}\n&quot;</code>.</p>
 <doc-anchor-target id="merge">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#merge">#</doc-anchor-trigger>
-        <span><code v-pre>merge</code></span>
+        <span><code translate="no" v-pre>merge</code></span>
     </h3>
 </doc-anchor-target>
 <p>Adds new values to an array.</p>
 <ul>
-<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:(&quot;c&quot;,&quot;d&quot;)</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]</code>.</li>
-<li>Single value: <code v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:&quot;c&quot;</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
-<li>If input is not an array, it creates a new array: <code v-pre>&quot;a&quot;|merge:(&quot;b&quot;,&quot;c&quot;)</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
-<li>Values can be quoted: <code v-pre>[&quot;a&quot;]|merge:('b,&quot;c,d&quot;,e')</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c,d&quot;,&quot;e&quot;]</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:(&quot;c&quot;,&quot;d&quot;)</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]</code>.</li>
+<li>Single value: <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;]|merge:&quot;c&quot;</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>If input is not an array, it creates a new array: <code translate="no" v-pre>&quot;a&quot;|merge:(&quot;b&quot;,&quot;c&quot;)</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>Values can be quoted: <code translate="no" v-pre>[&quot;a&quot;]|merge:('b,&quot;c,d&quot;,e')</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c,d&quot;,&quot;e&quot;]</code>.</li>
 </ul>
 <doc-anchor-target id="nth">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#nth">#</doc-anchor-trigger>
-        <span><code v-pre>nth</code></span>
+        <span><code translate="no" v-pre>nth</code></span>
     </h3>
 </doc-anchor-target>
 <p>Keeps nth items in an array using CSS-style nth-child syntax and group patterns. All positions are 1-based (first item is position 1).</p>
 <ul>
-<li><code v-pre>array|nth:3</code> keeps only the 3rd element.</li>
-<li><code v-pre>array|nth:3n</code> keeps every 3rd element (3, 6, 9, etc.).</li>
-<li><code v-pre>array|nth:n+3</code> keeps the 3rd and all following elements.</li>
+<li><code translate="no" v-pre>array|nth:3</code> keeps only the 3rd element.</li>
+<li><code translate="no" v-pre>array|nth:3n</code> keeps every 3rd element (3, 6, 9, etc.).</li>
+<li><code translate="no" v-pre>array|nth:n+3</code> keeps the 3rd and all following elements.</li>
 </ul>
 <p>Group pattern syntax for repeating structures:</p>
 <ul>
-<li><code v-pre>array|nth:1,2,3:5</code> keeps positions 1, 2, 3 from each group of 5 items. Example: <code v-pre>[1,2,3,4,5,6,7,8,9,10]|nth:1,2,3:5</code> returns <code v-pre>[1,2,3,6,7,8]</code>.</li>
+<li><code translate="no" v-pre>array|nth:1,2,3:5</code> keeps positions 1, 2, 3 from each group of 5 items. Example: <code translate="no" v-pre>[1,2,3,4,5,6,7,8,9,10]|nth:1,2,3:5</code> returns <code translate="no" v-pre>[1,2,3,6,7,8]</code>.</li>
 </ul>
 <doc-anchor-target id="object">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#object">#</doc-anchor-trigger>
-        <span><code v-pre>object</code></span>
+        <span><code translate="no" v-pre>object</code></span>
     </h3>
 </doc-anchor-target>
 <p>Manipulates object data:</p>
 <ul>
-<li><code v-pre>object:array</code> converts an object to an array of key-value pairs.</li>
-<li><code v-pre>object:keys</code> returns an array of the object&#x27;s keys.</li>
-<li><code v-pre>object:values</code> returns an array of the object&#x27;s values.</li>
-<li>Example: <code v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|object:array</code> returns <code v-pre>[[&quot;a&quot;,1],[&quot;b&quot;,2]]</code>.</li>
+<li><code translate="no" v-pre>object:array</code> converts an object to an array of key-value pairs.</li>
+<li><code translate="no" v-pre>object:keys</code> returns an array of the object&#x27;s keys.</li>
+<li><code translate="no" v-pre>object:values</code> returns an array of the object&#x27;s values.</li>
+<li>Example: <code translate="no" v-pre>{&quot;a&quot;:1,&quot;b&quot;:2}|object:array</code> returns <code translate="no" v-pre>[[&quot;a&quot;,1],[&quot;b&quot;,2]]</code>.</li>
 </ul>
 <doc-anchor-target id="slice">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#slice">#</doc-anchor-trigger>
-        <span><code v-pre>slice</code></span>
+        <span><code translate="no" v-pre>slice</code></span>
     </h3>
 </doc-anchor-target>
 <p>Extracts a portion of a string or array.</p>
 <ul>
-<li>For strings: <code v-pre>&quot;hello&quot;|slice:1,4</code> returns <code v-pre>&quot;ell&quot;</code>.</li>
-<li>For arrays: <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]|slice:1,3</code> returns <code v-pre>[&quot;b&quot;,&quot;c&quot;]</code>.</li>
-<li>If only one parameter is provided, it slices from that index to the end: <code v-pre>&quot;hello&quot;|slice:2</code> returns <code v-pre>&quot;llo&quot;</code>.</li>
-<li>Negative indices count from the end: <code v-pre>&quot;hello&quot;|slice:-3</code> returns <code v-pre>&quot;llo&quot;</code>.</li>
-<li>The second parameter is exclusive: <code v-pre>&quot;hello&quot;|slice:1,4</code> includes characters at indices 1, 2, and 3.</li>
-<li>Using a negative second parameter excludes elements from the end: <code v-pre>&quot;hello&quot;|slice:0,-2</code> returns <code v-pre>&quot;hel&quot;</code>.</li>
+<li>For strings: <code translate="no" v-pre>&quot;hello&quot;|slice:1,4</code> returns <code translate="no" v-pre>&quot;ell&quot;</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;]|slice:1,3</code> returns <code translate="no" v-pre>[&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li>If only one parameter is provided, it slices from that index to the end: <code translate="no" v-pre>&quot;hello&quot;|slice:2</code> returns <code translate="no" v-pre>&quot;llo&quot;</code>.</li>
+<li>Negative indices count from the end: <code translate="no" v-pre>&quot;hello&quot;|slice:-3</code> returns <code translate="no" v-pre>&quot;llo&quot;</code>.</li>
+<li>The second parameter is exclusive: <code translate="no" v-pre>&quot;hello&quot;|slice:1,4</code> includes characters at indices 1, 2, and 3.</li>
+<li>Using a negative second parameter excludes elements from the end: <code translate="no" v-pre>&quot;hello&quot;|slice:0,-2</code> returns <code translate="no" v-pre>&quot;hel&quot;</code>.</li>
 </ul>
 <doc-anchor-target id="split">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#split">#</doc-anchor-trigger>
-        <span><code v-pre>split</code></span>
+        <span><code translate="no" v-pre>split</code></span>
     </h3>
 </doc-anchor-target>
 <p>Divides a string into an array of substrings.</p>
 <ul>
-<li><code v-pre>&quot;a,b,c&quot;|split:&quot;,&quot;</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
-<li><code v-pre>&quot;hello world&quot;|split:&quot; &quot;</code> returns <code v-pre>[&quot;hello&quot;,&quot;world&quot;]</code>.</li>
-<li>If no separator is provided, it splits on every character: <code v-pre>&quot;hello&quot;|split</code> returns <code v-pre>[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</code>.</li>
-<li>Regular expressions can be used as separators: <code v-pre>&quot;a1b2c3&quot;|split:[0-9]</code> returns <code v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li><code translate="no" v-pre>&quot;a,b,c&quot;|split:&quot;,&quot;</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
+<li><code translate="no" v-pre>&quot;hello world&quot;|split:&quot; &quot;</code> returns <code translate="no" v-pre>[&quot;hello&quot;,&quot;world&quot;]</code>.</li>
+<li>If no separator is provided, it splits on every character: <code translate="no" v-pre>&quot;hello&quot;|split</code> returns <code translate="no" v-pre>[&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]</code>.</li>
+<li>Regular expressions can be used as separators: <code translate="no" v-pre>&quot;a1b2c3&quot;|split:[0-9]</code> returns <code translate="no" v-pre>[&quot;a&quot;,&quot;b&quot;,&quot;c&quot;]</code>.</li>
 </ul>
 <doc-anchor-target id="template">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#template">#</doc-anchor-trigger>
-        <span><code v-pre>template</code></span>
+        <span><code translate="no" v-pre>template</code></span>
     </h3>
 </doc-anchor-target>
-<p>Applies a template string to an object or array of objects, using the syntax <code v-pre>object|template:&quot;Template with ${variable}&quot;</code>.</p>
+<p>Applies a template string to an object or array of objects, using the syntax <code translate="no" v-pre>object|template:&quot;Template with ${variable}&quot;</code>.</p>
 <ul>
-<li>Access nested properties: <code v-pre>{&quot;gem&quot;:{&quot;name&quot;:&quot;Obsidian&quot;}}|template:&quot;${gem.name}&quot;</code> returns <code v-pre>&quot;Obsidian&quot;</code>.</li>
-<li>For objects: <code v-pre>{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5}|template:&quot;${gem} has a hardness of ${hardness}&quot;</code> returns <code v-pre>&quot;obsidian has a hardness of 5&quot;</code>.</li>
-<li>For arrays: <code v-pre>[{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5},{&quot;gem&quot;:&quot;amethyst&quot;,&quot;hardness&quot;:7}]|template:&quot;- ${gem} has a hardness of ${hardness}\n&quot;</code> returns a formatted list.</li>
+<li>Access nested properties: <code translate="no" v-pre>{&quot;gem&quot;:{&quot;name&quot;:&quot;Obsidian&quot;}}|template:&quot;${gem.name}&quot;</code> returns <code translate="no" v-pre>&quot;Obsidian&quot;</code>.</li>
+<li>For objects: <code translate="no" v-pre>{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5}|template:&quot;${gem} has a hardness of ${hardness}&quot;</code> returns <code translate="no" v-pre>&quot;obsidian has a hardness of 5&quot;</code>.</li>
+<li>For arrays: <code translate="no" v-pre>[{&quot;gem&quot;:&quot;obsidian&quot;,&quot;hardness&quot;:5},{&quot;gem&quot;:&quot;amethyst&quot;,&quot;hardness&quot;:7}]|template:&quot;- ${gem} has a hardness of ${hardness}\n&quot;</code> returns a formatted list.</li>
 </ul>
-<p>Works with string literals from <code v-pre>map</code> by accessing the <code v-pre>str</code> property:</p>
+<p>Works with string literals from <code translate="no" v-pre>map</code> by accessing the <code translate="no" v-pre>str</code> property:</p>
 <ul>
-<li>Example: <code v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;|template:&quot;${str}&quot;</code> returns <code v-pre>&quot;genres/rock\ngenres/pop&quot;</code>.</li>
-<li>The <code v-pre>str</code> property is automatically used when applying <code v-pre>template</code> to objects created by <code v-pre>map</code> with string literals.</li>
+<li>Example: <code translate="no" v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;|template:&quot;${str}&quot;</code> returns <code translate="no" v-pre>&quot;genres/rock\ngenres/pop&quot;</code>.</li>
+<li>The <code translate="no" v-pre>str</code> property is automatically used when applying <code translate="no" v-pre>template</code> to objects created by <code translate="no" v-pre>map</code> with string literals.</li>
 </ul>
 <doc-anchor-target id="unique">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#unique">#</doc-anchor-trigger>
-        <span><code v-pre>unique</code></span>
+        <span><code translate="no" v-pre>unique</code></span>
     </h3>
 </doc-anchor-target>
 <p>Removes duplicate values from arrays and objects.</p>
 <ul>
-<li>For arrays of primitives: <code v-pre>[1,2,2,3,3]|unique</code> returns <code v-pre>[1,2,3]</code>.</li>
-<li>For arrays of objects: <code v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2},{&quot;a&quot;:1}]|unique</code> returns <code v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2}]</code>.</li>
+<li>For arrays of primitives: <code translate="no" v-pre>[1,2,2,3,3]|unique</code> returns <code translate="no" v-pre>[1,2,3]</code>.</li>
+<li>For arrays of objects: <code translate="no" v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2},{&quot;a&quot;:1}]|unique</code> returns <code translate="no" v-pre>[{&quot;a&quot;:1},{&quot;b&quot;:2}]</code>.</li>
 <li>For objects it removes properties with duplicate values, keeping the last occurrence&#x27;s key.</li>
 <li>For strings it returns the input unchanged.</li>
 </ul>

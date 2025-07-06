@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Basic formatting syntax</title>
@@ -33,13 +33,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../favicon.ico" />
+    <link href="../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0-preview6.804960609760" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.12.0-preview.805089200166" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -93,31 +93,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -135,7 +110,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -234,7 +209,7 @@
         <span>Basic formatting syntax</span>
     </h1>
 </doc-anchor-target>
-<p>Learn how to apply basic formatting to your notes, using <a href="https://daringfireball.net/projects/markdown/" class="outbound" target="_blank"><span>Markdown</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. For more advanced formatting syntax, refer to <a href="../advanced-syntax/">Advanced formatting syntax</a>.</p>
+<p>Learn how to apply basic formatting to your notes, using <a href="https://daringfireball.net/projects/markdown/" class="outbound" target="_blank"><span>Markdown</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. For more advanced formatting syntax, refer to <a href="../advanced-syntax/">Advanced formatting syntax</a>.</p>
 <doc-anchor-target id="paragraphs">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#paragraphs">#</doc-anchor-trigger>
@@ -274,7 +249,7 @@ and multiple newlines between paragraphs.</code></pre>
 <p>Multiple          adjacent          spaces</p>
 <p>and multiple newlines between paragraphs.</p>
 </blockquote>
-<p>If you want to prevent spaces from collapsing or add multiple blank spaces, you can use the <code v-pre>&amp;nbsp;</code> (non-breaking space) or <code v-pre>&lt;br&gt;</code> (line break) HTML tags.</p>
+<p>If you want to prevent spaces from collapsing or add multiple blank spaces, you can use the <code translate="no" v-pre>&amp;nbsp;</code> (non-breaking space) or <code translate="no" v-pre>&lt;br&gt;</code> (line break) HTML tags.</p>
         </div>
     </div>
 </div>
@@ -284,10 +259,10 @@ and multiple newlines between paragraphs.</code></pre>
         <span>Line breaks</span>
     </h3>
 </doc-anchor-target>
-<p>By default in Obsidian, pressing <code v-pre>Enter</code> once will create a new line in your note, but this is treated as a <em>continuation</em> of the same paragraph in the rendered output, following typical Markdown behavior. To insert a line break <em>within</em> a paragraph without starting a new paragraph, you can either:</p>
+<p>By default in Obsidian, pressing <code translate="no" v-pre>Enter</code> once will create a new line in your note, but this is treated as a <em>continuation</em> of the same paragraph in the rendered output, following typical Markdown behavior. To insert a line break <em>within</em> a paragraph without starting a new paragraph, you can either:</p>
 <ul>
-<li>Add <strong>two spaces</strong> at the end of a line before pressing <code v-pre>Enter</code>, or</li>
-<li>Use the shortcut <code v-pre>Shift + Enter</code> to directly insert a line break.</li>
+<li>Add <strong>two spaces</strong> at the end of a line before pressing <code translate="no" v-pre>Enter</code>, or</li>
+<li>Use the shortcut <code translate="no" v-pre>Shift + Enter</code> to directly insert a line break.</li>
 </ul>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-question"></div>
@@ -302,8 +277,8 @@ and multiple newlines between paragraphs.</code></pre>
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Why don&#x27;t multiple <code v-pre>Enter</code> presses create more line breaks in reading view?</h5>
-<p>In Markdown, a single <code v-pre>Enter</code> is ignored, and multiple consecutive <code v-pre>Enter</code> presses result in just one new paragraph. This behavior aligns with Markdown’s soft wrap rule, where extra blank lines do not generate additional line breaks or paragraphs—they are collapsed into a single paragraph break. This is how Markdown handles text by default, ensuring that paragraphs flow naturally without unexpected breaks​.</p>
+            <h5>Why don&#x27;t multiple <code translate="no" v-pre>Enter</code> presses create more line breaks in reading view?</h5>
+<p>In Markdown, a single <code translate="no" v-pre>Enter</code> is ignored, and multiple consecutive <code translate="no" v-pre>Enter</code> presses result in just one new paragraph. This behavior aligns with Markdown’s soft wrap rule, where extra blank lines do not generate additional line breaks or paragraphs—they are collapsed into a single paragraph break. This is how Markdown handles text by default, ensuring that paragraphs flow naturally without unexpected breaks​.</p>
         </div>
     </div>
 </div>
@@ -315,14 +290,14 @@ and multiple newlines between paragraphs.</code></pre>
 <li>Enable <strong>Strict Line Breaks</strong>.</li>
 </ol>
 <p>When <strong>Strict Line Breaks</strong> is enabled in Obsidian, line breaks have three distinct behaviors depending on how the lines are separated:</p>
-<p><strong>Single return with no spaces</strong>: A single <code v-pre>Enter</code> with no trailing spaces will combine the two separate lines into a single line when rendered.</p>
+<p><strong>Single return with no spaces</strong>: A single <code translate="no" v-pre>Enter</code> with no trailing spaces will combine the two separate lines into a single line when rendered.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">line one
 line two</code></pre>
 </doc-codeblock></div>
 <p>Renders as:</p>
 <p>line one line two</p>
-<p><strong>Single return with two or more trailing spaces</strong>: If you add two or more spaces at the end of the first line before pressing <code v-pre>Enter</code>, the two lines remain part of the same paragraph, but are broken by a line break (HTML <code v-pre>&lt;br&gt;</code> element). We&#x27;ll use two underscores to stand in for spaces in this example.</p>
+<p><strong>Single return with two or more trailing spaces</strong>: If you add two or more spaces at the end of the first line before pressing <code translate="no" v-pre>Enter</code>, the two lines remain part of the same paragraph, but are broken by a line break (HTML <code translate="no" v-pre>&lt;br&gt;</code> element). We&#x27;ll use two underscores to stand in for spaces in this example.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">line three__  
 line four</code></pre>
@@ -330,7 +305,7 @@ line four</code></pre>
 <p>Renders as:</p>
 <p>line three<br>
 line four</p>
-<p><strong>Double return (with or without trailing spaces)</strong>: Pressing <code v-pre>Enter</code> twice (or more) separates the lines into two distinct paragraphs (HTML <code v-pre>&lt;p&gt;</code> elements), regardless of whether you add spaces at the end of the first line.</p>
+<p><strong>Double return (with or without trailing spaces)</strong>: Pressing <code translate="no" v-pre>Enter</code> twice (or more) separates the lines into two distinct paragraphs (HTML <code translate="no" v-pre>&lt;p&gt;</code> elements), regardless of whether you add spaces at the end of the first line.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">line five
 
@@ -345,7 +320,7 @@ line six</code></pre>
         <span>Headings</span>
     </h2>
 </doc-anchor-target>
-<p>To create a heading, add up to six <code v-pre>#</code> symbols before your heading text. The number of <code v-pre>#</code> symbols determines the size of the heading.</p>
+<p>To create a heading, add up to six <code translate="no" v-pre>#</code> symbols before your heading text. The number of <code translate="no" v-pre>#</code> symbols determines the size of the heading.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown"># This is a heading 1
 ## This is a heading 2
@@ -380,44 +355,44 @@ line six</code></pre>
 <tbody>
 <tr>
 <td>Bold</td>
-<td><code v-pre>** **</code> or <code v-pre>__ __</code></td>
-<td><code v-pre>**Bold text**</code></td>
+<td><code translate="no" v-pre>** **</code> or <code translate="no" v-pre>__ __</code></td>
+<td><code translate="no" v-pre>**Bold text**</code></td>
 <td><strong>Bold text</strong></td>
 </tr>
 <tr>
 <td>Italic</td>
-<td><code v-pre>* *</code> or <code v-pre>_ _</code></td>
-<td><code v-pre>*Italic text*</code></td>
+<td><code translate="no" v-pre>* *</code> or <code translate="no" v-pre>_ _</code></td>
+<td><code translate="no" v-pre>*Italic text*</code></td>
 <td><em>Italic text</em></td>
 </tr>
 <tr>
 <td>Strikethrough</td>
-<td><code v-pre>~~ ~~</code></td>
-<td><code v-pre>~~Striked out text~~</code></td>
+<td><code translate="no" v-pre>~~ ~~</code></td>
+<td><code translate="no" v-pre>~~Striked out text~~</code></td>
 <td><del>Striked out text</del></td>
 </tr>
 <tr>
 <td>Highlight</td>
-<td><code v-pre>== ==</code></td>
-<td><code v-pre>==Highlighted text==</code></td>
+<td><code translate="no" v-pre>== ==</code></td>
+<td><code translate="no" v-pre>==Highlighted text==</code></td>
 <td><mark>Highlighted text</mark></td>
 </tr>
 <tr>
 <td>Bold and nested italic</td>
-<td><code v-pre>** **</code> and <code v-pre>_ _</code></td>
-<td><code v-pre>**Bold text and _nested italic_ text**</code></td>
+<td><code translate="no" v-pre>** **</code> and <code translate="no" v-pre>_ _</code></td>
+<td><code translate="no" v-pre>**Bold text and _nested italic_ text**</code></td>
 <td><strong>Bold text and <em>nested italic</em> text</strong></td>
 </tr>
 <tr>
 <td>Bold and italic</td>
-<td><code v-pre>*** ***</code> or <code v-pre>___ ___</code></td>
-<td><code v-pre>***Bold and italic text***</code></td>
+<td><code translate="no" v-pre>*** ***</code> or <code translate="no" v-pre>___ ___</code></td>
+<td><code translate="no" v-pre>***Bold and italic text***</code></td>
 <td><em><strong>Bold and italic text</strong></em></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Formatting can be forced to display in plain text by adding a backslash <code v-pre>\</code> in front of it.</p>
+<p>Formatting can be forced to display in plain text by adding a backslash <code translate="no" v-pre>\</code> in front of it.</p>
 <p>**This line will not be bold**</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">\*\*This line will not be bold\*\*</code></pre>
@@ -434,8 +409,8 @@ line six</code></pre>
 </doc-anchor-target>
 <p>Obsidian supports two formats for <a href="../links/">internal links</a> between notes:</p>
 <ul>
-<li>Wikilink: <code v-pre>[[Three laws of motion]]</code></li>
-<li>Markdown: <code v-pre>[Three laws of motion](Three%20laws%20of%20motion.md)</code></li>
+<li>Wikilink: <code translate="no" v-pre>[[Three laws of motion]]</code></li>
+<li>Markdown: <code translate="no" v-pre>[Three laws of motion](Three%20laws%20of%20motion.md)</code></li>
 </ul>
 <doc-anchor-target id="external-links">
     <h2>
@@ -443,11 +418,11 @@ line six</code></pre>
         <span>External links</span>
     </h2>
 </doc-anchor-target>
-<p>If you want to link to an external URL, you can create an inline link by surrounding the link text in brackets (<code v-pre>[ ]</code>), and then the URL in parentheses (<code v-pre>( )</code>).</p>
+<p>If you want to link to an external URL, you can create an inline link by surrounding the link text in brackets (<code translate="no" v-pre>[ ]</code>), and then the URL in parentheses (<code translate="no" v-pre>( )</code>).</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">[Obsidian Help](https://help.obsidian.md)</code></pre>
 </doc-codeblock></div>
-<p><a href="https://help.obsidian.md" class="outbound" target="_blank"><span>Obsidian Help</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<p><a href="https://help.obsidian.md" class="outbound" target="_blank"><span>Obsidian Help</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
 <p>You can also create external links to files in other vaults, by linking to an <a href="../extending-obsidian/obsidian-uri/">Obsidian URI</a>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">[Note](obsidian://open?vault=MainVault&amp;file=Note.md)</code></pre>
@@ -458,11 +433,11 @@ line six</code></pre>
         <span>Escape blank spaces in links</span>
     </h3>
 </doc-anchor-target>
-<p>If your URL contains blank spaces, you must escape them by replacing them with <code v-pre>%20</code>.</p>
+<p>If your URL contains blank spaces, you must escape them by replacing them with <code translate="no" v-pre>%20</code>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">[My Note](obsidian://open?vault=MainVault&amp;file=My%20Note.md)</code></pre>
 </doc-codeblock></div>
-<p>You can also escape the URL by wrapping it with angled brackets (<code v-pre>&lt; &gt;</code>).</p>
+<p>You can also escape the URL by wrapping it with angled brackets (<code translate="no" v-pre>&lt; &gt;</code>).</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">[My Note](&lt;obsidian://open?vault=MainVault&amp;file=My Note.md&gt;)</code></pre>
 </doc-codeblock></div>
@@ -472,7 +447,7 @@ line six</code></pre>
         <span>External images</span>
     </h2>
 </doc-anchor-target>
-<p>You can add images with external URLs, by adding a <code v-pre>!</code> symbol before an <doc-anchor-trigger to="#external-links">external link</doc-anchor-trigger>.</p>
+<p>You can add images with external URLs, by adding a <code translate="no" v-pre>!</code> symbol before an <doc-anchor-trigger to="#external-links">external link</doc-anchor-trigger>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">![Engelbart](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)</code></pre>
 </doc-codeblock></div>
@@ -481,7 +456,7 @@ line six</code></pre>
     <figcaption class="caption">Engelbart</figcaption>
 </figure>
 </p>
-<p>You can change the image dimensions, by adding <code v-pre>|640x480</code> to the link destination, where 640 is the width and 480 is the height.</p>
+<p>You can change the image dimensions, by adding <code translate="no" v-pre>|640x480</code> to the link destination, where 640 is the width and 480 is the height.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">![Engelbart|100x145](https://history-computer.com/ModernComputer/Basis/images/Engelbart.jpg)</code></pre>
 </doc-codeblock></div>
@@ -511,7 +486,7 @@ line six</code></pre>
         <span>Quotes</span>
     </h2>
 </doc-anchor-target>
-<p>You can quote text by adding a <code v-pre>&gt;</code> symbols before the text.</p>
+<p>You can quote text by adding a <code translate="no" v-pre>&gt;</code> symbols before the text.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">&gt; Human beings face ever more complex and urgent problems, and their effectiveness in dealing with these problems is a matter that is critical to the stability and continued progress of society.
 
@@ -533,7 +508,7 @@ line six</code></pre>
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Tip</h5>
-<p>You can turn your quote into a <a href="../callouts/">callout</a> by adding <code v-pre>[!info]</code> as the first line in a quote.</p>
+<p>You can turn your quote into a <a href="../callouts/">callout</a> by adding <code translate="no" v-pre>[!info]</code> as the first line in a quote.</p>
         </div>
     </div>
 </div>
@@ -543,7 +518,7 @@ line six</code></pre>
         <span>Lists</span>
     </h2>
 </doc-anchor-target>
-<p>You can create an unordered list by adding a <code v-pre>-</code>, <code v-pre>*</code>, or <code v-pre>+</code> before the text.</p>
+<p>You can create an unordered list by adding a <code translate="no" v-pre>-</code>, <code translate="no" v-pre>*</code>, or <code translate="no" v-pre>+</code> before the text.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">- First list item
 - Second list item
@@ -554,7 +529,7 @@ line six</code></pre>
 <li>Second list item</li>
 <li>Third list item</li>
 </ul>
-<p>To create an ordered list, start each line with a number followed by a <code v-pre>.</code> or <code v-pre>)</code> symbol.</p>
+<p>To create an ordered list, start each line with a number followed by a <code translate="no" v-pre>.</code> or <code translate="no" v-pre>)</code> symbol.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">1. First list item
 2. Second list item
@@ -575,7 +550,7 @@ line six</code></pre>
 <li>Second list item</li>
 <li>Third list item</li>
 </ol>
-<p>You can use <code v-pre>shift + enter</code> to insert a <doc-anchor-trigger to="#line-breaks">line break</doc-anchor-trigger> within an ordered list without altering the numbering.</p>
+<p>You can use <code translate="no" v-pre>shift + enter</code> to insert a <doc-anchor-trigger to="#line-breaks">line break</doc-anchor-trigger> within an ordered list without altering the numbering.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">1. First list item
    
@@ -592,7 +567,7 @@ line six</code></pre>
         <span>Task lists</span>
     </h3>
 </doc-anchor-target>
-<p>To create a task list, start each list item with a hyphen and space followed by <code v-pre>[ ]</code>.</p>
+<p>To create a task list, start each list item with a hyphen and space followed by <code translate="no" v-pre>[ ]</code>.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">- [x] This is a completed task.
 - [ ] This is an incomplete task.</code></pre>
@@ -673,14 +648,14 @@ line six</code></pre>
 </ul>
 </li>
 </ul>
-<p>Use <code v-pre>Tab</code> or <code v-pre>Shift+Tab</code> to indent or unindent selected list items to easily organize them.</p>
+<p>Use <code translate="no" v-pre>Tab</code> or <code translate="no" v-pre>Shift+Tab</code> to indent or unindent selected list items to easily organize them.</p>
 <doc-anchor-target id="horizontal-rule">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#horizontal-rule">#</doc-anchor-trigger>
         <span>Horizontal rule</span>
     </h2>
 </doc-anchor-target>
-<p>You can use three or more stars <code v-pre>***</code>, hyphens <code v-pre>---</code>, or underscore <code v-pre>___</code> on its own line to add a horizontal bar. You can also separate symbols using spaces.</p>
+<p>You can use three or more stars <code translate="no" v-pre>***</code>, hyphens <code translate="no" v-pre>---</code>, or underscore <code translate="no" v-pre>___</code> on its own line to add a horizontal bar. You can also separate symbols using spaces.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">***
 ****
@@ -710,8 +685,8 @@ _ _ _</code></pre>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">Text inside `backticks` on a line will be formatted like code.</code></pre>
 </doc-codeblock></div>
-<p>Text inside <code v-pre>backticks</code> on a line will be formatted like code.</p>
-<p>If you want to put backticks in an inline code block, surround it with double backticks like so: inline <code v-pre>code with a backtick ` inside</code>.</p>
+<p>Text inside <code translate="no" v-pre>backticks</code> on a line will be formatted like code.</p>
+<p>If you want to put backticks in an inline code block, surround it with double backticks like so: inline <code translate="no" v-pre>code with a backtick ` inside</code>.</p>
 <doc-anchor-target id="code-blocks">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#code-blocks">#</doc-anchor-trigger>
@@ -732,7 +707,7 @@ cd ~/Desktop
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">cd ~/Desktop</code></pre>
 </doc-codeblock></div>
-<p>You can also create a code block by indenting the text using <code v-pre>Tab</code> or 4 blank spaces.</p>
+<p>You can also create a code block by indenting the text using <code translate="no" v-pre>Tab</code> or 4 blank spaces.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">    cd ~/Desktop</code></pre>
 </doc-codeblock></div>
@@ -753,7 +728,7 @@ function fancyAlert(arg) {
   }
 }</code></pre>
 </doc-codeblock></div>
-<p>Obsidian uses Prism for syntax highlighting. For more information, refer to <a href="https://prismjs.com/#supported-languages" class="outbound" target="_blank"><span>Supported languages</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>Obsidian uses Prism for syntax highlighting. For more information, refer to <a href="https://prismjs.com/#supported-languages" class="outbound" target="_blank"><span>Supported languages</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -815,7 +790,7 @@ function fancyAlert(arg) {
         <span>Comments</span>
     </h2>
 </doc-anchor-target>
-<p>You can add comments by wrapping text with <code v-pre>%%</code>. Comments are only visible in Editing view.</p>
+<p>You can add comments by wrapping text with <code translate="no" v-pre>%%</code>. Comments are only visible in Editing view.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">This is an %%inline%% comment.
 
@@ -831,7 +806,7 @@ Block comments can span multiple lines.
         <span>Escaping Markdown Syntax</span>
     </h2>
 </doc-anchor-target>
-<p>In some cases, you may need to display special characters in Markdown, such as <code v-pre>*</code>, <code v-pre>_</code>, or <code v-pre>#</code>, without triggering their formatting. To display these characters literally, place a backslash (<code v-pre>\</code>) before them.</p>
+<p>In some cases, you may need to display special characters in Markdown, such as <code translate="no" v-pre>*</code>, <code translate="no" v-pre>_</code>, or <code translate="no" v-pre>#</code>, without triggering their formatting. To display these characters literally, place a backslash (<code translate="no" v-pre>\</code>) before them.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-light"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -847,12 +822,12 @@ Block comments can span multiple lines.
         <div class="pr-5 ml-3 w-full">
             <h5>Common characters to escape</h5>
 <ul>
-<li>Asterisk: <code v-pre>\*</code></li>
-<li>Underscore: <code v-pre>\_</code></li>
-<li>Hashtag: <code v-pre>\#</code></li>
-<li>Backtick: <code v-pre>\`</code></li>
-<li>Pipe (used in tables): <code v-pre>\|</code></li>
-<li>Tilde: <code v-pre>\~</code></li>
+<li>Asterisk: <code translate="no" v-pre>\*</code></li>
+<li>Underscore: <code translate="no" v-pre>\_</code></li>
+<li>Hashtag: <code translate="no" v-pre>\#</code></li>
+<li>Backtick: <code translate="no" v-pre>\`</code></li>
+<li>Pipe (used in tables): <code translate="no" v-pre>\|</code></li>
+<li>Tilde: <code translate="no" v-pre>\~</code></li>
 </ul>
         </div>
     </div>
@@ -861,7 +836,7 @@ Block comments can span multiple lines.
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">\*This text will not be italicized\*.</code></pre>
 </doc-codeblock></div>
 <p>*This text will not be italicized*.</p>
-<p>When working with numbered lists, you may need to escape the period after the number to prevent automatic list formatting. Place the backslash (<code v-pre>\</code>) before the period, <strong>not</strong> before the number.</p>
+<p>When working with numbered lists, you may need to escape the period after the number to prevent automatic list formatting. Place the backslash (<code translate="no" v-pre>\</code>) before the period, <strong>not</strong> before the number.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">1\. This won't be a list item.</code></pre>
 </doc-codeblock></div>

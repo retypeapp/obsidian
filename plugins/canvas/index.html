@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Canvas</title>
@@ -31,12 +31,12 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
+    <link href="../../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -90,31 +90,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -132,7 +107,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -233,7 +208,7 @@
 </doc-anchor-target>
 <p>Canvas is a <a href="../">core plugin</a> for visual note-taking. It gives you infinite space to lay out notes and connect them to other notes, attachments, and web pages.</p>
 <p>Visual note-taking helps you to make sense of your notes by organizing them in a 2D space. Connect notes with lines and group related notes together to better understand the relationship between them.</p>
-<p>Canvas data you create in Obsidian is saved as <code v-pre>.canvas</code> files using the open file format <a href="https://jsoncanvas.org/" class="outbound" target="_blank"><span>JSON Canvas</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>Canvas data you create in Obsidian is saved as <code translate="no" v-pre>.canvas</code> files using the open file format <a href="https://jsoncanvas.org/" class="outbound" target="_blank"><span>JSON Canvas</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <doc-anchor-target id="create-a-new-canvas">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#create-a-new-canvas">#</doc-anchor-trigger>
@@ -269,7 +244,7 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>The .canvas file extension</h5>
-<p>Obsidian stores your canvas data as <code v-pre>.canvas</code> files using an open file format called <a href="https://jsoncanvas.org/" class="outbound" target="_blank"><span>JSON Canvas</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>Obsidian stores your canvas data as <code translate="no" v-pre>.canvas</code> files using an open file format called <a href="https://jsoncanvas.org/" class="outbound" target="_blank"><span>JSON Canvas</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
         </div>
     </div>
 </div>
@@ -361,7 +336,7 @@
 <li>Enter the URL to the web page and then select <strong>Save</strong>.</li>
 </ol>
 <p>You can also select a URL in your browser and then drag it into the canvas to embed it in a card.</p>
-<p>To open the web page in your browser, press <code v-pre>Ctrl</code> (or <code v-pre>Cmd</code> on macOS) and select the card label. Or, right-click the card and select <strong>Open in browser</strong>.</p>
+<p>To open the web page in your browser, press <code translate="no" v-pre>Ctrl</code> (or <code translate="no" v-pre>Cmd</code> on macOS) and select the card label. Or, right-click the card and select <strong>Open in browser</strong>.</p>
 <doc-anchor-target id="add-cards-from-folders">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#add-cards-from-folders">#</doc-anchor-trigger>
@@ -375,7 +350,7 @@
         <span>Edit a card</span>
     </h3>
 </doc-anchor-target>
-<p>Double-click on a text or note card to start editing it. Click outside the card to stop editing it. You can also press <code v-pre>Escape</code> to stop editing a card.</p>
+<p>Double-click on a text or note card to start editing it. Click outside the card to stop editing it. You can also press <code translate="no" v-pre>Escape</code> to stop editing a card.</p>
 <p>You can also edit a card by right-clicking it and selecting <strong>Edit</strong>.</p>
 <doc-anchor-target id="delete-a-card">
     <h3>
@@ -383,7 +358,7 @@
         <span>Delete a card</span>
     </h3>
 </doc-anchor-target>
-<p>Remove selected cards by right-clicking any of them, and then selecting <strong>Delete</strong>. Or, press <code v-pre>Backspace</code> (or <code v-pre>Delete</code> on macOS).</p>
+<p>Remove selected cards by right-clicking any of them, and then selecting <strong>Delete</strong>. Or, press <code translate="no" v-pre>Backspace</code> (or <code translate="no" v-pre>Delete</code> on macOS).</p>
 <p>You can also select <strong>Remove</strong> ( <img src="../../attachments/icons/lucide-trash-2.svg#icon" alt="" /> ) in the selection controls above your selection.</p>
 <doc-anchor-target id="swap-cards">
     <h3>
@@ -405,8 +380,8 @@
     </h2>
 </doc-anchor-target>
 <p>Select cards in the canvas by clicking on them. You can select multiple cards by dragging a selection around them.</p>
-<p>You can also add and remove cards from an existing selection by pressing <code v-pre>Shift</code> and selecting them.</p>
-<p>Press <code v-pre>Ctrl+a</code> (or <code v-pre>Cmd+a</code> on macOS) to select all cards in the canvas.</p>
+<p>You can also add and remove cards from an existing selection by pressing <code translate="no" v-pre>Shift</code> and selecting them.</p>
+<p>Press <code translate="no" v-pre>Ctrl+a</code> (or <code translate="no" v-pre>Cmd+a</code> on macOS) to select all cards in the canvas.</p>
 <p>To scroll the content of a card, you first need to select it.</p>
 <doc-anchor-target id="arrange-cards">
     <h3>
@@ -415,9 +390,9 @@
     </h3>
 </doc-anchor-target>
 <p>Drag a selected card to move it.</p>
-<p>Press <code v-pre>Alt</code> (or <code v-pre>Option</code> on macOS) and drag to duplicate the selection.</p>
-<p>You can press <code v-pre>Shift</code> while dragging to only move in one direction.</p>
-<p>Press <code v-pre>Space</code> while moving a selection to disable snapping.</p>
+<p>Press <code translate="no" v-pre>Alt</code> (or <code translate="no" v-pre>Option</code> on macOS) and drag to duplicate the selection.</p>
+<p>You can press <code translate="no" v-pre>Shift</code> while dragging to only move in one direction.</p>
+<p>Press <code translate="no" v-pre>Space</code> while moving a selection to disable snapping.</p>
 <p>Selecting a card moves it to the front.</p>
 <doc-anchor-target id="resize-a-card">
     <h3>
@@ -426,8 +401,8 @@
     </h3>
 </doc-anchor-target>
 <p>Drag any of a card&#x27;s edges to resize it.</p>
-<p>You can press <code v-pre>Space</code> while resizing to disable snapping.</p>
-<p>To maintain the aspect ratio while resizing, press <code v-pre>Shift</code> while resizing.</p>
+<p>You can press <code translate="no" v-pre>Space</code> while resizing to disable snapping.</p>
+<p>To maintain the aspect ratio while resizing, press <code translate="no" v-pre>Shift</code> while resizing.</p>
 <doc-anchor-target id="connect-cards">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#connect-cards">#</doc-anchor-trigger>
@@ -473,7 +448,7 @@
 <li>Hover the cursor over a connection line until two small circles appear on the line.</li>
 <li>Drag one of the circles from the card without connecting it to another.</li>
 </ol>
-<p>You can also disconnect two cards by right-clicking the line between them, and then selecting <strong>Remove</strong>. Or, by selecting the line and then pressing <code v-pre>Backspace</code> (or <code v-pre>Delete</code> on macOS).</p>
+<p>You can also disconnect two cards by right-clicking the line between them, and then selecting <strong>Remove</strong>. Or, by selecting the line and then pressing <code translate="no" v-pre>Backspace</code> (or <code translate="no" v-pre>Delete</code> on macOS).</p>
 <doc-anchor-target id="connect-a-card-to-a-different-card">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#connect-a-card-to-a-different-card">#</doc-anchor-trigger>
@@ -502,7 +477,7 @@
 <p>To label a connection:</p>
 <ol>
 <li>Double-click the line.</li>
-<li>Enter the label and then press <code v-pre>Escape</code> or click anywhere on the canvas.</li>
+<li>Enter the label and then press <code translate="no" v-pre>Escape</code> or click anywhere on the canvas.</li>
 </ol>
 <p>You can also label a connection by selecting it and then selecting <strong>Edit label</strong> from the selection controls.</p>
 <p>To edit a connection label, double-click on the line, or right-click the line and then select <strong>Edit label</strong>.</p>
@@ -538,7 +513,7 @@
 <li>Select the cards.</li>
 <li>Right-click any of the selected cards and then select <strong>Create group</strong>.</li>
 </ol>
-<p><strong>Rename group:</strong> Double-click the name of the group to edit it, and then press <code v-pre>Enter</code> to save.</p>
+<p><strong>Rename group:</strong> Double-click the name of the group to edit it, and then press <code translate="no" v-pre>Enter</code> to save.</p>
 <doc-anchor-target id="navigate-the-canvas">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#navigate-the-canvas">#</doc-anchor-trigger>
@@ -554,9 +529,9 @@
 </doc-anchor-target>
 <p>To move the canvas vertically and horizontally, also known as <em>panning</em>, you can use any of the following approaches:</p>
 <ul>
-<li>Press <code v-pre>Space</code> and drag the canvas.</li>
+<li>Press <code translate="no" v-pre>Space</code> and drag the canvas.</li>
 <li>Drag the canvas using the middle-mouse button.</li>
-<li>Scroll the mouse to pan vertically, and press <code v-pre>Shift</code> while scrolling to pan horizontally.</li>
+<li>Scroll the mouse to pan vertically, and press <code translate="no" v-pre>Shift</code> while scrolling to pan horizontally.</li>
 </ul>
 <doc-anchor-target id="zoom-the-canvas">
     <h3>
@@ -564,21 +539,21 @@
         <span>Zoom the canvas</span>
     </h3>
 </doc-anchor-target>
-<p>To zoom the canvas, press <code v-pre>Space</code>  or <code v-pre>Ctrl</code> (or <code v-pre>Cmd</code> on macOS) and scroll using the mouse wheel. Or, select <strong>Zoom in</strong> ( <img src="../../attachments/icons/lucide-plus.svg#icon" alt="" /> ) and <strong>Zoom out</strong> ( <img src="../../attachments/icons/lucide-minus.svg#icon" alt="" /> ) from the zoom controls in the upper-right corner.</p>
+<p>To zoom the canvas, press <code translate="no" v-pre>Space</code>  or <code translate="no" v-pre>Ctrl</code> (or <code translate="no" v-pre>Cmd</code> on macOS) and scroll using the mouse wheel. Or, select <strong>Zoom in</strong> ( <img src="../../attachments/icons/lucide-plus.svg#icon" alt="" /> ) and <strong>Zoom out</strong> ( <img src="../../attachments/icons/lucide-minus.svg#icon" alt="" /> ) from the zoom controls in the upper-right corner.</p>
 <doc-anchor-target id="zoom-to-fit">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#zoom-to-fit">#</doc-anchor-trigger>
         <span>Zoom to fit</span>
     </h4>
 </doc-anchor-target>
-<p>To zoom the canvas so that every item is visible, select <strong>Zoom to fit</strong> ( <img src="../../attachments/icons/lucide-maximize.svg#icon" alt="" /> ). Or, use the keyboard shortcut, <code v-pre>Shift+1</code>.</p>
+<p>To zoom the canvas so that every item is visible, select <strong>Zoom to fit</strong> ( <img src="../../attachments/icons/lucide-maximize.svg#icon" alt="" /> ). Or, use the keyboard shortcut, <code translate="no" v-pre>Shift+1</code>.</p>
 <doc-anchor-target id="zoom-to-selection">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#zoom-to-selection">#</doc-anchor-trigger>
         <span>Zoom to selection</span>
     </h4>
 </doc-anchor-target>
-<p>To zoom the canvas so that all selected items are visible, right-click a selected card and then select <strong>Zoom to selection</strong>. Or, use a keyboard shortcut by pressing <code v-pre>Shift+2</code>.</p>
+<p>To zoom the canvas so that all selected items are visible, right-click a selected card and then select <strong>Zoom to selection</strong>. Or, use a keyboard shortcut by pressing <code translate="no" v-pre>Shift+2</code>.</p>
 <doc-anchor-target id="reset-zoom">
     <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#reset-zoom">#</doc-anchor-trigger>
@@ -593,7 +568,7 @@
     </h2>
 </doc-anchor-target>
 <p>We have made some quick videos to demonstrate some advanced use cases of Canvas.</p>
-<p>You can <a href="https://obsidian.md/canvas#protips" class="outbound" target="_blank"><span>check out all 72 tips here</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. Please note that the tip videos are only visible on desktop.</p>
+<p>You can <a href="https://obsidian.md/canvas#protips" class="outbound" target="_blank"><span>check out all 72 tips here</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. Please note that the tip videos are only visible on desktop.</p>
 
                                 
                                 <!-- Required only on API pages -->

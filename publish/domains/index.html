@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Custom domains</title>
@@ -31,13 +31,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
+    <link href="../../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0-preview6.804960609760" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.12.0-preview.805089200166" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -91,31 +91,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -133,7 +108,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -248,7 +223,7 @@
             <h5>Warning</h5>
 <p>At the moment, we only support configuring custom domains using the following methods:</p>
 <ul>
-<li><doc-anchor-trigger to="#set-up-using-cloudflare">Set up using CloudFlare</doc-anchor-trigger> using <a href="https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full/" class="outbound" target="_blank"><span>Full mode</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+<li><doc-anchor-trigger to="#set-up-using-cloudflare">Set up using CloudFlare</doc-anchor-trigger> using <a href="https://developers.cloudflare.com/ssl/origin-configuration/ssl-modes/full/" class="outbound" target="_blank"><span>Full mode</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
 <li><doc-anchor-trigger to="#set-up-using-a-proxy">Set up using a proxy</doc-anchor-trigger></li>
 </ul>
 <p>We don&#x27;t yet have a way to provision an SSL certificate on your behalf.</p>
@@ -261,8 +236,8 @@
         <span>Set up using CloudFlare</span>
     </h2>
 </doc-anchor-target>
-<p>The easiest way to set up a custom domain or subdomain is to create a <a href="https://cloudflare.com" class="outbound" target="_blank"><span>CloudFlare</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> account and let CloudFlare manage your domain&#x27;s DNS.</p>
-<p>The following steps use CloudFlare to configure a custom domain for your Obsidian Publish site, either using a root domain (<code v-pre>mysite.com</code>) or a subdomain (<code v-pre>notes.mysite.com</code>).</p>
+<p>The easiest way to set up a custom domain or subdomain is to create a <a href="https://cloudflare.com" class="outbound" target="_blank"><span>CloudFlare</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> account and let CloudFlare manage your domain&#x27;s DNS.</p>
+<p>The following steps use CloudFlare to configure a custom domain for your Obsidian Publish site, either using a root domain (<code translate="no" v-pre>mysite.com</code>) or a subdomain (<code translate="no" v-pre>notes.mysite.com</code>).</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -283,11 +258,11 @@
 </div>
 <p><strong>CloudFlare:</strong></p>
 <ol>
-<li>Open Cloudflare to the domain where you want to host your Publish site, such as <code v-pre>mysite.com</code>, even if you want a subdomain like <code v-pre>notes.mysite.com</code>.</li>
+<li>Open Cloudflare to the domain where you want to host your Publish site, such as <code translate="no" v-pre>mysite.com</code>, even if you want a subdomain like <code translate="no" v-pre>notes.mysite.com</code>.</li>
 <li>Go to <strong>DNS</strong> and click <strong>Add Record</strong>.</li>
 <li>Select <strong>CNAME</strong>.</li>
-<li>In <strong>name</strong>, enter your domain or subdomain, for example <code v-pre>notes.mysite.com</code>.</li>
-<li>In <strong>target</strong>, enter <code v-pre>publish-main.obsidian.md</code>. Don&#x27;t include your personal sub-URL in this value. Obsidian Publish handles this from your configuration.</li>
+<li>In <strong>name</strong>, enter your domain or subdomain, for example <code translate="no" v-pre>notes.mysite.com</code>.</li>
+<li>In <strong>target</strong>, enter <code translate="no" v-pre>publish-main.obsidian.md</code>. Don&#x27;t include your personal sub-URL in this value. Obsidian Publish handles this from your configuration.</li>
 <li>Make sure that <strong>proxy status</strong> is enabled. It should be enabled by default.</li>
 <li>Go to <strong>SSL/TLS</strong> and set the SSL/TLS encryption mode to &quot;Full&quot; to configure the SSL/TLS certificate automatically.</li>
 </ol>
@@ -305,13 +280,13 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Note</h5>
-<p>To redirect both <code v-pre>mysite.com</code> and <code v-pre>www.mysite.com</code> to Obsidian Publish, you need to create a <a href="https://support.cloudflare.com/hc/en-us/articles/200172336-Creating-Page-Rules" class="outbound" target="_blank"><span>Page Rule</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> with the following settings:</p>
+<p>To redirect both <code translate="no" v-pre>mysite.com</code> and <code translate="no" v-pre>www.mysite.com</code> to Obsidian Publish, you need to create a <a href="https://support.cloudflare.com/hc/en-us/articles/200172336-Creating-Page-Rules" class="outbound" target="_blank"><span>Page Rule</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> with the following settings:</p>
 <ul>
-<li>URL match: <code v-pre>www.mysite.com/*</code></li>
+<li>URL match: <code translate="no" v-pre>www.mysite.com/*</code></li>
 <li>Forward URL - 301 Permanent Redirect</li>
-<li>Redirect URL: <code v-pre>https://mysite.com/$1</code></li>
+<li>Redirect URL: <code translate="no" v-pre>https://mysite.com/$1</code></li>
 </ul>
-<p>After you&#x27;ve created the page rule, create a CNAME record for <code v-pre>www.mysite.com</code> just like you did for <code v-pre>mysite.com</code>.</p>
+<p>After you&#x27;ve created the page rule, create a CNAME record for <code translate="no" v-pre>www.mysite.com</code> just like you did for <code translate="no" v-pre>mysite.com</code>.</p>
         </div>
     </div>
 </div>
@@ -321,7 +296,7 @@
 <li>In the <a href="../../ribbon/">Ribbon</a> at the left, click <strong>Publish changes</strong> ( <img src="../../attachments/icons/lucide-send.svg#icon" alt="" /> ).</li>
 <li>Under <strong>Publish changes</strong>, select <strong>Change site options</strong> ( <img src="../../attachments/icons/lucide-cog.svg#icon" alt="" /> ).</li>
 <li>Next to <strong>Custom domain</strong>, select <strong>Configure</strong>.</li>
-<li>In <strong>Custom URL</strong>, enter the URL to your domain or subdomain. Make sure to not put <code v-pre>www.</code> in the custom URL box.</li>
+<li>In <strong>Custom URL</strong>, enter the URL to your domain or subdomain. Make sure to not put <code translate="no" v-pre>www.</code> in the custom URL box.</li>
 </ol>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
@@ -349,8 +324,8 @@
 </doc-anchor-target>
 <p>You can also set up SSL/TLS for your custom domain by using your own web server.</p>
 <p>If you are already hosting a website under your domain or subdomain, you can also use this option and set up your website to load your Obsidian Publish site under a specific URL path, instead of hosting the full site.</p>
-<p>Proxy all requests under that URL path to <code v-pre>https://publish.obsidian.md/serve?url=mysite.com/my-notes/...</code> and configure the site options in Obsidian to the same URL path, by setting <strong>Custom URL</strong> to <code v-pre>mysite.com/my-notes</code>.</p>
-<p>You can also set up Obsidian Publish as a sub-URL of a site you own. For example, <code v-pre>https://mysite.com/my-notes/</code>. To achieve this, you must host your own server and proxy all requests to our server at <code v-pre>https://publish.obsidian.md/</code>.</p>
+<p>Proxy all requests under that URL path to <code translate="no" v-pre>https://publish.obsidian.md/serve?url=mysite.com/my-notes/...</code> and configure the site options in Obsidian to the same URL path, by setting <strong>Custom URL</strong> to <code translate="no" v-pre>mysite.com/my-notes</code>.</p>
+<p>You can also set up Obsidian Publish as a sub-URL of a site you own. For example, <code translate="no" v-pre>https://mysite.com/my-notes/</code>. To achieve this, you must host your own server and proxy all requests to our server at <code translate="no" v-pre>https://publish.obsidian.md/</code>.</p>
 <p>The following proxy setup examples are not exhaustive, but provide common methods for this implementation.</p>
 <doc-anchor-target id="nginx">
     <h3>
@@ -366,7 +341,7 @@
   proxy_set_header Host publish.obsidian.md;
 }</code></pre>
 </doc-codeblock></div>
-<p>Some users have reported that adding <code v-pre>$request_uri</code> to the proxy pass may be required:</p>
+<p>Some users have reported that adding <code translate="no" v-pre>$request_uri</code> to the proxy pass may be required:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-nginx"><code v-pre class="language-nginx">location /my-notes {
   proxy_pass https://publish.obsidian.md/serve?url=mysite.com/my-notes$request_uri;
@@ -380,7 +355,7 @@
         <span>Apache</span>
     </h3>
 </doc-anchor-target>
-<p>In <code v-pre>.htaccess</code>, add the following:</p>
+<p>In <code translate="no" v-pre>.htaccess</code>, add the following:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">htaccess</div>
 <pre translate="no" class="language-none"><code v-pre class="language-none">RewriteEngine  on
@@ -400,7 +375,7 @@ RewriteRule    &quot;^my-notes/(.*)$&quot;  &quot;https://publish.obsidian.md/se
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Note</h5>
-<p><code v-pre>mod_rewrite</code> must be enabled, and you may also need to configure <a href="https://stackoverflow.com/questions/40938148/reverse-proxy-for-external-url-apache" class="outbound" target="_blank"><span>SSLProxyEngine</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
+<p><code translate="no" v-pre>mod_rewrite</code> must be enabled, and you may also need to configure <a href="https://stackoverflow.com/questions/40938148/reverse-proxy-for-external-url-apache" class="outbound" target="_blank"><span>SSLProxyEngine</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></p>
         </div>
     </div>
 </div>
@@ -410,7 +385,7 @@ RewriteRule    &quot;^my-notes/(.*)$&quot;  &quot;https://publish.obsidian.md/se
         <span>Netlify</span>
     </h3>
 </doc-anchor-target>
-<p>In <code v-pre>netlify.toml</code>, <a href="https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file" class="outbound" target="_blank"><span>configure redirects</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
+<p>In <code translate="no" v-pre>netlify.toml</code>, <a href="https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file" class="outbound" target="_blank"><span>configure redirects</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <div class="codeblock-title">plain</div>
 <pre translate="no" class="language-none"><code v-pre class="language-none">[[redirects]]
@@ -425,7 +400,7 @@ RewriteRule    &quot;^my-notes/(.*)$&quot;  &quot;https://publish.obsidian.md/se
         <span>Vercel</span>
     </h3>
 </doc-anchor-target>
-<p>In <code v-pre>vercel.json</code>, <a href="https://vercel.com/docs/configuration#project/rewrites" class="outbound" target="_blank"><span>configure rewrites</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
+<p>In <code translate="no" v-pre>vercel.json</code>, <a href="https://vercel.com/docs/configuration#project/rewrites" class="outbound" target="_blank"><span>configure rewrites</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-json"><code v-pre class="language-json">{
   ...
@@ -466,8 +441,8 @@ RewriteRule    &quot;^my-notes/(.*)$&quot;  &quot;https://publish.obsidian.md/se
         <span>Traefik</span>
     </h3>
 </doc-anchor-target>
-<p>This minimal configuration excerpt redirects <code v-pre>mysite.com</code> to Obsidian publish.
-See the <a href="https://doc.traefik.io/traefik/routing/overview/" class="outbound" target="_blank"><span>Traefik documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>
+<p>This minimal configuration excerpt redirects <code translate="no" v-pre>mysite.com</code> to Obsidian publish.
+See the <a href="https://doc.traefik.io/traefik/routing/overview/" class="outbound" target="_blank"><span>Traefik documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>
 for a complete example.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">http:
@@ -495,21 +470,21 @@ for a complete example.</p>
         <span>Supported HTTP X-Headers</span>
     </h3>
 </doc-anchor-target>
-<p>If your proxy service doesn&#x27;t allow query paths, you can use <code v-pre>https://publish.obsidian.md/</code> with a custom header <code v-pre>x-obsidian-custom-domain</code> set to your site URL <code v-pre>mysite.com/my-subpath</code>.</p>
+<p>If your proxy service doesn&#x27;t allow query paths, you can use <code translate="no" v-pre>https://publish.obsidian.md/</code> with a custom header <code translate="no" v-pre>x-obsidian-custom-domain</code> set to your site URL <code translate="no" v-pre>mysite.com/my-subpath</code>.</p>
 <doc-anchor-target id="redirect-old-site-to-custom-domain">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#redirect-old-site-to-custom-domain">#</doc-anchor-trigger>
         <span>Redirect old site to custom domain</span>
     </h2>
 </doc-anchor-target>
-<p>If you want to redirect your visitors from the old <code v-pre>publish.obsidian.md</code> site to your new custom domain, enable the <strong>Redirect to your custom domain</strong> option when configuring your custom domain.</p>
+<p>If you want to redirect your visitors from the old <code translate="no" v-pre>publish.obsidian.md</code> site to your new custom domain, enable the <strong>Redirect to your custom domain</strong> option when configuring your custom domain.</p>
 <doc-anchor-target id="troubleshoot">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshoot">#</doc-anchor-trigger>
         <span>Troubleshoot</span>
     </h2>
 </doc-anchor-target>
-<p>Once you set up your custom domain, if you&#x27;ve visited your site from your previous <code v-pre>https://publish.obsidian.md/slug</code> link, you may have to clear your browser cache for certain things (like fonts, graphs, or password access) to work properly. This is due to the cross-domain security restrictions that are imposed by modern browsers. The good news is that readers of your site should never run into issue this if you only let visitors use your custom domain.</p>
+<p>Once you set up your custom domain, if you&#x27;ve visited your site from your previous <code translate="no" v-pre>https://publish.obsidian.md/slug</code> link, you may have to clear your browser cache for certain things (like fonts, graphs, or password access) to work properly. This is due to the cross-domain security restrictions that are imposed by modern browsers. The good news is that readers of your site should never run into issue this if you only let visitors use your custom domain.</p>
 
                                 
                                 <!-- Required only on API pages -->

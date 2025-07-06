@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Style guide</title>
@@ -31,13 +31,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../favicon.ico" />
+    <link href="../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0-preview6.804960609760" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.12.0-preview.805089200166" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -91,31 +91,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -133,7 +108,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -232,7 +207,7 @@
         <span>Style guide</span>
     </h1>
 </doc-anchor-target>
-<p>The Obsidian documentation uses the <a href="https://developers.google.com/style" class="outbound" target="_blank"><span>Google developer documentation style guide</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. For any topics not covered by the Google style guide, use the <a href="https://learn.microsoft.com/en-us/style-guide/" class="outbound" target="_blank"><span>Microsoft Style Guide</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p>The Obsidian documentation uses the <a href="https://developers.google.com/style" class="outbound" target="_blank"><span>Google developer documentation style guide</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. For any topics not covered by the Google style guide, use the <a href="https://learn.microsoft.com/en-us/style-guide/" class="outbound" target="_blank"><span>Microsoft Style Guide</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <p>This page lists any deviations from the Google style guide, or terminology worth highlighting.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
@@ -262,7 +237,7 @@
         <span>Language style</span>
     </h2>
 </doc-anchor-target>
-<p>For our English documentation, it is recommended to use <a href="https://docs.openedx.org/en/latest/documentors/references/doc_english_writing.html" class="outbound" target="_blank"><span>Global English</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to better serve our worldwide audience.</p>
+<p>For our English documentation, it is recommended to use <a href="https://docs.openedx.org/en/latest/documentors/references/doc_english_writing.html" class="outbound" target="_blank"><span>Global English</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> to better serve our worldwide audience.</p>
 <doc-anchor-target id="terms">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#terms">#</doc-anchor-trigger>
@@ -391,11 +366,11 @@
 <p>Prefer realistic examples over nonsense terms.</p>
 <p><strong>Recommended:</strong></p>
 <ul>
-<li><code v-pre>task:(call OR schedule)</code></li>
+<li><code translate="no" v-pre>task:(call OR schedule)</code></li>
 </ul>
 <p><strong>Not recommended:</strong></p>
 <ul>
-<li><code v-pre>task:(foo OR bar)</code></li>
+<li><code translate="no" v-pre>task:(foo OR bar)</code></li>
 </ul>
 <doc-anchor-target id="key-names">
     <h3>
@@ -411,7 +386,7 @@
 <p><strong>Not recommended:</strong></p>
 <ul>
 <li>Add a hyphen in front of the word.</li>
-<li>Add a <code v-pre>-</code> in front of the word.</li>
+<li>Add a <code translate="no" v-pre>-</code> in front of the word.</li>
 </ul>
 <doc-anchor-target id="markdown">
     <h3>
@@ -453,7 +428,7 @@ This is a section.
         <span>Icons and images</span>
     </h2>
 </doc-anchor-target>
-<p>Include icons and images when they make it easier to explain things that are hard to describe with words, or when you need to show important parts of the Obsidian application. You can save images in the <code v-pre>Attachments</code> folder.</p>
+<p>Include icons and images when they make it easier to explain things that are hard to describe with words, or when you need to show important parts of the Obsidian application. You can save images in the <code translate="no" v-pre>Attachments</code> folder.</p>
 <ul>
 <li>The image should make the text it accompanies easier to understand.</li>
 </ul>
@@ -464,7 +439,7 @@ This is a section.
 </figure>
 </p>
 <ul>
-<li>Images should be in either <code v-pre>.png</code> or <code v-pre>.svg</code> format.</li>
+<li>Images should be in either <code translate="no" v-pre>.png</code> or <code translate="no" v-pre>.svg</code> format.</li>
 <li>If an image looks too big in the note, make it smaller outside of Obsidian, or adjust its dimensions as explained in <a href="../embeds/#embed-an-image-in-a-note">embedding an image in a note</a>.</li>
 <li>In rare cases, you may want to place especially large or complex images in a <a href="../callouts/#foldable-callouts">folded callout</a>.</li>
 <li>For pop-up windows or modals, the image should show the entire Obsidian application window.
@@ -480,18 +455,18 @@ This is a section.
         <span>Icons</span>
     </h3>
 </doc-anchor-target>
-<p><a href="https://lucide.dev/icons/" class="outbound" target="_blank"><span>Lucide</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> and custom Obsidian icons can be used alongside detailed elements to provide a visual representation of a feature.</p>
+<p><a href="https://lucide.dev/icons/" class="outbound" target="_blank"><span>Lucide</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> and custom Obsidian icons can be used alongside detailed elements to provide a visual representation of a feature.</p>
 <p><strong>Example:</strong> In the ribbon on the left, select <strong>Create new canvas</strong> ( <img src="../attachments/icons/lucide-layout-dashboard.svg#icon" alt="" /> ) to create a canvas in the same folder as the active file.</p>
 <p><strong>Guidelines for icons</strong></p>
 <ul>
-<li>Store icons in the <code v-pre>Attachments/icons</code> folder.</li>
-<li>Add the prefix <code v-pre>lucide-</code> before the Lucide icon name.</li>
-<li>Add the prefix <code v-pre>obsidian-icon-</code> before the Obsidian icon name.</li>
+<li>Store icons in the <code translate="no" v-pre>Attachments/icons</code> folder.</li>
+<li>Add the prefix <code translate="no" v-pre>lucide-</code> before the Lucide icon name.</li>
+<li>Add the prefix <code translate="no" v-pre>obsidian-icon-</code> before the Obsidian icon name.</li>
 </ul>
-<p><strong>Example:</strong> The icon for creating a new canvas should be named <code v-pre>lucide-layout-dashboard</code>.</p>
+<p><strong>Example:</strong> The icon for creating a new canvas should be named <code translate="no" v-pre>lucide-layout-dashboard</code>.</p>
 <ul>
 <li>Use the SVG version of the icons available.</li>
-<li>Icons should be <code v-pre>18</code> pixels in width, <code v-pre>18</code> pixels in height, and have a stroke width of <code v-pre>1.5</code>. You can adjust these settings in the SVG data.</li>
+<li>Icons should be <code translate="no" v-pre>18</code> pixels in width, <code translate="no" v-pre>18</code> pixels in height, and have a stroke width of <code translate="no" v-pre>1.5</code>. You can adjust these settings in the SVG data.</li>
 </ul>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
@@ -514,10 +489,10 @@ This is a section.
     </div>
 </div>
 <ul>
-<li>Utilize the <code v-pre>icon</code> anchor in embedded images, to tweak the spacing around the icon so that it aligns neatly with the text in the vicinity.</li>
+<li>Utilize the <code translate="no" v-pre>icon</code> anchor in embedded images, to tweak the spacing around the icon so that it aligns neatly with the text in the vicinity.</li>
 <li>Icons should be surrounded by parenthesis. ( <img src="../attachments/icons/lucide-cog.svg#icon" alt="" /> )</li>
 </ul>
-<p><strong>Example</strong>: <code v-pre>( ![[lucide-cog.svg#icon]] )</code></p>
+<p><strong>Example</strong>: <code translate="no" v-pre>( ![[lucide-cog.svg#icon]] )</code></p>
 <doc-anchor-target id="image-anchor-tags">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#image-anchor-tags">#</doc-anchor-trigger>
@@ -543,11 +518,11 @@ This is a section.
     </div>
 </div>
 <p><strong>Icon</strong></p>
-<p><code v-pre>![[lucide-menu.svg#icon]]</code></p>
+<p><code translate="no" v-pre>![[lucide-menu.svg#icon]]</code></p>
 <p>The icon anchor tag ensures correct vertical alignment for icons used to indicate interface elements.</p>
 <p>The first menu icon uses the anchor tag ( <img src="../attachments/icons/lucide-menu.svg#icon" alt="" /> ), while the second menu icon ( <img src="../attachments/icons/lucide-menu.svg" alt="" /> ) does not.</p>
 <p><strong>Interface</strong></p>
-<p><code v-pre>![[Vault picker.png#interface]]</code></p>
+<p><code translate="no" v-pre>![[Vault picker.png#interface]]</code></p>
 <p>The interface anchor tag adds a decorative box shadow around the image. In the first image, the interface anchor tag is applied.
 <figure class="content-center">
     <img src="../attachments/vault-picker.png#interface" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
@@ -560,7 +535,7 @@ In contrast, the second image does not have the interface anchor applied.</p>
 </figure>
 </p>
 <p><strong>Outline</strong></p>
-<p><code v-pre>![[Backlinks.png#outline]]</code></p>
+<p><code translate="no" v-pre>![[Backlinks.png#outline]]</code></p>
 <p>The outline anchor tag adds a subtle border around the image. In the first image, the outline anchor tag is applied.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
@@ -611,9 +586,9 @@ In contrast, the second image does not have the interface anchor applied.</p>
             <h5>Tools for optimizing images</h5>
 <p>Here are a some recommended programs for reducing the size of your images.</p>
 <ul>
-<li><strong>Windows:</strong> <a href="https://sourceforge.net/projects/nikkhokkho/" class="outbound" target="_blank"><span>FileOptimizer</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
-<li><strong>macOS:</strong> <a href="https://imageoptim.com/" class="outbound" target="_blank"><span>ImageOptim</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
-<li><strong>Linux/Unix</strong> <a href="https://trimage.org" class="outbound" target="_blank"><span>Trimage</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li><strong>Windows:</strong> <a href="https://sourceforge.net/projects/nikkhokkho/" class="outbound" target="_blank"><span>FileOptimizer</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li><strong>macOS:</strong> <a href="https://imageoptim.com/" class="outbound" target="_blank"><span>ImageOptim</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
+<li><strong>Linux/Unix</strong> <a href="https://trimage.org" class="outbound" target="_blank"><span>Trimage</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></li>
 </ul>
 <p>We recommend an optimization rate of 65-75%.</p>
         </div>
@@ -640,7 +615,7 @@ In contrast, the second image does not have the interface anchor applied.</p>
     </h3>
 </doc-anchor-target>
 <p>This documentation is edited on GitHub and hosted online via <a href="../publish/">Obsidian Publish</a>, which includes <a href="../publish/social-share/#description">descriptions</a> for social cards and other <a href="../publish/seo/">SEO</a> elements.</p>
-<p>If the page you are working on does not have a <code v-pre>description</code> <a href="../properties/">property</a>, please add one. The description should be 150 characters or fewer and provide an objective summary of the page’s content.</p>
+<p>If the page you are working on does not have a <code translate="no" v-pre>description</code> <a href="../properties/">property</a>, please add one. The description should be 150 characters or fewer and provide an objective summary of the page’s content.</p>
 <p><strong>Good</strong>: Learn to create templates that capture and organize web page metadata automatically with Web Clipper.
 <strong>Could be tweaked</strong>: Learn how to create templates that automatically capture and organize metadata from web pages with Web Clipper.</p>
 <doc-anchor-target id="directions">

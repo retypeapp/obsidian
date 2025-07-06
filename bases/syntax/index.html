@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Bases syntax</title>
@@ -31,13 +31,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../favicon.ico" rel="icon">
-    <link href="../../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
+    <link href="../../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.11.0-preview6.804960609760" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.12.0-preview.805089200166" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -91,31 +91,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -133,7 +108,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -257,7 +232,7 @@
         </div>
     </div>
 </div>
-<p>When you <a href="../create-base/">create a base</a> in Obsidian, it is saved as a <code v-pre>.base</code> file. Bases are typically edited using the app interface, but the syntax can also be edited manually, and embedded in a code block.</p>
+<p>When you <a href="../create-base/">create a base</a> in Obsidian, it is saved as a <code translate="no" v-pre>.base</code> file. Bases are typically edited using the app interface, but the syntax can also be edited manually, and embedded in a code block.</p>
 <p>The <a href="../">Bases</a> syntax defines <a href="../views/">views</a>, filters, and formulas. Bases must be valid YAML conforming to the schema defined below.</p>
 <doc-anchor-target id="example">
     <h2>
@@ -316,7 +291,7 @@ views:
         <span>Filters</span>
     </h3>
 </doc-anchor-target>
-<p>By default a base includes every file in the vault. There is no <code v-pre>from</code> or <code v-pre>source</code> like in SQL or Dataview. The <code v-pre>filters</code> section lets you define conditions to narrow down the dataset.</p>
+<p>By default a base includes every file in the vault. There is no <code translate="no" v-pre>from</code> or <code translate="no" v-pre>source</code> like in SQL or Dataview. The <code translate="no" v-pre>filters</code> section lets you define conditions to narrow down the dataset.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">filters:
   or:
@@ -330,11 +305,11 @@ views:
 </doc-codeblock></div>
 <p>There are two opportunities to apply filters:</p>
 <ol>
-<li>At the global <code v-pre>filters</code> level (shown above) where they apply to all views in the base.</li>
-<li>At the <code v-pre>view</code> level where apply only to a specific view.</li>
+<li>At the global <code translate="no" v-pre>filters</code> level (shown above) where they apply to all views in the base.</li>
+<li>At the <code translate="no" v-pre>view</code> level where apply only to a specific view.</li>
 </ol>
-<p>These two sections are functionally equivalent and when evaluating for a view they will be concatenated with an <code v-pre>AND</code>.</p>
-<p>The <code v-pre>filters</code> section contains either a single filter statement as a string, or a recursively defined filter object. Filter objects may contain one of <code v-pre>and</code>, <code v-pre>or</code>, or <code v-pre>not</code>. These keys are a heterogeneous list of other filter objects or filter statements in strings. A filter statement is a line which evaluates to truthy or falsey when applied to a note. It can be one of the following:</p>
+<p>These two sections are functionally equivalent and when evaluating for a view they will be concatenated with an <code translate="no" v-pre>AND</code>.</p>
+<p>The <code translate="no" v-pre>filters</code> section contains either a single filter statement as a string, or a recursively defined filter object. Filter objects may contain one of <code translate="no" v-pre>and</code>, <code translate="no" v-pre>or</code>, or <code translate="no" v-pre>not</code>. These keys are a heterogeneous list of other filter objects or filter statements in strings. A filter statement is a line which evaluates to truthy or falsey when applied to a note. It can be one of the following:</p>
 <ul>
 <li>A basic comparison using standard arithmetic operators.</li>
 <li>A function. A variety of <a href="../functions/">functions</a> are built-in, and plugins can add additional functions.</li>
@@ -346,7 +321,7 @@ views:
         <span>Formulas</span>
     </h3>
 </doc-anchor-target>
-<p>The <code v-pre>formulas</code> section defines formula properties that can be displayed across all views in the base file.</p>
+<p>The <code translate="no" v-pre>formulas</code> section defines formula properties that can be displayed across all views in the base file.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">formulas:
   formatted_price: 'if(price, price.toFixed(2) + &quot; dollars&quot;)'
@@ -355,9 +330,9 @@ views:
 <p>Formula properties support basic arithmetic operators and a variety of built-in <a href="../functions/">functions</a>. In the future, plugins will be able to add functions for use in formulas.</p>
 <p>Properties in formulas can be referenced in multiple ways, depending on the type of property:</p>
 <ul>
-<li>Properties in the frontmatter are called <code v-pre>note</code> properties. For example <code v-pre>note.price</code> or <code v-pre>note[&quot;price&quot;]</code>. If a property does not have a prefix it is assumed to be a <code v-pre>note</code> property.</li>
-<li>Properties about the file (implicit properties) are called <code v-pre>file</code> properties. For example, <code v-pre>file.size</code> or <code v-pre>file.ext</code>. You may also use <code v-pre>file</code> to reference the file itself, for example <code v-pre>file.hasLink()</code>.</li>
-<li>Formulas are prefixed with <code v-pre>formula</code>, for example <code v-pre>formula.formatted_price</code>.</li>
+<li>Properties in the frontmatter are called <code translate="no" v-pre>note</code> properties. For example <code translate="no" v-pre>note.price</code> or <code translate="no" v-pre>note[&quot;price&quot;]</code>. If a property does not have a prefix it is assumed to be a <code translate="no" v-pre>note</code> property.</li>
+<li>Properties about the file (implicit properties) are called <code translate="no" v-pre>file</code> properties. For example, <code translate="no" v-pre>file.size</code> or <code translate="no" v-pre>file.ext</code>. You may also use <code translate="no" v-pre>file</code> to reference the file itself, for example <code translate="no" v-pre>file.hasLink()</code>.</li>
+<li>Formulas are prefixed with <code translate="no" v-pre>formula</code>, for example <code translate="no" v-pre>formula.formatted_price</code>.</li>
 </ul>
 <p>Formula properties can use values from other formula properties, as long as there is no circular reference. They are always defined as strings in the YAML, however the data type of the data and the function returns will be used to determine the output data type.</p>
 <p>Note the use of nested quotes necessary to include text literals in the YAML field. Text literals must be enclosed in single or double quotes.</p>
@@ -367,7 +342,7 @@ views:
         <span>Properties</span>
     </h3>
 </doc-anchor-target>
-<p>The <code v-pre>properties</code> section allows storing configuration information about each property. It is up to the individual view how to use these configuration values. For example, in tables the display name is used for the column headers.</p>
+<p>The <code translate="no" v-pre>properties</code> section allows storing configuration information about each property. It is up to the individual view how to use these configuration values. For example, in tables the display name is used for the column headers.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">properties:
   status:
@@ -384,7 +359,7 @@ views:
         <span>Views</span>
     </h3>
 </doc-anchor-target>
-<p>The <code v-pre>views</code> section defines how the data can be rendered. Each entry in the <code v-pre>views</code> list defines a separate view of the same data, and there can be as many different views as needed.</p>
+<p>The <code translate="no" v-pre>views</code> section defines how the data can be rendered. Each entry in the <code translate="no" v-pre>views</code> list defines a separate view of the same data, and there can be as many different views as needed.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">views:
   - type: table
@@ -410,9 +385,9 @@ views:
     title: file.name</code></pre>
 </doc-codeblock></div>
 <ul>
-<li><code v-pre>type</code> selects from the built-in and plugin-added view types.</li>
-<li><code v-pre>name</code> is the display name, and can be used to define the default view.</li>
-<li><code v-pre>filters</code> are exactly the same as described above, but apply only to the view.</li>
+<li><code translate="no" v-pre>type</code> selects from the built-in and plugin-added view types.</li>
+<li><code translate="no" v-pre>name</code> is the display name, and can be used to define the default view.</li>
+<li><code translate="no" v-pre>filters</code> are exactly the same as described above, but apply only to the view.</li>
 </ul>
 <p><a href="../views/">Views</a> can add additional data to store any information needed to maintain state or properly render, however plugin authors should take care to not use keys already in use by the core Bases plugin. As an example, a table view may use this to limit the number of rows or to select which column is used to sort rows and in which direction. A different view type such as a map could use this for mapping which property in the note corresponds to the latitude and longitude and which property should be displayed as the pin title.</p>
 <p>In the future, API will allow views to read and write these values, allowing the view to build its own interface for configuration.</p>
@@ -426,7 +401,7 @@ views:
 <ol>
 <li><strong>Note properties</strong>, stored in frontmatter of Markdown files.</li>
 <li><strong>File properties</strong>, accessible for all file types.</li>
-<li><strong>Formula properties</strong>, defined in the <code v-pre>.base</code> file itself (see above).</li>
+<li><strong>Formula properties</strong>, defined in the <code translate="no" v-pre>.base</code> file itself (see above).</li>
 </ol>
 <doc-anchor-target id="note-properties">
     <h3>
@@ -434,7 +409,7 @@ views:
         <span>Note properties</span>
     </h3>
 </doc-anchor-target>
-<p><a href="../../properties/">Note properties</a> are only available for Markdown files, and are stored in the YAML frontmatter of each note. These properties can be accessed using the format <code v-pre>note.author</code> or simply <code v-pre>author</code> as a shorthand.</p>
+<p><a href="../../properties/">Note properties</a> are only available for Markdown files, and are stored in the YAML frontmatter of each note. These properties can be accessed using the format <code translate="no" v-pre>note.author</code> or simply <code translate="no" v-pre>author</code> as a shorthand.</p>
 <doc-anchor-target id="file-properties">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#file-properties">#</doc-anchor-trigger>
@@ -442,7 +417,7 @@ views:
     </h3>
 </doc-anchor-target>
 <p>File properties refer to the file currently being tested or evaluated. File properties are available for all <a href="../../file-formats/">file types</a>, including attachments.</p>
-<p>For example, a filter <code v-pre>file.ext == &quot;md&quot;</code> will be true for all Markdown files and false otherwise.</p>
+<p>For example, a filter <code translate="no" v-pre>file.ext == &quot;md&quot;</code> will be true for all Markdown files and false otherwise.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -454,52 +429,52 @@ views:
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>file.ctime</code></td>
+<td><code translate="no" v-pre>file.ctime</code></td>
 <td>Date</td>
 <td>Created time</td>
 </tr>
 <tr>
-<td><code v-pre>file.embeds</code></td>
+<td><code translate="no" v-pre>file.embeds</code></td>
 <td>List</td>
 <td>List of all embeds in the note</td>
 </tr>
 <tr>
-<td><code v-pre>file.ext</code></td>
+<td><code translate="no" v-pre>file.ext</code></td>
 <td>String</td>
 <td>File extension</td>
 </tr>
 <tr>
-<td><code v-pre>file.file</code></td>
+<td><code translate="no" v-pre>file.file</code></td>
 <td>File</td>
 <td>File object, only usable in specific functions</td>
 </tr>
 <tr>
-<td><code v-pre>file.folder</code></td>
+<td><code translate="no" v-pre>file.folder</code></td>
 <td>String</td>
 <td>Path of the file folder</td>
 </tr>
 <tr>
-<td><code v-pre>file.mtime</code></td>
+<td><code translate="no" v-pre>file.mtime</code></td>
 <td>Date</td>
 <td>Modified time</td>
 </tr>
 <tr>
-<td><code v-pre>file.name</code></td>
+<td><code translate="no" v-pre>file.name</code></td>
 <td>String</td>
 <td>File name</td>
 </tr>
 <tr>
-<td><code v-pre>file.path</code></td>
+<td><code translate="no" v-pre>file.path</code></td>
 <td>String</td>
 <td>Path of the file</td>
 </tr>
 <tr>
-<td><code v-pre>file.size</code></td>
+<td><code translate="no" v-pre>file.size</code></td>
 <td>Number</td>
 <td>File size</td>
 </tr>
 <tr>
-<td><code v-pre>file.links</code></td>
+<td><code translate="no" v-pre>file.links</code></td>
 <td>List</td>
 <td>List of all internal links in the note, including frontmatter</td>
 </tr>
@@ -512,8 +487,8 @@ views:
         <span>Access properties of the current file</span>
     </h3>
 </doc-anchor-target>
-<p>Embedded bases can use <code v-pre>this</code> to access properties of the current file. For example, <code v-pre>this.file.name</code> will resolve to the name of the file which has embedded the base, instead of the file being evaluated.</p>
-<p>In a sidebar, <code v-pre>this</code> takes on the special meaning of &quot;the currently active file&quot;. This allows you to create contextual queries based on the active file in the main content area. For example, this can be used to replicate the backlinks pane with this filter: <code v-pre>file.hasLink(this.file)</code>.</p>
+<p>Embedded bases can use <code translate="no" v-pre>this</code> to access properties of the current file. For example, <code translate="no" v-pre>this.file.name</code> will resolve to the name of the file which has embedded the base, instead of the file being evaluated.</p>
+<p>In a sidebar, <code translate="no" v-pre>this</code> takes on the special meaning of &quot;the currently active file&quot;. This allows you to create contextual queries based on the active file in the main content area. For example, this can be used to replicate the backlinks pane with this filter: <code translate="no" v-pre>file.hasLink(this.file)</code>.</p>
 <doc-anchor-target id="operators">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#operators">#</doc-anchor-trigger>
@@ -526,7 +501,7 @@ views:
         <span>Arithmetic operators</span>
     </h3>
 </doc-anchor-target>
-<p>Arithmetic operators perform arithmetic on numbers. For example, <code v-pre>radius * (2 * 3.14)</code>.</p>
+<p>Arithmetic operators perform arithmetic on numbers. For example, <code translate="no" v-pre>radius * (2 * 3.14)</code>.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -537,27 +512,27 @@ views:
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>+</code></td>
+<td><code translate="no" v-pre>+</code></td>
 <td>plus</td>
 </tr>
 <tr>
-<td><code v-pre>-</code></td>
+<td><code translate="no" v-pre>-</code></td>
 <td>minus</td>
 </tr>
 <tr>
-<td><code v-pre>*</code></td>
+<td><code translate="no" v-pre>*</code></td>
 <td>multiply</td>
 </tr>
 <tr>
-<td><code v-pre>/</code></td>
+<td><code translate="no" v-pre>/</code></td>
 <td>divide</td>
 </tr>
 <tr>
-<td><code v-pre>%</code></td>
+<td><code translate="no" v-pre>%</code></td>
 <td>modulo</td>
 </tr>
 <tr>
-<td><code v-pre>( )</code></td>
+<td><code translate="no" v-pre>( )</code></td>
 <td>parenthesis</td>
 </tr>
 </tbody>
@@ -580,45 +555,45 @@ views:
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>y</code>, <code v-pre>year</code>, <code v-pre>years</code></td>
+<td><code translate="no" v-pre>y</code>, <code translate="no" v-pre>year</code>, <code translate="no" v-pre>years</code></td>
 <td>year</td>
 </tr>
 <tr>
-<td><code v-pre>M</code>, <code v-pre>month</code>, <code v-pre>months</code></td>
+<td><code translate="no" v-pre>M</code>, <code translate="no" v-pre>month</code>, <code translate="no" v-pre>months</code></td>
 <td>month</td>
 </tr>
 <tr>
-<td><code v-pre>d</code>, <code v-pre>day</code>, <code v-pre>days</code></td>
+<td><code translate="no" v-pre>d</code>, <code translate="no" v-pre>day</code>, <code translate="no" v-pre>days</code></td>
 <td>day</td>
 </tr>
 <tr>
-<td><code v-pre>w</code>, <code v-pre>week</code>, <code v-pre>weeks</code></td>
+<td><code translate="no" v-pre>w</code>, <code translate="no" v-pre>week</code>, <code translate="no" v-pre>weeks</code></td>
 <td>week</td>
 </tr>
 <tr>
-<td><code v-pre>h</code>, <code v-pre>hour</code>, <code v-pre>hours</code></td>
+<td><code translate="no" v-pre>h</code>, <code translate="no" v-pre>hour</code>, <code translate="no" v-pre>hours</code></td>
 <td>hour</td>
 </tr>
 <tr>
-<td><code v-pre>m</code>, <code v-pre>minute</code>, <code v-pre>minutes</code></td>
+<td><code translate="no" v-pre>m</code>, <code translate="no" v-pre>minute</code>, <code translate="no" v-pre>minutes</code></td>
 <td>minute</td>
 </tr>
 <tr>
-<td><code v-pre>s</code>, <code v-pre>second</code>, <code v-pre>seconds</code></td>
+<td><code translate="no" v-pre>s</code>, <code translate="no" v-pre>second</code>, <code translate="no" v-pre>seconds</code></td>
 <td>second</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>To modify or offset Date objects, use the <code v-pre>+</code> or <code v-pre>-</code> operator with a duration string. For example, <code v-pre>date + &quot;1M&quot;</code> adds 1 month to the date, while <code v-pre>date - &quot;2h&quot;</code> subtracts 2 hours from the date.</p>
-<p>The global <a href="../functions/">function</a> <code v-pre>today()</code> can be used to get the current date, and <code v-pre>now()</code> can be used to get the current date with time.</p>
+<p>To modify or offset Date objects, use the <code translate="no" v-pre>+</code> or <code translate="no" v-pre>-</code> operator with a duration string. For example, <code translate="no" v-pre>date + &quot;1M&quot;</code> adds 1 month to the date, while <code translate="no" v-pre>date - &quot;2h&quot;</code> subtracts 2 hours from the date.</p>
+<p>The global <a href="../functions/">function</a> <code translate="no" v-pre>today()</code> can be used to get the current date, and <code translate="no" v-pre>now()</code> can be used to get the current date with time.</p>
 <ul>
-<li><code v-pre>now() + &quot;1 day&quot;</code> returns a datetime exactly 24 hours from the time of execution.</li>
-<li><code v-pre>file.mtime &gt; now() - &quot;1 week&quot;</code> returns <code v-pre>true</code> if the file was modified within the last week.</li>
-<li><code v-pre>date(&quot;2024-12-01&quot;) + &quot;1M&quot; + &quot;4h&quot; + &quot;3m&quot;</code> returns a Date object representing <code v-pre>2025-01-01 04:03:00</code>.</li>
-<li>Subtract two dates to get the millisecond difference between the two, for example, <code v-pre>now() - file.ctime</code>.</li>
-<li>To get the date portion of a Date with time, use <code v-pre>datetime.date()</code>.</li>
-<li>To format a Date object, use the <code v-pre>format()</code> function, for example <code v-pre>datetime.format(&quot;YYYY-MM-DD&quot;)</code>.</li>
+<li><code translate="no" v-pre>now() + &quot;1 day&quot;</code> returns a datetime exactly 24 hours from the time of execution.</li>
+<li><code translate="no" v-pre>file.mtime &gt; now() - &quot;1 week&quot;</code> returns <code translate="no" v-pre>true</code> if the file was modified within the last week.</li>
+<li><code translate="no" v-pre>date(&quot;2024-12-01&quot;) + &quot;1M&quot; + &quot;4h&quot; + &quot;3m&quot;</code> returns a Date object representing <code translate="no" v-pre>2025-01-01 04:03:00</code>.</li>
+<li>Subtract two dates to get the millisecond difference between the two, for example, <code translate="no" v-pre>now() - file.ctime</code>.</li>
+<li>To get the date portion of a Date with time, use <code translate="no" v-pre>datetime.date()</code>.</li>
+<li>To format a Date object, use the <code translate="no" v-pre>format()</code> function, for example <code translate="no" v-pre>datetime.format(&quot;YYYY-MM-DD&quot;)</code>.</li>
 </ul>
 <doc-anchor-target id="comparison-operators">
     <h3>
@@ -637,27 +612,27 @@ views:
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>==</code></td>
+<td><code translate="no" v-pre>==</code></td>
 <td>equals</td>
 </tr>
 <tr>
-<td><code v-pre>!=</code></td>
+<td><code translate="no" v-pre>!=</code></td>
 <td>not equal</td>
 </tr>
 <tr>
-<td><code v-pre>&gt;</code></td>
+<td><code translate="no" v-pre>&gt;</code></td>
 <td>greater than</td>
 </tr>
 <tr>
-<td><code v-pre>&lt;</code></td>
+<td><code translate="no" v-pre>&lt;</code></td>
 <td>less than</td>
 </tr>
 <tr>
-<td><code v-pre>&gt;=</code></td>
+<td><code translate="no" v-pre>&gt;=</code></td>
 <td>greater than or equal to</td>
 </tr>
 <tr>
-<td><code v-pre>&lt;=</code></td>
+<td><code translate="no" v-pre>&lt;=</code></td>
 <td>less than or equal to</td>
 </tr>
 </tbody>
@@ -680,11 +655,11 @@ views:
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>!</code></td>
+<td><code translate="no" v-pre>!</code></td>
 <td>logical not</td>
 </tr>
 <tr>
-<td><code v-pre>&amp;&amp;</code></td>
+<td><code translate="no" v-pre>&amp;&amp;</code></td>
 <td>logical and</td>
 </tr>
 <tr>
@@ -716,9 +691,9 @@ views:
 </doc-anchor-target>
 <p>Strings, numbers, and booleans are &quot;primitive&quot; values which do not require a function to create.</p>
 <ul>
-<li>Strings are enclosed in single or double quotes, for example <code v-pre>&quot;message&quot;</code>.</li>
-<li>Numbers are written as digits, and may optionally be enclosed in parenthesis for clarity. For example, <code v-pre>1</code> or <code v-pre>(2.5)</code>.</li>
-<li>Booleans are written as <code v-pre>true</code> or <code v-pre>false</code> without quotes.</li>
+<li>Strings are enclosed in single or double quotes, for example <code translate="no" v-pre>&quot;message&quot;</code>.</li>
+<li>Numbers are written as digits, and may optionally be enclosed in parenthesis for clarity. For example, <code translate="no" v-pre>1</code> or <code translate="no" v-pre>(2.5)</code>.</li>
+<li>Booleans are written as <code translate="no" v-pre>true</code> or <code translate="no" v-pre>false</code> without quotes.</li>
 </ul>
 <doc-anchor-target id="dates-and-durations">
     <h3>
@@ -728,10 +703,10 @@ views:
 </doc-anchor-target>
 <p>Dates represent a specific date, or a date and time depending on the function used to create them, or that type that has been assigned to the <a href="../../properties/">property</a>.</p>
 <ul>
-<li>To construct a date, use the <code v-pre>date</code> function, for example <code v-pre>date(&quot;2025-01-01 12:00:00&quot;)</code></li>
-<li>To modify a date, add or remove a duration, for example <code v-pre>now() + &quot;1 hour&quot;</code> or <code v-pre>today() + &quot;7d&quot;</code></li>
-<li>Compare dates using comparison operators (e.g. <code v-pre>&gt;</code> or <code v-pre>&lt;</code>) and arithmetic operators (for example, <code v-pre>(now() + &quot;1d&quot;) - now()</code> returns <code v-pre>86400000</code> milliseconds.)</li>
-<li>To extract portions of a date, use the available fields (<code v-pre>now().hour</code>), or a convenience function (<code v-pre>now.time()</code>).</li>
+<li>To construct a date, use the <code translate="no" v-pre>date</code> function, for example <code translate="no" v-pre>date(&quot;2025-01-01 12:00:00&quot;)</code></li>
+<li>To modify a date, add or remove a duration, for example <code translate="no" v-pre>now() + &quot;1 hour&quot;</code> or <code translate="no" v-pre>today() + &quot;7d&quot;</code></li>
+<li>Compare dates using comparison operators (e.g. <code translate="no" v-pre>&gt;</code> or <code translate="no" v-pre>&lt;</code>) and arithmetic operators (for example, <code translate="no" v-pre>(now() + &quot;1d&quot;) - now()</code> returns <code translate="no" v-pre>86400000</code> milliseconds.)</li>
+<li>To extract portions of a date, use the available fields (<code translate="no" v-pre>now().hour</code>), or a convenience function (<code translate="no" v-pre>now.time()</code>).</li>
 <li>Many other <a href="../functions/">fields and functions</a> are available on date objects.</li>
 </ul>
 <doc-anchor-target id="objects-and-lists">
@@ -741,9 +716,9 @@ views:
     </h3>
 </doc-anchor-target>
 <ul>
-<li>Turn a single element into a list using the <code v-pre>list()</code> function. This is especially helpful for properties which may contain a mixture of lists or single values.</li>
-<li>Access list elements using square brackets, and a 0-based index. For example, <code v-pre>property[0]</code> returns the first element from the list.</li>
-<li>Access object elements using square brackets and the element name or dot notation. For example, <code v-pre>property.subprop</code> or <code v-pre>property[&quot;subprop&quot;]</code>.</li>
+<li>Turn a single element into a list using the <code translate="no" v-pre>list()</code> function. This is especially helpful for properties which may contain a mixture of lists or single values.</li>
+<li>Access list elements using square brackets, and a 0-based index. For example, <code translate="no" v-pre>property[0]</code> returns the first element from the list.</li>
+<li>Access object elements using square brackets and the element name or dot notation. For example, <code translate="no" v-pre>property.subprop</code> or <code translate="no" v-pre>property[&quot;subprop&quot;]</code>.</li>
 </ul>
 <doc-anchor-target id="files-and-links">
     <h3>
@@ -753,14 +728,14 @@ views:
 </doc-anchor-target>
 <p><a href="../../link-notes/">Wikilinks</a> in <a href="../../properties/">frontmatter properties</a> are automatically recognized as Link objects. Links will render as a clickable link in the <a href="../views/">view</a>.</p>
 <ul>
-<li>To construct a link, use the global <code v-pre>link</code> <a href="../functions/">function</a>, for example <code v-pre>link(&quot;filename&quot;)</code> or <code v-pre>link(&quot;https://obsidian.md&quot;)</code>.</li>
-<li>You can create a link from any string, for example, <code v-pre>link(file.ctime.date().toString())</code>.</li>
-<li>To set the display text, pass in an optional string or icon as a second parameter, for example <code v-pre>link(&quot;filename&quot;, &quot;display&quot;)</code> or <code v-pre>link(&quot;filename&quot;, &quot;plus&quot;.icon())</code>.</li>
+<li>To construct a link, use the global <code translate="no" v-pre>link</code> <a href="../functions/">function</a>, for example <code translate="no" v-pre>link(&quot;filename&quot;)</code> or <code translate="no" v-pre>link(&quot;https://obsidian.md&quot;)</code>.</li>
+<li>You can create a link from any string, for example, <code translate="no" v-pre>link(file.ctime.date().toString())</code>.</li>
+<li>To set the display text, pass in an optional string or icon as a second parameter, for example <code translate="no" v-pre>link(&quot;filename&quot;, &quot;display&quot;)</code> or <code translate="no" v-pre>link(&quot;filename&quot;, &quot;plus&quot;.icon())</code>.</li>
 </ul>
-<p>A File object can be turned into a link using <code v-pre>file.asLink()</code> with an optional display text.</p>
-<p>Links can be compared with <code v-pre>==</code> and <code v-pre>!=</code>. They are equivalent as long as they point to the same file, or if the file does not exist when looked up, their link text must be identical.</p>
-<p>Links can be compared to files such as <code v-pre>file</code> or <code v-pre>this</code>. They will equate if the link resolves to the file. For example, <code v-pre>author == this</code>.</p>
-<p>Links can also be checked in list contains, for example, <code v-pre>authors.contains(this)</code>.</p>
+<p>A File object can be turned into a link using <code translate="no" v-pre>file.asLink()</code> with an optional display text.</p>
+<p>Links can be compared with <code translate="no" v-pre>==</code> and <code translate="no" v-pre>!=</code>. They are equivalent as long as they point to the same file, or if the file does not exist when looked up, their link text must be identical.</p>
+<p>Links can be compared to files such as <code translate="no" v-pre>file</code> or <code translate="no" v-pre>this</code>. They will equate if the link resolves to the file. For example, <code translate="no" v-pre>author == this</code>.</p>
+<p>Links can also be checked in list contains, for example, <code translate="no" v-pre>authors.contains(this)</code>.</p>
 
                                 
                                 <!-- Required only on API pages -->

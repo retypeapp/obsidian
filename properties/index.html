@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0-preview6.804960609760">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.12.0-preview.805089200166">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.11.0-preview6">
+    <meta name="generator" content="Retype 3.12.0-preview">
 
     <!-- Primary Meta Tags -->
     <title>Properties</title>
@@ -31,13 +31,13 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../favicon.ico" rel="icon">
-    <link href="../resources/css/retype.css?v=3.11.0-preview6.804960609760" rel="stylesheet">
+    <link id="retype-favicon" rel="icon" href="../favicon.ico" />
+    <link href="../resources/css/retype.css?v=3.12.0-preview.805089200166" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../resources/js/retype.js?v=3.11.0-preview6" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.11.0-preview6.804960609760" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.11.0-preview6.804960609760" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=3.12.0-preview" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=3.12.0-preview.805089200166" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=3.12.0-preview.805089200166" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -91,31 +91,6 @@
                         </ul>
                     </nav>
         
-                    <!-- Header Right Skeleton -->
-                    <div v-cloak class="flex justify-end grow skeleton">
-        
-                        <!-- Search input mock -->
-                        <div class="relative hidden w-40 lg:block lg:max-w-sm lg:ml-auto">
-                            <div class="absolute flex items-center justify-center h-full pl-3 dark:text-dark-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-base" width="16" height="16" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 1px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                            </div>
-                            <input class="w-full h-10 placeholder-search-placeholder transition-colors duration-200 ease-in bg-search-bg border border-transparent rounded md:text-sm hover:border-search-border-hover focus:outline-none focus:border-search-border-focus" style="padding: 0.625rem 0.75rem 0.625rem 2rem" type="text" placeholder="Search">
-                        </div>
-        
-                        <!-- Mobile search button -->
-                        <div class="flex items-center justify-center w-10 h-10 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="20" height="20" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><path d="M21.71 20.29l-3.68-3.68A8.963 8.963 0 0020 11c0-4.96-4.04-9-9-9s-9 4.04-9 9 4.04 9 9 9c2.12 0 4.07-.74 5.61-1.97l3.68 3.68c.2.19.45.29.71.29s.51-.1.71-.29c.39-.39.39-1.03 0-1.42zM4 11c0-3.86 3.14-7 7-7s7 3.14 7 7c0 1.92-.78 3.66-2.04 4.93-.01.01-.02.01-.02.01-.01.01-.01.01-.01.02A6.98 6.98 0 0111 18c-3.86 0-7-3.14-7-7z" ></path></g></svg>
-                        </div>
-        
-                        <!-- Dark mode switch placeholder -->
-                        <div class="w-10 h-10 lg:ml-2"></div>
-        
-                        <!-- History button -->
-                        <div class="flex items-center justify-center w-10 h-10" style="margin-right: -0.625rem;">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="shrink-0 icon-base" width="22" height="22" viewBox="0 0 24 24" aria-labelledby="icon" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor" ><g ><path d="M12.01 6.01c-.55 0-1 .45-1 1V12a1 1 0 00.4.8l3 2.22a.985.985 0 001.39-.2.996.996 0 00-.21-1.4l-2.6-1.92V7.01c.02-.55-.43-1-.98-1z"></path><path d="M12.01 1.91c-5.33 0-9.69 4.16-10.05 9.4l-.29-.26a.997.997 0 10-1.34 1.48l1.97 1.79c.19.17.43.26.67.26s.48-.09.67-.26l1.97-1.79a.997.997 0 10-1.34-1.48l-.31.28c.34-4.14 3.82-7.41 8.05-7.41 4.46 0 8.08 3.63 8.08 8.09s-3.63 8.08-8.08 8.08c-2.18 0-4.22-.85-5.75-2.4a.996.996 0 10-1.42 1.4 10.02 10.02 0 007.17 2.99c5.56 0 10.08-4.52 10.08-10.08.01-5.56-4.52-10.09-10.08-10.09z"></path></g></g></svg>
-                        </div>
-                    </div>
-        
                     <div v-cloak class="flex justify-end grow">
                         <div id="retype-mobile-search-button"></div>
                         <doc-search-desktop></doc-search-desktop>
@@ -133,7 +108,7 @@
             <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
             
                 <div class="flex items-center h-16 px-6">
-                    <input class="w-full h-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded shadow-none text-sm focus:outline-none focus:border-filter-border-focus" type="text" placeholder="Filter">
+                    <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-none focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
                 </div>
             
                 <div class="pl-6 mt-1 mb-4">
@@ -242,12 +217,12 @@
 <p>There are several ways to add a property to a note:</p>
 <ul>
 <li>Use the <strong>Add file property</strong> <a href="../plugins/command-palette/">command</a>.</li>
-<li>Use the <strong><code v-pre>Cmd/Ctrl+;</code></strong> <a href="../hotkeys/">hotkey</a>.</li>
+<li>Use the <strong><code translate="no" v-pre>Cmd/Ctrl+;</code></strong> <a href="../hotkeys/">hotkey</a>.</li>
 <li>Choose <strong>Add file property</strong> from the <strong>More actions</strong> menu (brought up by the three dots icon or by right-clicking the tab).</li>
-<li>Type <code v-pre>---</code> at the very beginning of a file.</li>
+<li>Type <code translate="no" v-pre>---</code> at the very beginning of a file.</li>
 </ul>
 <p>Once you add a property, a row will appear at the top of the file with two inputs: the property <em>name</em> and the property <em>value</em>.</p>
-<p>For the name, you can choose anything you like. Obsidian provides several default properties: <code v-pre>tags</code>, <code v-pre>cssclasses</code>, and <code v-pre>aliases</code>.</p>
+<p>For the name, you can choose anything you like. Obsidian provides several default properties: <code translate="no" v-pre>tags</code>, <code translate="no" v-pre>cssclasses</code>, and <code translate="no" v-pre>aliases</code>.</p>
 <p>Once you choose the property name, you can give it a value.</p>
 <doc-anchor-target id="property-types">
     <h3>
@@ -278,7 +253,7 @@
         <span>Links</span>
     </h3>
 </doc-anchor-target>
-<p><strong>Text</strong> and <strong>List</strong> type properties can contain URLs and <a href="../links/">Internal links</a> using the <code v-pre>[[Link]]</code> syntax.</p>
+<p><strong>Text</strong> and <strong>List</strong> type properties can contain URLs and <a href="../links/">Internal links</a> using the <code translate="no" v-pre>[[Link]]</code> syntax.</p>
 <doc-anchor-target id="search-properties">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search-properties">#</doc-anchor-trigger>
@@ -354,7 +329,7 @@
 <tbody>
 <tr>
 <td>Add new property</td>
-<td><code v-pre>Cmd + ;</code></td>
+<td><code translate="no" v-pre>Cmd + ;</code></td>
 </tr>
 </tbody>
 </table>
@@ -377,15 +352,15 @@
 <tbody>
 <tr>
 <td>Focus next property</td>
-<td><code v-pre>Down arrow</code> or <code v-pre>Tab</code></td>
+<td><code translate="no" v-pre>Down arrow</code> or <code translate="no" v-pre>Tab</code></td>
 </tr>
 <tr>
 <td>Focus previous property</td>
-<td><code v-pre>Up arrow</code> or <code v-pre>Shift+Tab</code></td>
+<td><code translate="no" v-pre>Up arrow</code> or <code translate="no" v-pre>Shift+Tab</code></td>
 </tr>
 <tr>
 <td>Jump to editor</td>
-<td><code v-pre>Alt+Down arrow</code></td>
+<td><code translate="no" v-pre>Alt+Down arrow</code></td>
 </tr>
 </tbody>
 </table>
@@ -407,15 +382,15 @@
 <tbody>
 <tr>
 <td>Extend selection upwards</td>
-<td><code v-pre>Shift+Up arrow</code></td>
+<td><code translate="no" v-pre>Shift+Up arrow</code></td>
 </tr>
 <tr>
 <td>Extend selection downwards</td>
-<td><code v-pre>Shift+Down arrow</code></td>
+<td><code translate="no" v-pre>Shift+Down arrow</code></td>
 </tr>
 <tr>
 <td>Select all</td>
-<td><code v-pre>Cmd+A</code></td>
+<td><code translate="no" v-pre>Cmd+A</code></td>
 </tr>
 </tbody>
 </table>
@@ -437,27 +412,27 @@
 <tbody>
 <tr>
 <td>Edit property name</td>
-<td><code v-pre>Left arrow</code></td>
+<td><code translate="no" v-pre>Left arrow</code></td>
 </tr>
 <tr>
 <td>Edit property value</td>
-<td><code v-pre>Right arrow</code></td>
+<td><code translate="no" v-pre>Right arrow</code></td>
 </tr>
 <tr>
 <td>Focus property</td>
-<td><code v-pre>Escape</code></td>
+<td><code translate="no" v-pre>Escape</code></td>
 </tr>
 <tr>
 <td>Delete property</td>
-<td><code v-pre>Cmd+Backspace</code><br><br>if any properties are selected, it will delete the selection instead.</td>
+<td><code translate="no" v-pre>Cmd+Backspace</code><br><br>if any properties are selected, it will delete the selection instead.</td>
 </tr>
 <tr>
 <td>Undo</td>
-<td><code v-pre>Cmd+Z</code></td>
+<td><code translate="no" v-pre>Cmd+Z</code></td>
 </tr>
 <tr>
 <td>Redo</td>
-<td><code v-pre>Cmd+Shift+Z</code></td>
+<td><code translate="no" v-pre>Cmd+Shift+Z</code></td>
 </tr>
 </tbody>
 </table>
@@ -479,31 +454,31 @@
 <tbody>
 <tr>
 <td>Move down</td>
-<td><code v-pre>j</code></td>
+<td><code translate="no" v-pre>j</code></td>
 </tr>
 <tr>
 <td>Move up</td>
-<td><code v-pre>k</code></td>
+<td><code translate="no" v-pre>k</code></td>
 </tr>
 <tr>
 <td>Focus key</td>
-<td><code v-pre>h</code></td>
+<td><code translate="no" v-pre>h</code></td>
 </tr>
 <tr>
 <td>Focus value</td>
-<td><code v-pre>l</code></td>
+<td><code translate="no" v-pre>l</code></td>
 </tr>
 <tr>
 <td>Focus value (Cursor at end)</td>
-<td><code v-pre>A</code></td>
+<td><code translate="no" v-pre>A</code></td>
 </tr>
 <tr>
 <td>Focus value (Cursor at beginning)</td>
-<td><code v-pre>i</code></td>
+<td><code translate="no" v-pre>i</code></td>
 </tr>
 <tr>
 <td>Create new property</td>
-<td><code v-pre>o</code></td>
+<td><code translate="no" v-pre>o</code></td>
 </tr>
 </tbody>
 </table>
@@ -514,14 +489,14 @@
         <span>Property format</span>
     </h2>
 </doc-anchor-target>
-<p>Properties are stored in <a href="https://yaml.org/" class="outbound" target="_blank"><span>YAML</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> format at the top of the file. YAML is a popular format that is easy for both humans and computers to read.</p>
+<p>Properties are stored in <a href="https://yaml.org/" class="outbound" target="_blank"><span>YAML</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> format at the top of the file. YAML is a popular format that is easy for both humans and computers to read.</p>
 <p>Property names are separated from their values by a colon followed by a space:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
 name: value
 ---</code></pre>
 </doc-codeblock></div>
-<p>While the order of each name-value pair doesn&#x27;t matter, each name must be unique within a note. For example, you can&#x27;t have more than one <code v-pre>tags</code> property.</p>
+<p>While the order of each name-value pair doesn&#x27;t matter, each name must be unique within a note. For example, you can&#x27;t have more than one <code translate="no" v-pre>tags</code> property.</p>
 <p id="text-list">Values can be text, numbers, true or false, or even collections of values (lists). </p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
@@ -550,7 +525,7 @@ year: 1977
 pie: 3.14
 ---</code></pre>
 </doc-codeblock></div>
-<p id="checkbox">Checkbox type properties are either <code v-pre>true</code> or <code v-pre>false</code>. An empty property will be treated as <code v-pre>false</code>. In Live Preview, this will be represented as a checkbox. </p>
+<p id="checkbox">Checkbox type properties are either <code translate="no" v-pre>true</code> or <code translate="no" v-pre>false</code>. An empty property will be treated as <code translate="no" v-pre>false</code>. In Live Preview, this will be represented as a checkbox. </p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
 favorite: true
@@ -611,7 +586,7 @@ time: 2020-08-21T10:30:00
         <span>JSON Properties</span>
     </h3>
 </doc-anchor-target>
-<p>While we recommend using YAML to define properties, you can also define properties using <a href="https://www.json.org/" class="outbound" target="_blank"><span>JSON</span><svg xmlns="http://www.w3.org/2000/svg" class="docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
+<p>While we recommend using YAML to define properties, you can also define properties using <a href="https://www.json.org/" class="outbound" target="_blank"><span>JSON</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-json"><code v-pre class="language-json">---
 {
@@ -638,15 +613,15 @@ time: 2020-08-21T10:30:00
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>tags</code></td>
+<td><code translate="no" v-pre>tags</code></td>
 <td>See <a href="../tags/">Tags</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>aliases</code></td>
+<td><code translate="no" v-pre>aliases</code></td>
 <td>See <a href="../aliases/">Aliases</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>cssclasses</code></td>
+<td><code translate="no" v-pre>cssclasses</code></td>
 <td>Allows you to style individual notes using <a href="../snippets/">CSS snippets</a>.</td>
 </tr>
 </tbody>
@@ -669,23 +644,23 @@ time: 2020-08-21T10:30:00
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>publish</code></td>
+<td><code translate="no" v-pre>publish</code></td>
 <td>See <a href="../publish/publish/#automatically-select-notes-to-publish">Automatically select notes to publish</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>permalink</code></td>
+<td><code translate="no" v-pre>permalink</code></td>
 <td>See <a href="../publish/permalinks/">Permalinks</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>description</code></td>
+<td><code translate="no" v-pre>description</code></td>
 <td>See <a href="../publish/social-share/#description">Description</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>image</code></td>
+<td><code translate="no" v-pre>image</code></td>
 <td>See <a href="../publish/social-share/#image">Image</a>.</td>
 </tr>
 <tr>
-<td><code v-pre>cover</code></td>
+<td><code translate="no" v-pre>cover</code></td>
 <td>See <a href="../publish/social-share/#image">Image</a>.</td>
 </tr>
 </tbody>
@@ -708,16 +683,16 @@ time: 2020-08-21T10:30:00
 </thead>
 <tbody>
 <tr>
-<td><code v-pre>tag</code></td>
-<td>Deprecated alias for <code v-pre>tags</code>.</td>
+<td><code translate="no" v-pre>tag</code></td>
+<td>Deprecated alias for <code translate="no" v-pre>tags</code>.</td>
 </tr>
 <tr>
-<td><code v-pre>alias</code></td>
-<td>Deprecated alias for <code v-pre>aliases</code>.</td>
+<td><code translate="no" v-pre>alias</code></td>
+<td>Deprecated alias for <code translate="no" v-pre>aliases</code>.</td>
 </tr>
 <tr>
-<td><code v-pre>cssclass</code></td>
-<td>Deprecated alias for <code v-pre>cssclasses</code>.</td>
+<td><code translate="no" v-pre>cssclass</code></td>
+<td>Deprecated alias for <code translate="no" v-pre>cssclasses</code>.</td>
 </tr>
 </tbody>
 </table>
