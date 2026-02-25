@@ -36,16 +36,26 @@ If you don't see any content in Obsidian when you click **Add to Obsidian**:
 
 It is likely that Obsidian cannot access your clipboard. Clipboard access is necessary to pass data from your browser to Obsidian. Your configuration can affect how apps are sandboxed, and clipboard permissions.
 
-If you use Wayland, make sure that Obsidian has the permissions to read the clipboard when the app is not focused. For example, in your Hyprland configuration:
+If you use Wayland, make sure that Obsidian has the permissions to read the clipboard when the app is not focused. This preference may be in your tiling window manager, e.g. Hyprland or Sway.
+
+If you use Hyprland:
 
 ```ini
-# hyprland.conf
+# ~/.config/hypr/hyprland.conf
 misc {
     focus_on_activate = true
 }
 ```
 
+If you use Sway:
+
+```ini
+# ~/.config/sway/config
+for_window [class="obsidian"] focus_on_window_activation focus
+```
+
 - If you use Flatpak consider trying an [officially supported Obsidian version](https://obsidian.md/download).
+- If you use KDE go to to **System Settings** → **Window Management** → **Window Rules** and allow Obsidian to take focus, [[web-clipper-kde.png|see screenshot]].
 - As a fallback, try switching to **Legacy mode** in **Web Clipper Settings** → **General**. This will bypass the clipboard and save content directly via URI. Note that this will limit the number of characters that can be clipped depending on your browser and Linux distribution.
 
 ## iOS and iPadOS
@@ -60,10 +70,10 @@ To enable the Web Clipper extension for Safari:
 
 To allow Web Clipper to run on all websites:
 
-1. Go to iOS **Settings** →  **Apps** →  **Safari** →  **Extensions**.
+1. Go to iOS **[[Settings]]** →  **Apps** →  **Safari** →  **Extensions**.
 2. Under **Permissions** allow it to run on all websites.
 
 To allow Obsidian to always receive Web Clipper content:
 
-1. Go to iOS **Settings** →  **Apps** →  **Obsidian**.
+1. Go to iOS **[[Settings]]** →  **Apps** →  **Obsidian**.
 2. Set **Paste from other apps** to **Allow**.

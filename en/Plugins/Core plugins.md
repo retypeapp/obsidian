@@ -1,14 +1,20 @@
 ---
+aliases:
+  - core plugin
 cssclasses:
   - list-cards
   - list-cards-mobile-full
+description: This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.
+mobile: true
 permalink: plugins
-aliases:
-  - core plugin
+publish: true
 ---
-This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team. 
 
-Some core plugins are disabled by default. You can enable them under **Settings → Core plugins**.
+This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team, and are included within the application.
+
+Some core plugins are disabled by default. You can enable them under **[[Settings]] → Core plugins**.
+
+The Obsidian team also maintains the development of certain [[#Other plugins|open-source community plugins]].
 
 > [!tip] Community plugins
 > If you can't find the plugin you're looking here, check out some of the [[Community plugins|plugins built by the community]]. You can also [Build a plugin](https://docs.obsidian.md/Plugins/Getting+started/Build+a+plugin) yourself.
@@ -20,7 +26,7 @@ Some core plugins are disabled by default. You can enable them under **Settings 
 - [[Backlinks]]
 	- See all the links and unlinked mentions of a note.
 - [[Introduction to Bases|Bases]]
-	- Turn a set of notes into a powerful database.
+	- Create custom views that let you edit, sort, and filter files using their properties.
 - [[Bookmarks]]
 	- Save links to notes, headings, searches, and more.
 - [[Canvas]]
@@ -37,8 +43,6 @@ Some core plugins are disabled by default. You can enable them under **Settings 
 	- Convert Markdown from other apps to Obsidian format.
 - [[Graph view]]
 	- Visualize relationships between notes in your vault.
-- [[Importer]]
-	- Convert files from various apps and formats to Obsidian.
 - [[Note composer]]
 	- Merge two notes or split one into two.
 - [[Outgoing links]]
@@ -75,3 +79,12 @@ Some core plugins are disabled by default. You can enable them under **Settings 
 	- Display the number of words and characters.
 - [[Workspaces]]
 	- Save layouts and switch between them.
+
+### Other plugins
+
+The Obsidian team also maintains plugins available through the Community plugin store:
+
+- [[Importer]]
+	- Convert files from various apps and formats to Obsidian.
+- [[Map view|Maps]]
+	- Add a map view to Obsidian Bases.

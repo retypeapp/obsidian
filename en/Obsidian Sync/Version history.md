@@ -43,7 +43,7 @@ When you enable the [[Introduction to Obsidian Sync|Sync]] core plugin, Sync his
 
 Sync history will then appear in the [[Sidebar|right sidebar]].
 
-**Mobile** ![[obsidian-smartphone.svg#icon]]
+**Mobile** ![[obsidian-icon-smartphone.svg#icon]]
 
 1. Open the [[Ribbon]] ( ![[lucide-menu.svg#icon]] ).
 2. Open the **Command palette**. ( ![[lucide-terminal.svg#icon]] )
@@ -54,7 +54,7 @@ Sync history will then appear as a dropdown option in the [[Sidebar|right sideba
 
 #### Enable via Hotkey
 
-1. Open **Settings**.
+1. Open **[[Settings]]**.
 2. In the **Options** category, select **Hotkeys**.
 3. In the hotkeys search bar, type "Sync".
 4. Next to "Sync: Show Sync history," assign your preferred hotkey.
@@ -80,7 +80,7 @@ The process for restoring both notes and attachments is the same.
 2. Select **Open version history**.
 3. Select the version of the note you want to view on the left. The contents will be displayed on the right. 
 
-**Mobile** ![[obsidian-smartphone.svg#icon]]
+**Mobile** ![[obsidian-icon-smartphone.svg#icon]]
 1. In the **File explorer**, select the note you want to restore.
 2. Long press to bring up the context menu.
 3. Select **Open version history**.
@@ -89,7 +89,7 @@ The process for restoring both notes and attachments is the same.
 
 #### View version history of a deleted or renamed file
 
-1. Open **Settings**.
+1. Open **[[Settings]]**.
 2. In the sidebar, under **Core plugins***, select **Sync**.
 3. Next to **Deleted files**, select **View**.
 4. Select the note you want to view the version history for.
@@ -104,7 +104,7 @@ The process for restoring both notes and attachments is the same.
 4. Select the **Restore** button.
 5. The note contents will be replaced with the restored version.
 
-**Mobile** ![[obsidian-smartphone.svg#icon]]
+**Mobile** ![[obsidian-icon-smartphone.svg#icon]]
 1. In the **File explorer**, select the note you want to restore.
 2. Long press to bring up the context menu.
 3. Select **Open version history**.
@@ -115,7 +115,7 @@ The process for restoring both notes and attachments is the same.
 
 #### Restore a deleted file
 
-1. Open **Settings**.
+1. Open **[[Settings]]**.
 2. In the sidebar, under **Core plugins***, select **Sync**.
 3. Next to **Deleted files**, select **View**.
 4. Choose the note you want to restore.
@@ -131,18 +131,18 @@ Obsidian Sync also keeps track of the changes made to your vault configuration s
 
 #### View version history of a setting
 
-1. Open **Settings**.
+1. Open **[[Settings]]**.
 2. In the sidebar, under **Core plugins***, select **Sync**.
 3. Navigate down to **Vault configuration sync**. 
-4. Select the **View** button next to **Settings version history**.
-5. In the **Settings File** pop-up, choose a settings file you want to view.  
+4. Select the **View** button next to **[[Settings]] version history**.
+5. In the **[[Settings]] File** pop-up, choose a settings file you want to view.  
 
 #### Restore a previous version of a setting
 
-1. Open **Settings**.
+1. Open **[[Settings]]**.
 2. In the sidebar, under **Core plugins**, select **Sync**.
 3. Navigate down to **Vault configuration sync**. 
-4. Select the **View** button next to **Settings version history**.
-5. In the **Settings File** pop-up, choose a settings file you want to view.  
+4. Select the **View** button next to **[[Settings]] version history**.
+5. In the **[[Settings]] File** pop-up, choose a settings file you want to view.  
 6. In the changes window, select the **Restore** button.
 7. Reload or restart Obsidian to have the setting take effect. For more details, refer to the instructions in [[Set up Obsidian Sync#Adjust Obsidian Sync settings|Adjust Obsidian Sync settings]].

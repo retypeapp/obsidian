@@ -60,6 +60,8 @@ With thousands of plugins and themes, you can shape Obsidian to fit your way of 
 	- Make small changes to the interface on top of your Obsidian theme.
 - [[Introduction to Obsidian Web Clipper|Web Clipper]]
 	- Highlight web pages and save content to Obsidian using our browser extension.
+- [[Obsidian CLI]]
+	- Control Obsidian from your terminal using the command line interface.
 
 ## Add-on services
 

@@ -1,7 +1,10 @@
 ---
 aliases:
   - How to/Working with backlinks
+description: With the Backlinks plugin, you can see all the backlinks for the active note.
+mobile: false
 permalink: plugins/backlinks
+publish: true
 ---
 With the Backlinks [[Core plugins|plugin]], you can see all the _backlinks_ for the active note.
 
@@ -34,10 +37,13 @@ It provides the following options:
 
 ## View backlinks for a note
 
-To view the backlinks for the active note, click the **Backlinks** ( ![[obsidian-links-coming-in.svg#icon]] ) tab in the right sidebar.
+To view the backlinks for the active note, click the **Backlinks** ( ![[obsidian-icon-links-coming-in.svg#icon]] ) tab in the right sidebar.
 
 > [!note]
 > If you can't see the Backlinks tab, you can make it visible by opening the [[Command palette]] and running the **Backlinks: Show backlinks** command.
+
+> [!info] Excluded files
+> Files matching your [[Settings#Excluded files|Excluded files]] patterns will not appear in Unlinked mentions.
 
 ## See backlinks of a specific note
 

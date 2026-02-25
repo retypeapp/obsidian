@@ -45,8 +45,9 @@ Credits to these plugin developers for pioneering functionality that were adapte
 
 - pjeby for the Hotkey Helper plugin
 - javalent for the Admonition plugin
-- NothingIsLost for several CodeMirror 6 improvements
+- NothingIsLost for CodeMirror 6 improvements
 - mgmeyers for the Indentation Guides plugin
+- blacksmithgu for Dataview
 
 ## Builds
 
@@ -56,6 +57,7 @@ Credits to these plugin developers for pioneering functionality that were adapte
 ## Translators
 
 - Andrea Brandi (Italian)
+- Anne-Katrin aka Mephi (German)
 - bongudth (Vietnamese)
 - canzi-teacher, 蚕子 (Simplified Chinese)
 - cor-bee, Ілля Пишняк (Ukrainian)
@@ -118,7 +120,7 @@ Licensed under the [Mozilla Public License version 2.0](http://mozilla.org/MPL/2
 
 ### Electron
 
-Version `34.3.0`
+Version `37.3.0`
 MIT License
 Copyright (c) Electron contributors
 Copyright (c) 2013-2020 GitHub Inc.
@@ -154,6 +156,7 @@ Copyright (c) 2014 - 2022 Knut Sveidqvist
 Version `2.29.4`
 MIT License
 Copyright (c) JS Foundation and other contributors
+
 ### pdf.js
 
 Apache License 2.0
