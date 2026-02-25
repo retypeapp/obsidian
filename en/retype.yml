@@ -15,9 +15,9 @@ start:
 input: .
 output: .retype
 
-# See https://retype.com/community for FREE
-# GitHub community key on github.io 
-url: your-github-username.github.io/obsidian
+# See https://retype.com/community for a FREE
+# GitHub community key on github.io
+url: retypeapp.github.io/obsidian
 
 edit:
   repo: "https://github.com/obsidianmd/obsidian-help/edit"
