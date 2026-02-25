@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320669901">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825372436014">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825320669901" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825372436014" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320669901" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825372436014" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320669901" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825372436014" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,7 +203,7 @@
         <span>Variables</span>
     </h1>
 </doc-anchor-target>
-<p><a href="../../plugins/templates/">Web Clipper templates</a> can use variables to automatically pre-populate data from the page in a template. Variables can be used in the <strong>note name</strong>, <strong>note location</strong>, <strong>properties</strong>, and <strong>note content</strong>. Variables can also be modified using <a href="../filters/">filters</a>.</p>
+<p><a href="../templates/">Web Clipper templates</a> can use variables to automatically pre-populate data from the page in a template. Variables can be used in the <strong>note name</strong>, <strong>note location</strong>, <strong>properties</strong>, and <strong>note content</strong>. Variables can also be modified using <a href="../filters/">filters</a>.</p>
 <p>Use the <code translate="no" v-pre>...</code> icon in the <a href="../">Web Clipper</a> extension to access the current page variables for use in templates. There are five types of variables you can use:</p>
 <ul>
 <li><doc-anchor-trigger to="#preset-variables">Preset variables</doc-anchor-trigger></li>
@@ -321,7 +321,7 @@
 <p>Prompt variables have the benefit of being extremely flexible and easy to write, however they come with several tradeoffs: they are slower to run, and may have cost and privacy considerations depending on the <a href="../interpreter/#models">provider</a> you choose.</p>
 <p>Unlike other variable types, prompt variables need to be processed by an external language model, so they are replaced only once <a href="../interpreter/">Interpreter</a> has run.</p>
 <p>It is best to <em>not</em> use prompt variables if the data you want to extract is in a consistent format that could be extracted with other variable types.</p>
-<p>On the other hand, prompt variables can be useful if the data you want to extract is an <em>inconsistent</em> format across websites. For example, you can make a <a href="../../plugins/templates/">template</a> to save books that is agnostic of the book site. Prompt variables like <code translate="no" v-pre>{{&quot;author of the book&quot;}}</code> will work across any book site, whereas selector variables typically only work for one site.</p>
+<p>On the other hand, prompt variables can be useful if the data you want to extract is an <em>inconsistent</em> format across websites. For example, you can make a <a href="../templates/">template</a> to save books that is agnostic of the book site. Prompt variables like <code translate="no" v-pre>{{&quot;author of the book&quot;}}</code> will work across any book site, whereas selector variables typically only work for one site.</p>
 <doc-anchor-target id="examples">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
@@ -371,7 +371,7 @@
         <span>Schema.org variables</span>
     </h2>
 </doc-anchor-target>
-<p>Schema variables allow you to extract data from <a href="https://schema.org/" class="outbound" target="_blank"><span>schema.org</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> JSON-LD on the page. Schema.org data can also be used to automatically <a href="../../plugins/templates/#schemaorg-matching">trigger a template</a>.</p>
+<p>Schema variables allow you to extract data from <a href="https://schema.org/" class="outbound" target="_blank"><span>schema.org</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> JSON-LD on the page. Schema.org data can also be used to automatically <a href="../templates/#schemaorg-matching">trigger a template</a>.</p>
 <ul>
 <li><code translate="no" v-pre>{{schema:@Type:key}}</code> returns the value of the key from the schema.</li>
 <li><code translate="no" v-pre>{{schema:@Type:parent.child}}</code> returns the value of a nested property.</li>

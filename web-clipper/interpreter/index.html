@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320669901">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825372436014">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825320669901" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825372436014" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320669901" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825372436014" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320669901" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825372436014" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -210,7 +210,7 @@
 <li>Convert text from one format to another.</li>
 <li>Translate text to a different language.</li>
 </ul>
-<p>Interpreter leverages language models to process information on a web page, and return results using <a href="../variables/">Variables</a> that you can add to your <a href="../../plugins/templates/">Web Clipper Templates</a>.</p>
+<p>Interpreter leverages language models to process information on a web page, and return results using <a href="../variables/">Variables</a> that you can add to your <a href="../templates/">Web Clipper Templates</a>.</p>
 <p><a href="../../attachments/video/web-clipper-interpreter-demo.mp4#interface">web clipper interpreter demo.mp4 &gt; interface</a></p>
 <doc-anchor-target id="examples-of-prompts">
     <h2>
@@ -236,7 +236,7 @@
 <li>Go to the <strong>Interpreter</strong> section in Web Clipper settings.</li>
 <li>Toggle on <strong>Enable Interpreter</strong>.</li>
 <li>Configure your provider and model, see <doc-anchor-trigger to="#models">models</doc-anchor-trigger> section below.</li>
-<li>Add <a href="../variables/">prompt variables</a> to your <a href="../../plugins/templates/">templates</a>.</li>
+<li>Add <a href="../variables/">prompt variables</a> to your <a href="../templates/">templates</a>.</li>
 <li>If your template includes prompt variables, the Interpreter section will be visible when you <a href="../capture/">clip a page</a>. Click <strong>interpret</strong> to process the prompt variables.</li>
 </ol>
 <doc-anchor-target id="how-it-works">
@@ -256,7 +256,7 @@
 </doc-anchor-target>
 <p>The term <em>context</em> refers to the page data that Interpreter uses to process prompts. The smaller the context, the faster Interpreter runs.</p>
 <p>By default, Interpreter uses the entire page HTML as its context, however this can make prompts slower and more expensive than necessary.</p>
-<p>You can override the default context in Interpreter <strong>Advanced settings</strong> and define context per <a href="../../plugins/templates/">template</a>.</p>
+<p>You can override the default context in Interpreter <strong>Advanced settings</strong> and define context per <a href="../templates/">template</a>.</p>
 <p>To define a more targeted context use <a href="../variables/#selector-variables">selector variables</a> (or other variable types) to interpret a section of the page. For example, you could use the following selector variable in your template&#x27;s Interpreter context:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">{{selectorHtml:#main}}</code></pre>
