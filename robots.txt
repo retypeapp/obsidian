@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-github-username.github.io/obsidian/sitemap.xml.gz
+Sitemap: https://retypeapp.github.io/obsidian/sitemap.xml.gz
