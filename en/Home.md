@@ -10,10 +10,10 @@ permalink: /
 ---
 # Obsidian Help
 
-!!!base Disclaimer
-This site displays the [Obsidian Help](https://github.com/obsidianmd/obsidian-help) documentation, which is © [Obsidian](https://obsidian.md/). The content is reproduced here for informational and/or educational purposes only. We make no claim of ownership over the material; all rights are reserved by Obsidian. Any use beyond fair use or without Obsidian’s permission may be subject to copyright law.
+!!!base DISCLAIMER
+THIS SITE DISPLAYS THE [OBSIDIAN HELP](https://github.com/obsidianmd/obsidian-help) DOCUMENTATION, WHICH IS © [OBSIDIAN](https://obsidian.md/). THE CONTENT IS REPRODUCED HERE FOR INFORMATIONAL AND/OR EDUCATIONAL PURPOSES ONLY. WE MAKE NO CLAIM OF OWNERSHIP OVER THE MATERIAL; ALL RIGHTS ARE RESERVED BY OBSIDIAN. ANY USE BEYOND FAIR USE OR WITHOUT OBSIDIAN'S PERMISSION MAY BE SUBJECT TO COPYRIGHT LAW.
 
-This website is generated using [Retype](https://retype.com/) as a demonstration from a public [fork](https://github.com/retypeapp/obsidian) of the [Obsidian Help](https://github.com/obsidianmd/obsidian-help) repository. Please see the original [Obsidian Help](https://help.obsidian.md/) website. All content is copyright © 2025 [Obsidian](https://obsidian.md/).
+THIS WEBSITE IS GENERATED USING [RETYPE](https://retype.com/) AS A DEMONSTRATION FROM A PUBLIC [FORK](https://github.com/retypeapp/obsidian) OF THE [OBSIDIAN HELP](https://github.com/obsidianmd/obsidian-help) REPOSITORY. PLEASE SEE THE ORIGINAL [OBSIDIAN HELP](https://help.obsidian.md/) WEBSITE. ALL CONTENT IS COPYRIGHT © 2026 [OBSIDIAN](https://obsidian.md/).
 !!!
 
 Welcome to the official Obsidian Help site, where you can find tips and guides on how to use [Obsidian](https://obsidian.md). For API documentation visit the [Obsidian Developer Docs](https://docs.obsidian.md/).
