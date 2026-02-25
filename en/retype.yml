@@ -9,13 +9,15 @@
 # website using Retype (https://retype.com/) as the static website generator.
 
 start:
-  # Start in Pro mode
+  # Start in Retype Pro trial mode:
   pro: true
 
 input: .
 output: .retype
 
-url: retypeapp.github.io/obsidian
+# See https://retype.com/community for FREE
+# GitHub community key on github.io 
+url: your-github-username.github.io/obsidian
 
 edit:
   repo: "https://github.com/obsidianmd/obsidian-help/edit"
@@ -65,5 +67,5 @@ footer:
 
 templating:
   # By default, templating is enabled, but 
-  # we will leave templating turned off for now:
+  # we will turn templating off for now:
   enabled: false
