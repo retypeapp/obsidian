@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,12 +203,31 @@
         <span>Search</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Search is a core plugin that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.</div>
 <p>Search is a <a href="../">core plugin</a> that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.</p>
-<p>By default, you can find Search in the left sidebar ( <img src="../../attachments/icons/lucide-search.svg#icon" alt="" /> ). You can also open Search by pressing <code translate="no" v-pre>Ctrl+Shift+F</code> (or <code translate="no" v-pre>Cmd+Shift+F</code> on macOS).</p>
+<p>By default, you can find Search in the left sidebar ( <img src="../../attachments/icons/lucide-search.svg#icon" alt="" /> ). You can also open Search by pressing <code translate="no" v-pre>Ctrl+Shift+F</code> (Windows/Linux) or <code translate="no" v-pre>Command+Shift+F</code> (macOS).</p>
 <ul>
 <li><strong>Search selected text</strong>: If you select text in the editor and open Search with the keyboard shortcut, Search shows you the search results for the selected text.</li>
 <li><strong>Search recent search terms</strong>: Open Search with an empty search term to list recent search terms. Click any of them to use the search term again.</li>
 </ul>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-info" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Excluded files</h5>
+<p>Files matching your <a href="../../settings/#excluded-files">Excluded files</a> patterns will not appear in Search results.</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="search-terms">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search-terms">#</doc-anchor-trigger>
@@ -257,6 +276,11 @@
 <p>You can exclude a combination of expressions using parentheses:</p>
 <ul>
 <li><code translate="no" v-pre>meeting -(work meetup)</code> returns files that contain <code translate="no" v-pre>meeting</code> but not <em>both</em> <code translate="no" v-pre>work</code> and <code translate="no" v-pre>meetup</code>.</li>
+</ul>
+<p>To filter results using the less than (<code translate="no" v-pre>&lt;</code>) and greater than (<code translate="no" v-pre>&gt;</code>) operators, surround them with square brackets (<code translate="no" v-pre>[]</code>) or quotes (<code translate="no" v-pre>&quot;&quot;</code>):</p>
+<ul>
+<li><code translate="no" v-pre>meeting [duration:&lt;5]</code> returns files where meeting is present, and duration is less than 5.</li>
+<li><code translate="no" v-pre>meeting [duration:&gt;5]</code> returns files where meeting is present, and duration is greater than 5.</li>
 </ul>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
@@ -357,9 +381,17 @@
 <ul>
 <li><code translate="no" v-pre>[aliases:Name]</code> returns files where the <code translate="no" v-pre>aliases</code> property value is <code translate="no" v-pre>Name</code></li>
 </ul>
+<p>Use <code translate="no" v-pre>null</code> as a value to find properties that have no value:</p>
+<ul>
+<li><code translate="no" v-pre>[aliases:null]</code> returns files where the <code translate="no" v-pre>aliases</code> property exists but has no value</li>
+</ul>
+<blockquote>
+<p>[!info]+ Empty values
+The <code translate="no" v-pre>null</code> operator works when a property is empty (e.g., <code translate="no" v-pre>aliases: </code>), but not when the property contains empty quotes (<code translate="no" v-pre>&quot;&quot;</code>) or empty brackets (<code translate="no" v-pre>[]</code>).</p>
+</blockquote>
 <p>Both property and value allow sub-queries, such as parentheses for grouping, the <code translate="no" v-pre>OR</code> operator, double-quotes for exact matching, and regex.</p>
 <ul>
-<li>Example: <code translate="no" v-pre>[status:Draft OR Published]</code> to find returns files where the <code translate="no" v-pre>status</code> property value is <code translate="no" v-pre>Draft</code> or <code translate="no" v-pre>Published</code></li>
+<li><code translate="no" v-pre>[status:Draft OR Published]</code> returns files where the <code translate="no" v-pre>status</code> property value is <code translate="no" v-pre>Draft</code> or <code translate="no" v-pre>Published</code></li>
 </ul>
 <doc-anchor-target id="change-case-sensitivity">
     <h2>
@@ -367,7 +399,7 @@
         <span>Change case sensitivity</span>
     </h2>
 </doc-anchor-target>
-<p>By default, search terms are not case sensitive. If you want to search for the exact case of your search term, click <strong>Match case</strong> ( <img src="../../attachments/icons/obsidian-upper-lowercase.svg#icon" alt="" /> ) inside the search bar.</p>
+<p>By default, search terms are not case sensitive. If you want to search for the exact case of your search term, select <strong>Match case</strong> ( <img src="../../attachments/icons/obsidian-icon-upper-lowercase.svg#icon" alt="" /> ) inside the search bar.</p>
 <p>This setting can be toggled. If <strong>Match case</strong> icon is highlighted, that means you’re currently doing a case sensitive search.</p>
 <doc-anchor-target id="change-result-sort-order">
     <h2>
@@ -377,7 +409,7 @@
 </doc-anchor-target>
 <ol>
 <li>Enter a <doc-anchor-trigger to="#search-terms">search term</doc-anchor-trigger>.</li>
-<li>Under the search field, click on the dropdown on the right.</li>
+<li>Under the search field, select the dropdown on the right.</li>
 <li>Select the sort order you want. Default is &quot;File name (A to Z)&quot;.</li>
 </ol>
 <p>The following options are available:</p>
@@ -415,31 +447,17 @@
 <li><code translate="no" v-pre>path:/\d{4}-\d{2}-\d{2}/</code> returns files with a date in the file path.</li>
 </ul>
 <p>For more information on how to write regular expressions, refer to FreeCodeCamp&#x27;s <a href="https://www.freecodecamp.org/news/practical-regex-guide-with-real-life-examples/" class="outbound" target="_blank"><span>Practical Regex guide</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> or Mozilla&#x27;s <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" class="outbound" target="_blank"><span>Regular expressions</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
-<div class="flex mb-6">
-    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
-    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
-        <div class="flex items-center ml-4 h-7">
-            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
-                <g fill="currentColor"><g>
-                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
-                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                </g></g>
-            </svg>
-        </div>
-        <div class="pr-5 ml-3 w-full">
-            <h5>Note</h5>
-<p>Regular expressions come in different flavors that may look different from each other. Obsidian uses JavaScript-flavored regular expressions.</p>
-        </div>
-    </div>
-</div>
+<blockquote>
+<p>[!info]+ JavaScript-flavored regular expressions
+Regular expressions come in different flavors that may look different from each other. Obsidian uses JavaScript-flavored regular expressions.</p>
+</blockquote>
 <doc-anchor-target id="configure-search-settings">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#configure-search-settings">#</doc-anchor-trigger>
         <span>Configure search settings</span>
     </h2>
 </doc-anchor-target>
-<p>To configure Search, click on <strong>Search settings</strong> ( <img src="../../attachments/icons/lucide-sliders-horizontal.svg#icon" alt="" /> ) on the right side of the search bar to see the toggles.</p>
+<p>To configure Search, select <strong>Search settings</strong> ( <img src="../../attachments/icons/lucide-sliders-horizontal.svg#icon" alt="" /> ) on the right side of the search bar to see the toggles.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -478,7 +496,7 @@ embed OR search
 </doc-codeblock></div>
 <p><a href="../../publish/">Obsidian Publish</a> doesn&#x27;t support embedded <a href="../../publish/limitations/#search">search results</a>. To see a live rendered example, use the code block above within your vault.</p>
 <p><figure class="content-center">
-    <img src="../../attachments/search-query-rendered.png#" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../attachments/search-query-rendered.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -506,7 +524,7 @@ embed OR search
                 <div>
                     <span>Core plugins</span>
                 </div>
-                <p>This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team.</p>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
             </div>
         </a>
         <a href="/obsidian/embeds/" class="group no-link">
@@ -525,7 +543,7 @@ embed OR search
                 <p>Graph view is a core plugin that lets you visualize the relationships between the notes in your vault.</p>
             </div>
         </a>
-        <a href="/obsidian/extending-obsidian/obsidian-uri/" class="group no-link">
+        <a href="/obsidian/uri/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Obsidian URI</span>
@@ -554,7 +572,7 @@ embed OR search
                 <div>
                     <span>Properties view</span>
                 </div>
-                <p>Properties view is a core plugin that adds two sidebar views that you can use to manage Properties:</p>
+                <p>Properties view is a core plugin that adds two sidebar views that you can use to manage Properties.</p>
             </div>
         </a>
         <a href="/obsidian/publish/limitations/" class="group no-link">
@@ -565,20 +583,20 @@ embed OR search
                 <p>Obsidian Publish has minimal support for Community plugins.</p>
             </div>
         </a>
+        <a href="/obsidian/settings/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Settings</span>
+                </div>
+                <p>Learn how to customize Obsidian through the Settings interface.</p>
+            </div>
+        </a>
         <a href="/obsidian/tags/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Tags</span>
                 </div>
                 <p>Tags are keywords or topics that help you quickly find the notes you want.</p>
-            </div>
-        </a>
-        <a href="/obsidian/plugins/tags/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <span>Tags view</span>
-                </div>
-                <p>Tags view is a core plugin that lists all tags in your vault and the number of notes for each tag.</p>
             </div>
         </a>
     </div>

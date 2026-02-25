@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Hotkeys</title>
     <meta name="title" content="Hotkeys">
-    <meta name="description" content="Obsidian allows you to customize hotkeys, also known as keyboard shortcuts.">
+    <meta name="description" content="Hotkeys are customizable keyboard shortcuts for Obsidian commands. You can assign any keyboard combination to trigger commands like opening files,">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/hotkeys/">
@@ -22,18 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/hotkeys/">
     <meta property="og:title" content="Hotkeys">
-    <meta property="og:description" content="Obsidian allows you to customize hotkeys, also known as keyboard shortcuts.">
+    <meta property="og:description" content="Hotkeys are customizable keyboard shortcuts for Obsidian commands. You can assign any keyboard combination to trigger commands like opening files,">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,24 +203,64 @@
         <span>Hotkeys</span>
     </h1>
 </doc-anchor-target>
-<p>Obsidian allows you to customize hotkeys, also known as keyboard shortcuts.</p>
-<p>Default hotkeys are only defined for the most commonly used <a href="../plugins/command-palette/">commands</a>. If you frequently use a command, you can define a hotkey for it. See also <a href="../editing-shortcuts/">Editing shortcuts</a>.</p>
-<doc-anchor-target id="viewing-hotkeys">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#viewing-hotkeys">#</doc-anchor-trigger>
-        <span>Viewing hotkeys</span>
-    </h3>
+<p>Hotkeys are customizable keyboard shortcuts for Obsidian commands. You can assign any keyboard combination to trigger commands like opening files, inserting templates, or toggling plugins.</p>
+<p>Hotkeys are different from <a href="../editing-shortcuts/">system keyboard shortcuts</a> (like <code translate="no" v-pre>Ctrl+C</code> for copy), which are provided by your operating system and cannot be customized in Obsidian.</p>
+<doc-anchor-target id="view-hotkeys">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#view-hotkeys">#</doc-anchor-trigger>
+        <span>View hotkeys</span>
+    </h2>
 </doc-anchor-target>
-<p>The fastest way to see the hotkey set for a command is to find the command in <a href="../plugins/command-palette/">Command palette</a>. If there&#x27;s a hotkey listed for that command, it&#x27;s set.</p>
-<doc-anchor-target id="setting-hotkeys">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-hotkeys">#</doc-anchor-trigger>
-        <span>Setting hotkeys</span>
-    </h3>
+<p>The fastest way to see the hotkey set for a command is to find the command in the <a href="../plugins/command-palette/">Command palette</a>. If there&#x27;s a hotkey listed for that command, it&#x27;s set.</p>
+<p>You can also view and manage all hotkeys in <strong><a href="../settings/">Settings</a> → Hotkeys</strong>.</p>
+<doc-anchor-target id="set-a-hotkey">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#set-a-hotkey">#</doc-anchor-trigger>
+        <span>Set a hotkey</span>
+    </h2>
 </doc-anchor-target>
-<p>To add a hotkey, remove a hotkey, or restore hotkeys to default, go to Settings =&gt; Hotkeys. You can also filter the list, as the list of commands is quite long.</p>
-<p><strong>Note for non-US users:</strong> Even if the hotkey you type doesn&#x27;t match on screen with what you would expect to see (given your keyboard layout), it will work fine following the actual buttons you pressed (as long as you don’t change layout).</p>
-<p>The hotkey that appears on screen is the one that you would have to perform if you were using a US keyboard.</p>
+<p>To add or modify a hotkey:</p>
+<ol>
+<li>Open <strong><a href="../settings/">Settings</a> → Hotkeys</strong>.</li>
+<li>Find the command in the list or use the search filter.</li>
+<li>Select the plus (+) icon next to the command.</li>
+<li>Press the keyboard combination you want to use.</li>
+<li>Select <strong>Save</strong> to confirm.</li>
+</ol>
+<p>You can assign multiple hotkey combinations to a single command by selecting the plus (+) icon again after setting the first hotkey.</p>
+<doc-anchor-target id="remove-a-hotkey">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#remove-a-hotkey">#</doc-anchor-trigger>
+        <span>Remove a hotkey</span>
+    </h2>
+</doc-anchor-target>
+<p>To remove a hotkey:</p>
+<ol>
+<li>Open <strong><a href="../settings/">Settings</a> → Hotkeys</strong>.</li>
+<li>Find the command with the hotkey you want to remove.</li>
+<li>Select the X icon next to the keyboard combination.</li>
+</ol>
+<doc-anchor-target id="filter-hotkeys">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#filter-hotkeys">#</doc-anchor-trigger>
+        <span>Filter hotkeys</span>
+    </h2>
+</doc-anchor-target>
+<p>To show only commands that have assigned hotkeys, select the filter icon in <strong><a href="../settings/">Settings</a> → Hotkeys</strong>.</p>
+<doc-anchor-target id="non-us-keyboard-layouts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#non-us-keyboard-layouts">#</doc-anchor-trigger>
+        <span>Non-US keyboard layouts</span>
+    </h2>
+</doc-anchor-target>
+<p>Hotkeys are displayed as they would appear on a US keyboard layout. Even if the displayed combination doesn&#x27;t match your keyboard layout, the hotkey will work based on the actual keys you pressed (as long as you don&#x27;t change your keyboard layout).</p>
+<doc-anchor-target id="default-keyboard-shortcuts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-keyboard-shortcuts">#</doc-anchor-trigger>
+        <span>Default keyboard shortcuts</span>
+    </h2>
+</doc-anchor-target>
+<p>For a comprehensive list of default keyboard shortcuts for editing and navigation, see <a href="../editing-shortcuts/">Editing shortcuts</a>.</p>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
@@ -230,6 +270,14 @@
                     <span>Command palette</span>
                 </div>
                 <p>The Command palette plugin lets you run any command directly from your keyboard. It also lets you explore all the available commands and their</p>
+            </div>
+        </a>
+        <a href="/obsidian/community-plugins/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Community plugins</span>
+                </div>
+                <p>Learn how to extend Obsidian with plugins built by the community.</p>
             </div>
         </a>
         <a href="/obsidian/plugins/daily-notes/" class="group no-link">
@@ -245,7 +293,7 @@
                 <div>
                     <span>Editing shortcuts</span>
                 </div>
-                <p>Learn how to use keyboard shortcuts to navigate and edit text in your notes. You can also define custom hotkeys.</p>
+                <p>This page lists default keyboard shortcuts for navigating and editing text in Obsidian. These shortcuts are provided by your operating system or the</p>
             </div>
         </a>
         <a href="/obsidian/folding/" class="group no-link">
@@ -253,7 +301,7 @@
                 <div>
                     <span>Folding</span>
                 </div>
-                <p>Learn how to get a better overview of large notes by using folding to hide parts of the note. Folding is useful when creating outlines for your notes</p>
+                <p>Learn how to get a better overview of large notes by using folding to hide parts of the note</p>
             </div>
         </a>
         <a href="/obsidian/glossary/" class="group no-link">
@@ -280,12 +328,36 @@
                 <p>You can manage files and folders in several ways, using Hotkeys, commands, or File explorer.</p>
             </div>
         </a>
+        <a href="/obsidian/cli/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Obsidian CLI</span>
+                </div>
+                <p>Anything you can do in Obsidian can be done from the command line.</p>
+            </div>
+        </a>
         <a href="/obsidian/properties/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Properties</span>
                 </div>
                 <p>Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers.</p>
+            </div>
+        </a>
+        <a href="/obsidian/settings/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Settings</span>
+                </div>
+                <p>Learn how to customize Obsidian through the Settings interface.</p>
+            </div>
+        </a>
+        <a href="/obsidian/edit-and-read/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Views and editing mode</span>
+                </div>
+                <p>Obsidian lets you control how you read and edit notes written in Markdown using views and modes.</p>
             </div>
         </a>
     </div>

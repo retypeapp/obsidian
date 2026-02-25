@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -245,7 +245,7 @@
         <span>How it works</span>
     </h2>
 </doc-anchor-target>
-<p>When Interpreter is enabled <em>and</em> your template contains <a href="../variables/#prompt-variables">prompt variables</a>, a new Interpreter section is displayed in the extension window, above the <strong>Add to Obsidian</strong> button. This section allows you to select a model and run Interpreter for the current page.</p>
+<p>When Interpreter is enabled <em>and</em> your template contains <a href="../variables/#prompt-variables">prompt variables</a>, a new Interpreter section is displayed in the extension window, above the <strong>Add to Obsidian</strong> button. This section lets you select a model and run Interpreter for the current page.</p>
 <p>When you click <strong>interpret</strong>, Interpreter sends the page context to your selected model, along with <em>all</em> the prompts in your template in one request. Depending on the model provider you choose, this can be an external call or local to your device. The model evaluates your prompts against the page context, and returns its responses. Interpreter then replaces the prompt variables with the response data.</p>
 <p>The whole process can take milliseconds or more than 30 seconds depending on the model you use and the amount of data you are processing.</p>
 <doc-anchor-target id="context">
@@ -373,7 +373,7 @@
         <span>Custom providers and models</span>
     </h3>
 </doc-anchor-target>
-<p>To add a custom provider and/or model go to Web Clipper <strong>Settings</strong> → <strong>Interpreter</strong>:</p>
+<p>To add a custom provider and/or model go to Web Clipper <strong><a href="../../settings/">Settings</a></strong> → <strong>Interpreter</strong>:</p>
 <ul>
 <li><strong>Add provider</strong> to configure preset and custom providers.</li>
 <li><strong>Add model</strong> to configure preset and custom models.</li>
@@ -392,7 +392,7 @@
         <span>Ollama</span>
     </h4>
 </doc-anchor-target>
-<p><a href="https://ollama.com/" class="outbound" target="_blank"><span>Ollama</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> allows you to run language models locally and privately on your device.</p>
+<p><a href="https://ollama.com/" class="outbound" target="_blank"><span>Ollama</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> lets you run language models locally and privately on your device.</p>
 <p>Once you have downloaded and installed Ollama, add Ollama using <strong>Add provider</strong> in Interpreter settings. Ollama does not require an API key. Then choose a model from the <a href="https://ollama.com/search" class="outbound" target="_blank"><span>model list</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>. For example if you want to use <a href="https://ollama.com/library/llama3.2" class="outbound" target="_blank"><span>Llama 3.2</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, click <strong>Add model</strong>, then:</p>
 <ul>
 <li><strong>Provider:</strong> Ollama</li>
@@ -409,6 +409,12 @@
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-none"><code v-pre class="language-none">ollama run llama3.2</code></pre>
 </doc-codeblock></div>
+<p><strong>Context length</strong></p>
+<p>Ollama&#x27;s context window defaults to 2048 tokens. This is the maximum number of tokens for the message and response. When clipping a long web page you can easily exceed this limit. Ollama will silently fail and return irrelevant results. Some options:</p>
+<ul>
+<li>Increase Ollama&#x27;s <code translate="no" v-pre>num_ctx</code> parameter. Be mindful that longer context requires more memory.</li>
+<li>Use the <doc-anchor-trigger to="#context">Context</doc-anchor-trigger> field in your template to provide a more targeted section of the page, or trim the context using a <a href="../filters/">filter</a> e.g. <code translate="no" v-pre>{{content|slice:0,1000}}</code>.</li>
+</ul>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">

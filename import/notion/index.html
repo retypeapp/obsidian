@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Import from Notion</title>
     <meta name="title" content="Import from Notion">
-    <meta name="description" content="Obsidian allows you to easily migrate your notes from Notion using the Importer plugin. This will convert your Notion data to durable Markdown files, that">
+    <meta name="description" content="Obsidian lets you easily migrate your notes from Notion using the Importer plugin. This will convert your Notion data to durable Markdown files that you">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/import/notion/">
@@ -22,18 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/import/notion/">
     <meta property="og:title" content="Import from Notion">
-    <meta property="og:description" content="Obsidian allows you to easily migrate your notes from Notion using the Importer plugin. This will convert your Notion data to durable Markdown files, that">
+    <meta property="og:description" content="Obsidian lets you easily migrate your notes from Notion using the Importer plugin. This will convert your Notion data to durable Markdown files that you">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,21 +203,132 @@
         <span>Import from Notion</span>
     </h1>
 </doc-anchor-target>
-<p>Obsidian allows you to easily migrate your notes from Notion using the <a href="../../plugins/importer/">Importer plugin</a>. This will convert your Notion data to durable Markdown files, that you can use with Obsidian and many other apps.</p>
-<doc-anchor-target id="export-your-data-from-notion">
+<p>Obsidian lets you easily migrate your notes from Notion using the <a href="../../plugins/importer/">Importer plugin</a>. This will convert your Notion data to durable Markdown files that you can use offline with Obsidian and many other apps.</p>
+<p>Obsidian offers two ways to import your Notion data:</p>
+<ol>
+<li><strong>API import</strong> preserves your entire workspace including Databases and formulas which are converted to <a href="../../bases/">Bases</a>, but requires a Notion integration token and an internet connection.</li>
+<li><strong>File import</strong> does not preserve Databases but does not require an API token or internet connection.</li>
+</ol>
+<doc-anchor-target id="api-import">
     <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#api-import">#</doc-anchor-trigger>
+        <span>API import</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="create-a-notion-api-integration-token">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-a-notion-api-integration-token">#</doc-anchor-trigger>
+        <span>Create a Notion API integration token</span>
+    </h3>
+</doc-anchor-target>
+<p>To access your Notion data via the API you need an integration token. This step takes about 2 minutes to complete.</p>
+<p>The token is a long string of numbers and letters typically starting with <code translate="no" v-pre>ntn_...</code> that will allow you to download your data from Notion.</p>
+<ol>
+<li>Sign into your <a href="https://www.notion.so/profile/integrations/" class="outbound" target="_blank"><span>Notion Integrations</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> dashboard.</li>
+<li>Choose <strong>New integration</strong>.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../attachments/notion-integration.png#interface" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<ol start="2">
+<li>Give your integration a name, e.g. &quot;Personal&quot;. Any name can be used.</li>
+<li>Choose the workspace you want to export.</li>
+<li>Click <strong>Save</strong> and continue to <strong>Configure integration settings</strong>.</li>
+<li>In the <strong>Configuration</strong> tab your API token is accessible in the <strong>Internal Integration Secret</strong> field.</li>
+<li>Select <strong>Show</strong> then <strong>Copy</strong>.</li>
+<li>Save the token to a safe place like your password manager.</li>
+</ol>
+<p><figure class="content-center">
+    <img src="../../attachments/notion-token.png#interface" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<p>Next, give your integration access to the Notion pages and databases you want to import.</p>
+<ol>
+<li>Go to the <strong>Access</strong> tab of the integration you just created.</li>
+<li>Click <strong>Edit access</strong>.</li>
+<li>Add the pages and databases that you want to import.</li>
+</ol>
+<p>You can now convert your data using Obsidian Importer.</p>
+<doc-anchor-target id="import-your-notion-data-via-api">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#import-your-notion-data-via-api">#</doc-anchor-trigger>
+        <span>Import your Notion data via API</span>
+    </h3>
+</doc-anchor-target>
+<p>You will need the official Obsidian <a href="../../plugins/importer/">Importer</a> plugin, which you can <a href="obsidian://show-plugin?id=obsidian-importer" class="outbound" target="_blank"><span>install here</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<ol>
+<li>Open <strong><a href="../../settings/">Settings</a></strong>.</li>
+<li>Go to <strong>Community Plugins</strong> and <a href="obsidian://show-plugin?id=obsidian-importer" class="outbound" target="_blank"><span>install Importer</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+<li>Enable the Importer plugin.</li>
+<li>Open the <strong>Importer</strong> plugin using the command palette or ribbon icon.</li>
+<li>Under <strong>File format</strong> select <strong>Notion (API)</strong></li>
+<li>Under <strong>API token</strong>, paste your <strong>Internal Integration Secret</strong> from Notion.</li>
+<li>Click <strong>Load</strong> to choose the databases and pages you want to import.</li>
+<li>Review and edit the import options.</li>
+<li>Select <strong>Import</strong> and wait until import is complete</li>
+<li>You&#x27;re done!</li>
+</ol>
+<doc-anchor-target id="limitations">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limitations">#</doc-anchor-trigger>
+        <span>Limitations</span>
+    </h3>
+</doc-anchor-target>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-info" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>API import is new</h5>
+<p>The Notion API importer is new. Because of the complexity of Notion workspaces, some edge cases may not have been considered. If you encounter issues with the conversion, <a href="https://github.com/obsidianmd/obsidian-importer/issues">submit a bug report</a> so we can improve it.</p>
+        </div>
+    </div>
+</div>
+<p>Due to Notion API rate limits, importing large workspaces may take considerable time. Please be patient.</p>
+<p>Due to limitations in the Notion API some data is not available or cannot converted:</p>
+<ul>
+<li>Only the primary view for each database is imported.</li>
+<li><a href="https://developers.notion.com/docs/working-with-databases#additional-types-of-databases" class="outbound" target="_blank"><span>Linked data sources</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a> are not imported: <em>&quot;Notion&#x27;s API does not currently support linked data sources. When sharing a database with your integration, make sure it contains the original data source!&quot;</em></li>
+<li><code translate="no" v-pre>People</code> functions: <code translate="no" v-pre>name()</code> and <code translate="no" v-pre>email()</code></li>
+<li><code translate="no" v-pre>Text</code> functions: <code translate="no" v-pre>style()</code> and <code translate="no" v-pre>unstyle()</code></li>
+</ul>
+<p>Additionally, Importer will make the following changes:</p>
+<ul>
+<li>Pages without child pages or databases will be imported as <code translate="no" v-pre>[filename].md</code> instead of <code translate="no" v-pre>[filename]/[filename].md</code>.</li>
+<li>Databases are always represented as folders named <code translate="no" v-pre>[database name]</code> with a <code translate="no" v-pre>[database name].base</code> file inside.</li>
+</ul>
+<doc-anchor-target id="file-import">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#file-import">#</doc-anchor-trigger>
+        <span>File import</span>
+    </h2>
+</doc-anchor-target>
+<p>File import is alternative way to import your Notion data. This method does not preserve Databases but it does not require an API token or internet connection.</p>
+<doc-anchor-target id="export-your-data-from-notion">
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#export-your-data-from-notion">#</doc-anchor-trigger>
         <span>Export your data from Notion</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>To prepare your data for import, you will need to export your entire workspace using Notion&#x27;s HTML export format. We recommend that you do not use Notion&#x27;s Markdown export as it omits important data. You must have admin access to the Notion workspace to export all workspace content.</p>
 <ol>
-<li>Go to <strong>Settings &amp; members</strong> at the top of your left-hand sidebar.</li>
-<li>Select <strong>Settings</strong> in the sidebar of that window.</li>
-<li>Scroll down and select the <strong>Export all workspace content</strong> button.</li>
+<li>Go to <strong><a href="../../settings/">Settings</a></strong> at the top of the Notion sidebar.</li>
+<li>Under <strong>Workspace</strong> select <strong>General</strong>.</li>
+<li>Find and select <strong>Export all workspace content</strong>.</li>
 <li>Under <strong>Export format</strong> select <strong>HTML</strong>.</li>
-<li>Enable <strong>Include subpages</strong></li>
-<li>Enable <strong>Create folders for subpages</strong></li>
+<li>Choose <strong>Include everything</strong>.</li>
+<li>Enable <strong>Create folders for subpages</strong>.</li>
 <li>You will receive a <code translate="no" v-pre>.zip</code> file via email or directly in the browser.</li>
 </ol>
 <p><figure class="content-center">
@@ -225,15 +336,20 @@
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
-<doc-anchor-target id="import-your-notion-data-into-obsidian">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#import-your-notion-data-into-obsidian">#</doc-anchor-trigger>
-        <span>Import your Notion data into Obsidian</span>
-    </h2>
+<p><figure class="content-center">
+    <img src="../../attachments/notion-export-2.png#interface" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
+<doc-anchor-target id="import-your-notion-zip-file">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#import-your-notion-zip-file">#</doc-anchor-trigger>
+        <span>Import your Notion .zip file</span>
+    </h3>
 </doc-anchor-target>
 <p>You will need the official Obsidian <a href="../../plugins/importer/">Importer</a> plugin, which you can <a href="obsidian://show-plugin?id=obsidian-importer" class="outbound" target="_blank"><span>install here</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
 <ol>
-<li>Open <strong>Settings</strong>.</li>
+<li>Open <strong><a href="../../settings/">Settings</a></strong>.</li>
 <li>Go to <strong>Community Plugins</strong> and <a href="obsidian://show-plugin?id=obsidian-importer" class="outbound" target="_blank"><span>install Importer</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
 <li>Enable the Importer plugin.</li>
 <li>Open the <strong>Importer</strong> plugin using the command palette or ribbon icon.</li>
@@ -245,10 +361,10 @@
 <li>You&#x27;re done!</li>
 </ol>
 <doc-anchor-target id="troubleshooting">
-    <h2>
+    <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
         <span>Troubleshooting</span>
-    </h2>
+    </h3>
 </doc-anchor-target>
 <p>If you run into issues while importing from Notion:</p>
 <ul>
@@ -257,10 +373,10 @@
 </ul>
 <p>Run into something else? Search <a href="https://github.com/obsidianmd/obsidian-importer/issues">the Importer repository</a> to see if others have experienced it.</p>
 <doc-anchor-target id="importing-large-workspaces">
-    <h3>
+    <h4>
         <doc-anchor-trigger class="header-anchor-trigger" to="#importing-large-workspaces">#</doc-anchor-trigger>
         <span>Importing large workspaces</span>
-    </h3>
+    </h4>
 </doc-anchor-target>
 <p>If you are importing a workspace with multiple gigabytes of data, the export from Notion may contain nested <code translate="no" v-pre>.zip</code> files. In this case you may see an import error message that looks something like this:</p>
 <div class="codeblock-wrapper"><doc-codeblock>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>File explorer</title>
     <meta name="title" content="File explorer">
-    <meta name="description" content="File explorer is a core plugin that lets you manage files and folders inside your vault. You can browse notes and other Accepted file formats in your vault">
+    <meta name="description" content="File explorer is a core plugin that lets you manage files and folders inside your vault.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/plugins/file-explorer/">
@@ -22,18 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/plugins/file-explorer/">
     <meta property="og:title" content="File explorer">
-    <meta property="og:description" content="File explorer is a core plugin that lets you manage files and folders inside your vault. You can browse notes and other Accepted file formats in your vault">
+    <meta property="og:description" content="File explorer is a core plugin that lets you manage files and folders inside your vault.">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,6 +203,7 @@
         <span>File explorer</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">File explorer is a core plugin that lets you manage files and folders inside your vault.</div>
 <p>File explorer is a <a href="../">core plugin</a> that lets you manage files and folders inside your vault. You can browse notes and other <a href="../../file-formats/">Accepted file formats</a> in your vault and perform many common file operations:</p>
 <ul>
 <li>Create, delete, and rename files and folders.</li>
@@ -220,7 +221,7 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Tip</h5>
+            <h5>Drag and drop files</h5>
 <p>You can drag a file from the File explorer into your note to create a link to it, or drag a file into a folder in the File explorer to copy it.</p>
         </div>
     </div>
@@ -247,8 +248,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Tip</h5>
-<p>You can change the default location for new notes under <strong>Settings → Files and links → Default location for new notes</strong>.</p>
+            <h5>Change default location</h5>
+<p>You can change the default location for new notes under <strong><a href="../../settings/">Settings</a> → <a href="../../settings/#files-and-links">Files and links</a> → <a href="../../settings/#default-location-for-new-notes">Default location for new notes</a></strong>.</p>
         </div>
     </div>
 </div>
@@ -263,7 +264,7 @@
         <span>Create a new folder</span>
     </h2>
 </doc-anchor-target>
-<p>To create a new folder the root of your vault:</p>
+<p>To create a new folder in the root of your vault:</p>
 <ol>
 <li>Click <strong>New folder</strong> ( <img src="../../attachments/icons/lucide-folder-plus.svg#icon" alt="" /> ) at the top of the File explorer.</li>
 <li>Type the name of the folder, and then press Enter.</li>
@@ -273,6 +274,44 @@
 <li>Right-click the folder you want to create the subfolder in, and then click <strong>New folder</strong>.</li>
 <li>Type the name of the folder, and then press Enter.</li>
 </ol>
+<doc-anchor-target id="change-sort-order">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#change-sort-order">#</doc-anchor-trigger>
+        <span>Change sort order</span>
+    </h2>
+</doc-anchor-target>
+<p>To change the sort order of your files:</p>
+<ol>
+<li>Select <strong>Change sort order</strong> ( <img src="../../attachments/icons/lucide-arrow-up-narrow-wide.svg#icon" alt="" /> ) at the top of the File explorer.</li>
+<li>Choose how you want to sort your files. You can sort in ascending or descending order by file name, modified time, or created time.</li>
+</ol>
+<doc-anchor-target id="auto-reveal-active-file">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#auto-reveal-active-file">#</doc-anchor-trigger>
+        <span>Auto-reveal active file</span>
+    </h2>
+</doc-anchor-target>
+<p>When you open a note, File explorer can automatically scroll to and highlight that note in the folder tree. This helps you keep track of where your active note is located within your vault.</p>
+<p>To toggle auto-reveal:</p>
+<ul>
+<li>Select <strong>Auto-reveal active file</strong> ( <img src="../../attachments/icons/lucide-gallery-vertical.svg#icon" alt="" /> ) at the top of the File explorer.</li>
+</ul>
+<p>When enabled, the File explorer will automatically follow and reveal the currently open note.</p>
+<doc-anchor-target id="expand-or-collapse-all-folders">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#expand-or-collapse-all-folders">#</doc-anchor-trigger>
+        <span>Expand or collapse all folders</span>
+    </h2>
+</doc-anchor-target>
+<p>You can expand or collapse all folders in the File explorer at once.</p>
+<p>To expand all folders:</p>
+<ul>
+<li>Select <strong>Expand all</strong> ( <img src="../../attachments/icons/lucide-chevrons-up-down.svg#icon" alt="" /> ) at the top of the File explorer.</li>
+</ul>
+<p>To collapse all folders:</p>
+<ul>
+<li>Select <strong>Collapse all</strong> ( <img src="../../attachments/icons/lucide-chevrons-down-up.svg#icon" alt="" /> ) at the top of the File explorer.</li>
+</ul>
 <doc-anchor-target id="delete-a-file-or-folder">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#delete-a-file-or-folder">#</doc-anchor-trigger>
@@ -292,7 +331,7 @@
 </doc-anchor-target>
 <ol>
 <li>Right-click the file you want to rename, and then click <strong>Rename</strong>.</li>
-<li>Type the new name, and the press Enter.</li>
+<li>Type the new name, and then press Enter.</li>
 </ol>
 <p>For more information, refer to <a href="../../manage-notes/#rename-a-note">Rename a note</a>.</p>
 <doc-anchor-target id="move-a-file-or-folder">
@@ -344,7 +383,7 @@
                 <div>
                     <span>Core plugins</span>
                 </div>
-                <p>This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team.</p>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
             </div>
         </a>
         <a href="/obsidian/publish/customize/" class="group no-link">
@@ -401,6 +440,14 @@
                     <span>Pop out windows</span>
                 </div>
                 <p>Learn how to open files in separate pop-out windows.</p>
+            </div>
+        </a>
+        <a href="/obsidian/sidebar/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Sidebar</span>
+                </div>
+                <p>Learn about Obsidian's left and right sidebars and how to manage tabs and tab groups.</p>
             </div>
         </a>
     </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -272,7 +272,7 @@
 <p>To continue using Obsidian Sync, we suggest doing a full re-setup to be able to add new devices to your Sync system:</p>
 <ol>
 <li>Make a full vault backup on your primary device, just in case something goes wrong. This can be as simple as making a copy of the vault folder, or creating a zip file from the vault.</li>
-<li>Disconnect the remote vault in each of your devices. This can be done by going to <strong>Settings → Sync → Pick remote vault → Disconnect</strong>.</li>
+<li>Disconnect the remote vault in each of your devices. This can be done by going to <strong><a href="../../settings/">Settings</a> → Sync → Pick remote vault → Disconnect</strong>.</li>
 <li><a href="../setup/#create-a-new-remote-vault">Create a new remote vault</a> on your primary device from the same Settings page. Optionally, you can delete the previous remote vault since you don&#x27;t have the password for it anyway. (You may have to delete the previous remote vault if you are at the <a href="../faq/#how-many-remote-vaults-can-i-have">vault limit</a>)</li>
 <li>Wait for your primary device to sync. Watch the sync indicator at the bottom right of the screen until it displays a green checkmark.</li>
 <li>Connect each of your device to the same newly created remote vault. When connecting, you will be shown a warning about vault merging, this is expected and you can proceed. Wait for each device to fully sync before moving onto the next. This reduces the chances of issues.</li>
@@ -304,8 +304,8 @@
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-            <h5>Sync geo-regions</h5>
-<p><strong>Automatic</strong>: Your data center is chosen based on your IP location.</p>
+            <h5>Sync regions</h5>
+<p><strong>Automatic</strong>: Your data center is chosen based on your IP location, at the time when you first set it up.</p>
 <p><strong>Asia</strong>: Singapore
 <strong>Europe</strong>: Frankfurt, Germany
 <strong>North America</strong>: San Francisco, USA
@@ -322,7 +322,7 @@
 </doc-anchor-target>
 <p>To locate your Obsidian Sync server, follow these steps:</p>
 <ol>
-<li>Go to <strong>Settings</strong> → <strong>Sync</strong> → <strong>Copy Debug Info</strong>.</li>
+<li>Go to <strong><a href="../../settings/">Settings</a></strong> → <strong>Sync</strong> → <strong>Copy Debug Info</strong>.</li>
 <li>Paste the copied information into a note or file.</li>
 <li>Look for a line similar to this: <code translate="no" v-pre>Host server: wss://sync-xx.obsidian.md</code></li>
 </ol>
@@ -357,6 +357,29 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="limitations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#limitations">#</doc-anchor-trigger>
+        <span>Limitations</span>
+    </h2>
+</doc-anchor-target>
+<p>Obsidian Sync is designed to keep your notes private and secure. To deliver fast, reliable sync and efficient storage across devices, we make some deliberate trade-offs in how encryption is applied.</p>
+<doc-anchor-target id="deterministic-file-hash-encryption">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deterministic-file-hash-encryption">#</doc-anchor-trigger>
+        <span>Deterministic file-hash encryption</span>
+    </h3>
+</doc-anchor-target>
+<p>We encrypt file hashes deterministically: the same file content, using the same encryption key and salt, always produces the same encrypted hash on the server. This helps Sync detect duplicates and avoid re-uploading or re-storing identical data, which saves bandwidth and remote storage, especially in version history or when large files repeat.</p>
+<p>However, if an attacker compromises a Sync server, and they have a separate way to force a user to upload files of their choosing, then the attacker could force the user to upload specific files and determine if the file matches against a file the user has previously uploaded.</p>
+<doc-anchor-target id="no-cryptographic-binding-between-path-and-content">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#no-cryptographic-binding-between-path-and-content">#</doc-anchor-trigger>
+        <span>No cryptographic binding between path and content</span>
+    </h3>
+</doc-anchor-target>
+<p>Some metadata is not end-to-end encrypted: which device uploaded or deleted a file, when it was uploaded, and the <em>mapping</em> between encrypted file paths and encrypted content. This data is readable by the server so it can route changes, determine the version history for a file, and keep devices in sync.</p>
+<p>If a Sync server were compromised, an attacker could tamper with that mapping, causing the contents of one encrypted file to be delivered under a different file path. This doesn’t reveal your plaintext data, it remains encrypted.</p>
 
                 
                 <!-- Required only on API pages -->

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825319958261" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -204,6 +204,7 @@
         <span>Properties</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers.</div>
 <p>Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers. Properties can also be used in combination with <a href="../community-plugins/">Community plugins</a> that can do useful things with your structured data.</p>
 <doc-anchor-target id="add-properties-to-a-note">
     <h2>
@@ -227,30 +228,24 @@
         <span>Property types</span>
     </h3>
 </doc-anchor-target>
-<p>In addition to a name and value, properties also have a <em>type</em>. A property&#x27;s type describes the kind of values it can store. To change the type of a property, click the property&#x27;s icon or use the <strong>Edit file property</strong> command.</p>
+<p>In addition to a name and value, properties also have a <em>type</em>. A property&#x27;s type determines what kind of values it can store and how Obsidian handles them. To change the type of a property, click the type icon next to the property name and select a different option. You can also manage property types using the <a href="../plugins/properties/">Properties view</a> core plugin.</p>
 <p>Obsidian supports the following property types:</p>
 <ul>
-<li><strong><doc-anchor-trigger to="#text-list">Text</doc-anchor-trigger></strong></li>
-<li><strong><doc-anchor-trigger to="#text-list">List</doc-anchor-trigger></strong></li>
-<li><strong><doc-anchor-trigger to="#numbers">Number</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#text">Text</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#list">List</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#number">Number</doc-anchor-trigger></strong></li>
 <li><strong><doc-anchor-trigger to="#checkbox">Checkbox</doc-anchor-trigger></strong></li>
-<li><strong><doc-anchor-trigger to="#date-time">Date</doc-anchor-trigger></strong></li>
-<li><strong><doc-anchor-trigger to="#date-time">Date &amp; time</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#date">Date</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#date--time">Date &amp; time</doc-anchor-trigger></strong></li>
+<li><strong><doc-anchor-trigger to="#tags">Tags</doc-anchor-trigger></strong></li>
 </ul>
-<p>Once a property type is assigned to a property, all properties with that name are assumed to have the same property type.</p>
+<p>Once a property type is assigned to a property name, all properties with that name across your vault will use the same type.</p>
 <doc-anchor-target id="advanced-uses">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-uses">#</doc-anchor-trigger>
         <span>Advanced uses</span>
     </h2>
 </doc-anchor-target>
-<doc-anchor-target id="links">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#links">#</doc-anchor-trigger>
-        <span>Links</span>
-    </h3>
-</doc-anchor-target>
-<p><strong>Text</strong> and <strong>List</strong> type properties can contain URLs and <a href="../links/">Internal links</a> using the <code translate="no" v-pre>[[Link]]</code> syntax.</p>
 <doc-anchor-target id="search-properties">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#search-properties">#</doc-anchor-trigger>
@@ -264,7 +259,8 @@
         <span>Templates</span>
     </h3>
 </doc-anchor-target>
-<p>You can add properties to <a href="../plugins/templates/">Templates</a>. When you insert a template into the active note, all the properties from the template will be added to the note. Obsidian will also merge any properties that exist in your note with properties in the template.</p>
+<p>You can add properties to <a href="../plugins/templates/">Templates</a>.</p>
+<p id="templates-properties">When you insert a template into the active note, all the properties from the template will be added to the note. Obsidian will also merge any properties that exist in your note with properties in the template. </p>
 <doc-anchor-target id="rename-properties">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#rename-properties">#</doc-anchor-trigger>
@@ -278,11 +274,11 @@
         <span>Display modes</span>
     </h3>
 </doc-anchor-target>
-<p>You can change how properties are displayed in your note by going to  <strong>Settings → Editor → Properties in document</strong>. The options are:</p>
+<p>You can change how properties are displayed in your note by going to  <strong><a href="../settings/">Settings</a> → Editor → Properties in document</strong>. The options are:</p>
 <ul>
-<li><strong>Visible</strong> (default) — displays properties at the top of the note, if there are any.</li>
-<li><strong>Hidden</strong> — hides properties, can still be displayed in the sidebar via <a href="../plugins/properties/">Properties view</a>.</li>
-<li><strong>Source</strong> — displays properties in plain text YAML format.</li>
+<li><strong>Visible</strong> (default) – displays properties at the top of the note, if there are any.</li>
+<li><strong>Hidden</strong> – hides properties, can still be displayed in the sidebar via <a href="../plugins/properties/">Properties view</a>.</li>
+<li><strong>Source</strong> – displays properties in plain text YAML format.</li>
 </ul>
 <doc-anchor-target id="css-snippets">
     <h3>
@@ -297,11 +293,11 @@
         <span>Not supported</span>
     </h3>
 </doc-anchor-target>
-<p>A few features are not supported in Obsidian:</p>
+<p>A few features are not currently supported in Obsidian:</p>
 <ul>
-<li><strong>Nested properties</strong> — to view nested properties, we recommend using the Source display.</li>
-<li><strong>Bulk-editing properties</strong> — this can be achieved with bulk-editing tools like VSCode, scripts, and community plugins.</li>
-<li><strong>Markdown in properties</strong> — this is an intentional limitation as properties are meant for small, atomic bits of information that are both human and machine readable.</li>
+<li><strong>Nested properties</strong>: To view nested properties, we recommend using the <a href="../edit-and-read/#source-mode">source mode</a>.</li>
+<li><strong>Bulk-editing properties</strong>: For in-depth bulk editing outside of <a href="../plugins/properties/">Properties view</a>, we recommend using bulk-editing tools like VSCode, scripts, and community plugins.</li>
+<li><strong>Markdown in properties</strong>: This is an intentional limitation as properties are meant for small, atomic bits of information that are both human and machine readable.</li>
 </ul>
 <doc-anchor-target id="hotkeys">
     <h2>
@@ -494,46 +490,77 @@ name: value
 ---</code></pre>
 </doc-codeblock></div>
 <p>While the order of each name-value pair doesn&#x27;t matter, each name must be unique within a note. For example, you can&#x27;t have more than one <code translate="no" v-pre>tags</code> property.</p>
-<p id="text-list">Values can be text, numbers, true or false, or even collections of values (lists). </p>
+<p>Values can be <doc-anchor-trigger to="#text">text</doc-anchor-trigger>, <doc-anchor-trigger to="#number">numbers</doc-anchor-trigger>, <doc-anchor-trigger to="#checkbox">checkboxes</doc-anchor-trigger>, <doc-anchor-trigger to="#date">dates</doc-anchor-trigger>, <doc-anchor-trigger to="#date--time">dates and times</doc-anchor-trigger>, or <doc-anchor-trigger to="#list">lists</doc-anchor-trigger>.</p>
+<doc-anchor-target id="text">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#text">#</doc-anchor-trigger>
+        <span>Text</span>
+    </h3>
+</doc-anchor-target>
+<p>Text properties contain a single line of text. Markdown formatting is not rendered in text properties. Hashtags do not create tags when used in text properties.</p>
+<p>Text properties can contain URLs and <a href="../links/">Internal links</a> using the <code translate="no" v-pre>[[Link]]</code> syntax. <a href="../links/">Internal links</a> in text properties must be surrounded with quotes. Obsidian will automatically add these if you manually enter internal links into properties, but be careful to add them when using templating plugins.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
-title: A New Hope # This is a text property
-year: 1977
-favorite: true
-cast: # This is a list property
+title: A New Hope
+link: &quot;[[Episode IV]]&quot;
+url: https://www.example.com
+---</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="list">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#list">#</doc-anchor-trigger>
+        <span>List</span>
+    </h3>
+</doc-anchor-target>
+<p>List properties contain multiple values. Each value in a list appears on its own line, preceded by a hyphen (-) and a space.</p>
+<p>List values can contain text, numbers, and <a href="../links/">Internal links</a>. When using <a href="../links/">Internal links</a> in list properties, surround them with quotes.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
+cast: 
   - Mark Hamill
   - Harrison Ford
   - Carrie Fisher
----</code></pre>
-</doc-codeblock></div>
-<p>Internal links in <strong>Text</strong> and <strong>List</strong> type properties must be surrounded with quotes. Obsidian will automatically add these if you manually enter internal links into properties, but be careful to add them when using templating plugins.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
-link: &quot;[[Link]]&quot; 
-linklist: 
+links:
   - &quot;[[Link]]&quot; 
   - &quot;[[Link2]]&quot;
 ---</code></pre>
 </doc-codeblock></div>
-<p id="numbers">Number type properties must always be a literal number, not an expression with operators. Integers and decimals are both allowed. </p>
+<doc-anchor-target id="number">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#number">#</doc-anchor-trigger>
+        <span>Number</span>
+    </h3>
+</doc-anchor-target>
+<p>Number type properties must always be a literal number, not an expression with operators. Integers and decimals are both allowed.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
 year: 1977
 pie: 3.14
 ---</code></pre>
 </doc-codeblock></div>
-<p id="checkbox">Checkbox type properties are either <code translate="no" v-pre>true</code> or <code translate="no" v-pre>false</code>. An empty property will be treated as <code translate="no" v-pre>false</code>. In Live Preview, this will be represented as a checkbox. </p>
+<doc-anchor-target id="checkbox">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#checkbox">#</doc-anchor-trigger>
+        <span>Checkbox</span>
+    </h3>
+</doc-anchor-target>
+<p>Checkbox properties are either <code translate="no" v-pre>true</code> or <code translate="no" v-pre>false</code>. In Live Preview, this displays as a checkbox.</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
 favorite: true
 reply: false
-last: # this will default to false</code></pre>
+last: # Inderminate value; often treated as false</code></pre>
 </doc-codeblock></div>
-<p id="date-time"><strong>Date</strong> and <strong>Date &amp; time</strong> type properties are stored in the following format:  </p>
+<doc-anchor-target id="date">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date">#</doc-anchor-trigger>
+        <span>Date</span>
+    </h3>
+</doc-anchor-target>
+<p>Date properties are stored in the following format:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
 date: 2020-08-21
-time: 2020-08-21T10:30:00
 ---</code></pre>
 </doc-codeblock></div>
 <p>The date picker follows your operating system&#x27;s default date and time format. You can change it in your system preferences:</p>
@@ -551,7 +578,7 @@ time: 2020-08-21T10:30:00
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Windows</h5>
-<p><strong>Settings → Time &amp; Language → Language &amp; Region → Regional Format → Change Formats</strong></p>
+<p><strong><a href="../settings/">Settings</a> → Time &amp; Language → Language &amp; Region → Regional Format → Change Formats</strong></p>
 <p><img src="../attachments/windows-os-datetime.png#interface" alt="" /></p>
         </div>
     </div>
@@ -577,10 +604,40 @@ time: 2020-08-21T10:30:00
 </div>
 <p>With the <a href="../plugins/daily-notes/">Daily notes</a> plugin enabled, the date property will additionally function as an internal link to the corresponding daily note for that date.</p>
 <p><a href="../plugins/daily-notes/#daily-notes-date">Daily notes &gt; ^daily notes date</a></p>
+<doc-anchor-target id="date--time">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#date--time">#</doc-anchor-trigger>
+        <span>Date &amp; time</span>
+    </h3>
+</doc-anchor-target>
+<p>Date &amp; time properties include both a date and a specific time, stored in the following format:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
+time: 2020-08-21T10:30:00
+---</code></pre>
+</doc-codeblock></div>
+<p>Like <doc-anchor-trigger to="#date">date properties</doc-anchor-trigger>, the date and time picker follows your operating system&#x27;s default format. You can change it in your system preferences.</p>
+<doc-anchor-target id="tags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tags">#</doc-anchor-trigger>
+        <span>Tags</span>
+    </h3>
+</doc-anchor-target>
+<p>Tags properties are a special property type used exclusively by the <code translate="no" v-pre>tags</code> property. This property type cannot be assigned to other properties.</p>
+<p>Tags properties are formatted as a list, with each tag on its own line preceded by a hyphen (-) and a space.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml">---
+tags: 
+  - journal
+  - personal
+  - draft
+---</code></pre>
+</doc-codeblock></div>
+<p>The <code translate="no" v-pre>tags</code> property is one of Obsidian&#x27;s <doc-anchor-trigger to="#default-properties">Default properties</doc-anchor-trigger>. See <a href="../tags/">Tags</a> for more information about using tags in Obsidian.</p>
 <doc-anchor-target id="json-properties">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#json-properties">#</doc-anchor-trigger>
-        <span>JSON Properties</span>
+        <span>JSON properties</span>
     </h3>
 </doc-anchor-target>
 <p>While we recommend using YAML to define properties, you can also define properties using <a href="https://www.json.org/" class="outbound" target="_blank"><span>JSON</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>:</p>
@@ -605,20 +662,24 @@ time: 2020-08-21T10:30:00
 <thead>
 <tr>
 <th>Property</th>
+<th>Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code translate="no" v-pre>tags</code></td>
+<td>List</td>
 <td>See <a href="../tags/">Tags</a>.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>aliases</code></td>
+<td>List</td>
 <td>See <a href="../aliases/">Aliases</a>.</td>
 </tr>
 <tr>
 <td><code translate="no" v-pre>cssclasses</code></td>
+<td>List</td>
 <td>Allows you to style individual notes using <a href="../snippets/">CSS snippets</a>.</td>
 </tr>
 </tbody>
@@ -630,7 +691,7 @@ time: 2020-08-21T10:30:00
         <span>Properties for Obsidian Publish</span>
     </h3>
 </doc-anchor-target>
-<p>The following properties can be used with <a href="../publish/">Obsidian Publish</a>:</p>
+<p>The following default properties can be used with <a href="../publish/">Obsidian Publish</a>:</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -669,7 +730,7 @@ time: 2020-08-21T10:30:00
         <span>Deprecated properties</span>
     </h3>
 </doc-anchor-target>
-<p>These properties were deprecated in Obsidian 1.4. Please do not use them anymore:</p>
+<p>These properties were deprecated in Obsidian 1.4 and should be replaced with their modern equivalents. Support for them as <doc-anchor-trigger to="#default-properties">Default properties</doc-anchor-trigger> is dropped in Obsidian 1.9.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
 <thead>
@@ -694,6 +755,21 @@ time: 2020-08-21T10:30:00
 </tbody>
 </table>
 </div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-tip" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M7.90625 2.15625C4.50944 2.15625 2.15625 4.58563 2.15625 7.54688C2.15625 8.96138 2.76575 9.88281 3.57075 10.8589L3.87837 11.2226C4.19894 11.6021 4.554 12.0218 4.84581 12.4416C5.25406 13.0324 5.61775 13.7296 5.7385 14.5834C5.76728 14.8608 5.68746 15.1386 5.51579 15.3583C5.34413 15.5781 5.09399 15.7228 4.8179 15.7621C4.5418 15.8013 4.26124 15.7321 4.03512 15.5689C3.809 15.4056 3.65493 15.1612 3.60525 14.8867C3.54775 14.4814 3.37094 14.1004 3.07338 13.6692C2.8306 13.3302 2.57055 13.0039 2.29425 12.6917C2.1735 12.5479 2.04556 12.397 1.909 12.2317C1.00769 11.1406 0 9.72613 0 7.54688C0 3.32062 3.39681 0 7.90625 0C12.4157 0 15.8125 3.32062 15.8125 7.54688C15.8125 9.72613 14.8048 11.1406 13.9035 12.2317C13.7669 12.397 13.639 12.5479 13.5183 12.6903C13.2207 13.0424 12.9677 13.3414 12.7406 13.6692C12.4416 14.1004 12.2662 14.4814 12.2087 14.8867C12.1557 15.1584 12.0003 15.3994 11.7747 15.5598C11.5492 15.7202 11.2706 15.7879 10.9965 15.7488C10.7225 15.7096 10.474 15.5667 10.3023 15.3496C10.1306 15.1325 10.0489 14.8577 10.074 14.582C10.1948 13.7296 10.5584 13.0324 10.9667 12.4416C11.2585 12.0218 11.6136 11.6021 11.9341 11.2226C12.0419 11.0961 12.1454 10.9739 12.2403 10.8589C13.0468 9.88281 13.6562 8.96138 13.6562 7.54688C13.6562 4.58563 11.3031 2.15625 7.90625 2.15625ZM4.67188 17.25H11.1406C11.4266 17.25 11.7008 17.3636 11.903 17.5658C12.1052 17.768 12.2188 18.0422 12.2188 18.3281C12.2188 18.6141 12.1052 18.8883 11.903 19.0905C11.7008 19.2927 11.4266 19.4062 11.1406 19.4062H4.67188C4.38594 19.4062 4.11171 19.2927 3.90953 19.0905C3.70734 18.8883 3.59375 18.6141 3.59375 18.3281C3.59375 18.0422 3.70734 17.768 3.90953 17.5658C4.11171 17.3636 4.38594 17.25 4.67188 17.25ZM5.03125 21.9219C5.03125 21.6359 5.14484 21.3617 5.34703 21.1595C5.54921 20.9573 5.82344 20.8438 6.10938 20.8438H9.70312C9.98906 20.8438 10.2633 20.9573 10.4655 21.1595C10.6677 21.3617 10.7812 21.6359 10.7812 21.9219C10.7812 22.2078 10.6677 22.482 10.4655 22.6842C10.2633 22.8864 9.98906 23 9.70312 23H6.10938C5.82344 23 5.54921 22.8864 5.34703 22.6842C5.14484 22.482 5.03125 22.2078 5.03125 21.9219Z" />
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>If you need to convert your files in your vault to the <doc-anchor-trigger to="#default-properties">Default properties</doc-anchor-trigger> format, you can use <a href="../plugins/format-converter/">Format converter</a> to change your vault en masse.</h5>
+        </div>
+    </div>
+</div>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
@@ -710,15 +786,7 @@ time: 2020-08-21T10:30:00
                 <div>
                     <span>Bases syntax</span>
                 </div>
-                <p>Bases are still in beta and the syntax is continuing to evolve with feedback we receive during the early access phase. Expect the syntax to change.</p>
-            </div>
-        </a>
-        <a href="/obsidian/web-clipper/capture/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <span>Clip web pages</span>
-                </div>
-                <p>Once you install the Web Clipper browser extension, you can access it in several ways, depending on your browser:</p>
+                <p>This page provides an introduction to Bases syntax in Obsidian.</p>
             </div>
         </a>
         <a href="/obsidian/snippets/" class="group no-link">
@@ -729,20 +797,28 @@ time: 2020-08-21T10:30:00
                 <p>Learn how to change parts of the Obsidian app’s appearance without creating a full theme.</p>
             </div>
         </a>
+        <a href="/obsidian/formulas/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Formulas</span>
+                </div>
+                <p>Formulas allow you to create calculated properties using data from other properties. You can perform calculations, manipulate text, work with dates,</p>
+            </div>
+        </a>
         <a href="/obsidian/bases/functions/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Functions</span>
                 </div>
-                <p>Functions are used in Bases to manipulate data from Properties in filters and formulas. See the bases syntax reference to learn more about how you</p>
+                <p>This page details the functions used in Obsidian Bases to manipulate data from properties in filters and formulas.</p>
             </div>
         </a>
-        <a href="/obsidian/publish/permalinks/" class="group no-link">
+        <a href="/obsidian/bases/" class="group no-link">
             <div class="flex flex-col">
                 <div>
-                    <span>Permalinks</span>
+                    <span>Introduction to Bases</span>
                 </div>
-                <p>You can rename the URL to your notes, using permalinks.</p>
+                <p>Create database-like views of your notes, formatted as tables or cards. Edit, sort, and filter files using their properties.</p>
             </div>
         </a>
         <a href="/obsidian/publish/publish/" class="group no-link">
@@ -761,20 +837,12 @@ time: 2020-08-21T10:30:00
                 <p>Search is a core plugin that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.</p>
             </div>
         </a>
-        <a href="/obsidian/publish/social-share/" class="group no-link">
+        <a href="/obsidian/settings/" class="group no-link">
             <div class="flex flex-col">
                 <div>
-                    <span>Social media link previews</span>
+                    <span>Settings</span>
                 </div>
-                <p>Many social networks display a rich preview for your website when a user shares a link to it. Using Properties, you can customize how your notes</p>
-            </div>
-        </a>
-        <a href="/obsidian/style-guide/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <span>Style guide</span>
-                </div>
-                <p>This page explains the style guide for writing our support documentation.</p>
+                <p>Learn how to customize Obsidian through the Settings interface.</p>
             </div>
         </a>
         <a href="/obsidian/tags/" class="group no-link">
@@ -785,12 +853,20 @@ time: 2020-08-21T10:30:00
                 <p>Tags are keywords or topics that help you quickly find the notes you want.</p>
             </div>
         </a>
+        <a href="/obsidian/plugins/templates/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Templates</span>
+                </div>
+                <p>Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your active note.</p>
+            </div>
+        </a>
         <a href="/obsidian/bases/views/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Views</span>
                 </div>
-                <p>Views allow you to organize the information in a Base in multiple different ways. A base can contain several views, and each view can have a unique</p>
+                <p>Views allow you to organize the information in a Base in multiple ways. A base can contain several views, and each view can have a unique</p>
             </div>
         </a>
     </div>

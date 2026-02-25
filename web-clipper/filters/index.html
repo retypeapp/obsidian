@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -667,6 +667,7 @@
 </ul>
 <p>String literals are supported and automatically wrapped in an object with a <code translate="no" v-pre>str</code> property. The <code translate="no" v-pre>str</code> property is used to store the result of string literal transformations, e.g. <code translate="no" v-pre>[&quot;rock&quot;, &quot;pop&quot;]|map:item =&gt; &quot;genres/${item}&quot;</code> returns <code translate="no" v-pre>[{str: &quot;genres/rock&quot;}, {str: &quot;genres/pop&quot;}]</code>.</p>
 <p>Combine <code translate="no" v-pre>map</code> with the <code translate="no" v-pre>template</code> filter, e.g. <code translate="no" v-pre>map:item =&gt; ({name: ${item.gem}, color: item.color})|template:&quot;- ${name} is ${color}\n&quot;</code>.</p>
+<p>Note: Built-in filters cannot be used inside <code translate="no" v-pre>map</code>. This means that, for example, trimming each value of an array cannot be done with <code translate="no" v-pre>map</code>.</p>
 <doc-anchor-target id="merge">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#merge">#</doc-anchor-trigger>

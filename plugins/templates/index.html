@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Templates</title>
     <meta name="title" content="Templates">
-    <meta name="description" content="Templates is a core plugin that lets you insert pre-defined snippets of text into your active note.">
+    <meta name="description" content="Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your active note.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/plugins/templates/">
@@ -22,18 +22,19 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/plugins/templates/">
     <meta property="og:title" content="Templates">
-    <meta property="og:description" content="Templates is a core plugin that lets you insert pre-defined snippets of text into your active note.">
+    <meta property="og:description" content="Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your active note.">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,6 +204,7 @@
         <span>Templates</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Templates is a Core plugins|core plugin that lets you insert pre-defined snippets of text into your active note.</div>
 <p>Templates is a <a href="../">core plugin</a> that lets you insert pre-defined snippets of text into your active note.</p>
 <doc-anchor-target id="set-your-template-folder">
     <h2>
@@ -211,19 +213,8 @@
     </h2>
 </doc-anchor-target>
 <ol>
-<li>In the bottom-left corner, click <strong>Settings</strong> ( <img src="../../attachments/icons/lucide-cog.svg#icon" alt="" /> ).</li>
+<li>In the bottom-left corner, click <strong><a href="../../settings/">Settings</a></strong> ( <img src="../../attachments/icons/lucide-cog.svg#icon" alt="" /> ).</li>
 <li>Under <strong>Core plugins → Templates → Template folder location</strong>, enter the folder containing your templates.</li>
-</ol>
-<doc-anchor-target id="insert-a-template-into-the-active-note">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#insert-a-template-into-the-active-note">#</doc-anchor-trigger>
-        <span>Insert a template into the active note</span>
-    </h2>
-</doc-anchor-target>
-<p><strong>Important:</strong>  To insert a template, you need to first <doc-anchor-trigger to="#set-your-template-folder">Set your template folder</doc-anchor-trigger>.</p>
-<ol>
-<li>In the ribbon, click <strong>Insert template</strong>.</li>
-<li>Select the template to insert at the cursor position in the active note.</li>
 </ol>
 <doc-anchor-target id="template-variables">
     <h2>
@@ -259,7 +250,7 @@
 <p>Both <code translate="no" v-pre>{{date}}</code> and <code translate="no" v-pre>{{time}}</code> allow you to change the default format using a <em>format string</em>.</p>
 <p>To set a format string, add a colon (<code translate="no" v-pre>:</code>) followed by a string of <a href="https://momentjs.com/docs/#/displaying/format/" class="outbound" target="_blank"><span>Moment.js format tokens</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, for example <code translate="no" v-pre>{{date:YYYY-MM-DD}}</code>.</p>
 <p>You can use <code translate="no" v-pre>{{date}}</code> and <code translate="no" v-pre>{{time}}</code> interchangeably with format strings, for example <code translate="no" v-pre>{{time:YYYY-MM-DD}}</code>.</p>
-<p>You can change the default date and time formats under <strong>Settings → Templates → Date format</strong> and <strong>Settings → Templates → Time format</strong>.</p>
+<p>You can change the default date and time formats under <strong><a href="../../settings/">Settings</a> → Templates → Date format</strong> and <strong><a href="../../settings/">Settings</a> → Templates → Time format</strong>.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -276,6 +267,61 @@
         </div>
     </div>
 </div>
+<doc-anchor-target id="create-a-template">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create-a-template">#</doc-anchor-trigger>
+        <span>Create a template</span>
+    </h2>
+</doc-anchor-target>
+<p>In the <doc-anchor-trigger to="#set-your-template-folder">template folder</doc-anchor-trigger>, <a href="../../manage-notes/#create-a-new-note">create a note</a> containing the text you want to appear when you use the template. You can use <doc-anchor-trigger to="#template-variables">template variables</doc-anchor-trigger> for dynamic text like the current date.</p>
+<p>For example, here&#x27;s a template for study notes:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">---
+topic: 
+date: &quot;{{date}}&quot;
+course: 
+tags:
+  - studies
+---
+
+# {{title}}
+
+## Key Concepts
+
+
+## Important Details
+
+
+## Examples
+
+
+## Questions
+- 
+
+## Summary
+
+
+## Related Topics
+- [[]]</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="insert-a-template-into-the-active-note">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#insert-a-template-into-the-active-note">#</doc-anchor-trigger>
+        <span>Insert a template into the active note</span>
+    </h2>
+</doc-anchor-target>
+<p><strong>Important:</strong>  To insert a template, you need to first <doc-anchor-trigger to="#set-your-template-folder">Set your template folder</doc-anchor-trigger>.</p>
+<ol>
+<li>In the ribbon, click <strong>Insert template</strong>.</li>
+<li>Select the template to insert at the cursor position in the active note.</li>
+</ol>
+<doc-anchor-target id="template-properties">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#template-properties">#</doc-anchor-trigger>
+        <span>Template properties</span>
+    </h2>
+</doc-anchor-target>
+<p><a href="../../properties/#templates-properties">Properties &gt; ^templates properties</a></p>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
@@ -292,7 +338,7 @@
                 <div>
                     <span>Core plugins</span>
                 </div>
-                <p>This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team.</p>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
             </div>
         </a>
         <a href="/obsidian/plugins/daily-notes/" class="group no-link">
@@ -325,6 +371,14 @@
                     <span>Introduction to Obsidian Web Clipper</span>
                 </div>
                 <p>Obsidian Web Clipper is a free browser extension that lets you highlight pages and save web content to your vault.</p>
+            </div>
+        </a>
+        <a href="/obsidian/cli/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Obsidian CLI</span>
+                </div>
+                <p>Anything you can do in Obsidian can be done from the command line.</p>
             </div>
         </a>
         <a href="/obsidian/properties/" class="group no-link">
@@ -433,6 +487,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Templates", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Templates", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
 </body>
 </html>

@@ -1,0 +1,2364 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/obsidian">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.0.1">
+
+    <!-- Primary Meta Tags -->
+    <title>Obsidian CLI</title>
+    <meta name="title" content="Obsidian CLI">
+    <meta name="description" content="Anything you can do in Obsidian can be done from the command line.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://retypeapp.github.io/obsidian/cli/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://retypeapp.github.io/obsidian/cli/">
+    <meta property="og:title" content="Obsidian CLI">
+    <meta property="og:description" content="Anything you can do in Obsidian can be done from the command line.">
+    <meta property="og:site_name" content="Obsidian">
+    <meta property="og:locale" content="en_US">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../favicon.ico" />
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="docs-hub-link" href="https://obsidian.md/" title="Visit Obsidian" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="30" viewBox="0 0 12 30" fill="currentColor" aria-label="Home" focusable="false" role="img">
+                            <path d="M10.6763 23.0822C10.4303 23.328 10.0967 23.4661 9.74885 23.4661C9.40103 23.4661 9.06744 23.328 8.82135 23.0822L1.38384 15.6447C1.13806 15.3986 1 15.065 1 14.7172C1 14.3694 1.13806 14.0358 1.38384 13.7897L8.82135 6.35222C9.0703 6.1205 9.39939 5.99432 9.73945 6.0002C10.0795 6.00607 10.404 6.14354 10.6448 6.38372C10.885 6.62452 11.0225 6.94906 11.0284 7.28912C11.0342 7.62917 10.9081 7.95826 10.6763 8.20722L4.16635 14.7172L10.6763 21.2272C10.9221 21.4733 11.0602 21.8069 11.0602 22.1547C11.0602 22.5025 10.9221 22.8361 10.6763 23.0822Z" />
+                        </svg>
+                    </a>
+                    <a id="retype-branding-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                            <svg alt="Obsidian" height="30" viewBox="-10 0 30 25" width="40" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"></path><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"></path><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"></path><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"></path></svg>
+                        </span>
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Obsidian</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Help</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/download">Download</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/pricing">Pricing</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/sync">Sync</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/publish">Publish</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/enterprise">Enterprise</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/download">Download</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/pricing">Pricing</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/sync">Sync</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/publish">Publish</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/enterprise">Enterprise</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                Extending Obsidian
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../cli/" class="pr-4">
+                                Obsidian CLI
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
+<doc-anchor-target id="obsidian-cli" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#obsidian-cli">#</doc-anchor-trigger>
+        <span>Obsidian CLI</span>
+    </h1>
+</doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Anything you can do in Obsidian can be done from the command line.</div>
+<p>Obsidian CLI is a command line interface that lets you control Obsidian from your terminal for scripting, automation, and integration with external tools.</p>
+<p>Anything you can do in Obsidian can be done from the command line. Obsidian CLI even includes <doc-anchor-trigger to="#developer-commands">developer commands</doc-anchor-trigger> to access developer tools, inspect elements, take screenshots, reload plugins, and more.</p>
+<p><a href="../attachments/video/obsidian-cli.mp4#interface">obsidian cli.mp4 &gt; interface</a></p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-warning" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M22.48 15.59L14.01 1.45A2.968 2.968 0 0012.16.09c-.78-.19-1.58-.07-2.27.35-.41.25-.76.6-1.01 1.01v.01L.4 15.6c-.83 1.43-.33 3.27 1.1 4.1.45.26.95.4 1.48.4h16.95c.8-.01 1.55-.33 2.11-.9.56-.57.87-1.33.86-2.13a3.04 3.04 0 00-.42-1.48zm-1.87 2.21c-.19.19-.44.3-.69.3H2.99c-.17 0-.34-.05-.49-.13a.992.992 0 01-.37-1.35L10.6 2.48c.08-.14.2-.25.34-.33a.992.992 0 011.37.33l8.46 14.13c.09.15.13.32.13.49 0 .26-.1.51-.29.7z"></path>
+                    <path d="M11.45 12.1c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1s-1 .45-1 1v4c0 .56.45 1 1 1zM11.46 14.1c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Early access feature</h5>
+<p>Obsidian CLI requires Obsidian 1.12 or above, which is currently an <a href="../early-access/">early access version</a> and requires a <a href="../catalyst/">Catalyst license</a>. Commands and syntax are likely to change during the early access phase.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="install-obsidian-cli">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#install-obsidian-cli">#</doc-anchor-trigger>
+        <span>Install Obsidian CLI</span>
+    </h2>
+</doc-anchor-target>
+<p>Upgrade to the latest <a href="../updates/">Obsidian installer version</a> (1.11.7) and the latest <a href="../early-access/">early access version</a> (1.12.x).</p>
+<p>Enable Obsidian CLI in Obsidian:</p>
+<ol>
+<li>Go to <strong>Settings</strong> → <strong>General</strong>.</li>
+<li>Enable <strong>Command line interface</strong>.</li>
+<li>Follow the prompt to register Obsidian CLI.</li>
+</ol>
+<p>On Windows you will also need to run the <code translate="no" v-pre>.com</code> file, available to <a href="../catalyst/">Catalyst</a> members on Discord. See <doc-anchor-trigger to="#troubleshooting">Troubleshooting</doc-anchor-trigger> for help.</p>
+<doc-anchor-target id="get-started">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#get-started">#</doc-anchor-trigger>
+        <span>Get started</span>
+    </h2>
+</doc-anchor-target>
+<p>Obsidian CLI supports both single commands and a terminal user interface (TUI) with interactive help and autocomplete.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-info" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Obsidian app must be running</h5>
+<p>Obsidian CLI requires the Obsidian app to be running. If Obsidian is not running, the first command you run launches Obsidian.</p>
+        </div>
+    </div>
+</div>
+<doc-anchor-target id="run-a-command">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#run-a-command">#</doc-anchor-trigger>
+        <span>Run a command</span>
+    </h3>
+</doc-anchor-target>
+<p>Run an individual command without opening the TUI:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Run the help command
+obsidian help</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="use-the-terminal-interface">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-the-terminal-interface">#</doc-anchor-trigger>
+        <span>Use the terminal interface</span>
+    </h3>
+</doc-anchor-target>
+<p>Use the TUI by entering <code translate="no" v-pre>obsidian</code>. Subsequent commands can be entered without <code translate="no" v-pre>obsidian</code>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Open the TUI, then run help
+obsidian
+help</code></pre>
+</doc-codeblock></div>
+<p>The TUI supports autocomplete, command history, and reverse search. Use <code translate="no" v-pre>Ctrl+R</code> to search your command history. See <doc-anchor-trigger to="#keyboard-shortcuts">Keyboard shortcuts</doc-anchor-trigger> for all available shortcuts.</p>
+<doc-anchor-target id="examples">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#examples">#</doc-anchor-trigger>
+        <span>Examples</span>
+    </h2>
+</doc-anchor-target>
+<p>Here are a few examples of what Obsidian CLI can do.</p>
+<doc-anchor-target id="everyday-use">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#everyday-use">#</doc-anchor-trigger>
+        <span>Everyday use</span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Open today's daily note
+obsidian daily
+
+# Add a task to your daily note
+obsidian daily:append content=&quot;- [ ] Buy groceries&quot;
+
+# Search your vault
+obsidian search query=&quot;meeting notes&quot;
+
+# Read the active file
+obsidian read
+
+# List all tasks from your daily note
+obsidian tasks daily
+
+# Create a new note from a template
+obsidian create name=&quot;Trip to Paris&quot; template=Travel
+
+# List all tags in your vault with counts
+obsidian tags counts
+
+# Compare two versions of a file
+obsidian diff file=README from=1 to=3</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="for-developers">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#for-developers">#</doc-anchor-trigger>
+        <span>For developers</span>
+    </h3>
+</doc-anchor-target>
+<p>Many <doc-anchor-trigger to="#developer-commands">Developer commands</doc-anchor-trigger> are available for plugin and theme development. These commands allow agentic coding tools to automatically test and debug.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Open developer tools
+obsidian devtools
+
+# Reload a community plugin you're developing
+obsidian plugin:reload id=my-plugin
+
+# Take a screenshot of the app
+obsidian dev:screenshot path=screenshot.png
+
+# Run JavaScript in the app console
+obsidian eval code=&quot;app.vault.getFiles().length&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="how-to">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#how-to">#</doc-anchor-trigger>
+        <span>How to</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="use-parameters-and-flags">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-parameters-and-flags">#</doc-anchor-trigger>
+        <span>Use parameters and flags</span>
+    </h3>
+</doc-anchor-target>
+<p>Commands can use <strong>parameters</strong> and <strong>flags</strong>. Most commands do not require any parameters or flags. Required parameters are marked as <code translate="no" v-pre>required</code>. For example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Create a new note using the default &quot;Untitled&quot; name
+obsidian create</code></pre>
+</doc-codeblock></div>
+<p>A <strong>parameter</strong> takes a value, written as <code translate="no" v-pre>parameter=value</code>. If the value has spaces, wrap it in quotes:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Create a new note called &quot;Note&quot; with content &quot;Hello world&quot;
+obsidian create name=Note content=&quot;Hello world&quot;</code></pre>
+</doc-codeblock></div>
+<p>A <strong>flag</strong> is a boolean switch with no value. Include it to turn it on, for example <code translate="no" v-pre>open</code> and <code translate="no" v-pre>overwrite</code> are flags:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Create a note and open it
+obsidian create name=Note content=&quot;Hello&quot; open overwrite</code></pre>
+</doc-codeblock></div>
+<p>For multiline content use <code translate="no" v-pre>\n</code> for newline. Use <code translate="no" v-pre>\t</code> for tab.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">obsidian create name=Note content=&quot;# Title\n\nBody text&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="target-a-vault">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#target-a-vault">#</doc-anchor-trigger>
+        <span>Target a vault</span>
+    </h3>
+</doc-anchor-target>
+<p>If your terminal&#x27;s current working directory is a vault folder, that vault is used by default. Otherwise, the currently active vault is used.</p>
+<p>Use <code translate="no" v-pre>vault=&lt;name&gt;</code> to target a specific vault. This must be the first parameter before your command:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">obsidian vault=Notes daily
+obsidian vault=&quot;My Vault&quot; search query=&quot;test&quot;</code></pre>
+</doc-codeblock></div>
+<p>In the TUI, use <code translate="no" v-pre>vault:open &lt;name&gt;</code> to switch to a different vault.</p>
+<doc-anchor-target id="target-a-file">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#target-a-file">#</doc-anchor-trigger>
+        <span>Target a file</span>
+    </h3>
+</doc-anchor-target>
+<p>Many commands accept <code translate="no" v-pre>file</code> and <code translate="no" v-pre>path</code> parameters to target a specific file. If neither is provided, the command defaults to the active file.</p>
+<ul>
+<li><code translate="no" v-pre>file=&lt;name&gt;</code> resolves the file using the same link resolution as <a href="../links/">wikilinks</a>, matching by file name without requiring the full path or extension.</li>
+<li><code translate="no" v-pre>path=&lt;path&gt;</code> requires the exact path from the vault root, e.g. <code translate="no" v-pre>folder/note.md</code>.</li>
+</ul>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># These are equivalent if &quot;Recipe.md&quot; is the only file with that name
+obsidian read file=Recipe
+obsidian read path=&quot;Templates/Recipe.md&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="copy-output">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#copy-output">#</doc-anchor-trigger>
+        <span>Copy output</span>
+    </h3>
+</doc-anchor-target>
+<p>Add <code translate="no" v-pre>--copy</code> to any command to copy the output to the clipboard:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">read --copy
+search query=&quot;TODO&quot; --copy</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="general-commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#general-commands">#</doc-anchor-trigger>
+        <span>General commands</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="help">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#help">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>help</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show list of all available commands.</p>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code translate="no" v-pre>&lt;command&gt;</code></td>
+<td>Show help for a specific command.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="version">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#version">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>version</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show Obsidian version.</p>
+<doc-anchor-target id="reload">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reload">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>reload</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Reload the app window.</p>
+<doc-anchor-target id="restart">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#restart">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>restart</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Restart the app.</p>
+<doc-anchor-target id="bases">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bases">#</doc-anchor-trigger>
+        <span>Bases</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../bases/">Bases</a>.</p>
+<doc-anchor-target id="bases-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bases-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>bases</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List all <code translate="no" v-pre>.base</code> files in the vault.</p>
+<doc-anchor-target id="baseviews">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#baseviews">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>base:views</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List views in the current base file.</p>
+<doc-anchor-target id="basecreate">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basecreate">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>base:create</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Create a new item in a base. Defaults to the active base view if no file is specified.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # base file name
+path=&lt;path&gt;        # base file path
+view=&lt;name&gt;        # view name
+name=&lt;name&gt;        # new file name
+content=&lt;text&gt;     # initial content
+
+open               # open file after creating
+newtab             # open in new tab</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="basequery">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#basequery">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>base:query</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Query a base and return results.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;                    # base file name
+path=&lt;path&gt;                    # base file path
+view=&lt;name&gt;                    # view name to query
+format=json|csv|tsv|md|paths   # output format (default: json)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="bookmarks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bookmarks">#</doc-anchor-trigger>
+        <span>Bookmarks</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/bookmarks/">Bookmarks</a>.</p>
+<doc-anchor-target id="bookmarks-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bookmarks-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>bookmarks</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List bookmarks.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return bookmark count
+verbose            # include bookmark types
+format=json|tsv|csv  # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="bookmark">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bookmark">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>bookmark</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Add a bookmark.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;path&gt;        # file to bookmark
+subpath=&lt;subpath&gt;  # subpath (heading or block) within file
+folder=&lt;path&gt;      # folder to bookmark
+search=&lt;query&gt;     # search query to bookmark
+url=&lt;url&gt;          # URL to bookmark
+title=&lt;title&gt;      # bookmark title</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="command-palette">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#command-palette">#</doc-anchor-trigger>
+        <span>Command palette</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/command-palette/">Command palette</a> and <a href="../hotkeys/">Hotkeys</a>. This includes all commands registered by plugins.</p>
+<doc-anchor-target id="commands">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commands">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>commands</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List available command IDs.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">filter=&lt;prefix&gt;    # filter by ID prefix</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="command">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#command">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>command</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Execute an Obsidian command.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;command-id&gt;    # (required) command ID to execute</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="hotkeys">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hotkeys">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>hotkeys</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List hotkeys for all commands.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return hotkey count
+verbose            # show if hotkey is custom
+format=json|tsv|csv  # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="hotkey">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hotkey">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>hotkey</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Get hotkey for a command.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;command-id&gt;    # (required) command ID
+
+verbose            # show if custom or default</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="daily-notes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#daily-notes">#</doc-anchor-trigger>
+        <span>Daily notes</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/daily-notes/">Daily notes</a>.</p>
+<doc-anchor-target id="daily">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#daily">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>daily</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open daily note.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">paneType=tab|split|window    # pane type to open in</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="dailypath">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dailypath">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>daily:path</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Get daily note path. Returns the expected path even if the file hasn&#x27;t been created yet.</p>
+<doc-anchor-target id="dailyread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dailyread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>daily:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read daily note contents.</p>
+<doc-anchor-target id="dailyappend">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dailyappend">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>daily:append</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Append content to daily note.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">content=&lt;text&gt;     # (required) content to append
+paneType=tab|split|window    # pane type to open in
+
+inline             # append without newline
+open               # open file after adding</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="dailyprepend">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dailyprepend">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>daily:prepend</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Prepend content to daily note.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">content=&lt;text&gt;     # (required) content to prepend
+paneType=tab|split|window    # pane type to open in
+
+inline             # prepend without newline
+open               # open file after adding</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="file-history">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#file-history">#</doc-anchor-trigger>
+        <span>File history</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="diff">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#diff">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>diff</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List or compare versions from local <a href="../plugins/file-recovery/">File recovery</a> and <a href="../sync/">Sync</a>. Versions are numbered from newest to oldest.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;          # file name
+path=&lt;path&gt;          # file path
+from=&lt;n&gt;             # version number to diff from
+to=&lt;n&gt;               # version number to diff to
+filter=local|sync    # filter by version source</code></pre>
+</doc-codeblock></div>
+<p><strong>Examples:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># List all versions of the active file
+diff
+
+# List all versions of a specific file
+diff file=Recipe
+
+# Compare the latest version to the current file
+diff file=Recipe from=1
+
+# Compare two versions
+diff file=Recipe from=2 to=1
+
+# Only show Sync versions
+diff filter=sync</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="history">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#history">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>history</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List versions from <a href="../plugins/file-recovery/">File recovery</a> only. See <doc-anchor-trigger to="#sync">sync:history</doc-anchor-trigger> for the equivalent Sync command.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="historylist">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#historylist">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>history:list</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List all files with local history.</p>
+<doc-anchor-target id="historyread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#historyread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>history:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read a local history version.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+version=&lt;n&gt;        # version number (default: 1)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="historyrestore">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#historyrestore">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>history:restore</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Restore a local history version.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+version=&lt;n&gt;        # (required) version number</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="historyopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#historyopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>history:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open file recovery.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="files-and-folders">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#files-and-folders">#</doc-anchor-trigger>
+        <span>Files and folders</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="file">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#file">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>file</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show file info (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<p>Example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">path       Notes/Recipe.md
+name       Recipe
+extension  md
+size       1024
+created    1700000000000
+modified   1700001000000</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="files">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#files">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>files</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List files in the vault.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">folder=&lt;path&gt;      # filter by folder
+ext=&lt;extension&gt;    # filter by extension
+
+total              # return file count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="folder">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#folder">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>folder</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show folder info.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">path=&lt;path&gt;              # (required) folder path
+info=files|folders|size  # return specific info only</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="folders">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#folders">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>folders</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List folders in the vault.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">folder=&lt;path&gt;      # filter by parent folder
+
+total              # return folder count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="open">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#open">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open a file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+newtab             # open in new tab</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="create">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#create">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>create</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Create or overwrite a file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+content=&lt;text&gt;     # initial content
+template=&lt;name&gt;    # template to use
+
+overwrite          # overwrite if file exists
+open               # open file after creating
+newtab             # open in new tab</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="read">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#read">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read file contents (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="append">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#append">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>append</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Append content to a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+content=&lt;text&gt;     # (required) content to append
+
+inline             # append without newline</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="prepend">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#prepend">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>prepend</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Prepend content after frontmatter (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+content=&lt;text&gt;     # (required) content to prepend
+
+inline             # prepend without newline</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="move">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#move">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>move</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Move or rename a file (default: active file). This will automatically update <a href="../links/">internal links</a> if turned on in your <a href="../settings/#automatically-update-internal-links">vault settings</a>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+to=&lt;path&gt;          # (required) destination folder or path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="rename">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rename">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>rename</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Rename a file (default: active file). The file extension is preserved automatically if omitted from the new name. Use <doc-anchor-trigger to="#move">move</doc-anchor-trigger> to rename and move a file at the same time. This will automatically update <a href="../links/">internal links</a> if turned on in your <a href="../settings/#automatically-update-internal-links">vault settings</a>.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+name=&lt;name&gt;        # (required) new file name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="delete">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#delete">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>delete</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Delete a file (default: active file, trash by default).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+permanent          # skip trash, delete permanently</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="links">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#links">#</doc-anchor-trigger>
+        <span>Links</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/backlinks/">Backlinks</a> and <a href="../plugins/outgoing-links/">Outgoing links</a>.</p>
+<doc-anchor-target id="backlinks">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#backlinks">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>backlinks</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List backlinks to a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # target file name
+path=&lt;path&gt;        # target file path
+
+counts             # include link counts
+total              # return backlink count
+format=json|tsv|csv  # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="links-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#links-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>links</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List outgoing links from a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+total              # return link count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="unresolved">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unresolved">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>unresolved</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List unresolved links in vault.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return unresolved link count
+counts             # include link counts
+verbose            # include source files
+format=json|tsv|csv  # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="orphans">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#orphans">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>orphans</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List files with no incoming links.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return orphan count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="deadends">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deadends">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>deadends</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List files with no outgoing links.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return dead-end count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="outline">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#outline">#</doc-anchor-trigger>
+        <span>Outline</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/outline/">Outline</a>.</p>
+<doc-anchor-target id="outline-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#outline-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>outline</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show headings for the current file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+format=tree|md|json  # output format (default: tree)
+
+total              # return heading count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="plugins">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plugins">#</doc-anchor-trigger>
+        <span>Plugins</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/">Core plugins</a> and <a href="../community-plugins/">Community plugins</a>.</p>
+<doc-anchor-target id="plugins-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plugins-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugins</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List installed plugins.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">filter=core|community  # filter by plugin type
+
+versions               # include version numbers
+format=json|tsv|csv    # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pluginsenabled">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pluginsenabled">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugins:enabled</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List enabled plugins.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">filter=core|community  # filter by plugin type
+
+versions               # include version numbers
+format=json|tsv|csv    # output format (default: tsv)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pluginsrestrict">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pluginsrestrict">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugins:restrict</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Toggle or check restricted mode.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">on                 # enable restricted mode
+off                # disable restricted mode</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="plugin">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plugin">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Get plugin info.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;plugin-id&gt;     # (required) plugin ID</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pluginenable">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pluginenable">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin:enable</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Enable a plugin.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;id&gt;                # (required) plugin ID
+filter=core|community  # plugin type</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="plugindisable">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plugindisable">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin:disable</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Disable a plugin.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;id&gt;                # (required) plugin ID
+filter=core|community  # plugin type</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="plugininstall">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#plugininstall">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin:install</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Install a community plugin.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;id&gt;            # (required) plugin ID
+
+enable             # enable after install</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pluginuninstall">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pluginuninstall">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin:uninstall</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Uninstall a community plugin.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;id&gt;            # (required) plugin ID</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="pluginreload">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#pluginreload">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>plugin:reload</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Reload a plugin (for developers).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">id=&lt;id&gt;            # (required) plugin ID</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="properties">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#properties">#</doc-anchor-trigger>
+        <span>Properties</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands related to <a href="../properties/">Properties</a>.</p>
+<doc-anchor-target id="aliases">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#aliases">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>aliases</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List aliases in the vault. Use <code translate="no" v-pre>active</code> or <code translate="no" v-pre>file</code>/<code translate="no" v-pre>path</code> to show aliases for a specific file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+total              # return alias count
+verbose            # include file paths
+active             # show aliases for active file</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="properties-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#properties-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>properties</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List properties in the vault. Use <code translate="no" v-pre>active</code> or <code translate="no" v-pre>file</code>/<code translate="no" v-pre>path</code> to show properties for a specific file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # show properties for file
+path=&lt;path&gt;        # show properties for path
+name=&lt;name&gt;        # get specific property count
+sort=count         # sort by count (default: name)
+format=yaml|json|tsv  # output format (default: yaml)
+
+total              # return property count
+counts             # include occurrence counts
+active             # show properties for active file</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="propertyset">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#propertyset">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>property:set</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Set a property on a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;                                    # (required) property name
+value=&lt;value&gt;                                  # (required) property value
+type=text|list|number|checkbox|date|datetime   # property type
+file=&lt;name&gt;                                    # file name
+path=&lt;path&gt;                                    # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="propertyremove">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#propertyremove">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>property:remove</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Remove a property from a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) property name
+file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="propertyread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#propertyread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>property:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read a property value from a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) property name
+file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="publish">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publish">#</doc-anchor-trigger>
+        <span>Publish</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../publish/">Obsidian Publish</a>.</p>
+<doc-anchor-target id="publishsite">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishsite">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:site</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show publish site info (slug, URL).</p>
+<doc-anchor-target id="publishlist">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishlist">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:list</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List published files.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return published file count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="publishstatus">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishstatus">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:status</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List publish changes.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return change count
+new                # show new files only
+changed            # show changed files only
+deleted            # show deleted files only</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="publishadd">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishadd">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:add</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Publish a file or all changed files (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+changed            # publish all changed files</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="publishremove">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishremove">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:remove</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Unpublish a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="publishopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#publishopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>publish:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open file on published site (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="random-notes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#random-notes">#</doc-anchor-trigger>
+        <span>Random notes</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/random-note/">Random note</a>.</p>
+<doc-anchor-target id="random">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#random">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>random</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open a random note.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">folder=&lt;path&gt;      # limit to folder
+
+newtab             # open in new tab</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="randomread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#randomread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>random:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read a random note (includes path).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">folder=&lt;path&gt;      # limit to folder</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="search">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#search">#</doc-anchor-trigger>
+        <span>Search</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/search/">Search</a>.</p>
+<doc-anchor-target id="search-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#search-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>search</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Search vault for text. Returns matching file paths.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">query=&lt;text&gt;       # (required) search query
+path=&lt;folder&gt;      # limit to folder
+limit=&lt;n&gt;          # max files
+format=text|json   # output format (default: text)
+
+total              # return match count
+case               # case sensitive</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="searchcontext">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#searchcontext">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>search:context</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Search with matching line context. Returns grep-style <code translate="no" v-pre>path:line: text</code> output.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">query=&lt;text&gt;       # (required) search query
+path=&lt;folder&gt;      # limit to folder
+limit=&lt;n&gt;          # max files
+format=text|json   # output format (default: text)
+
+case               # case sensitive</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="searchopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#searchopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>search:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open search view.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">query=&lt;text&gt;       # initial search query</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="sync">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sync">#</doc-anchor-trigger>
+        <span>Sync</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../sync/">Obsidian Sync</a>.</p>
+<doc-anchor-target id="sync-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sync-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Pause or resume sync.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">on                 # resume sync
+off                # pause sync</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="syncstatus">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#syncstatus">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:status</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show sync status and usage.</p>
+<doc-anchor-target id="synchistory">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#synchistory">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:history</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List sync version history for a file (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+total              # return version count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="syncread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#syncread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read a sync version (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+version=&lt;n&gt;        # (required) version number</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="syncrestore">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#syncrestore">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:restore</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Restore a sync version (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+version=&lt;n&gt;        # (required) version number</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="syncopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#syncopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open sync history (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="syncdeleted">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#syncdeleted">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>sync:deleted</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List deleted files in sync.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return deleted file count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tags">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tags">#</doc-anchor-trigger>
+        <span>Tags</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../tags/">Tags</a>.</p>
+<doc-anchor-target id="tags-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tags-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>tags</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List tags in the vault. Use <code translate="no" v-pre>active</code> or <code translate="no" v-pre>file</code>/<code translate="no" v-pre>path</code> to show tags for a specific file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+sort=count         # sort by count (default: name)
+
+total              # return tag count
+counts             # include tag counts
+format=json|tsv|csv  # output format (default: tsv)
+active             # show tags for active file</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tag">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tag">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>tag</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Get tag info.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;tag&gt;         # (required) tag name
+
+total              # return occurrence count
+verbose            # include file list and count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tasks">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tasks">#</doc-anchor-trigger>
+        <span>Tasks</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for task management.</p>
+<doc-anchor-target id="tasks-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tasks-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>tasks</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List tasks in the vault. Use <code translate="no" v-pre>active</code> or <code translate="no" v-pre>file</code>/<code translate="no" v-pre>path</code> to show tasks for a specific file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # filter by file name
+path=&lt;path&gt;        # filter by file path
+status=&quot;&lt;char&gt;&quot;    # filter by status character
+
+total              # return task count
+done               # show completed tasks
+todo               # show incomplete tasks
+verbose            # group by file with line numbers
+format=json|tsv|csv  # output format (default: text)
+active             # show tasks for active file
+daily              # show tasks from daily note</code></pre>
+</doc-codeblock></div>
+<p><strong>Examples:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># List all tasks in the vault
+tasks
+
+# List incomplete tasks in the vault
+tasks todo
+
+# List completed tasks from a specific file
+tasks file=Recipe done
+
+# List tasks from today's daily note
+tasks daily
+
+# Count tasks in daily note
+tasks daily total
+
+# List tasks with file paths and line numbers
+tasks verbose
+
+# Filter by custom status (quote special chars)
+tasks 'status=?'</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="task">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#task">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>task</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show or update a task.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ref=&lt;path:line&gt;    # task reference (path:line)
+file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+line=&lt;n&gt;           # line number
+status=&quot;&lt;char&gt;&quot;    # set status character
+
+toggle             # toggle task status
+daily              # daily note
+done               # mark as done
+todo               # mark as todo</code></pre>
+</doc-codeblock></div>
+<p><strong>Examples:</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash"># Show task info
+task file=Recipe line=8
+task ref=&quot;Recipe.md:8&quot;
+
+# Toggle task completion
+task ref=&quot;Recipe.md:8&quot; toggle
+
+# Toggle task in daily note
+task daily line=3 toggle
+
+# Set task status
+task file=Recipe line=8 done      # → [x]
+task file=Recipe line=8 todo      # → [ ]
+task file=Recipe line=8 status=-  # → [-]
+task daily line=3 done            # Mark daily note task as done</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="templates">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#templates">#</doc-anchor-trigger>
+        <span>Templates</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/templates/">Templates</a>.</p>
+<doc-anchor-target id="templates-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#templates-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>templates</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List templates.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return template count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="templateread">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#templateread">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>template:read</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Read template content.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;template&gt;    # (required) template name
+title=&lt;title&gt;      # title for variable resolution
+
+resolve            # resolve template variables</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="templateinsert">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#templateinsert">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>template:insert</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Insert template into active file.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;template&gt;    # (required) template name</code></pre>
+</doc-codeblock></div>
+<p><strong>Notes:</strong></p>
+<ul>
+<li><code translate="no" v-pre>resolve</code> option processes <code translate="no" v-pre>{{date}}</code>, <code translate="no" v-pre>{{time}}</code>, <code translate="no" v-pre>{{title}}</code> variables</li>
+<li>Use <code translate="no" v-pre>create path=&lt;path&gt; template=&lt;name&gt;</code> to create a file with a template</li>
+</ul>
+<doc-anchor-target id="themes-and-snippets">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themes-and-snippets">#</doc-anchor-trigger>
+        <span>Themes and snippets</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../themes/">Themes</a> and <a href="../snippets/">CSS snippets</a>.</p>
+<doc-anchor-target id="themes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themes">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>themes</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List installed themes.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">versions           # include version numbers</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="theme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#theme">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>theme</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show active theme or get info.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # theme name for details</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="themeset">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themeset">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>theme:set</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Set active theme.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) theme name (empty for default)</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="themeinstall">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themeinstall">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>theme:install</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Install a community theme.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) theme name
+
+enable             # activate after install</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="themeuninstall">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themeuninstall">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>theme:uninstall</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Uninstall a theme.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) theme name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="snippets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snippets">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>snippets</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List installed CSS snippets.</p>
+<doc-anchor-target id="snippetsenabled">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snippetsenabled">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>snippets:enabled</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List enabled CSS snippets.</p>
+<doc-anchor-target id="snippetenable">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snippetenable">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>snippet:enable</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Enable a CSS snippet.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) snippet name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="snippetdisable">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snippetdisable">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>snippet:disable</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Disable a CSS snippet.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) snippet name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="unique-notes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unique-notes">#</doc-anchor-trigger>
+        <span>Unique notes</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/unique-note/">Unique note creator</a>.</p>
+<doc-anchor-target id="unique">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#unique">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>unique</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Create unique note.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;text&gt;        # note name
+content=&lt;text&gt;     # initial content
+paneType=tab|split|window    # pane type to open in
+
+open               # open file after creating</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="vault">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vault">#</doc-anchor-trigger>
+        <span>Vault</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="vault-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vault-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>vault</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show vault info.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">info=name|path|files|folders|size  # return specific info only</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="vaults">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vaults">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>vaults</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List known vaults.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return vault count
+verbose            # include vault paths</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="vaultopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vaultopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>vault:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Switch to a different vault (TUI only).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) vault name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="web-viewer">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#web-viewer">#</doc-anchor-trigger>
+        <span>Web viewer</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/web-viewer/">Web viewer</a>.</p>
+<doc-anchor-target id="web">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#web">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>web</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open URL in web viewer.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">url=&lt;url&gt;          # (required) URL to open
+
+newtab             # open in new tab</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="wordcount">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wordcount">#</doc-anchor-trigger>
+        <span>Wordcount</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../plugins/word-count/">Word count</a>.</p>
+<doc-anchor-target id="wordcount-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#wordcount-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>wordcount</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Count words and characters (default: active file).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">file=&lt;name&gt;        # file name
+path=&lt;path&gt;        # file path
+
+words              # return word count only
+characters         # return character count only</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="workspace">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspace">#</doc-anchor-trigger>
+        <span>Workspace</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands for <a href="../workspace/">Workspace</a> and the <a href="../plugins/workspaces/">Workspaces</a> plugin.</p>
+<doc-anchor-target id="workspace-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspace-1">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>workspace</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show workspace tree.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ids                # include workspace item IDs</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="workspaces">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspaces">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>workspaces</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List saved workspaces.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return workspace count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="workspacesave">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspacesave">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>workspace:save</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Save current layout as workspace.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # workspace name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="workspaceload">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspaceload">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>workspace:load</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Load a saved workspace.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) workspace name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="workspacedelete">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#workspacedelete">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>workspace:delete</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Delete a saved workspace.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">name=&lt;name&gt;        # (required) workspace name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tabs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tabs">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>tabs</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List open tabs.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">ids                # include tab IDs</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="tabopen">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#tabopen">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>tab:open</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Open a new tab.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">group=&lt;id&gt;         # tab group ID
+file=&lt;path&gt;        # file to open
+view=&lt;type&gt;        # view type to open</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="recents">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#recents">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>recents</code></span>
+    </h3>
+</doc-anchor-target>
+<p>List recently opened files.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">total              # return recent file count</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="developer-commands">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#developer-commands">#</doc-anchor-trigger>
+        <span>Developer commands</span>
+    </h2>
+</doc-anchor-target>
+<p>Commands to help you develop <a href="../community-plugins/">Community plugins</a> and <a href="../themes/">Themes</a>. Learn more by heading to the <a href="https://docs.obsidian.md" class="outbound" target="_blank"><span>Obsidian Developer Documentation</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<doc-anchor-target id="devtools">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devtools">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>devtools</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Toggle Electron dev tools.</p>
+<doc-anchor-target id="devdebug">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devdebug">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:debug</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Attach/detach Chrome DevTools Protocol debugger.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">on                 # attach debugger
+off                # detach debugger</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devcdp">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devcdp">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:cdp</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Run a Chrome DevTools Protocol command.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">method=&lt;CDP.method&gt;  # (required) CDP method to call
+params=&lt;json&gt;        # method parameters as JSON</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="deverrors">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deverrors">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:errors</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show captured JavaScript errors.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">clear              # clear the error buffer</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devscreenshot">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devscreenshot">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:screenshot</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Take a screenshot (returns base64 PNG).</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">path=&lt;filename&gt;    # output file path</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devconsole">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devconsole">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:console</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Show captured console messages.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">limit=&lt;n&gt;                        # max messages to show (default 50)
+level=log|warn|error|info|debug  # filter by log level
+
+clear                            # clear the console buffer</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devcss">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devcss">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:css</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Inspect CSS with source locations.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">selector=&lt;css&gt;     # (required) CSS selector
+prop=&lt;name&gt;        # filter by property name</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devdom">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devdom">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:dom</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Query DOM elements.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">selector=&lt;css&gt;     # (required) CSS selector
+attr=&lt;name&gt;        # get attribute value
+css=&lt;prop&gt;         # get CSS property value
+
+total              # return element count
+text               # return text content
+inner              # return innerHTML instead of outerHTML
+all                # return all matches instead of first</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="devmobile">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#devmobile">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>dev:mobile</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Toggle mobile emulation.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">on                 # enable mobile emulation
+off                # disable mobile emulation</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="eval">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#eval">#</doc-anchor-trigger>
+        <span><code translate="no" v-pre>eval</code></span>
+    </h3>
+</doc-anchor-target>
+<p>Execute JavaScript and return result.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-bash"><code v-pre class="language-bash">code=&lt;javascript&gt;  # (required) JavaScript code to execute</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="keyboard-shortcuts">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#keyboard-shortcuts">#</doc-anchor-trigger>
+        <span>Keyboard shortcuts</span>
+    </h2>
+</doc-anchor-target>
+<p>These shortcuts are available in the <doc-anchor-trigger to="#use-the-terminal-interface">TUI</doc-anchor-trigger>.</p>
+<doc-anchor-target id="navigation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#navigation">#</doc-anchor-trigger>
+        <span>Navigation</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Move cursor left</td>
+<td><code translate="no" v-pre>←</code> / <code translate="no" v-pre>Ctrl+B</code></td>
+</tr>
+<tr>
+<td>Move cursor right (accepts suggestion at end of line)</td>
+<td><code translate="no" v-pre>→</code> / <code translate="no" v-pre>Ctrl+F</code></td>
+</tr>
+<tr>
+<td>Jump to start of line</td>
+<td><code translate="no" v-pre>Ctrl+A</code></td>
+</tr>
+<tr>
+<td>Jump to end of line</td>
+<td><code translate="no" v-pre>Ctrl+E</code></td>
+</tr>
+<tr>
+<td>Move back one word</td>
+<td><code translate="no" v-pre>Alt+B</code></td>
+</tr>
+<tr>
+<td>Move forward one word</td>
+<td><code translate="no" v-pre>Alt+F</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="editing">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#editing">#</doc-anchor-trigger>
+        <span>Editing</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Delete to start of line</td>
+<td><code translate="no" v-pre>Ctrl+U</code></td>
+</tr>
+<tr>
+<td>Delete to end of line</td>
+<td><code translate="no" v-pre>Ctrl+K</code></td>
+</tr>
+<tr>
+<td>Delete previous word</td>
+<td><code translate="no" v-pre>Ctrl+W</code> / <code translate="no" v-pre>Alt+Backspace</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="autocomplete">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#autocomplete">#</doc-anchor-trigger>
+        <span>Autocomplete</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enter suggestion mode / accept selected suggestion</td>
+<td><code translate="no" v-pre>Tab</code></td>
+</tr>
+<tr>
+<td>Exit suggestion mode</td>
+<td><code translate="no" v-pre>Shift+Tab</code></td>
+</tr>
+<tr>
+<td>Enter suggestion mode (from fresh input)</td>
+<td><code translate="no" v-pre>↓</code></td>
+</tr>
+<tr>
+<td>Accept first/selected suggestion (at end of line)</td>
+<td><code translate="no" v-pre>→</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="history-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#history-1">#</doc-anchor-trigger>
+        <span>History</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Previous history entry / navigate suggestions up</td>
+<td><code translate="no" v-pre>↑</code> / <code translate="no" v-pre>Ctrl+P</code></td>
+</tr>
+<tr>
+<td>Next history entry / navigate suggestions down</td>
+<td><code translate="no" v-pre>↓</code> / <code translate="no" v-pre>Ctrl+N</code></td>
+</tr>
+<tr>
+<td>Reverse history search (type to filter, <code translate="no" v-pre>Ctrl+R</code> to cycle)</td>
+<td><code translate="no" v-pre>Ctrl+R</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="other">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#other">#</doc-anchor-trigger>
+        <span>Other</span>
+    </h3>
+</doc-anchor-target>
+<div class="table-wrapper scrollbar overflow-hidden">
+<table class="comfortable">
+<thead>
+<tr>
+<th>Action</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Execute command or accept suggestion</td>
+<td><code translate="no" v-pre>Enter</code></td>
+</tr>
+<tr>
+<td>Undo autocomplete / exit suggestion mode / clear input</td>
+<td><code translate="no" v-pre>Escape</code></td>
+</tr>
+<tr>
+<td>Clear screen</td>
+<td><code translate="no" v-pre>Ctrl+L</code></td>
+</tr>
+<tr>
+<td>Exit</td>
+<td><code translate="no" v-pre>Ctrl+C</code> / <code translate="no" v-pre>Ctrl+D</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<doc-anchor-target id="troubleshooting">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#troubleshooting">#</doc-anchor-trigger>
+        <span>Troubleshooting</span>
+    </h2>
+</doc-anchor-target>
+<p>If you are having trouble running Obsidian CLI:</p>
+<ul>
+<li>Make sure you are using the latest <a href="../updates/">Obsidian installer version</a> (1.11.7) and the latest <a href="../early-access/">early access version</a> (1.12).</li>
+<li>Restart your terminal after registering the CLI for the PATH changes to take effect.</li>
+<li>Obsidian must be running. The CLI connects to the running Obsidian instance. If Obsidian is not running, the first CLI command should launch the app.</li>
+</ul>
+<doc-anchor-target id="windows">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#windows">#</doc-anchor-trigger>
+        <span>Windows</span>
+    </h3>
+</doc-anchor-target>
+<p>Windows requires using a terminal redirector that connects to Obsidian to stdin/stdout properly. This is unfortunately necessary because Obsidian normally runs as a GUI app which is incompatible with terminal outputs.</p>
+<p>To get this file, go to the official Obsidian Discord in the <code translate="no" v-pre>#insider-desktop-release</code> channel. Requires a <a href="../catalyst/">Catalyst license</a>.</p>
+<ul>
+<li>Download the <code translate="no" v-pre>Obsidian.com</code> file <a href="https://discord.com/channels/686053708261228577/716028884885307432/1470798383085261057" class="outbound" target="_blank"><span>here</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+<li>Place the <code translate="no" v-pre>Obsidian.com</code> file in the folder where you installed the <code translate="no" v-pre>Obsidian.exe</code> file, which could be one of these paths:
+<ul>
+<li><code translate="no" v-pre>C:\Users\&lt;YourUsername&gt;\AppData\Local\Programs\obsidian\</code></li>
+<li><code translate="no" v-pre>C:\Users\&lt;YourUsername&gt;\AppData\Local\obsidian\</code></li>
+</ul>
+</li>
+</ul>
+<doc-anchor-target id="macos">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#macos">#</doc-anchor-trigger>
+        <span>macOS</span>
+    </h3>
+</doc-anchor-target>
+<p>The CLI registration adds the Obsidian binary directory to your PATH via <code translate="no" v-pre>~/.zprofile</code>. If you are having trouble, check the following:</p>
+<p>Your <code translate="no" v-pre>~/.zprofile</code> file should contain the following line. If it&#x27;s missing, you can add it manually:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">export PATH=&quot;$PATH:/Applications/Obsidian.app/Contents/MacOS&quot;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="alternate-shells">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#alternate-shells">#</doc-anchor-trigger>
+        <span>Alternate shells</span>
+    </h4>
+</doc-anchor-target>
+<p>The CLI registration only modifies <code translate="no" v-pre>~/.zprofile</code>, which is used by zsh (the default macOS shell). If you use a different shell, add the Obsidian binary directory to your shell&#x27;s configuration file manually:</p>
+<ul>
+<li>Bash: add <code translate="no" v-pre>export PATH=&quot;$PATH:/Applications/Obsidian.app/Contents/MacOS&quot;</code> to <code translate="no" v-pre>~/.bash_profile</code></li>
+<li>Fish: run <code translate="no" v-pre>fish_add_path /Applications/Obsidian.app/Contents/MacOS</code></li>
+</ul>
+<doc-anchor-target id="linux">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#linux">#</doc-anchor-trigger>
+        <span>Linux</span>
+    </h3>
+</doc-anchor-target>
+<p>The CLI registration creates a symlink at <code translate="no" v-pre>/usr/local/bin/obsidian</code> pointing to the Obsidian binary (requires sudo).</p>
+<doc-anchor-target id="appimage">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#appimage">#</doc-anchor-trigger>
+        <span>AppImage</span>
+    </h4>
+</doc-anchor-target>
+<p>For AppImage installs, the symlink points to the <code translate="no" v-pre>.AppImage</code> file instead of the internal binary, since the mount path changes each launch. If sudo fails, the symlink is created at <code translate="no" v-pre>~/.local/bin/obsidian</code> as a fallback. If you are having trouble, check the following.</p>
+<p>Check that the symlink exists and points to the correct binary:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">ls -l /usr/local/bin/obsidian</code></pre>
+</doc-codeblock></div>
+<p>If the symlink is missing, create it manually:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">sudo ln -s /path/to/obsidian /usr/local/bin/obsidian</code></pre>
+</doc-codeblock></div>
+<p>I the symlink was created in <code translate="no" v-pre>~/.local/bin/</code> instead, make sure that directory is in your PATH. Add the following to your <code translate="no" v-pre>~/.bashrc</code> or <code translate="no" v-pre>~/.zshrc</code>:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">export PATH=&quot;$PATH:$HOME/.local/bin&quot;</code></pre>
+</doc-codeblock></div>
+<p>If the symlink breaks after moving or renaming the <code translate="no" v-pre>.AppImage</code> file, re-register the CLI or update the symlink manually.</p>
+<doc-anchor-target id="snap">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#snap">#</doc-anchor-trigger>
+        <span>Snap</span>
+    </h4>
+</doc-anchor-target>
+<p>The Snap package stores insider build data in its own user data directory. If the CLI doesn&#x27;t detect the insider <code translate="no" v-pre>.asar</code>, set <code translate="no" v-pre>XDG_CONFIG_HOME</code> to point to the Snap config path:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">export XDG_CONFIG_HOME=&quot;$HOME/snap/obsidian/current/.config&quot;</code></pre>
+</doc-codeblock></div>
+<p>Add this to your <code translate="no" v-pre>~/.bashrc</code> or <code translate="no" v-pre>~/.zshrc</code> to make it persistent.</p>
+<doc-anchor-target id="flatpak">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#flatpak">#</doc-anchor-trigger>
+        <span>Flatpak</span>
+    </h4>
+</doc-anchor-target>
+<p>Obsidian tries to do this automatically, but below are the manual instructions. If it is a system install:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">ln -s /var/lib/flatpak/exports/bin/md.obsidian.Obsidian ~/.local/bin/obsidian</code></pre>
+</doc-codeblock></div>
+<p>If it is a user install:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-none"><code v-pre class="language-none">ln -s ~/.local/share/flatpak/exports/bin/md.obsidian.Obsidian ~/.local/bin/obsidian</code></pre>
+</doc-codeblock></div>
+<div id="retype-backlinks">
+    <h2>See also</h2>
+    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="/obsidian/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Obsidian Help</span>
+                </div>
+                <p>This site displays the Obsidian Help documentation, which is © Obsidian. The content is reproduced here for informational and/or educational purposes</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+                <div class="flex flex-wrap items-center justify-between mt-14">
+                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-body-link font-body-link hover:text-body-link-hover hover:underline" href="https://github.com/obsidianmd/obsidian-help/edit/master/en/Extending Obsidian/Obsidian CLI.md" target="_blank" rel="noopener">
+                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        <span>Edit this page</span>
+                    </a>
+                </div>
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../snippets/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">CSS snippets</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../uri/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Obsidian URI</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© 2026 Obsidian</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Obsidian CLI", level: 1, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+</body>
+</html>

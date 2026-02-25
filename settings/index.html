@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="turbo-root" content="/obsidian">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
+
+    <!-- See retype.com -->
+    <meta name="generator" content="Retype 4.0.1">
+
+    <!-- Primary Meta Tags -->
+    <title>Settings</title>
+    <meta name="title" content="Settings">
+    <meta name="description" content="Learn how to customize Obsidian through the Settings interface.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://retypeapp.github.io/obsidian/settings/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://retypeapp.github.io/obsidian/settings/">
+    <meta property="og:title" content="Settings">
+    <meta property="og:description" content="Learn how to customize Obsidian through the Settings interface.">
+    <meta property="og:site_name" content="Obsidian">
+    <meta property="og:locale" content="en_US">
+
+    <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
+
+    <link id="retype-favicon" rel="icon" href="../favicon.ico" />
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
+
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+</head>
+<body>
+    <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
+    <div class="absolute bottom-0 left-0" style="top: 5rem; right: 50%"></div>
+
+    <header id="retype-header" class="sticky top-0 z-30 flex w-full h-16 bg-header-bg border-b border-header-border md:h-20">
+        <div class="container relative flex items-center justify-between pr-6 grow md:justify-start">
+            <!-- Mobile menu button skeleton -->
+            <button v-cloak class="skeleton retype-mobile-menu-button flex items-center justify-center shrink-0 overflow-hidden dark:text-white focus:outline-hidden rounded-full w-10 h-10 ml-3.5 md:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="mb-px shrink-0" width="24" height="24" viewBox="0 0 24 24" role="presentation" style="margin-bottom: 0px;"><g fill="currentColor"><path d="M2 4h20v2H2zM2 11h20v2H2zM2 18h20v2H2z"></path></g></svg></button>
+            <div v-cloak id="retype-sidebar-left-toggle-button"></div>
+    
+            <!-- Logo -->
+            <div class="flex items-center justify-between h-full py-2 md:w-75">
+                <div class="flex items-center px-2 md:px-6">
+                    <a id="docs-hub-link" href="https://obsidian.md/" title="Visit Obsidian" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="30" viewBox="0 0 12 30" fill="currentColor" aria-label="Home" focusable="false" role="img">
+                            <path d="M10.6763 23.0822C10.4303 23.328 10.0967 23.4661 9.74885 23.4661C9.40103 23.4661 9.06744 23.328 8.82135 23.0822L1.38384 15.6447C1.13806 15.3986 1 15.065 1 14.7172C1 14.3694 1.13806 14.0358 1.38384 13.7897L8.82135 6.35222C9.0703 6.1205 9.39939 5.99432 9.73945 6.0002C10.0795 6.00607 10.404 6.14354 10.6448 6.38372C10.885 6.62452 11.0225 6.94906 11.0284 7.28912C11.0342 7.62917 10.9081 7.95826 10.6763 8.20722L4.16635 14.7172L10.6763 21.2272C10.9221 21.4733 11.0602 21.8069 11.0602 22.1547C11.0602 22.5025 10.9221 22.8361 10.6763 23.0822Z" />
+                        </svg>
+                    </a>
+                    <a id="retype-branding-logo" href="../" class="flex items-center leading-snug text-2xl">
+                        <span class="w-10 mr-2 grow-0 shrink-0 overflow-hidden">
+                            <svg alt="Obsidian" height="30" viewBox="-10 0 30 25" width="40" xmlns="http://www.w3.org/2000/svg"><path fill="#A88BFA" d="m6.91927 14.5955c.64053-.1907 1.67255-.4839 2.85923-.5565-.71191-1.7968-.88376-3.3691-.74554-4.76905.15962-1.61678.72977-2.9662 1.28554-4.11442.1186-.24501.2326-.47313.3419-.69198.1549-.30984.3004-.60109.4365-.8953.2266-.48978.3948-.92231.4798-1.32416.0836-.39515.0841-.74806-.0148-1.08657-.099-.338982-.3093-.703864-.7093-1.1038132-.5222-.1353116-1.1017-.0165173-1.53613.3742922l-5.15591 4.638241c-.28758.25871-.47636.60929-.53406.99179l-.44455 2.94723c.69903.6179 2.42435 2.41414 3.47374 4.90644.09364.2224.1819.4505.26358.6838z"></path><path fill="#A88BFA" d="m2.97347 10.3512c-.02431.1037-.05852.205-.10221.3024l-2.724986 6.0735c-.279882.6238-.15095061 1.3552.325357 1.8457l4.288349 4.4163c2.1899-3.2306 1.87062-6.2699.87032-8.6457-.75846-1.8013-1.90801-3.2112-2.65683-3.9922z"></path><path fill="#A88BFA" d="m5.7507 23.5094c.07515.012.15135.0192.2281.0215.81383.0244 2.18251.0952 3.29249.2997.90551.1669 2.70051.6687 4.17761 1.1005 1.1271.3294 2.2886-.5707 2.4522-1.7336.1192-.8481.343-1.8075.7553-2.6869l-.0095.0033c-.6982-1.9471-1.5865-3.2044-2.5178-4.0073-.9284-.8004-1.928-1.1738-2.8932-1.3095-1.60474-.2257-3.07497.1961-4.00103.4682.55465 2.3107.38396 5.0295-1.48417 7.8441z"></path><path fill="#A88BFA" d="m17.3708 19.3102c.9267-1.3985 1.5868-2.4862 1.9352-3.0758.1742-.295.1427-.6648-.0638-.9383-.5377-.7126-1.5666-2.1607-2.1272-3.5015-.5764-1.3785-.6624-3.51876-.6673-4.56119-.0019-.39626-.1275-.78328-.3726-1.09465l-3.3311-4.23183c-.0117.19075-.0392.37998-.0788.56747-.1109.52394-.32 1.04552-.5585 1.56101-.1398.30214-.3014.62583-.4646.95284-.1086.21764-.218.4368-.3222.652-.5385 1.11265-1.0397 2.32011-1.1797 3.73901-.1299 1.31514.0478 2.84484.8484 4.67094.1333.0113.2675.0262.4023.0452 1.1488.1615 2.3546.6115 3.4647 1.5685.9541.8226 1.8163 2.0012 2.5152 3.6463z"></path></svg>
+                        </span>
+                        <span class="dark:text-white font-bold line-clamp-1 md:line-clamp-2">Obsidian</span>
+                    </a><span id="retype-branding-label" class="inline-flex mt-1 px-2 py-1 ml-4 text-xs font-medium leading-none items-center rounded-md bg-branding-label-bg text-branding-label-text ring-1 ring-branding-label-border ring-inset md:inline-block">Help</span>
+                </div>
+    
+                <span class="hidden h-8 border-r md:inline-block border-base-border"></span>
+            </div>
+    
+            <div class="flex justify-between md:grow">
+                <!-- Top Nav -->
+                <nav id="retype-header-nav" class="hidden md:flex">
+                    <ul class="flex flex-col mb-4 md:pl-16 md:mb-0 md:flex-row md:items-center">
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/download">Download</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/pricing">Pricing</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/sync">Sync</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/publish">Publish</a>
+                        </li>
+                        <li class="mr-6">
+                            <a class="py-2 md:mb-0 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/enterprise">Enterprise</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+    
+                <div v-cloak class="flex justify-end grow">
+                    <div id="retype-mobile-search-button"></div>
+                    <doc-search-desktop></doc-search-desktop>
+    
+                    <doc-theme-switch class="lg:ml-2"></doc-theme-switch>
+                    <doc-history></doc-history>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="retype-container" class="container relative flex bg-white">
+        <!-- Sidebar Skeleton -->
+        <div v-cloak class="fixed flex flex-col shrink-0 duration-300 ease-in-out bg-sidebar-left-bg border-sidebar-left-border sidebar top-20 w-75 border-r h-screen md:sticky transition-transform skeleton">
+        
+            <div class="flex items-center h-16 px-6">
+                <input id="retype-filter-input-mock" class="w-full h-10 pl-8 px-3 py-2 transition-colors duration-200 ease-linear bg-filter-bg border border-filter-border rounded-lg shadow-none md:text-sm hover:border-filter-border-hover focus:outline-hidden focus:border-filter-border-focus placeholder-filter-placeholder" type="text">
+            </div>
+        
+            <div class="pl-6 mt-1 mb-4">
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+                <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            </div>
+        
+            <div class="shrink-0 mt-auto bg-transparent dark:border-base-border">
+                <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                    <span class="text-xs whitespace-nowrap">Powered by</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Sidebar component -->
+        <doc-sidebar v-cloak>
+            <template #sidebar-footer>
+                <div class="shrink-0 mt-auto border-t md:bg-transparent md:border-none dark:border-base-border">
+        
+                    <div class="py-3 px-6 md:hidden border-b dark:border-base-border">
+                        <nav>
+                            <ul class="flex flex-wrap justify-center items-center">
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/download">Download</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/pricing">Pricing</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/sync">Sync</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/publish">Publish</a>
+                                </li>
+                                <li class="mr-6">
+                                    <a class="block py-1 inline-flex items-center text-sm whitespace-nowrap transition-colors duration-200 ease-linear md:text-header-text font-header-text hover:text-header-text-hover" href="https://obsidian.md/enterprise">Enterprise</a>
+                                </li>
+        
+                            </ul>
+                        </nav>
+                    </div>
+        
+                    <a class="flex items-center justify-center flex-nowrap h-16 text-gray-350 dark:text-dark-400 hover:text-gray-600 dark:hover:text-dark-300 transition-colors duration-150 ease-in docs-powered-by" target="_blank" href="https://retype.com/" rel="noopener">
+                        <span class="text-xs whitespace-nowrap">Powered by</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2" fill="currentColor" width="96" height="20" overflow="visible"><path d="M0 0v20h13.59V0H0zm11.15 17.54H2.44V2.46h8.71v15.08zM15.8 20h2.44V4.67L15.8 2.22zM20.45 6.89V20h2.44V9.34z"/><g><path d="M40.16 8.44c0 1.49-.59 2.45-1.75 2.88l2.34 3.32h-2.53l-2.04-2.96h-1.43v2.96h-2.06V5.36h3.5c1.43 0 2.46.24 3.07.73s.9 1.27.9 2.35zm-2.48 1.1c.26-.23.38-.59.38-1.09 0-.5-.13-.84-.4-1.03s-.73-.28-1.39-.28h-1.54v2.75h1.5c.72 0 1.2-.12 1.45-.35zM51.56 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92h4.74v1.83h-6.79V5.36h6.64zM60.09 7.15v7.48h-2.06V7.15h-2.61V5.36h7.28v1.79h-2.61zM70.81 14.64h-2.06v-3.66l-3.19-5.61h2.23l1.99 3.45 1.99-3.45H74l-3.19 5.61v3.66zM83.99 6.19c.65.55.97 1.4.97 2.55s-.33 1.98-1 2.51-1.68.8-3.04.8h-1.23v2.59h-2.06V5.36h3.26c1.42 0 2.45.28 3.1.83zm-1.51 3.65c.25-.28.37-.69.37-1.22s-.16-.92-.48-1.14c-.32-.23-.82-.34-1.5-.34H79.7v3.12h1.38c.68 0 1.15-.14 1.4-.42zM95.85 5.36V7.2h-4.59v1.91h4.13v1.76h-4.13v1.92H96v1.83h-6.79V5.36h6.64z"/></g></svg>
+                    </a>
+                </div>
+            </template>
+        </doc-sidebar>
+
+        <div class="grow min-w-0 bg-body-bg">
+            <!-- Render "toolbar" template here on api pages --><!-- Render page content -->
+<div class="flex">
+    <div id="retype-main" class="min-w-0 p-4 grow md:px-16">
+        <main class="relative pb-12 lg:pt-2">
+            <div class="retype-markdown" id="retype-content">
+                <!-- Rendered if sidebar right is enabled -->
+                <div id="retype-sidebar-right-toggle"></div>
+                <nav id="retype-breadcrumb" class="breadcrumb" aria-label="Breadcrumb">
+                    <ol role="list">
+                        <li class="pr-4">
+                            <a href="../" class="pr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M11.03 2.59a1.501 1.501 0 0 1 1.94 0l7.5 6.363a1.5 1.5 0 0 1 .53 1.144V19.5a1.5 1.5 0 0 1-1.5 1.5h-5.75a.75.75 0 0 1-.75-.75V14h-2v6.25a.75.75 0 0 1-.75.75H4.5A1.5 1.5 0 0 1 3 19.5v-9.403c0-.44.194-.859.53-1.144ZM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v6.25h5v-9.403Z"/>
+                                </svg>
+                            </a>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <span class="pr-4">
+                                User interface
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"/>
+                            </svg>
+                        </li>
+                        <li class="pr-4">
+                            <a href="../settings/" class="pr-4">
+                                Settings
+                            </a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <!-- Page content  -->
+<doc-anchor-target id="settings" class="break-words">
+    <h1>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings">#</doc-anchor-trigger>
+        <span>Settings</span>
+    </h1>
+</doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Learn how to customize Obsidian through the Settings interface.</div>
+<p>Settings allow you to customize your Obsidian experience. Configure general options, editor preferences, appearance, keyboard shortcuts, and manage both core and community plugins.</p>
+<doc-anchor-target id="open-settings">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#open-settings">#</doc-anchor-trigger>
+        <span>Open Settings</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="desktop">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#desktop">#</doc-anchor-trigger>
+        <span>Desktop</span>
+    </h3>
+</doc-anchor-target>
+<p>In the <a href="../sidebar/#open-hidden-sidebars">left sidebar</a>, select <strong><a href="">Settings</a></strong> ( <img src="../attachments/icons/lucide-cog.svg#icon" alt="" /> ). You can also open Settings with the <a href="../plugins/command-palette/">Command palette</a>.</p>
+<doc-anchor-target id="mobile">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#mobile">#</doc-anchor-trigger>
+        <span>Mobile</span>
+    </h3>
+</doc-anchor-target>
+<p>In the left sidebar, select <strong><a href="">Settings</a></strong> ( <img src="../attachments/icons/lucide-cog.svg#icon" alt="" /> ).</p>
+<doc-anchor-target id="settings-organization">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#settings-organization">#</doc-anchor-trigger>
+        <span>Settings organization</span>
+    </h2>
+</doc-anchor-target>
+<p>Settings are organized into the following categories:</p>
+<ul>
+<li><strong>Options</strong> — Core application settings including <doc-anchor-trigger to="#general">General</doc-anchor-trigger>, <doc-anchor-trigger to="#editor">Editor</doc-anchor-trigger>, <doc-anchor-trigger to="#files-and-links">Files and links</doc-anchor-trigger>, <doc-anchor-trigger to="#appearance">Appearance</doc-anchor-trigger>, and <doc-anchor-trigger to="#hotkeys">Hotkeys</doc-anchor-trigger>.</li>
+<li><strong><a href="../plugins/">Core plugins</a></strong> — Built-in plugins that come with Obsidian.</li>
+<li><strong><a href="../community-plugins/">Community plugins</a></strong> — Third-party plugins installed from the community.</li>
+</ul>
+<doc-anchor-target id="general">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#general">#</doc-anchor-trigger>
+        <span>General</span>
+    </h2>
+</doc-anchor-target>
+<p>The General page contains version information, update settings, language preferences, and account management.</p>
+<doc-anchor-target id="version-and-updates">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#version-and-updates">#</doc-anchor-trigger>
+        <span>Version and updates</span>
+    </h3>
+</doc-anchor-target>
+<p>View your current Obsidian version and installer version at the top of the page. Select <strong>Check for updates</strong> to manually check for new versions, or select <strong><a href="https://obsidian.md/changelog/" class="outbound" target="_blank"><span>Read the changelog</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></strong> to view release notes.</p>
+<p><strong>Automatic updates</strong></p>
+<p>When enabled, Obsidian automatically checks for new versions and notifies you when updates are available.</p>
+<p><strong>Receive early access versions</strong></p>
+<p>Auto-update to the latest <a href="../early-access/">Early access versions</a>. These versions include new features but may be less stable.</p>
+<blockquote>
+<p>[!info]+ Catalyst license required
+This option is only available for users with a <a href="../catalyst/">Catalyst license</a>.</p>
+</blockquote>
+<doc-anchor-target id="language">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#language">#</doc-anchor-trigger>
+        <span>Language</span>
+    </h3>
+</doc-anchor-target>
+<p>Select your preferred language for the Obsidian interface. Select <strong><a href="../translations/">Learn how to add a new language to Obsidian</a></strong> to contribute a translation.</p>
+<doc-anchor-target id="help">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#help">#</doc-anchor-trigger>
+        <span>Help</span>
+    </h3>
+</doc-anchor-target>
+<p>Select <strong><a href="../">Open</a></strong> to access help resources, including documentation, community forums, and troubleshooting guides.</p>
+<doc-anchor-target id="account">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#account">#</doc-anchor-trigger>
+        <span>Account</span>
+    </h3>
+</doc-anchor-target>
+<p>Manage your Obsidian account and licenses.</p>
+<p><strong>Your account</strong></p>
+<p>View your account information, including username and email. Select <strong><a href="https://obsidian.md/account" class="outbound" target="_blank"><span>Manage</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></strong> to access account settings, or select <strong>Log out</strong> to sign out on the app.</p>
+<p><strong>Catalyst license</strong></p>
+<p>View your Catalyst license status. If you have an active <a href="../catalyst/">Catalyst license</a>, your license tier appears here.</p>
+<p><strong>Commercial license</strong></p>
+<p>If you support <a href="https://obsidian.md/blog/free-for-work/" class="outbound" target="_blank"><span>Obsidian for work</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>, select <strong>Activate</strong> to enter a commercial license key, or select <strong><a href="https://obsidian.md/account/commercial" class="outbound" target="_blank"><span>Purchase</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a></strong> to buy a license. Select <strong><a href="../teams/license/">Learn more</a></strong> for information about Commercial licenses.</p>
+<doc-anchor-target id="advanced">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced">#</doc-anchor-trigger>
+        <span>Advanced</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="notify-if-startup-takes-longer-than-expected">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#notify-if-startup-takes-longer-than-expected">#</doc-anchor-trigger>
+        <span>Notify if startup takes longer than expected</span>
+    </h4>
+</doc-anchor-target>
+<p>When enabled, Obsidian displays a notification if startup is unusually slow. The notification includes diagnostic information about what&#x27;s causing the delay. Select the timer icon ( <img src="../attachments/icons/lucide-timer.svg#icon" alt="" /> ) next to this setting to <a href="../resources/#check-startup-time">check your startup time</a>.</p>
+<doc-anchor-target id="editor">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#editor">#</doc-anchor-trigger>
+        <span>Editor</span>
+    </h2>
+</doc-anchor-target>
+<p>The Editor page contains settings for how you view and edit notes.</p>
+<doc-anchor-target id="always-focus-new-tabs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#always-focus-new-tabs">#</doc-anchor-trigger>
+        <span>Always focus new tabs</span>
+    </h3>
+</doc-anchor-target>
+<p>When you open a link in a new tab, switch to it immediately.</p>
+<doc-anchor-target id="default-view-for-new-tabs">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-view-for-new-tabs">#</doc-anchor-trigger>
+        <span>Default view for new tabs</span>
+    </h3>
+</doc-anchor-target>
+<p>The default view that a new Markdown file tab gets opened in. Choose between <a href="../edit-and-read/#reading-view">Reading view</a> or <a href="../edit-and-read/#editing-view">Editing view</a>.</p>
+<doc-anchor-target id="default-editing-mode">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-editing-mode">#</doc-anchor-trigger>
+        <span>Default editing mode</span>
+    </h3>
+</doc-anchor-target>
+<p>The default editing mode a new tab will start with. Choose between <a href="../edit-and-read/#live-preview">Live preview</a> or <a href="../edit-and-read/#source-mode">Source mode</a>.</p>
+<doc-anchor-target id="show-editing-mode-in-status-bar">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-editing-mode-in-status-bar">#</doc-anchor-trigger>
+        <span>Show editing mode in status bar</span>
+    </h3>
+</doc-anchor-target>
+<p>Show the editing mode toggle in the <a href="../status-bar/">status bar</a>.</p>
+<doc-anchor-target id="display">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#display">#</doc-anchor-trigger>
+        <span>Display</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="readable-line-length">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#readable-line-length">#</doc-anchor-trigger>
+        <span>Readable line length</span>
+    </h4>
+</doc-anchor-target>
+<p>Limit maximum line length. Less content fits onscreen, but long blocks of text are more readable.</p>
+<doc-anchor-target id="strict-line-breaks">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#strict-line-breaks">#</doc-anchor-trigger>
+        <span>Strict line breaks</span>
+    </h4>
+</doc-anchor-target>
+<p>Markdown specs ignore single <a href="../syntax/#line-breaks">Line breaks</a> in reading view. Turn this off to make single line breaks visible.</p>
+<doc-anchor-target id="properties-in-document">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#properties-in-document">#</doc-anchor-trigger>
+        <span>Properties in document</span>
+    </h4>
+</doc-anchor-target>
+<p>Choose how <a href="../properties/">properties</a> are displayed at the top of notes. Select <strong>source</strong> to show properties as raw YAML.</p>
+<doc-anchor-target id="fold-heading">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fold-heading">#</doc-anchor-trigger>
+        <span>Fold heading</span>
+    </h4>
+</doc-anchor-target>
+<p><a href="../folding/">Fold</a> all content under a heading by selecting the collapse icon next to it.</p>
+<doc-anchor-target id="fold-indent">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#fold-indent">#</doc-anchor-trigger>
+        <span>Fold indent</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="../folding/">Fold</a> part of an indentation, such as lists, by selecting the collapse icon.</p>
+<doc-anchor-target id="show-line-numbers">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-line-numbers">#</doc-anchor-trigger>
+        <span>Show line numbers</span>
+    </h4>
+</doc-anchor-target>
+<p>Show line numbers in the gutter.</p>
+<doc-anchor-target id="show-indentation-guides">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-indentation-guides">#</doc-anchor-trigger>
+        <span>Show indentation guides</span>
+    </h4>
+</doc-anchor-target>
+<p>Show vertical relationship lines between list items.</p>
+<doc-anchor-target id="right-to-left-rtl">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#right-to-left-rtl">#</doc-anchor-trigger>
+        <span>Right-to-left (RTL)</span>
+    </h4>
+</doc-anchor-target>
+<p>Sets the default text direction of notes to right-to-left.</p>
+<doc-anchor-target id="auto-pair-brackets">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#auto-pair-brackets">#</doc-anchor-trigger>
+        <span>Auto-pair brackets</span>
+    </h4>
+</doc-anchor-target>
+<p>Pair brackets and quotes automatically.</p>
+<doc-anchor-target id="auto-pair-markdown-syntax">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#auto-pair-markdown-syntax">#</doc-anchor-trigger>
+        <span>Auto-pair Markdown syntax</span>
+    </h4>
+</doc-anchor-target>
+<p>Pair symbols automatically for bold, italic, code, and more.</p>
+<doc-anchor-target id="smart-lists">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#smart-lists">#</doc-anchor-trigger>
+        <span>Smart lists</span>
+    </h4>
+</doc-anchor-target>
+<p>Automatically set indentation and place list items correctly.</p>
+<doc-anchor-target id="indent-using-tabs">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#indent-using-tabs">#</doc-anchor-trigger>
+        <span>Indent using tabs</span>
+    </h4>
+</doc-anchor-target>
+<p>Use tabs to indent by pressing the Tab key. Turn this off to indent using 4 spaces.</p>
+<doc-anchor-target id="convert-pasted-html-to-markdown">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#convert-pasted-html-to-markdown">#</doc-anchor-trigger>
+        <span>Convert pasted HTML to Markdown</span>
+    </h4>
+</doc-anchor-target>
+<p>Automatically convert HTML to Markdown when pasting and drag-and-drop from web pages.</p>
+<p>Use <code translate="no" v-pre>Ctrl/Cmd+Shift+V</code> to paste HTML without converting.</p>
+<doc-anchor-target id="behavior">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#behavior">#</doc-anchor-trigger>
+        <span>Behavior</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="spellcheck">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#spellcheck">#</doc-anchor-trigger>
+        <span>Spellcheck</span>
+    </h4>
+</doc-anchor-target>
+<p>Turn on the spellchecker. Select the gear icon to remove saved items from the custom dictionary.</p>
+<doc-anchor-target id="spellcheck-languages">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#spellcheck-languages">#</doc-anchor-trigger>
+        <span>Spellcheck languages</span>
+    </h4>
+</doc-anchor-target>
+<p><strong>Windows and Linux:</strong></p>
+<p>Choose the languages for the spellchecker to use. Select the plus (+) icon to add languages. To remove a language, select the X next to it.</p>
+<p><strong>macOS:</strong></p>
+<p>The native spellchecker automatically detects the language used by the OS.</p>
+<doc-anchor-target id="indent-visual-width">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#indent-visual-width">#</doc-anchor-trigger>
+        <span>Indent visual width</span>
+    </h4>
+</doc-anchor-target>
+<p>Number of spaces a tab character will render as.</p>
+<doc-anchor-target id="advanced-1">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-1">#</doc-anchor-trigger>
+        <span>Advanced</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="vim-key-bindings">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#vim-key-bindings">#</doc-anchor-trigger>
+        <span>Vim key bindings</span>
+    </h4>
+</doc-anchor-target>
+<p>Use Vim key bindings when editing.</p>
+<doc-anchor-target id="files-and-links">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#files-and-links">#</doc-anchor-trigger>
+        <span>Files and links</span>
+    </h2>
+</doc-anchor-target>
+<p>The Files and links page contains settings for file management, links, and vault behavior.</p>
+<doc-anchor-target id="default-location-for-new-notes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-location-for-new-notes">#</doc-anchor-trigger>
+        <span>Default location for new notes</span>
+    </h3>
+</doc-anchor-target>
+<p>Where newly created notes are placed. Options include:</p>
+<ul>
+<li><strong>Vault folder</strong> — Notes are created in the root of your vault.</li>
+<li><strong>Same folder as current file</strong> — Notes are created in the same folder as the currently active note.</li>
+<li><strong>In the folder specified below</strong> — Notes are created in a specific folder you choose.</li>
+</ul>
+<doc-anchor-target id="default-location-for-new-attachments">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#default-location-for-new-attachments">#</doc-anchor-trigger>
+        <span>Default location for new attachments</span>
+    </h3>
+</doc-anchor-target>
+<p>Where newly added <a href="../attachments/">attachments</a> are placed. Options include:</p>
+<ul>
+<li><strong>Vault folder</strong> — Attachments are placed in the root of your vault.</li>
+<li><strong>In the folder specified below</strong> — Attachments are placed in a specific folder you choose.</li>
+<li><strong>Same folder as current file</strong> — Attachments are placed in the same folder as the currently active note.</li>
+<li><strong>In subfolder under current folder</strong> — Attachments are placed in a subfolder within the current note&#x27;s folder.</li>
+</ul>
+<doc-anchor-target id="links">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#links">#</doc-anchor-trigger>
+        <span>Links</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="new-link-format">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#new-link-format">#</doc-anchor-trigger>
+        <span>New link format</span>
+    </h4>
+</doc-anchor-target>
+<p>What links to insert when auto-generating <a href="../links/">internal links</a>. Options include:</p>
+<ul>
+<li><strong>Shortest path when possible</strong> — Uses the shortest unique path to the linked file.</li>
+<li><strong>Relative path to file</strong> — Uses a path relative to the current file.</li>
+<li><strong>Absolute path in vault</strong> — Uses the full path from the vault root.</li>
+</ul>
+<doc-anchor-target id="automatically-update-internal-links">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#automatically-update-internal-links">#</doc-anchor-trigger>
+        <span>Automatically update internal links</span>
+    </h4>
+</doc-anchor-target>
+<p>When enabled, Obsidian automatically updates internal links when you rename a file. Turn this off to be prompted to update links after renaming.</p>
+<doc-anchor-target id="use-wikilinks">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#use-wikilinks">#</doc-anchor-trigger>
+        <span>Use Wikilinks</span>
+    </h4>
+</doc-anchor-target>
+<p>Auto-generate Wikilinks for <code translate="no" v-pre>[[links]]</code> and <code translate="no" v-pre>![[images]]</code> instead of Markdown links and images. Disable this option to generate Markdown links instead.</p>
+<doc-anchor-target id="show-all-file-types">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-all-file-types">#</doc-anchor-trigger>
+        <span>Show all file types</span>
+    </h4>
+</doc-anchor-target>
+<p>Show files with any extension even if Obsidian can&#x27;t open them natively, so you can link to them and see them in File Explorer and Quick Switcher.</p>
+<doc-anchor-target id="trash">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#trash">#</doc-anchor-trigger>
+        <span>Trash</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="confirm-file-deletion">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#confirm-file-deletion">#</doc-anchor-trigger>
+        <span>Confirm file deletion</span>
+    </h4>
+</doc-anchor-target>
+<p>Ask before deleting a file.</p>
+<doc-anchor-target id="deleted-files">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#deleted-files">#</doc-anchor-trigger>
+        <span>Deleted files</span>
+    </h4>
+</doc-anchor-target>
+<p>What happens to a file after you delete it. Options include:</p>
+<ul>
+<li><strong>Move to system trash</strong> — Files are moved to your operating system&#x27;s trash.</li>
+<li><strong>Move to Obsidian trash</strong> — Files are moved to the <code translate="no" v-pre>.trash</code> folder in your vault.</li>
+<li><strong>Permanently delete</strong> — Files are permanently deleted and cannot be recovered.</li>
+</ul>
+<doc-anchor-target id="advanced-2">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-2">#</doc-anchor-trigger>
+        <span>Advanced</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="excluded-files">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#excluded-files">#</doc-anchor-trigger>
+        <span>Excluded files</span>
+    </h4>
+</doc-anchor-target>
+<p>Excluded files will be hidden in <a href="../plugins/search/">Search</a>, <a href="../plugins/graph/">Graph View</a>, and Unlinked Mentions (<a href="../plugins/backlinks/">Backlinks</a> and <a href="../plugins/outgoing-links/">Outgoing links</a>), and less noticeable in <a href="../plugins/quick-switcher/">Quick Switcher</a> and link suggestions. Select <strong>Manage</strong> to configure excluded files.</p>
+<doc-anchor-target id="override-config-folder">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#override-config-folder">#</doc-anchor-trigger>
+        <span>Override config folder</span>
+    </h4>
+</doc-anchor-target>
+<p>Use a different <a href="../configuration-folder/">config folder</a> than the default one. Must start with a dot.</p>
+<doc-anchor-target id="allow-uri-callbacks">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#allow-uri-callbacks">#</doc-anchor-trigger>
+        <span>Allow URI callbacks</span>
+    </h4>
+</doc-anchor-target>
+<p>Enable the use of x-callback-url through x-success or x-error when handling <a href="../uri/">Obsidian URIs</a>.</p>
+<doc-anchor-target id="rebuild-vault-cache">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#rebuild-vault-cache">#</doc-anchor-trigger>
+        <span>Rebuild vault cache</span>
+    </h4>
+</doc-anchor-target>
+<p>Rebuilds the vault&#x27;s <a href="../data-storage/#metadata-cache">metadata cache</a>. Rebuilding the cache could take a few seconds to a few minutes depending on the size of your vault. Select <strong>Rebuild</strong> to start the process.</p>
+<doc-anchor-target id="appearance">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#appearance">#</doc-anchor-trigger>
+        <span>Appearance</span>
+    </h2>
+</doc-anchor-target>
+<p>The Appearance page contains settings for customizing how Obsidian looks.</p>
+<doc-anchor-target id="base-color-scheme">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#base-color-scheme">#</doc-anchor-trigger>
+        <span>Base color scheme</span>
+    </h3>
+</doc-anchor-target>
+<p>Choose Obsidian&#x27;s default color scheme. Options include:</p>
+<ul>
+<li><strong>Adapt to system</strong> — Matches your operating system&#x27;s light or dark mode.</li>
+<li><strong>Light</strong> — Uses light mode.</li>
+<li><strong>Dark</strong> — Uses dark mode.</li>
+</ul>
+<doc-anchor-target id="accent-color">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#accent-color">#</doc-anchor-trigger>
+        <span>Accent color</span>
+    </h3>
+</doc-anchor-target>
+<p>Choose the accent color used throughout the app. Select the color picker or reset icon to customize.</p>
+<doc-anchor-target id="themes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#themes">#</doc-anchor-trigger>
+        <span>Themes</span>
+    </h3>
+</doc-anchor-target>
+<p>Manage installed <a href="../themes/">themes</a> and browse community themes. Select <strong>Manage</strong> to view and install themes. The dropdown shows your currently active theme. The folder icon ( <img src="../attachments/icons/lucide-folder-open.svg#icon" alt="" /> ) opens the themes folder in your <a href="../configuration-folder/">configuration folder</a>.</p>
+<doc-anchor-target id="current-community-themes">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#current-community-themes">#</doc-anchor-trigger>
+        <span>Current community themes</span>
+    </h3>
+</doc-anchor-target>
+<p>Displays the number of community themes you have installed.</p>
+<doc-anchor-target id="font">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#font">#</doc-anchor-trigger>
+        <span>Font</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="interface-font">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interface-font">#</doc-anchor-trigger>
+        <span>Interface font</span>
+    </h4>
+</doc-anchor-target>
+<p>Set base font for all of Obsidian. Select <strong>Manage</strong> to choose a custom font or enter a font name.</p>
+<doc-anchor-target id="text-font">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#text-font">#</doc-anchor-trigger>
+        <span>Text font</span>
+    </h4>
+</doc-anchor-target>
+<p>Set font for editing and reading views. Select <strong>Manage</strong> to choose a custom font or enter a font name.</p>
+<doc-anchor-target id="monospace-font">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#monospace-font">#</doc-anchor-trigger>
+        <span>Monospace font</span>
+    </h4>
+</doc-anchor-target>
+<p>Set font for places like code blocks and frontmatter. Select <strong>Manage</strong> to choose a custom font or enter a font name.</p>
+<doc-anchor-target id="font-size">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#font-size">#</doc-anchor-trigger>
+        <span>Font size</span>
+    </h4>
+</doc-anchor-target>
+<p>Font size in pixels that affects editing and reading views. Adjust using the slider.</p>
+<doc-anchor-target id="quick-font-size-adjustment">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#quick-font-size-adjustment">#</doc-anchor-trigger>
+        <span>Quick font size adjustment</span>
+    </h4>
+</doc-anchor-target>
+<p>Adjust the font size using <code translate="no" v-pre>Ctrl+Scroll</code> (Windows/Linux) or <code translate="no" v-pre>Cmd+Scroll</code> (macOS), or using the trackpad pinch-zoom gesture.</p>
+<doc-anchor-target id="interface">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#interface">#</doc-anchor-trigger>
+        <span>Interface</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="show-inline-title">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-inline-title">#</doc-anchor-trigger>
+        <span>Show inline title</span>
+    </h4>
+</doc-anchor-target>
+<p>Displays the filename as an editable title inline with the file contents. The inline title acts as a heading within Obsidian but does not add a heading to your note.</p>
+<doc-anchor-target id="show-tab-title-bar">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-tab-title-bar">#</doc-anchor-trigger>
+        <span>Show tab title bar</span>
+    </h4>
+</doc-anchor-target>
+<p>Display the header at the top of every tab.</p>
+<doc-anchor-target id="show-ribbon">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#show-ribbon">#</doc-anchor-trigger>
+        <span>Show ribbon</span>
+    </h4>
+</doc-anchor-target>
+<p>Display vertical toolbar on the side of the window. Learn more about the <a href="../ribbon/">ribbon</a>.</p>
+<doc-anchor-target id="ribbon-menu-configuration">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#ribbon-menu-configuration">#</doc-anchor-trigger>
+        <span>Ribbon menu configuration</span>
+    </h4>
+</doc-anchor-target>
+<p>Configure what commands appear in the ribbon menu. Select <strong>Manage</strong> to customize.</p>
+<blockquote>
+<p>[!info]+ Mobile ribbon configuration
+On mobile, ribbon customization works differently. See <a href="../ribbon/#mobile">Ribbon customization on mobile</a> for details.</p>
+</blockquote>
+<doc-anchor-target id="advanced-3">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#advanced-3">#</doc-anchor-trigger>
+        <span>Advanced</span>
+    </h3>
+</doc-anchor-target>
+<doc-anchor-target id="zoom-level">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zoom-level">#</doc-anchor-trigger>
+        <span>Zoom level</span>
+    </h4>
+</doc-anchor-target>
+<p>Controls the overall zoom level of the app. Adjust using the slider.</p>
+<doc-anchor-target id="native-menus">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#native-menus">#</doc-anchor-trigger>
+        <span>Native menus</span>
+    </h4>
+</doc-anchor-target>
+<p>Menus throughout the app will match the operating system. They will not be affected by your theme.</p>
+<doc-anchor-target id="window-frame-style">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#window-frame-style">#</doc-anchor-trigger>
+        <span>Window frame style</span>
+    </h4>
+</doc-anchor-target>
+<p>Determines the styling of the title bar of Obsidian windows. Requires a full restart to take effect. Options include:</p>
+<ul>
+<li><strong>Obsidian frame</strong> — Uses Obsidian&#x27;s custom window frame.</li>
+<li><strong>Native frame</strong> — Uses your operating system&#x27;s default window frame.</li>
+<li><strong>Hidden frame</strong> — Hides the title bar completely.</li>
+</ul>
+<doc-anchor-target id="custom-app-icon">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#custom-app-icon">#</doc-anchor-trigger>
+        <span>Custom app icon</span>
+    </h4>
+</doc-anchor-target>
+<p>Set a custom icon for the app. Select <strong>Choose</strong> to pick an icon file (<code translate="no" v-pre>.icns</code>, <code translate="no" v-pre>.ico</code>, <code translate="no" v-pre>.png</code>, or <code translate="no" v-pre>.svg</code>). Learn more about <a href="../appearance/#custom-app-icon">custom app icons</a>.</p>
+<doc-anchor-target id="translucent-window">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#translucent-window">#</doc-anchor-trigger>
+        <span>Translucent window</span>
+    </h4>
+</doc-anchor-target>
+<p>Turn on translucency effect to enhance a sense of depth. Best used with dark mode. Not supported on Linux.</p>
+<blockquote>
+<p>[!info]+ macOS only
+This feature is primarily designed for macOS. Learn more about <a href="../appearance/#translucency">translucency</a>.</p>
+</blockquote>
+<doc-anchor-target id="hardware-acceleration">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hardware-acceleration">#</doc-anchor-trigger>
+        <span>Hardware acceleration</span>
+    </h4>
+</doc-anchor-target>
+<p>Turns on Hardware Acceleration, which uses your GPU to make Obsidian smoother. If you turn this off, app performance can be severely degraded but may solve some rare issues.</p>
+<doc-anchor-target id="css-snippets">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#css-snippets">#</doc-anchor-trigger>
+        <span>CSS snippets</span>
+    </h3>
+</doc-anchor-target>
+<p>Manage and view <a href="../snippets/">CSS snippets</a> stored in your vault. CSS Snippets are stored in <code translate="no" v-pre>/vault/.obsidian/snippets/</code>. Select the refresh icon to reload snippets, or the folder icon ( <img src="../attachments/icons/lucide-folder-open.svg#icon" alt="" /> ) to open the snippets folder.</p>
+<doc-anchor-target id="hotkeys">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#hotkeys">#</doc-anchor-trigger>
+        <span>Hotkeys</span>
+    </h2>
+</doc-anchor-target>
+<p>The <a href="../hotkeys/">Hotkeys</a> page allows you to view, set, and customize <a href="../editing-shortcuts/">keyboard shortcuts</a> for commands in Obsidian.</p>
+<p>Use the search bar to filter commands, and select the filter icon to show only commands with assigned hotkeys. To add a hotkey, select the plus (+) icon next to a command. To remove a hotkey, select the X icon next to the keyboard combination.</p>
+<doc-anchor-target id="core-plugins">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#core-plugins">#</doc-anchor-trigger>
+        <span>Core plugins</span>
+    </h2>
+</doc-anchor-target>
+<p><a href="../plugins/">Core plugins</a> are built-in plugins that come with Obsidian. Each plugin adds specific functionality to the app.</p>
+<p>To enable or disable a core plugin, select the toggle next to the plugin name. Select the plus ( <img src="../attachments/icons/lucide-plus-circle.svg#icon" alt="" /> ) icon to view the <a href="../hotkeys/">Hotkeys</a> for the plugin. Select the settings ( <img src="../attachments/icons/lucide-settings.svg#icon" alt="" /> ) icon to open the plugin&#x27;s settings page.</p>
+<p>Use the search bar to filter plugins by name.</p>
+<doc-anchor-target id="community-plugins">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#community-plugins">#</doc-anchor-trigger>
+        <span>Community plugins</span>
+    </h2>
+</doc-anchor-target>
+<p><a href="../community-plugins/">Community plugins</a> are third-party plugins created by the Obsidian community. Browse and install plugins by selecting <strong>Browse</strong>.</p>
+<doc-anchor-target id="restricted-mode">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#restricted-mode">#</doc-anchor-trigger>
+        <span>Restricted mode</span>
+    </h3>
+</doc-anchor-target>
+<p><a href="../plugin-security/#restricted-mode">Restricted mode</a> disables all community plugins for security. Select <strong>Turn on and reload</strong> to enable restricted mode.</p>
+<doc-anchor-target id="current-plugins">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#current-plugins">#</doc-anchor-trigger>
+        <span>Current plugins</span>
+    </h3>
+</doc-anchor-target>
+<p>Displays the number of community plugins you have installed. Select <strong>Check for updates</strong> to check for plugin updates.</p>
+<doc-anchor-target id="installed-plugins">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installed-plugins">#</doc-anchor-trigger>
+        <span>Installed plugins</span>
+    </h3>
+</doc-anchor-target>
+<p>View and manage your installed community plugins. Use the search bar to filter plugins by name. Each plugin has icons for settings, hotkeys, funding, uninstalling, and a toggle to enable or disable it.</p>
+<div id="retype-backlinks">
+    <h2>See also</h2>
+    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="/obsidian/plugins/backlinks/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Backlinks</span>
+                </div>
+                <p>With the Backlinks plugin, you can see all the backlinks for the active note.</p>
+            </div>
+        </a>
+        <a href="/obsidian/syntax/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Basic formatting syntax</span>
+                </div>
+                <p>Learn how to apply basic formatting to your notes in Obsidian, using Markdown.</p>
+            </div>
+        </a>
+        <a href="/obsidian/plugins/command-palette/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Command palette</span>
+                </div>
+                <p>The Command palette plugin lets you run any command directly from your keyboard. It also lets you explore all the available commands and their</p>
+            </div>
+        </a>
+        <a href="/obsidian/community-plugins/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Community plugins</span>
+                </div>
+                <p>Learn how to extend Obsidian with plugins built by the community.</p>
+            </div>
+        </a>
+        <a href="/obsidian/plugins/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Core plugins</span>
+                </div>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
+            </div>
+        </a>
+        <a href="/obsidian/snippets/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>CSS snippets</span>
+                </div>
+                <p>Learn how to change parts of the Obsidian app’s appearance without creating a full theme.</p>
+            </div>
+        </a>
+        <a href="/obsidian/plugins/file-explorer/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>File explorer</span>
+                </div>
+                <p>File explorer is a core plugin that lets you manage files and folders inside your vault.</p>
+            </div>
+        </a>
+        <a href="/obsidian/resources/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Help and support</span>
+                </div>
+                <p>Find support resources, report security or community violations, and learn how to contribute to Obsidian.</p>
+            </div>
+        </a>
+        <a href="/obsidian/links/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Internal links</span>
+                </div>
+                <p>Learn how to link to notes, attachments, and other files from your notes, using internal links.</p>
+            </div>
+        </a>
+        <a href="/obsidian/properties/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Properties</span>
+                </div>
+                <p>Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers.</p>
+            </div>
+        </a>
+        <a href="/obsidian/ribbon/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Ribbon</span>
+                </div>
+                <p>Learn how to use the ribbon, a space for common commands in Obsidian, and customize it on desktop and mobile.</p>
+            </div>
+        </a>
+        <a href="/obsidian/plugins/search/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Search</span>
+                </div>
+                <p>Search is a core plugin that helps you find data in your Obsidian vault by using search terms and operators to narrow down results.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+                
+                <!-- Required only on API pages -->
+                <doc-toolbar-member-filter-no-results></doc-toolbar-member-filter-no-results>
+            </div>
+            <footer id="retype-content-footer" class="clear-both">
+                <div class="flex flex-wrap items-center justify-between mt-14">
+                    <a id="retype-edit-this-page" class="my-2.5 inline-flex items-center text-sm whitespace-nowrap text-body-link font-body-link hover:text-body-link-hover hover:underline" href="https://github.com/obsidianmd/obsidian-help/edit/master/en/User interface/Settings.md" target="_blank" rel="noopener">
+                        <svg class="mr-1.5" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M20 12c-.55 0-1 .45-1 1v7c0 .55-.45 1-1 1H4c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h7c.55 0 1-.45 1-1s-.45-1-1-1H4C2.35 3 1 4.35 1 6v14c0 1.65 1.35 3 3 3h14c1.65 0 3-1.35 3-3v-7c0-.55-.45-1-1-1z" /><path d="M22.21 1.79c-1.18-1.18-3.24-1.18-4.41 0l-9.5 9.5c-.13.13-.22.29-.26.46l-1 4c-.08.34.01.7.26.95.18.2.44.3.7.3.08 0 .16-.01.24-.03l4-1c.18-.04.34-.13.46-.26l9.5-9.5c1.22-1.22 1.22-3.2.01-4.42zm-1.42 3l-9.3 9.3-2.11.53.53-2.11 9.3-9.3c.42-.42 1.16-.42 1.59 0 .43.43.43 1.15-.01 1.58z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        <span>Edit this page</span>
+                    </a>
+                </div>
+            
+                <nav id="retype-nextprev" class="print:hidden flex mt-14">
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../ribbon/">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                            <span>
+                                <span class="block text-xs font-normal text-base-text-muted">Previous</span>
+                                <span class="block mt-1">Ribbon</span>
+                            </span>
+                        </a>
+                    </div>
+            
+                    <div class="w-1/2">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../sidebar/">
+                            <span>
+                                <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
+                                <span class="block mt-1">Sidebar</span>
+                            </span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </main>
+
+        <div id="retype-page-footer" class="print:border-none border-t border-base-border pt-6 mb-8">
+            <footer class="flex flex-wrap items-center justify-between print:justify-center">
+                <div id="retype-footer-links" class="print:hidden">
+                    <ul class="flex flex-wrap items-center text-sm">
+                    </ul>
+                </div>
+                <div id="retype-copyright" class="print:justify-center py-2 text-footer-text font-footer-link text-sm leading-relaxed"><p>© 2026 Obsidian</p></div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Rendered if sidebar right is enabled -->
+    <!-- Sidebar right skeleton-->
+    <div v-cloak class="fixed top-0 bottom-0 right-0 translate-x-full bg-sidebar-right-bg border-sidebar-right-border lg:sticky lg:border-l lg:shrink-0 lg:pt-6 lg:translate-x-0 sm:w-1/2 lg:w-64 lg:z-0 md:w-104 sidebar-right skeleton">
+        <div class="pl-5">
+            <div class="w-32 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-48 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+            <div class="w-40 h-3 mb-4 bg-skeleton-bg rounded-full loading"></div>
+        </div>
+    </div>
+
+    <!-- User should be able to hide sidebar right -->
+    <doc-sidebar-right v-cloak></doc-sidebar-right>
+</div>
+
+        </div>
+    </div>
+
+    <doc-search-mobile></doc-search-mobile>
+    <doc-back-to-top></doc-back-to-top>
+</div>
+
+
+    <div id="retype-overlay-target"></div>
+
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Settings", level: 1, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+</body>
+</html>

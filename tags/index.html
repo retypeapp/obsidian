@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825319958261" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -236,8 +236,12 @@ tags:
     </h2>
 </doc-anchor-target>
 <p>Nested tags define tag hierarchies that make it easier to find and filter related tags.</p>
-<p>Create nested tags by using forward slashes (<code translate="no" v-pre>/</code>) in the tag name, for example  <code translate="no" v-pre>#inbox/to-read</code> and <code translate="no" v-pre>#inbox/processing</code>.</p>
-<p>Both the <a href="../plugins/search/">Search</a> and <a href="../plugins/tags/">Tags view</a> plugins support nested tags.</p>
+<p>Create nested tags by using forward slashes (<code translate="no" v-pre>/</code>) in the tag name, for example <code translate="no" v-pre>#inbox/to-read</code> and <code translate="no" v-pre>#inbox/processing</code>.</p>
+<ul>
+<li>In <a href="../plugins/search/">Search</a>, <code translate="no" v-pre>tag:inbox</code> will match <code translate="no" v-pre>#inbox</code> as well as all nested tags such as <code translate="no" v-pre>#inbox/to-read</code>.</li>
+<li>In the <a href="../plugins/tags/">Tags view</a>, nested tags are shown as belonging to their parent tag.</li>
+<li>In <a href="../bases/">Bases</a>, nested tags are recognized by the <a href="../bases/functions/#hastag">&#x60;hasTag&#x60;</a> function, so <code translate="no" v-pre>file.hasTag(&quot;a&quot;)</code> will match both <code translate="no" v-pre>#a</code> and <code translate="no" v-pre>#a/b</code>.</li>
+</ul>
 <doc-anchor-target id="tag-format">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#tag-format">#</doc-anchor-trigger>
@@ -283,6 +287,22 @@ For example, creating #Tag and then #TAG will display #Tag for both.</p>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="/obsidian/bases/functions/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Functions</span>
+                </div>
+                <p>This page details the functions used in Obsidian Bases to manipulate data from properties in filters and formulas.</p>
+            </div>
+        </a>
+        <a href="/obsidian/cli/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Obsidian CLI</span>
+                </div>
+                <p>Anything you can do in Obsidian can be done from the command line.</p>
+            </div>
+        </a>
         <a href="/obsidian/properties/" class="group no-link">
             <div class="flex flex-col">
                 <div>
@@ -296,7 +316,7 @@ For example, creating #Tag and then #TAG will display #Tag for both.</p>
                 <div>
                     <span>Views</span>
                 </div>
-                <p>Views allow you to organize the information in a Base in multiple different ways. A base can contain several views, and each view can have a unique</p>
+                <p>Views allow you to organize the information in a Base in multiple ways. A base can contain several views, and each view can have a unique</p>
             </div>
         </a>
     </div>

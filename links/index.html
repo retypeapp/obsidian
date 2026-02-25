@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825319958261" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -207,7 +207,7 @@
 <div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Learn how to link to notes, attachments, and other files from your notes, using internal links.</div>
 <p id="b15695">Learn how to link to notes, attachments, and other files from your notes, using <em>internal links</em>. By linking notes, you can create a network of knowledge. </p>
 <p>Obsidian can automatically update internal links in your vault when you rename a file. If you want to be prompted instead, you can disable it under:</p>
-<p>Settings → Files &amp; Links → Automatically update internal links.</p>
+<p><strong><a href="../settings/">Settings</a></strong> → <strong><a href="../settings/#files-and-links">Files and links</a></strong> → <strong><a href="../settings/#automatically-update-internal-links">Automatically update internal links</a></strong>.</p>
 <doc-anchor-target id="supported-formats-for-internal-links">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#supported-formats-for-internal-links">#</doc-anchor-trigger>
@@ -216,10 +216,10 @@
 </doc-anchor-target>
 <p>Obsidian supports the following link formats:</p>
 <ul>
-<li>Wikilink: <code translate="no" v-pre>[[Three laws of motion]]</code></li>
-<li>Markdown: <code translate="no" v-pre>[Three laws of motion](Three%20laws%20of%20motion.md)</code></li>
+<li>Wikilink: <code translate="no" v-pre>[[Three laws of motion]]</code> or <code translate="no" v-pre>[[Three laws of motion.md]]</code></li>
+<li>Markdown: <code translate="no" v-pre>[Three laws of motion](Three%20laws%20of%20motion)</code> or <code translate="no" v-pre>[Three laws of motion](Three%20laws%20of%20motion.md)</code></li>
 </ul>
-<p>The examples above are equivalent—they appear the same way in the editor, and links to the same note.</p>
+<p>The examples above are equivalent, and they appear the same way in the editor and links to the same note.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -241,10 +241,29 @@
 <p>By default, due to its more compact format, Obsidian generates links using the Wikilink format. If interoperability is important to you, you can disable Wikilinks and use Markdown links instead.</p>
 <p>To use the Markdown format:</p>
 <ol>
-<li>Open Settings.</li>
-<li>Under Files &amp; Links, disable Use [[Wikilink]].</li>
+<li>Open <strong><a href="../settings/">Settings</a></strong>.</li>
+<li>Under <strong>Files and Links</strong>, disable <strong>Use [[Wikilinks]]</strong>.</li>
 </ol>
 <p>Even if you disable the Wikilink format, you can still autocomplete links by typing two square brackets <code translate="no" v-pre>[[</code>. When you select one of the suggested files, Obsidian instead generates a Markdown link.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Invalid characters</h5>
+<p>A string which contains the following characters may not work as a link: <code translate="no" v-pre># | ^ : %% [[ ]]</code>.</p>
+<p>We recommend avoiding using those characters and practicing <a href="https://stackoverflow.com/questions/1976007/what-characters-are-forbidden-in-windows-and-linux-directory-names" class="outbound" target="_blank"><span>safe filename practices</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="link-to-a-file">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#link-to-a-file">#</doc-anchor-trigger>
@@ -274,6 +293,24 @@
         </div>
     </div>
 </div>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-info" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Excluded files</h5>
+<p>Files matching your <a href="../settings/#excluded-files">Excluded files</a> patterns are deprioritized in link suggestions when creating internal links.</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="link-to-a-heading-in-a-note">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#link-to-a-heading-in-a-note">#</doc-anchor-trigger>
@@ -286,7 +323,7 @@
 <p>For example, <code translate="no" v-pre>[[#Preview a linked file]]</code> will create a link to <doc-anchor-trigger to="#preview-a-linked-file">Preview a linked file</doc-anchor-trigger>.</p>
 <p><strong>Linking to a heading in another note</strong></p>
 <p>To link to a heading in another note, add a hash (<code translate="no" v-pre>#</code>) at the end of the link destination, followed by the heading text.</p>
-<p>For example, <code translate="no" v-pre>[[Obsidian#Links are first-class citizens]]</code> will create a link to <a href="../obsidian/#links-are-first-class-citizens">Obsidian &gt; Links are first class citizens</a>.</p>
+<p>For example, <code translate="no" v-pre>[[About Obsidian#Links are first-class citizens]]</code> will create a link to <a href="../obsidian/#links-are-first-class-citizens">About Obsidian &gt; Links are first class citizens</a>.</p>
 <p><strong>Linking to subheadings</strong></p>
 <p>You can add multiple hash symbols for each subheading.</p>
 <p>For example, <code translate="no" v-pre>[[Help and support#Questions and advice#Report bugs and request features]]</code> will create a link to <a href="../resources/#questions-and-advicereport-bugs-and-request-features">Help and support &gt; Questions and advice#Report bugs and request features</a>.</p>
@@ -319,7 +356,7 @@
 </doc-anchor-target>
 <p>A block is a unit of text in your note, such as a paragraph, block quote, or list item.</p>
 <p>You can link to a block by adding <code translate="no" v-pre>#^</code> at the end of your link destination, followed by a unique block identifier. For example: <code translate="no" v-pre>[[2023-01-01#^37066d]]</code>. Fortunately, you don&#x27;t need to manually find the identifier—when you type the caret (<code translate="no" v-pre>^</code>), a list of suggestions will appear, allowing you to select the correct block.</p>
-<p>For <em>simple paragraphs</em>, place the block identifier at the end of the line:</p>
+<p>For <em>simple paragraphs</em>, place a blank space followed by a caret <code translate="no" v-pre>^</code> and the block identifier at the end of the line:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">The quick purple gem dashes through the paragraph with blazing speed. Pen in hand and a paperclip in the other, Gemmy works toward her goal of making the world of note-taking a happier place. {#37066d}</code></pre>
 </doc-codeblock></div>
@@ -375,7 +412,7 @@ This is the tale of Gemmy, the Unhelpful assistant.  </code></pre>
         </div>
     </div>
 </div>
-<p>You can also create human-readable block identifiers by adding a blank space followed by the identifier. Block identifiers can only consist of Latin letters, numbers, and dashes.</p>
+<p>You can also create human-readable block identifiers by adding a blank space followed by a caret (<code translate="no" v-pre>^</code>) and the identifier. Block identifiers can only consist of Latin letters, numbers, and dashes.</p>
 <p>For example, add <code translate="no" v-pre>^quote-of-the-day</code> at the end of a block:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre translate="no" class="language-markdown"><code v-pre class="language-markdown">&quot;You do not rise to the level of your goals. You fall to the level of your systems.&quot; by James Clear {#quote-of-the-day}</code></pre>
@@ -409,7 +446,7 @@ This is the tale of Gemmy, the Unhelpful assistant.  </code></pre>
 <li><code translate="no" v-pre>[[Example]]</code> displays as <a href="../attachments/style-guide-zoomed-example.png">Example</a></li>
 <li><code translate="no" v-pre>[[Example#Details]]</code> displays as <a href="../attachments/style-guide-zoomed-example.png#details">Example &gt; Details</a></li>
 </ul>
-<p>You can change how a link is displayed by customising its link text:</p>
+<p>You can change how a link is displayed by customizing its link text:</p>
 <p><strong>Wikilink format</strong>:<br />
 Use a vertical bar (<code translate="no" v-pre>|</code>) to change the display text.</p>
 <ul>
@@ -417,13 +454,13 @@ Use a vertical bar (<code translate="no" v-pre>|</code>) to change the display t
 <li><code translate="no" v-pre>[[Example#Details|Section name]]</code> appears as <a href="../attachments/style-guide-zoomed-example.png#details">Section name</a></li>
 </ul>
 <p><strong>Markdown format</strong>:<br />
-Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how the link appears.</p>
+Use <code translate="no" v-pre>[Display text](Link URL)</code> to customize how the link appears.</p>
 <ul>
 <li><code translate="no" v-pre>[Custom name](Example.md)</code> appears as <a href="example.md">Custom name</a></li>
 <li><code translate="no" v-pre>[Section name](Example.md#Details)</code> appears as <a href="example.md#Details">Section name</a></li>
 </ul>
 <p>This method is helpful for one-off situations where you want to change how a link looks in a specific context. If you want to set up an alternate link name that you can reuse throughout your vault, consider using an <a href="../aliases/">alias</a> instead.</p>
-<p>For example, if you regularly refer to <code translate="no" v-pre>[[Three laws of motion]]</code> as <code translate="no" v-pre>[[The 3 laws]]</code>, adding &quot;3 laws&quot; as an alias allows you to type just that—no need to add custom display text each time.</p>
+<p>For example, if you regularly refer to <code translate="no" v-pre>[[Three laws of motion]]</code> as <code translate="no" v-pre>[[The 3 laws]]</code>, adding &quot;3 laws&quot; as an alias lets you type just that — no need to add custom display text each time.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-tip"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -436,7 +473,7 @@ Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how 
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Tip</h5>
-<p>Use <doc-anchor-trigger to="#change-the-link-display-text">link display text</doc-anchor-trigger> when you want to customise how a link looks <em>in a specific place</em>.</p>
+<p>Use <doc-anchor-trigger to="#change-the-link-display-text">link display text</doc-anchor-trigger> when you want to customize how a link looks <em>in a specific place</em>.</p>
 <p>Use <a href="../aliases/">aliases</a> when you want to refer to the same note using <em>different names</em> throughout your vault.
 ^callout-internal-links-link-text</p>
         </div>
@@ -466,10 +503,18 @@ Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how 
         </div>
     </div>
 </div>
-<p>To preview a linked file, press <code translate="no" v-pre>Ctrl</code> (or <code translate="no" v-pre>Cmd</code> on macOS) while hovering the cursor over the link. A preview of the file content appears next to the cursor.</p>
+<p>To preview a linked file, hover over an internal link. While in editing mode, press <code translate="no" v-pre>Ctrl</code> (or <code translate="no" v-pre>Cmd</code> on macOS) while hovering the cursor over the link. A preview of the file content appears next to the cursor.</p>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="/obsidian/obsidian/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>About Obsidian</span>
+                </div>
+                <p>Obsidian is both a Markdown editor and a knowledge base app.</p>
+            </div>
+        </a>
         <a href="/obsidian/advanced-syntax/" class="group no-link">
             <div class="flex flex-col">
                 <div>
@@ -534,20 +579,12 @@ Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how 
                 <p>This page explains how Obsidian stores its data on your device.</p>
             </div>
         </a>
-        <a href="/obsidian/obsidian/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <span>Obsidian</span>
-                </div>
-                <p>Obsidian is both a Markdown editor and a knowledge base app.</p>
-            </div>
-        </a>
         <a href="/obsidian/obsidian-flavored-markdown/" class="group no-link">
             <div class="flex flex-col">
                 <div>
                     <span>Obsidian Flavored Markdown</span>
                 </div>
-                <p>Obsidian strives for maximum capability without breaking any existing formats. As a result, we use a combination of flavors of Markdown.</p>
+                <p>Learn about Obsidian Flavored Markdown, including supported extensions and how Markdown interacts with HTML elements.</p>
             </div>
         </a>
         <a href="/obsidian/properties/" class="group no-link">
@@ -556,6 +593,14 @@ Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how 
                     <span>Properties</span>
                 </div>
                 <p>Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers.</p>
+            </div>
+        </a>
+        <a href="/obsidian/settings/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Settings</span>
+                </div>
+                <p>Learn how to customize Obsidian through the Settings interface.</p>
             </div>
         </a>
     </div>
@@ -585,10 +630,10 @@ Use <code translate="no" v-pre>[Display text](Link URL)</code> to customise how 
                     </div>
             
                     <div class="w-1/2">
-                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../obsidian/">
+                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-body-link border border-base-border hover:border-base-border-hover rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../2fa/">
                             <span>
                                 <span class="block text-xs font-normal text-right text-base-text-muted">Next</span>
-                                <span class="block mt-1">Obsidian</span>
+                                <span class="block mt-1">2 factor authentication</span>
                             </span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                         </a>

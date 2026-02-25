@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -262,6 +262,11 @@
 <li>Back up your vault using third-party tools.</li>
 </ul>
 </li>
+<li><a href="region/">Sync regions</a>
+<ul>
+<li>Move your Sync vault to a different regional server.</li>
+</ul>
+</li>
 <li><a href="troubleshoot/">Troubleshoot Obsidian Sync</a>
 <ul>
 <li>Common syncing issues and solutions.</li>
@@ -301,7 +306,7 @@
                 <div>
                     <span>Back up your Obsidian files</span>
                 </div>
-                <p>If you haven't backed up your computer yet, it's a good idea to start now! Obsidian’s File recovery plugin is a useful tool, but it only backs up your</p>
+                <p>If you haven't backed up your computer yet, start now! Obsidian's File recovery plugin is useful but limited. It can only recover a certain amount of</p>
             </div>
         </a>
         <a href="/obsidian/sync/collaborate/" class="group no-link">
@@ -317,7 +322,15 @@
                 <div>
                     <span>Core plugins</span>
                 </div>
-                <p>This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team.</p>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
+            </div>
+        </a>
+        <a href="/obsidian/plugins/file-recovery/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>File recovery</span>
+                </div>
+                <p>File Recovery helps protect your work from unintentional data loss by automatically saving snapshots of your notes at regular intervals.</p>
             </div>
         </a>
         <a href="/obsidian/sync/faq/" class="group no-link">
@@ -344,12 +357,12 @@
                 <p>This page explains how Obsidian stores its data on your device.</p>
             </div>
         </a>
-        <a href="/obsidian/credit/" class="group no-link">
+        <a href="/obsidian/sync/vault-types/" class="group no-link">
             <div class="flex flex-col">
                 <div>
-                    <span>Obsidian Credit</span>
+                    <span>Local and remote vaults</span>
                 </div>
-                <p>Obsidian Credit is a type of prepaid credit that can be bought in advance and applied toward purchases of any Obsidian service or license. Obsidian</p>
+                <p>This page describes the differences between local and remote vaults in practice.</p>
             </div>
         </a>
         <a href="/obsidian/sync/plans/" class="group no-link">
@@ -358,14 +371,6 @@
                     <span>Plans and storage limits</span>
                 </div>
                 <p>Learn about the different plan options we have available for Obsidian Sync.</p>
-            </div>
-        </a>
-        <a href="/obsidian/refunds/" class="group no-link">
-            <div class="flex flex-col">
-                <div>
-                    <span>Refund policy</span>
-                </div>
-                <p>We offer full refunds within 7 days of purchase with no questions asked for the following services:</p>
             </div>
         </a>
         <a href="/obsidian/sync-notes/" class="group no-link">

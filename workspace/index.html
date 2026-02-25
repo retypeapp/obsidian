@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Workspace</title>
     <meta name="title" content="Workspace">
-    <meta name="description" content="In the Obsidian desktop app the workspace includes:">
+    <meta name="description" content="Learn about the Obsidian workspace and its core components on desktop and mobile.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/workspace/">
@@ -22,18 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/workspace/">
     <meta property="og:title" content="Workspace">
-    <meta property="og:description" content="In the Obsidian desktop app the workspace includes:">
+    <meta property="og:description" content="Learn about the Obsidian workspace and its core components on desktop and mobile.">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,6 +203,8 @@
         <span>Workspace</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Learn about the Obsidian workspace and its core components on desktop and mobile.</div>
+<p>The workspace is the main container for all the components that make up the Obsidian interface. It consists of different elements arranged around your notes, allowing you to customize how you view and interact with your content.</p>
 <doc-anchor-target id="desktop">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#desktop">#</doc-anchor-trigger>
@@ -211,21 +213,18 @@
 </doc-anchor-target>
 <p>In the Obsidian desktop app the workspace includes:</p>
 <ul>
-<li><a href="../tabs/#organize-your-tabs-and-windows">Tab groups</a>, in the central content area which can be split vertically or horizontally
+<li><a href="../ribbon/">Ribbon</a> running vertically on the left side of the app</li>
+<li><a href="../sidebar/">Sidebars</a> on the left and right side (can be collapsed)
+<ul>
+<li><a href="../sidebar/#tab-groups">Sidebar tab groups</a> (can be split vertically)</li>
+<li><a href="../sidebar/#tabs">Sidebar tabs</a></li>
+</ul>
+</li>
+<li><a href="../tabs/#organize-your-tabs-and-windows">Tab groups</a> in the central content area (can be split vertically or horizontally)
 <ul>
 <li><a href="../tabs/">Tabs</a></li>
 </ul>
 </li>
-<li><a href="../sidebar/">Sidebars</a> which can be collapsed on the left and right side
-<ul>
-<li><a href="../sidebar/#tab-groups">Sidebar tab groups</a> which can be split vertically
-<ul>
-<li><a href="../sidebar/#tabs">Sidebar tabs</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="../ribbon/">Ribbon</a> running vertically on the left side of the app</li>
 <li><a href="../status-bar/">Status bar</a> in the bottom right corner</li>
 </ul>
 <doc-anchor-target id="mobile">
@@ -236,15 +235,25 @@
 </doc-anchor-target>
 <p>In the Obsidian mobile app the workspace includes:</p>
 <ul>
-<li><a href="../tabs/">Tabs</a></li>
-<li><a href="../mobile/">Editor toolbar</a> which appears above the keyboard when editing</li>
-<li><a href="../sidebar/">Sidebars</a> can be opened using left and right swipe gestures</li>
-<li><a href="../mobile/#navigation-bar">Navigation bar</a> at the bottom of the screen
-<ul>
-<li><a href="../ribbon/">Ribbon menu</a> contains customizable actions</li>
+<li><a href="../tabs/">Tabs</a> managed from the tab counter in the <a href="../mobile/#navigation-bar">Navigation bar</a></li>
+<li><a href="../sidebar/">Sidebars</a> (opened using left and right swipe gestures)</li>
+<li><a href="../mobile/#navigation-bar">Navigation bar</a> at the bottom of the screen</li>
+<li><a href="../ribbon/">Ribbon menu</a> in the Navigation bar (contains customizable actions)</li>
+<li><a href="../mobile/">Editor toolbar</a> above the keyboard when editing</li>
 </ul>
-</li>
-</ul>
+<div id="retype-backlinks">
+    <h2>See also</h2>
+    <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
+        <a href="/obsidian/cli/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Obsidian CLI</span>
+                </div>
+                <p>Anything you can do in Obsidian can be done from the command line.</p>
+            </div>
+        </a>
+    </div>
+</div>
 
                 
                 <!-- Required only on API pages -->

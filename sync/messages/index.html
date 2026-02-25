@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Status icon and messages</title>
     <meta name="title" content="Status icon and messages">
-    <meta name="description" content="This page explains the Obsidian Sync status icons and provides details about the sync log.">
+    <meta name="description" content="This page explains the Obsidian Sync status icons and provides details about the sync activity log.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/sync/messages/">
@@ -22,18 +22,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/sync/messages/">
     <meta property="og:title" content="Status icon and messages">
-    <meta property="og:description" content="This page explains the Obsidian Sync status icons and provides details about the sync log.">
+    <meta property="og:description" content="This page explains the Obsidian Sync status icons and provides details about the sync activity log.">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,8 +203,8 @@
         <span>Status icon and messages</span>
     </h1>
 </doc-anchor-target>
-<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">This page explains the Obsidian Sync status icons and provides details about the sync log.</div>
-<p>Obsidian Sync provides several elements to indicate sync status, mainly the <doc-anchor-trigger to="#sync-status-icon">Sync status icon</doc-anchor-trigger> and <doc-anchor-trigger to="#sync-log">Sync log</doc-anchor-trigger>. Details about version control in Obsidian Sync are covered in the <a href="../../obsidian-sync/version-history/">Version history</a> page.</p>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">This page explains the Obsidian Sync status icons and provides details about the sync activity log.</div>
+<p>Obsidian Sync provides several elements to indicate sync status, mainly the <doc-anchor-trigger to="#sync-status-icon">Sync status icon</doc-anchor-trigger> and <doc-anchor-trigger to="#sync-activity-log">Sync activity log</doc-anchor-trigger>. Details about version control in Obsidian Sync are covered in the <a href="../../obsidian-sync/version-history/">Version history</a> page.</p>
 <doc-anchor-target id="sync-status-icon">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#sync-status-icon">#</doc-anchor-trigger>
@@ -214,7 +214,7 @@
 <p>The Sync status icon is located in the <a href="../../status-bar/">Status bar</a> on the desktop version and in the <a href="../../sidebar/#open-hidden-sidebars">right sidebar</a> on mobile and tablet. The icon reflects various sync states:</p>
 <ul>
 <li><img src="../../attachments/icons/obsidian-icon-sync-synced.svg#icon" alt="" /> <strong>Synced</strong>: Obsidian Sync has fully synced your files. This icon is typically green.</li>
-<li><img src="../../attachments/icons/obsidian-icon-sync-syncing.svg" alt="" /> <strong>Syncing</strong>: Obsidian is currently updating the remote vault. This icon is usually purple.</li>
+<li><img src="../../attachments/icons/obsidian-icon-sync-syncing.svg#icon" alt="" /> <strong>Syncing</strong>: Obsidian is currently updating the remote vault. This icon is usually purple.</li>
 <li><img src="../../attachments/icons/obsidian-icon-sync-paused.svg#icon" alt="" /> <strong>Paused</strong>: Syncing has been paused, but Obsidian is still connected to the remote vault. The icon is typically purple.</li>
 <li><img src="../../attachments/icons/obsidian-icon-sync-disconnected.svg#icon" alt="" /> <strong>Disconnected</strong>: The Sync core plugin is active, but the <a href="../vault-types/">local vault</a> is not connected to a remote vault. This icon is typically red.</li>
 </ul>
@@ -222,17 +222,24 @@
 <ul>
 <li><img src="../../attachments/icons/obsidian-icon-sync-paused.svg#icon" alt="" /> Pause (or <img src="../../attachments/icons/lucide-circle-play.svg#icon" alt="" /> Resume if paused)</li>
 <li><img src="../../attachments/icons/lucide-history.svg#icon" alt="" /> <a href="../../obsidian-sync/version-history/">Version history</a> (Greyed out if not viewing a note)</li>
-<li><img src="../../attachments/icons/lucide-align-left.svg#icon" alt="" /> Open <doc-anchor-trigger to="#sync-log">Sync log</doc-anchor-trigger></li>
+<li><img src="../../attachments/icons/lucide-align-left.svg#icon" alt="" /> Open <doc-anchor-trigger to="#sync-activity-log">Sync log</doc-anchor-trigger></li>
 <li><img src="../../attachments/icons/lucide-trash-2.svg#icon" alt="" /> <a href="../../obsidian-sync/version-history/#restore-a-deleted-file">Deleted files</a></li>
 <li><img src="../../attachments/icons/lucide-cog.svg#icon" alt="" /> <a href="../settings/">Sync settings</a></li>
 </ul>
-<doc-anchor-target id="sync-log">
+<doc-anchor-target id="sync-activity-log">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#sync-log">#</doc-anchor-trigger>
-        <span>Sync log</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#sync-activity-log">#</doc-anchor-trigger>
+        <span>Sync activity log</span>
     </h2>
 </doc-anchor-target>
-<p>Obsidian Sync includes a detailed Sync log that tracks interactions between your files and the remote vault. Whether files are being uploaded, deleted, or encountering issues like account expiration or merge conflicts, these logs provide key troubleshooting information.</p>
+<p>Obsidian Sync includes a detailed sync log that tracks all interactions between your local files and the remote vault. The log shows uploads, downloads, deletions, and any issues like merge conflicts or connectivity problems.</p>
+<p><strong>Access the activity log:</strong></p>
+<ul>
+<li>Click the sync status icon in the status bar</li>
+<li>Go to <strong><a href="../../settings/">Settings</a> → Sync → Activity log</strong></li>
+<li>Use <strong>Command palette → Sync: Open activity log</strong></li>
+</ul>
+<p>The log provides timestamps and details for each sync operation, making it useful for troubleshooting sync issues.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -340,7 +347,7 @@ This issue typically occurs on mobile devices when there isn&#x27;t enough stora
 Your account has exceeded the <a href="../faq/#how-large-can-each-remote-vault-be">maximum storage size</a>. Attachments and version history contribute to this size. Even if your vault seems smaller than the limit, older versions and files can push it over.</p>
 <p>To reduce vault size:</p>
 <ol>
-<li>Open <strong>Settings → Sync</strong>.</li>
+<li>Open <strong><a href="../../settings/">Settings</a> → Sync</strong>.</li>
 <li>Use the options under <strong>Vault size over limit</strong> to remove large files.</li>
 </ol>
 <p><strong>Vault not found</strong><br />
@@ -352,9 +359,12 @@ Your account has exceeded the <a href="../faq/#how-large-can-each-remote-vault-b
 <li>The subscription was canceled or refunded, resulting in the remote vault&#x27;s deletion.</li>
 </ol>
 <p>In these cases, you&#x27;ll need to <a href="../setup/#disconnect-from-a-remote-vault">disconnect from the remote vault</a> and <a href="../setup/#create-a-new-remote-vault">create a new remote vault</a>, ensuring your local data is preserved.</p>
-<p><strong>Your subscription to Obsidian sync has expired.</strong><br />
+<p><strong>Failed to authenticate: Your subscription to Obsidian Sync has expired</strong><br />
 Your account is now in a fully expired status as we were unable to process the payment on file.</p>
 <p>To continue using Obsidian Sync, you will need to resubscribe within <a href="https://obsidian.md/account/sync" class="outbound" target="_blank"><span>your account</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</p>
+<p><strong>Failed to authenticate: Not logged in</strong></p>
+<p>Obsidian Sync has detected that you are not currently logged in. You will need to log back in on the app in the <a href="../../settings/#generalaccount">Account</a> section of <strong><a href="../../settings/">Settings</a></strong>.</p>
+<p>In some cases, a community plugin can also prevent Obsidian Sync from being able to confirm your account&#x27;s login status. Please enter <strong><a href="../../plugin-security/#restricted-mode">Restricted mode</a></strong> and try again.</p>
 <doc-anchor-target id="network-messages">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#network-messages">#</doc-anchor-trigger>

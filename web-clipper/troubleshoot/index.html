@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,12 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825319958261" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -250,7 +250,7 @@
     </h4>
 </doc-anchor-target>
 <ul>
-<li>Make sure the <a href="../../extending-obsidian/obsidian-uri/">Obsidian URI</a> protocol <a href="../../extending-obsidian/obsidian-uri/#register-obsidian-uri">is registered</a>.</li>
+<li>Make sure the <a href="../../uri/">Obsidian URI</a> protocol <a href="../../uri/#register-obsidian-uri">is registered</a>.</li>
 <li>If you are using Firefox you may need to <a href="https://kb.mozillazine.org/Register_protocol" class="outbound" target="_blank"><span>register it the browser settings</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
 </ul>
 <doc-anchor-target id="obsidian-opens-but-only-the-file-name-is-saved">
@@ -260,15 +260,22 @@
     </h4>
 </doc-anchor-target>
 <p>It is likely that Obsidian cannot access your clipboard. Clipboard access is necessary to pass data from your browser to Obsidian. Your configuration can affect how apps are sandboxed, and clipboard permissions.</p>
-<p>If you use Wayland, make sure that Obsidian has the permissions to read the clipboard when the app is not focused. For example, in your Hyprland configuration:</p>
+<p>If you use Wayland, make sure that Obsidian has the permissions to read the clipboard when the app is not focused. This preference may be in your tiling window manager, e.g. Hyprland or Sway.</p>
+<p>If you use Hyprland:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre translate="no" class="language-ini"><code v-pre class="language-ini"># hyprland.conf
+<pre translate="no" class="language-ini"><code v-pre class="language-ini"># ~/.config/hypr/hyprland.conf
 misc {
     focus_on_activate = true
 }</code></pre>
 </doc-codeblock></div>
+<p>If you use Sway:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-ini"><code v-pre class="language-ini"># ~/.config/sway/config
+for_window [class=&quot;obsidian&quot;] focus_on_window_activation focus</code></pre>
+</doc-codeblock></div>
 <ul>
 <li>If you use Flatpak consider trying an <a href="https://obsidian.md/download" class="outbound" target="_blank"><span>officially supported Obsidian version</span><svg xmlns="http://www.w3.org/2000/svg" class="retype-outbound-trigger docs-icon ml-1" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"/><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"/></g></svg></a>.</li>
+<li>If you use KDE go to to <strong>System Settings</strong> → <strong>Window Management</strong> → <strong>Window Rules</strong> and allow Obsidian to take focus, <a href="../../attachments/web-clipper-kde.png">see screenshot</a>.</li>
 <li>As a fallback, try switching to <strong>Legacy mode</strong> in <strong>Web Clipper Settings</strong> → <strong>General</strong>. This will bypass the clipboard and save content directly via URI. Note that this will limit the number of characters that can be clipped depending on your browser and Linux distribution.</li>
 </ul>
 <doc-anchor-target id="ios-and-ipados">
@@ -287,12 +294,12 @@ misc {
 </ol>
 <p>To allow Web Clipper to run on all websites:</p>
 <ol>
-<li>Go to iOS <strong>Settings</strong> →  <strong>Apps</strong> →  <strong>Safari</strong> →  <strong>Extensions</strong>.</li>
+<li>Go to iOS <strong><a href="../../settings/">Settings</a></strong> →  <strong>Apps</strong> →  <strong>Safari</strong> →  <strong>Extensions</strong>.</li>
 <li>Under <strong>Permissions</strong> allow it to run on all websites.</li>
 </ol>
 <p>To allow Obsidian to always receive Web Clipper content:</p>
 <ol>
-<li>Go to iOS <strong>Settings</strong> →  <strong>Apps</strong> →  <strong>Obsidian</strong>.</li>
+<li>Go to iOS <strong><a href="../../settings/">Settings</a></strong> →  <strong>Apps</strong> →  <strong>Obsidian</strong>.</li>
 <li>Set <strong>Paste from other apps</strong> to <strong>Allow</strong>.</li>
 </ol>
 <div id="retype-backlinks">

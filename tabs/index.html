@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>Tabs</title>
     <meta name="title" content="Tabs">
-    <meta name="description" content="Tabs in Obsidian work much like tabs in other apps, such as web browsers.">
+    <meta name="description" content="Learn how to open, organize, and manage tabs in Obsidian, including pinning, stacking, and linked views.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/tabs/">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/tabs/">
     <meta property="og:title" content="Tabs">
-    <meta property="og:description" content="Tabs in Obsidian work much like tabs in other apps, such as web browsers.">
+    <meta property="og:description" content="Learn how to open, organize, and manage tabs in Obsidian, including pinning, stacking, and linked views.">
     <meta property="og:image" content="https://user-images.githubusercontent.com/693981/188205363-0f24b2a5-3706-4a8c-b38b-7a66baa68ce6.gif">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -33,11 +33,11 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../favicon.ico" />
-    <link href="../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -207,8 +207,27 @@
         <span>Tabs</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Learn how to open, organize, and manage tabs in Obsidian, including pinning, stacking, and linked views.</div>
 <p>Tabs in Obsidian work much like tabs in other apps, such as web browsers.</p>
 <p>You can open as many tabs as you want in Obsidian. You can also arrange tabs to create custom layouts that persist until the next time you open the app.</p>
+<div class="flex mb-6">
+    <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-primary"></div>
+    <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
+        <div class="flex items-center ml-4 h-7">
+            <svg xmlns="http://www.w3.org/2000/svg" class="mb-px text-callout-primary" width="22" height="22" viewBox="0 0 24 24" role="presentation">
+                <g fill="currentColor"><g>
+                    <path d="M12 1C5.93 1 1 5.93 1 12s4.93 11 11 11 11-4.93 11-11S18.07 1 12 1zm0 20c-4.96 0-9-4.04-9-9s4.04-9 9-9 9 4.04 9 9-4.04 9-9 9z"></path>
+                    <path d="M12 11c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1s1-.45 1-1v-4c0-.55-.45-1-1-1zM12.01 7c-.56 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"></path>
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                </g></g>
+            </svg>
+        </div>
+        <div class="pr-5 ml-3 w-full">
+            <h5>Mobile tabs</h5>
+<p>On mobile, you can manage open tabs from the tab counter in the <a href="../mobile/#navigation-bar">Navigation bar</a>.</p>
+        </div>
+    </div>
+</div>
 <doc-anchor-target id="open-a-new-tab">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#open-a-new-tab">#</doc-anchor-trigger>
@@ -277,7 +296,7 @@
     </h3>
 </doc-anchor-target>
 <p>To change the order of your tabs, drag the tab along the tabs in the tab group.</p>
-<p>As you drag a tab, <em>drop zones</em>—areas onto which you can move the tab—become highlighted. The drop zone determines where to insert the tab. Some tabs can only be in of the sidebars.</p>
+<p>As you drag a tab, <em>drop zones</em>—areas onto which you can move the tab—become highlighted. The drop zone determines where to insert the tab. Some tabs can only be in one of the sidebars.</p>
 <doc-anchor-target id="split-a-tab-group">
     <h3>
         <doc-anchor-trigger class="header-anchor-trigger" to="#split-a-tab-group">#</doc-anchor-trigger>
@@ -321,8 +340,9 @@
         <span>Pin a tab</span>
     </h3>
 </doc-anchor-target>
-<p>To pin a tab, right-click the tab and select <strong>Pin</strong>. Links in a pinned tab always open in a separate tab.</p>
-<p>To unpin a pinned tab, right-click the tab and select <strong>Unpin</strong>.</p>
+<p>To pin a tab in the main editor, right-click the tab and select <strong>Pin</strong>. Links in a pinned tab always open in a separate tab.</p>
+<p>To unpin a pinned tab in the main editor, right-click the tab and select <strong>Unpin</strong>.</p>
+<p>To pin or unpin a tab in the sidebar, see <a href="../sidebar/#pin-tabs">pinning tabs in the sidebar</a>.</p>
 <doc-anchor-target id="switch-to-a-different-tab">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#switch-to-a-different-tab">#</doc-anchor-trigger>
@@ -439,6 +459,14 @@
                 <p>This page explains how to manage Obsidian Publish sites.</p>
             </div>
         </a>
+        <a href="/obsidian/sidebar/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Sidebar</span>
+                </div>
+                <p>Learn about Obsidian's left and right sidebars and how to manage tabs and tab groups.</p>
+            </div>
+        </a>
         <a href="/obsidian/plugins/web-viewer/" class="group no-link">
             <div class="flex flex-col">
                 <div>
@@ -452,7 +480,7 @@
                 <div>
                     <span>Workspace</span>
                 </div>
-                <p>In the Obsidian desktop app the workspace includes:</p>
+                <p>Learn about the Obsidian workspace and its core components on desktop and mobile.</p>
             </div>
         </a>
     </div>

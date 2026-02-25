@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -29,11 +29,12 @@
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,7 +204,8 @@
         <span>Format converter</span>
     </h1>
 </doc-anchor-target>
-<p>Format converter is a <a href="../">core plugin</a> that lets you convert Markdown from other applications to Obsidian format.</p>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Format converter is a core plugin that lets you convert Markdown from other applications to Obsidian format.</div>
+<p>Format converter is a <a href="../">core plugin</a> that lets you convert Markdown from other applications to Obsidian format. It also lets you convert certain <a href="../../properties/">Properties</a> to new required formats.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-warning"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -217,13 +219,13 @@
         </div>
         <div class="pr-5 ml-3 w-full">
             <h5>Warning</h5>
-<p>Format converter converts your entire vault based on your settings. Back up your notes before you perform the conversion.</p>
+<p>Format converter converts your entire vault based on your settings. <a href="../../backup/">Back up your Obsidian files</a> before you perform the conversion.</p>
         </div>
     </div>
 </div>
 <p>To convert all notes in your vault:</p>
 <ol>
-<li>In the ribbon, click <strong>Open format converter</strong> ( <img src="../../attachments/icons/lucide-binary.svg#icon" alt="" /> ).</li>
+<li>In <a href="../command-palette/">Command palette</a>, select <strong>Open format converter</strong>. This can also be found in the <a href="../../ribbon/">Ribbon</a> with the  <strong>Open format converter</strong> ( <img src="../../attachments/icons/lucide-binary.svg#icon" alt="" /> ) icon.</li>
 <li>Enable the formats you want to convert.</li>
 <li>Click <strong>Start conversion</strong>.</li>
 </ol>
@@ -234,49 +236,80 @@
         <span>Supported formats</span>
     </h2>
 </doc-anchor-target>
-<div class="table-wrapper scrollbar overflow-hidden">
-<table class="comfortable">
-<thead>
-<tr>
-<th>Application</th>
-<th>From</th>
-<th>To</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Roam Research</td>
-<td><code translate="no" v-pre>#tag</code> and <code translate="no" v-pre>#[[tag]]</code></td>
-<td><code translate="no" v-pre>[[tag]]</code></td>
-</tr>
-<tr>
-<td>Roam Research</td>
-<td><code translate="no" v-pre>^^highlight^^</code></td>
-<td><code translate="no" v-pre>==highlight==</code></td>
-</tr>
-<tr>
-<td>Roam Research</td>
-<td><code translate="no" v-pre>{{[[TODO]]}}</code></td>
-<td><code translate="no" v-pre>[ ]</code></td>
-</tr>
-<tr>
-<td>Bear</td>
-<td><code translate="no" v-pre>::highlight::</code></td>
-<td><code translate="no" v-pre>==highlight==</code></td>
-</tr>
-<tr>
-<td>Zettelkasten</td>
-<td><code translate="no" v-pre>[[UID]]</code></td>
-<td><code translate="no" v-pre>[[UID File Name]]</code> (full link)</td>
-</tr>
-<tr>
-<td>Zettelkasten</td>
-<td><code translate="no" v-pre>[[UID]]</code></td>
-<td><code>[[UID File Name|File Name]]</code> (pretty link)</td>
-</tr>
-</tbody>
-</table>
-</div>
+<doc-anchor-target id="roam-research">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#roam-research">#</doc-anchor-trigger>
+        <span>Roam Research</span>
+    </h3>
+</doc-anchor-target>
+<p>The Format converter can convert the following Roam Research syntax:</p>
+<ul>
+<li><strong>Tags</strong>: Converts <code translate="no" v-pre>#tag</code> and <code translate="no" v-pre>#[[tag]]</code> to <code translate="no" v-pre>[[tag]]</code></li>
+<li><strong>Highlights</strong>: Converts <code translate="no" v-pre>^^highlight^^</code> to <code translate="no" v-pre>==highlight==</code></li>
+<li><strong>TODO items</strong>: Converts <code translate="no" v-pre>{{[[TODO]]}}</code> to <code translate="no" v-pre>[ ]</code></li>
+</ul>
+<doc-anchor-target id="bear">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#bear">#</doc-anchor-trigger>
+        <span>Bear</span>
+    </h3>
+</doc-anchor-target>
+<p>The Format converter can convert the following Bear syntax:</p>
+<ul>
+<li><strong>Highlights</strong>: Converts <code translate="no" v-pre>::highlight::</code> to <code translate="no" v-pre>==highlight==</code></li>
+</ul>
+<doc-anchor-target id="zettelkasten">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#zettelkasten">#</doc-anchor-trigger>
+        <span>Zettelkasten</span>
+    </h3>
+</doc-anchor-target>
+<p>The Format converter can convert the following Zettelkasten syntax:</p>
+<ul>
+<li><strong>Full links</strong>: Converts <code translate="no" v-pre>[[UID]]</code> to <code translate="no" v-pre>[[UID File Name]]</code></li>
+<li><strong>Pretty links</strong>: Converts <code translate="no" v-pre>[[UID]]</code> to <code translate="no" v-pre>[[UID File Name|File Name]]</code></li>
+</ul>
+<doc-anchor-target id="properties">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#properties">#</doc-anchor-trigger>
+        <span><a href="../../properties/">Properties</a></span>
+    </h3>
+</doc-anchor-target>
+<p>As of Obsidian <code translate="no" v-pre>1.9.3</code>, the Format converter can convert <a href="../../properties/#deprecated-properties">deprecated property</a> formats to the current format:</p>
+<p><strong>Aliases</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># Before
+
+alias: My Note Title
+
+# After
+
+aliases:
+  - My Note Title</code></pre>
+</doc-codeblock></div>
+<p><strong>Tags</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># Before
+
+tag: project, important
+
+# After
+
+tags:
+  - project
+  - important</code></pre>
+</doc-codeblock></div>
+<p><strong>CSS Classes</strong></p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-yaml"><code v-pre class="language-yaml"># Before
+
+cssclass: custom-style
+
+# After
+
+cssclasses:
+  - custom-style</code></pre>
+</doc-codeblock></div>
 <div id="retype-backlinks">
     <h2>See also</h2>
     <div class="grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(300px,1fr))]">
@@ -285,7 +318,7 @@
                 <div>
                     <span>Core plugins</span>
                 </div>
-                <p>This page lists the core plugins that come installed with Obsidian. Core plugins are officially built and supported by the Obsidian team.</p>
+                <p>This page lists the core plugins that come installed with Obsidian, and community plugins they also maintain.</p>
             </div>
         </a>
         <a href="/obsidian/import/markdown/" class="group no-link">
@@ -302,6 +335,14 @@
                     <span>Import Zettelkasten notes</span>
                 </div>
                 <p>If you've been using the Zettelkasten method to name and link your notes, you may need to convert links from [[UID]] to [[UID My note title]].</p>
+            </div>
+        </a>
+        <a href="/obsidian/properties/" class="group no-link">
+            <div class="flex flex-col">
+                <div>
+                    <span>Properties</span>
+                </div>
+                <p>Properties allow you to organize information about a note. Properties contain structured data such as text, links, dates, checkboxes, and numbers.</p>
             </div>
         </a>
     </div>
@@ -378,6 +419,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Format converter", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Format converter", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
 </body>
 </html>

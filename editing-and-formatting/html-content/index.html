@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="turbo-root" content="/obsidian">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825319958261">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="4.0.1.825320307788">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 4.0.1">
@@ -13,7 +13,7 @@
     <!-- Primary Meta Tags -->
     <title>HTML content</title>
     <meta name="title" content="HTML content">
-    <meta name="description" content="Obsidian supports HTML to allow you to display your notes the way you want, or even embed web pages. Allowing HTML inside your notes comes with risks. To">
+    <meta name="description" content="Learn how to use HTML in Obsidian, including limitations with Markdown rendering, and HTML block requirements.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://retypeapp.github.io/obsidian/editing-and-formatting/html-content/">
@@ -22,18 +22,19 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://retypeapp.github.io/obsidian/editing-and-formatting/html-content/">
     <meta property="og:title" content="HTML content">
-    <meta property="og:description" content="Obsidian supports HTML to allow you to display your notes the way you want, or even embed web pages. Allowing HTML inside your notes comes with risks. To">
+    <meta property="og:description" content="Learn how to use HTML in Obsidian, including limitations with Markdown rendering, and HTML block requirements.">
     <meta property="og:site_name" content="Obsidian">
     <meta property="og:locale" content="en_US">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
     <link id="retype-favicon" rel="icon" href="../../favicon.ico" />
-    <link href="../../resources/css/retype.css?v=4.0.1.825319958261" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=4.0.1.825320307788" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=4.0.1" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825319958261" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=4.0.1.825320307788" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=4.0.1.825320307788" defer></script>
 </head>
 <body>
     <div id="retype-app" class="relative text-base antialiased text-base-text bg-base-bg font-body">
@@ -203,6 +204,7 @@
         <span>HTML content</span>
     </h1>
 </doc-anchor-target>
+<div id="retype-page-description" class="description-display text-description font-description leading-description mb-description-margin-bottom mt-description-margin-top tracking-description text-transform-description">Learn how to use HTML in Obsidian, including limitations with Markdown rendering, and HTML block requirements.</div>
 <p>Obsidian supports HTML to allow you to display your notes the way you want, or even <a href="../../embed-web-pages/">embed web pages</a>. Allowing HTML inside your notes comes with risks. To prevent malicious code from doing harm, Obsidian <em>sanitizes</em> any HTML in your notes.</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-light"></div>
@@ -223,6 +225,67 @@
     </div>
 </div>
 <p>That said, since Markdown syntax does not support all forms of styling, using sanitized HTML can be yet another way of enhancing the quality of your notes. We&#x27;ve included some of the more common usages of HTML.</p>
+<doc-anchor-target id="html-limitations">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#html-limitations">#</doc-anchor-trigger>
+        <span>HTML limitations</span>
+    </h2>
+</doc-anchor-target>
+<p>Obsidian has specific limitations when using HTML in your notes:</p>
+<doc-anchor-target id="no-markdown-inside-html">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#no-markdown-inside-html">#</doc-anchor-trigger>
+        <span>No Markdown inside HTML</span>
+    </h3>
+</doc-anchor-target>
+<p>Obsidian does not render Markdown syntax inside HTML elements. This is an intentional design choice for performance optimization and to keep parser complexity low when managing large documents.</p>
+<p>For example, this will not work as expected:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">&lt;div&gt;
+This **will not** be bold and this `will not` be code.
+&lt;/div&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="html-blocks-must-be-self-contained">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#html-blocks-must-be-self-contained">#</doc-anchor-trigger>
+        <span>HTML blocks must be self-contained</span>
+    </h3>
+</doc-anchor-target>
+<p>HTML blocks must be complete and cannot contain blank lines within them. Blank lines will break the HTML block.</p>
+<p>This will work:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">&lt;table&gt;
+&lt;tr&gt;
+&lt;td&gt;Content here&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+</doc-codeblock></div>
+<p>This will not work correctly:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre translate="no" class="language-markdown"><code v-pre class="language-markdown">&lt;table&gt;
+
+&lt;tr&gt;
+
+&lt;td&gt;Content here&lt;/td&gt;
+
+&lt;/tr&gt;
+
+&lt;/table&gt;</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="when-markdown-appears-to-work-in-html">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#when-markdown-appears-to-work-in-html">#</doc-anchor-trigger>
+        <span>When Markdown appears to work in HTML</span>
+    </h3>
+</doc-anchor-target>
+<p>Some inline HTML tags like <code translate="no" v-pre>&lt;span&gt;</code> or <code translate="no" v-pre>&lt;a&gt;</code> have limited functionality and may appear to render Markdown, but this is not actually what&#x27;s happening. The Markdown is being processed outside of the HTML context.</p>
+<p>For more details on how Obsidian handles Markdown, see <a href="../../obsidian-flavored-markdown/">Obsidian Flavored Markdown</a>.</p>
+<doc-anchor-target id="common-html-usage">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#common-html-usage">#</doc-anchor-trigger>
+        <span>Common HTML usage</span>
+    </h2>
+</doc-anchor-target>
 <div class="flex mb-6">
     <div class="shrink-0 w-1.5 rounded-tl-lg rounded-bl-lg bg-callout-info"></div>
     <div class="flex w-full py-4 border border-l-0 rounded-tr-lg rounded-br-lg doc-callout bg-callout-base-bg border-callout-base-border" role="alert">
@@ -340,6 +403,6 @@
 
     <div id="retype-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "HTML content", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "HTML content", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 234, tocLabel: "On this page" }</script>
 </body>
 </html>
